@@ -1,0 +1,6 @@
+framework module Pods_SYBlinkAnimationKit_Tests {
+  umbrella header "Pods-SYBlinkAnimationKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

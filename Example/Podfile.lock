@@ -1,0 +1,21 @@
+PODS:
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+  - SYBlinkAnimationKit (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - SYBlinkAnimationKit (from `../`)
+
+EXTERNAL SOURCES:
+  SYBlinkAnimationKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+  SYBlinkAnimationKit: 38db06bd99aac7a78ccba2ffac6aeb17e11856eb
+
+COCOAPODS: 0.37.2
