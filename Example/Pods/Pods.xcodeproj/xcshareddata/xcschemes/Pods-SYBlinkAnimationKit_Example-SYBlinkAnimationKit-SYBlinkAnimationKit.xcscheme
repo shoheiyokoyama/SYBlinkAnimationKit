@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A09FF19A2495F22701E6397"
+               BlueprintIdentifier = "19E76F31073651E2AD54AFB1"
                BuildableName = "SYBlinkAnimationKit.bundle"
                BlueprintName = "Pods-SYBlinkAnimationKit_Example-SYBlinkAnimationKit-SYBlinkAnimationKit"
                ReferencedContainer = "container:Pods.xcodeproj">

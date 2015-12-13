@@ -1,0 +1,6 @@
+framework module SYBlinkAnimationKit {
+  umbrella header "SYBlinkAnimationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

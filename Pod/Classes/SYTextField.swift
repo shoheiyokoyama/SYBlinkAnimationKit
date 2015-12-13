@@ -2,7 +2,7 @@
 //  SYTextField.swift
 //  SYBlinkAnimationKit
 //
-//  Created by Shohei Yokoyama on 2015/10/31.
+//  Created by Shohei Yokoyama on 12/13/2015.
 //  Copyright © 2015年 Shohei. All rights reserved.
 //
 
@@ -50,6 +50,7 @@ public class SYTextField: UITextField {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     
     private func setLayer() {
         self.syLayer.syLayerAnimation = .Border // Default Animation

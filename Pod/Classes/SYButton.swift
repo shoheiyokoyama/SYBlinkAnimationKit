@@ -2,7 +2,7 @@
 //  SYButton.swift
 //  SYBlinkAnimationKit
 //
-//  Created by Shohei Yokoyama on 2015/10/31.
+//  Created by Shohei Yokoyama on 12/13/2015.
 //  Copyright © 2015年 Shohei. All rights reserved.
 //
 
@@ -51,6 +51,8 @@ public class SYButton: UIButton {
         }
     }
     
+    public var isAnimating = false
+    
     public var textColor = UIColor()
     
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
@@ -81,7 +83,7 @@ public class SYButton: UIButton {
         
         self.setLayer()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -141,10 +143,12 @@ public class SYButton: UIButton {
     
     
     public func startAnimation() {
+        self.isAnimating = true
         self.syLayer.startAnimation()
     }
     
     public func stopAnimation() {
+        self.isAnimating = false
         self.syLayer.stopAnimation()
     }
 }

@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  TextFieldViewViewController.swift
 //  SYBlinkAnimationKit
 //
-//  Created by Shohei Yokoyama on 12/13/2015.
-//  Copyright (c) 2015 Shohei Yokoyama. All rights reserved.
+//  Created by Shoehi Yokoyama on 2015/12/13.
+//  Copyright © 2015年 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class TextFieldViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,4 +22,3 @@ class ViewController: UIViewController {
     }
 
 }
-

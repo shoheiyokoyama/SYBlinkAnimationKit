@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_SYBlinkAnimationKit_Example_SYBlinkAnimationKit : NSObject
-@end
-@implementation PodsDummy_Pods_SYBlinkAnimationKit_Example_SYBlinkAnimationKit
-@end

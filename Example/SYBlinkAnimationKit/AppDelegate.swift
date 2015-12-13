@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SYBlinkAnimationKit
 //
-//  Created by shoheiyokoyama on 12/13/2015.
-//  Copyright (c) 2015 shoheiyokoyama. All rights reserved.
+//  Created by Shohei Yokoyama on 12/13/2015.
+//  Copyright (c) 2015 Shohei Yokoyama. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        let exampleViewController = TextFieldViewViewController()
+        let exampleViewController = ButtonViewController()
+//        let exampleViewController = LabelViewController()
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = exampleViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
