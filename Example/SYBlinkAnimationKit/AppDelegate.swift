@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-//        let exampleViewController = TextFieldViewViewController()
-        let exampleViewController = ButtonViewController()
+        let exampleViewController = TextFieldViewViewController()
+//        let exampleViewController = ButtonViewController()
 //        let exampleViewController = LabelViewController()
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

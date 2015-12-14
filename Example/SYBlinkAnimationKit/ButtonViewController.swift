@@ -11,7 +11,6 @@ import SYBlinkAnimationKit
 
 class ButtonViewController: UIViewController {
     
-    
     let borderButton = SYButton()
     let border2Button = SYButton()
     let backgroundButton = SYButton()
