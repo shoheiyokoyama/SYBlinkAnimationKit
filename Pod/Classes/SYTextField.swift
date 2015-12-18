@@ -39,6 +39,8 @@ public class SYTextField: UITextField {
         }
     }
     
+    public var isAnimating = false
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {
@@ -85,10 +87,12 @@ public class SYTextField: UITextField {
     }
     
     public func startAnimation() {
+        self.isAnimating = true
         self.syLayer.startAnimation()
     }
     
     public func stopAnimation() {
+        self.isAnimating = false
         self.syLayer.stopAnimation()
     }
     

@@ -64,6 +64,8 @@ public class SYLabel: UILabel {
         }
     }
     
+    public var isAnimating = false
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {
@@ -127,10 +129,12 @@ public class SYLabel: UILabel {
     }
     
     public func startAnimation() {
+        self.isAnimating = true
         self.syLayer.startAnimation()
     }
     
     public func stopAnimation() {
+        self.isAnimating = false
         self.syLayer.stopAnimation()
     }
 }

@@ -51,9 +51,9 @@ public class SYButton: UIButton {
         }
     }
     
-    public var isAnimating = false
-    
     public var textColor = UIColor()
+    
+    public var isAnimating = false
     
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     

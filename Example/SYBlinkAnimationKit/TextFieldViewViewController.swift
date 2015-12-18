@@ -41,6 +41,10 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         self.rippleTextField.animationRippleColor = UIColor.purpleColor()
         self.rippleTextField.startAnimation()
         self.view.addSubview(rippleTextField)
+        
+        // TODO: List
+//            ・タップ時にアニメーションが消えるかのプロパティ
+//            ・..
     }
 
     override func didReceiveMemoryWarning() {
