@@ -55,12 +55,14 @@ public class SYButton: UIButton {
     
     public var isAnimating = false
     
+    private var isFirstSetTextLayer = false
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     override public func setTitle(title: String?, forState state: UIControlState) {
         super.setTitle(title, forState: state)
         
-        self.setTextLayer()
+        !self.isFirstSetTextLayer ? self.firstSetTextLayer() : self.resetTextLayer()
     }
     
     override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
@@ -73,7 +75,13 @@ public class SYButton: UIButton {
     
     override public var frame: CGRect {
         didSet {
-            self.syLayer.resizeSuperLayer(self.frame)
+            self.syLayer.resizeSuperLayer()
+        }
+    }
+    
+    override public var bounds: CGRect {
+        didSet {
+            self.syLayer.resizeSuperLayer()
         }
     }
     
@@ -93,7 +101,7 @@ public class SYButton: UIButton {
         
         self.textColor = UIColor.blackColor()
         
-        self.syLayer.syLayerAnimation = .Border // Default Animation
+        self.syLayer.syLayerAnimation = .Border
         
         self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
         self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
@@ -105,7 +113,7 @@ public class SYButton: UIButton {
     }
     
     private func setTextLayer() {
-        let font = UIFont.systemFontOfSize(17.0)//文字がずれている模様
+        let font = UIFont.systemFontOfSize(17.0)//Fix 文字がずれている模様, size変更に対応
         let text = self.currentTitle
         
         var attributes = [String: AnyObject]()
@@ -127,8 +135,17 @@ public class SYButton: UIButton {
         
         self.textLayer.frame = frame
         self.textLayer.alignmentMode = kCAAlignmentCenter
-        
-        self.syLayer.setTextLayer(textLayer)
+    }
+    
+    private func firstSetTextLayer() {
+        self.isFirstSetTextLayer = true
+        self.setTextLayer()
+        self.syLayer.firstSetTextLayer(self.textLayer)
+    }
+    
+    private func resetTextLayer(){
+        self.setTextLayer()
+        self.syLayer.resetTextLayer(self.textLayer)
     }
     
     public var syButtonAnimation: SYButtonAnimation = .Border {
@@ -147,7 +164,6 @@ public class SYButton: UIButton {
             }
         }
     }
-    
     
     public func startAnimation() {
         self.isAnimating = true

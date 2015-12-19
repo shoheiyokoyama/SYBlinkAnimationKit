@@ -138,9 +138,12 @@ public class SYLayer {
         
     }
     
-    public func resizeSuperLayer(frame: CGRect) {
-        self.superLayer.frame = frame
-        
+    public func resizeSuperLayer() {
+        self.resizeRippleLayer()
+        self.resizeTextLayer()
+    }
+    
+    private func resizeRippleLayer() {
         let superLayerHeight = CGRectGetHeight(self.superLayer.frame)
         
         let rippleDiameter: CGFloat = superLayerHeight * 0.75
@@ -156,9 +159,21 @@ public class SYLayer {
         self.subRippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - subRippleDiameter) / 2, y: (self.superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
     }
     
-    public func setTextLayer(textLayer: CATextLayer) {
+    private func resizeTextLayer() {
+        let superLayerHeight = CGRectGetHeight(self.superLayer.frame)
+        let superLayerWidth = CGRectGetWidth(self.superLayer.frame)
+        
+        self.textLayer.frame.origin.x = (superLayerWidth - self.textLayer.frame.width) / 2
+        self.textLayer.frame.origin.y = (superLayerHeight - self.textLayer.frame.height) / 2
+    }
+    
+    public func firstSetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
         self.superLayer.addSublayer(self.textLayer)
+    }
+    
+    public func resetTextLayer(textLayer: CATextLayer) {
+        self.textLayer = textLayer
     }
     
     private func clearSuperLayerShadow() {

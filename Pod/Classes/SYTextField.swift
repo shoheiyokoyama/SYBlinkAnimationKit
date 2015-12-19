@@ -35,7 +35,7 @@ public class SYTextField: UITextField {
     
     override public var frame: CGRect {
         didSet {
-            self.syLayer.resizeSuperLayer(self.frame)
+            self.syLayer.resizeSuperLayer()
         }
     }
     

@@ -15,6 +15,7 @@
 		41D8739E2720D3535592391C25507158 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12CC4BD9C5F6D514C917D7942DF2D2F4 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		450B6D2D1CBBC278F7DC4CB31FC1D49D /* Pods-SYBlinkAnimationKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */; };
 		45C51F9E6947EC156012B9DB97BEAD52 /* Pods-SYBlinkAnimationKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D8AE58B52E56F20E9A96EFB92A0AF4D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20277428A982E24B0D663A86CBB87E6 /* ReplaceMe.swift */; };
 		52B0263F90696E7FD87CB146D5C5E2C1 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAAAB29C54DB2D5220028C4110E45E6 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52F7A46AB0053D8BB1D793B917D37BB2 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5208FE4A05C9114818BC72105E5F7 /* SwiftSupport.swift */; };
 		5BAD543A9790D6D2CDE20A24FD61AE6B /* SYLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E63B79B5C170FF4E1FC26AC04DA1E8 /* SYLayer.swift */; };
@@ -123,6 +124,7 @@
 		DD6465C3902CF4E5E96E8439B99913EA /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF90F95FC2B36AB64D2FB3AF22E996D2 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		E008177C1226E7BA6B129AD883792ECE /* Pods-SYBlinkAnimationKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Example-resources.sh"; sourceTree = "<group>"; };
+		E20277428A982E24B0D663A86CBB87E6 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		E38041D93EDE9398D62F150F8F25DE47 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		E54ECFEE27296950D4AFBF79C8C6DB00 /* Pods-SYBlinkAnimationKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E63204387F5461CCA9B1C4DE8C0FD7FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		166ADB2531A291B333E7C2116788EAA1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E20277428A982E24B0D663A86CBB87E6 /* ReplaceMe.swift */,
 				ACE53FD159B5A8B3A96D0D3B1F2FA062 /* SYButton.swift */,
 				B764D70ACC9D0B289BD864B3A934E96F /* SYLabel.swift */,
 				C9E63B79B5C170FF4E1FC26AC04DA1E8 /* SYLayer.swift */,
@@ -592,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8AE58B52E56F20E9A96EFB92A0AF4D /* ReplaceMe.swift in Sources */,
 				6EABD22E37309152B897C10BE39AEC97 /* SYBlinkAnimationKit-dummy.m in Sources */,
 				AFDAA4C21129994CA889B79EA0DB41E3 /* SYButton.swift in Sources */,
 				B2D38A59685EBBE81AACD87FFE5F1098 /* SYLabel.swift in Sources */,

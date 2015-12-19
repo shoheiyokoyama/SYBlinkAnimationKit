@@ -53,18 +53,31 @@ public class SYLabel: UILabel {
     
     override public var frame: CGRect {
         didSet {
-            self.syLayer.resizeSuperLayer(self.frame)
+            self.syLayer.resizeSuperLayer()
+        }
+    }
+    
+    override public var bounds: CGRect {
+        didSet {
+            self.syLayer.resizeSuperLayer()
         }
     }
     
     override public var text: String? {
         didSet {
-            self.textLayer.string = text
-            self.setTextLayer(text!)
+            !isFirstSetTextLayer ? self.firstSetTextLayer(text!) : self.firstSetTextLayer(text!)
+        }
+    }
+    
+    public var labelTextColor: UIColor? {
+        didSet {
+            self.textLayer.foregroundColor = labelTextColor?.CGColor
         }
     }
     
     public var isAnimating = false
+    
+    public var isFirstSetTextLayer = false
     
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
@@ -77,23 +90,33 @@ public class SYLabel: UILabel {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
     private func setLayer() {
         self.textColor = UIColor.clearColor()
-        self.syLayer.syLayerAnimation = .Border // Default Animation
-        
+        self.labelTextColor = UIColor.blackColor()
         self.labelColor = UIColor.clearColor()
+        
+        self.syLayer.syLayerAnimation = .Border
+        
         self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
         self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
         self.animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1)
         self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
-        
+    }
+    
+    private func firstSetTextLayer(text: String) {
+        self.isFirstSetTextLayer = true
+        self.setTextLayer(text)
+        self.syLayer.firstSetTextLayer(textLayer)
+    }
+    
+    private func resetTextLayer(text: String) {
+        self.setTextLayer(text)
+        self.syLayer.resetTextLayer(self.textLayer)
     }
     
     private func setTextLayer(text: String) {
-        let font = UIFont.systemFontOfSize(17.0)
-        let text = text
+        let font = UIFont.systemFontOfSize(17.0)//Fix
         
         var attributes = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
@@ -109,13 +132,11 @@ public class SYLabel: UILabel {
         self.textLayer.string = text
         self.textLayer.fontSize = font.pointSize
         
-        self.textLayer.foregroundColor = UIColor.blackColor().CGColor
+        self.textLayer.foregroundColor = self.labelTextColor!.CGColor
         self.textLayer.contentsScale = UIScreen.mainScreen().scale
         
         self.textLayer.frame = frame
         self.textLayer.alignmentMode = kCAAlignmentCenter
-        
-        self.syLayer.setTextLayer(textLayer)
     }
     
     public var syLabelAnimation: SYLabelAnimation = .Border {

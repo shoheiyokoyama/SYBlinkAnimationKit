@@ -55,6 +55,8 @@ class ButtonViewController: UIViewController {
         rippleButton.addTarget(self, action: "rippleAnimation:", forControlEvents: .TouchUpInside)
         rippleButton.syButtonAnimation = .Ripple
         self.view.addSubview(rippleButton)
+        
+        rippleButton.frame = CGRectMake(40, 290, 150, 50)
     }
 
     override func didReceiveMemoryWarning() {

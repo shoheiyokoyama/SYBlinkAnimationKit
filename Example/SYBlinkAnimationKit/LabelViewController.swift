@@ -17,7 +17,8 @@ class LabelViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         
         let borderLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
-        borderLabel.text = "Border Animation"//再度テキスト設定
+        borderLabel.text = "Border Animation"
+        borderLabel.labelTextColor = UIColor.yellowColor()
         borderLabel.layer.cornerRadius = 5.0 // TODO: Animation の挙動が変わる
 //        borderLabel.animationBorderColor = UIColor.redColor()
         borderLabel.syLabelAnimation = .Border
@@ -48,8 +49,11 @@ class LabelViewController: UIViewController {
         
         let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))// TODO: Animation Time, Size
         rippleLabel.text = "Ripple Animation"
+        rippleLabel.text = "Ripple"
+        rippleLabel.labelColor = UIColor.grayColor()
 //        rippleLabel.animationRippleColor = UIColor.orangeColor()
         rippleLabel.syLabelAnimation = .Ripple
+        rippleLabel.frame = CGRectMake(40, 290, 150, 50)
         rippleLabel.startAnimation()
         self.view.addSubview(rippleLabel)
         
