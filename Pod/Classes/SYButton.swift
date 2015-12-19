@@ -95,6 +95,8 @@ public class SYButton: UIButton {
         self.textColor = UIColor.blackColor()
         
         self.syLayer.syLayerAnimation = .Ripple // Default Animation
+        
+        print(self.layer.masksToBounds)
     }
     
     private func setTextLayer() {

@@ -48,6 +48,7 @@ public class SYLayer {
     public var animationShadowColor = UIColor.blackColor() {
         didSet {
             self.superLayer.shadowColor = self.animationShadowColor.CGColor
+            print(self.superLayer.shadowColor)
         }
     }
     
@@ -176,9 +177,7 @@ public class SYLayer {
                 self.setBorderWithShadowAnimation()
             default:
                 return
-                
             }
-
         }
     }
     
@@ -197,6 +196,8 @@ public class SYLayer {
         borderColorAnimtion = CABasicAnimation(keyPath: "borderColor")
         borderColorAnimtion.fromValue = UIColor.clearColor().CGColor
         borderColorAnimtion.toValue = self.animationBorderColor.CGColor
+        
+        print(self.animationBorderColor)
     }
     
     private func setBorderWidthAnimation(fromValue: CGFloat, toValue: CGFloat) {
@@ -243,7 +244,7 @@ public class SYLayer {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.duration = self.animationDuration
         groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
-        groupAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        groupAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear) //Fix
         groupAnimation.delegate = self
         groupAnimation.autoreverses = true
         groupAnimation.repeatCount = 1e100
@@ -251,20 +252,11 @@ public class SYLayer {
     }
     
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
+        self.superLayer.masksToBounds = false
         self.superLayer.backgroundColor = UIColor.whiteColor().CGColor //FIX
         self.superLayer.shadowRadius = 5.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")
-        
-        print(self.superLayer.shadowColor)
-        print(self.superLayer.shadowOffset)
-        print(self.superLayer.shadowOpacity)
-        print(self.superLayer.shadowRadius)
-        
-//        Optional(<CGColor 0x7f83cbf220b0> [<CGColorSpace 0x7f83cbd08be0> (kCGColorSpaceDeviceRGB)] ( 0 0 1 1 ))
-//        (0.0, 0.0)
-//        0.5
-//        5.0
     }
     
     private func animateBackground() {
@@ -307,6 +299,4 @@ public class SYLayer {
         self.rippleLayer.addAnimation(animationGroup, forKey: nil)
         self.subRippleLayer.addAnimation(animationGroup, forKey: nil)
     }
-    
-    
 }

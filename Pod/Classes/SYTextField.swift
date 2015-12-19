@@ -58,7 +58,7 @@ public class SYTextField: UITextField {
     
     private func setLayer() {
         self.syLayer.syLayerAnimation = .Border // Default Animation
-        self.layer.cornerRadius = 5.0
+        self.layer.cornerRadius = 5.0 //Fix
         
         self.syBorderStyle = .RoundedRect
     }
