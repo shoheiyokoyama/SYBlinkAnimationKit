@@ -48,7 +48,6 @@ public class SYLayer {
     public var animationShadowColor = UIColor.blackColor() {
         didSet {
             self.superLayer.shadowColor = self.animationShadowColor.CGColor
-            print(self.superLayer.shadowColor)
         }
     }
     
@@ -196,8 +195,6 @@ public class SYLayer {
         borderColorAnimtion = CABasicAnimation(keyPath: "borderColor")
         borderColorAnimtion.fromValue = UIColor.clearColor().CGColor
         borderColorAnimtion.toValue = self.animationBorderColor.CGColor
-        
-        print(self.animationBorderColor)
     }
     
     private func setBorderWidthAnimation(fromValue: CGFloat, toValue: CGFloat) {
