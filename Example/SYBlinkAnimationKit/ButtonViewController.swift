@@ -31,11 +31,11 @@ class ButtonViewController: UIViewController {
         self.view.addSubview(self.borderButton)
         
         self.border2Button.frame = CGRectMake(40, 110, 300, 50)
-        self.border2Button.setTitle("BorderWithLight Animation", forState: .Normal)
+        self.border2Button.setTitle("BorderWithShadow Animation", forState: .Normal)
         self.border2Button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         self.border2Button.animationBorderColor = UIColor.blueColor()
-        self.border2Button.addTarget(self, action: "borderWithLightAnimation:", forControlEvents: .TouchUpInside)
-        self.border2Button.syButtonAnimation = .BorderWithLight
+        self.border2Button.addTarget(self, action: "BorderWithShadowAnimation:", forControlEvents: .TouchUpInside)
+        self.border2Button.syButtonAnimation = .BorderWithShadow
         self.view.addSubview(self.border2Button)
         
         self.backgroundButton.frame = CGRectMake(40, 170, 300, 50)
@@ -74,7 +74,7 @@ class ButtonViewController: UIViewController {
         self.borderButton.isAnimating ? self.borderButton.stopAnimation() : self.borderButton.startAnimation()
     }
     
-    internal func borderWithLightAnimation(sender: SYButton) {
+    internal func BorderWithShadowAnimation(sender: SYButton) {
         self.border2Button.isAnimating ? self.border2Button.stopAnimation() : self.border2Button.startAnimation()
     }
     

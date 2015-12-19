@@ -10,7 +10,7 @@ import UIKit
 
 public enum SYTextFieldAnimation {
     case Border
-    case BorderWithLight
+    case BorderWithShadow
     case Ripple
 }
 
@@ -41,6 +41,8 @@ public class SYTextField: UITextField {
     
     public var isAnimating = false
     
+    public var stopAnimationWithTouch = true
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {
@@ -66,8 +68,8 @@ public class SYTextField: UITextField {
             switch syTextFieldAnimation {
             case .Border:
                 self.syLayer.syLayerAnimation = .Border
-            case .BorderWithLight:
-                self.syLayer.syLayerAnimation = .BorderWithLight
+            case .BorderWithShadow:
+                self.syLayer.syLayerAnimation = .BorderWithShadow
             case .Ripple:
                 self.syLayer.syLayerAnimation = .Ripple
             }
@@ -97,7 +99,9 @@ public class SYTextField: UITextField {
     }
     
     override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        self.stopAnimation()
+        if self.stopAnimationWithTouch {
+            self.stopAnimation()
+        }
         
         return super.beginTrackingWithTouch(touch, withEvent: event)
     }

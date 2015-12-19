@@ -10,7 +10,7 @@ import UIKit
 
 public enum SYLabelAnimation {
     case Border
-    case BorderWithLight
+    case BorderWithShadow
     case Background
     case Text
     case Ripple
@@ -116,8 +116,8 @@ public class SYLabel: UILabel {
             switch syLabelAnimation {
             case .Border:
                 self.syLayer.syLayerAnimation = .Border
-            case .BorderWithLight:
-                self.syLayer.syLayerAnimation = .BorderWithLight
+            case .BorderWithShadow:
+                self.syLayer.syLayerAnimation = .BorderWithShadow
             case .Background:
                 self.syLayer.syLayerAnimation = .Background
             case .Text:

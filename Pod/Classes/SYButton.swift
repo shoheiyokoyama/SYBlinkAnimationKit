@@ -10,7 +10,7 @@ import UIKit
 
 public enum SYButtonAnimation {
     case Border
-    case BorderWithLight
+    case BorderWithShadow
     case Background
     case Text
     case Ripple
@@ -129,8 +129,8 @@ public class SYButton: UIButton {
             switch syButtonAnimation {
             case .Border:
                 self.syLayer.syLayerAnimation = .Border
-            case .BorderWithLight:
-                self.syLayer.syLayerAnimation = .BorderWithLight
+            case .BorderWithShadow:
+                self.syLayer.syLayerAnimation = .BorderWithShadow
             case .Background:
                 self.syLayer.syLayerAnimation = .Background
             case .Text:

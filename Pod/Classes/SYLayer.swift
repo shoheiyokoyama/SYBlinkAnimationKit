@@ -10,7 +10,7 @@ import UIKit
 
 public enum SYLayerAnimation {
     case Border
-    case BorderWithLight
+    case BorderWithShadow
     case Background
     case Text
     case Ripple
@@ -172,8 +172,8 @@ public class SYLayer {
             switch syLayerAnimation {
             case .Border:
                 self.setBorderAnimation()
-            case .BorderWithLight:
-                self.setBorderWithLightAnimation()
+            case .BorderWithShadow:
+                self.setBorderWithShadowAnimation()
             default:
                 return
                 
@@ -187,7 +187,7 @@ public class SYLayer {
         self.setBorderWidthAnimation(0.0, toValue: 1.0)
     }
     
-    private func setBorderWithLightAnimation() {
+    private func setBorderWithShadowAnimation() {
         self.setBorderColorAnimation()
         self.setShadowAnimation(0.0, toValue: 0.5)
         self.setBorderWidthAnimation(0.0, toValue: 0.6)
@@ -216,9 +216,9 @@ public class SYLayer {
         switch syLayerAnimation {
             
         case .Border:
-            self.animateBorderOrBorderWithLight()
-        case .BorderWithLight:
-            self.animateBorderOrBorderWithLight()
+            self.animateBorderOrBorderWithShadow()
+        case .BorderWithShadow:
+            self.animateBorderOrBorderWithShadow()
         case .Background:
             self.animateBackground()
         case .Text:
@@ -239,7 +239,7 @@ public class SYLayer {
         self.textLayer.foregroundColor = self.textColor.CGColor
     }
     
-    public func animateBorderOrBorderWithLight() {
+    public func animateBorderOrBorderWithShadow() {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.duration = self.animationDuration
         groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
@@ -247,14 +247,24 @@ public class SYLayer {
         groupAnimation.delegate = self
         groupAnimation.autoreverses = true
         groupAnimation.repeatCount = 1e100
-        syLayerAnimation == .BorderWithLight ? self.animateBorderWithLight(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
+        syLayerAnimation == .BorderWithShadow ? self.animateBorderWithShadow(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
     }
     
-    private func animateBorderWithLight(groupAnimation: CAAnimationGroup) {
-        self.superLayer.backgroundColor = UIColor.whiteColor().CGColor
+    private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
+        self.superLayer.backgroundColor = UIColor.whiteColor().CGColor //FIX
         self.superLayer.shadowRadius = 5.0
-        groupAnimation.animations?.append(shadowAnimation)
-        self.superLayer.addAnimation(groupAnimation, forKey: "LightBorder")
+        groupAnimation.animations?.append(self.shadowAnimation)
+        self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")
+        
+        print(self.superLayer.shadowColor)
+        print(self.superLayer.shadowOffset)
+        print(self.superLayer.shadowOpacity)
+        print(self.superLayer.shadowRadius)
+        
+//        Optional(<CGColor 0x7f83cbf220b0> [<CGColorSpace 0x7f83cbd08be0> (kCGColorSpaceDeviceRGB)] ( 0 0 1 1 ))
+//        (0.0, 0.0)
+//        0.5
+//        5.0
     }
     
     private func animateBackground() {

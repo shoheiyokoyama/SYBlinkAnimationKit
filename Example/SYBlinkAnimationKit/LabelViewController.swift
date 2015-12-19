@@ -31,10 +31,10 @@ class LabelViewController: UIViewController {
         self.view.addSubview(self.borderLabel)
         
         self.border2Label.frame = CGRectMake(40, 110, 300, 50)
-        self.border2Label.text = "BorderWithLight Animation"
+        self.border2Label.text = "BorderWithShadow Animation"
         self.border2Label.layer.cornerRadius = 5.0 // TODO: Animation の挙動が変わる
         self.border2Label.animationBorderColor = UIColor.blueColor()
-        self.border2Label.syLabelAnimation = .BorderWithLight
+        self.border2Label.syLabelAnimation = .BorderWithShadow
         self.border2Label.startAnimation()
         self.view.addSubview(self.border2Label)
         
