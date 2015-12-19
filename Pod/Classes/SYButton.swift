@@ -20,32 +20,32 @@ public class SYButton: UIButton {
     
     private let textLayer = CATextLayer()
     
-    public var buttonColor: UIColor = UIColor.clearColor() {
+    public var buttonColor: UIColor = UIColor() {
         didSet {
             self.backgroundColor = UIColor.clearColor()
             self.syLayer.backgroundColor = buttonColor
         }
     }
     
-    public var animationBorderColor = UIColor.blackColor() {
+    public var animationBorderColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
     
-    public var animationBackgroundColor = UIColor.blackColor() {
+    public var animationBackgroundColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
     }
     
-    public var animationTextColor = UIColor.blackColor() {
+    public var animationTextColor = UIColor() {
         didSet {
             self.syLayer.animationTextColor = self.animationTextColor
         }
     }
     
-    public var animationRippleColor = UIColor.blackColor() {
+    public var animationRippleColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
@@ -60,7 +60,6 @@ public class SYButton: UIButton {
     override public func setTitle(title: String?, forState state: UIControlState) {
         super.setTitle(title, forState: state)
         
-        self.setTitleColor(UIColor.clearColor(), forState: state)
         self.setTextLayer()
     }
     
@@ -95,10 +94,18 @@ public class SYButton: UIButton {
         self.textColor = UIColor.blackColor()
         
         self.syLayer.syLayerAnimation = .Border // Default Animation
+        
+        self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
+        self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
+        self.buttonColor = UIColor.clearColor()
+        self.animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1)
+        self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
+        
+        self.setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
     private func setTextLayer() {
-        let font = UIFont.systemFontOfSize(17.0)
+        let font = UIFont.systemFontOfSize(17.0)//文字がずれている模様
         let text = self.currentTitle
         
         var attributes = [String: AnyObject]()
