@@ -49,15 +49,21 @@ class LabelViewController: UIViewController {
         
         let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))// TODO: Animation Time, Size
         rippleLabel.text = "Ripple Animation"
-        rippleLabel.text = "Ripple"
         rippleLabel.labelColor = UIColor.grayColor()
 //        rippleLabel.animationRippleColor = UIColor.orangeColor()
         rippleLabel.syLabelAnimation = .Ripple
-        rippleLabel.frame = CGRectMake(40, 290, 150, 50)
         rippleLabel.startAnimation()
         self.view.addSubview(rippleLabel)
+                
+        
+        
         
         //animation on off の挙動確認
+        //テスト
+//        ・文字変更
+//        ・サイズ変更
+//        ・frame変更
+//        ・フォント変更
     }
 
     override func didReceiveMemoryWarning() {

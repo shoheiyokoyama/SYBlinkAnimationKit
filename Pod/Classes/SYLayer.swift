@@ -134,7 +134,8 @@ public class SYLayer {
         self.subRippleLayer.backgroundColor = UIColor.clearColor().CGColor
         self.subRippleLayer.cornerRadius = subRippleCornerRadius
         self.subRippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - subRippleDiameter) / 2, y: (self.superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
-        self.superLayer.addSublayer(self.subRippleLayer)
+//        self.superLayer.addSublayer(self.subRippleLayer)
+        self.superLayer.insertSublayer(self.subRippleLayer, atIndex: 1)
         
     }
     
@@ -169,7 +170,8 @@ public class SYLayer {
     
     public func firstSetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
-        self.superLayer.addSublayer(self.textLayer)
+//        self.superLayer.addSublayer(self.textLayer)
+        self.superLayer.insertSublayer(self.textLayer, atIndex: 0)
     }
     
     public func resetTextLayer(textLayer: CATextLayer) {

@@ -17,7 +17,7 @@ public enum SYLabelAnimation {
 }
 
 public class SYLabel: UILabel {
-
+    
     private let textLayer = CATextLayer()
     
     public var labelColor: UIColor = UIColor() {
@@ -65,7 +65,7 @@ public class SYLabel: UILabel {
     
     override public var text: String? {
         didSet {
-            !isFirstSetTextLayer ? self.firstSetTextLayer(text!) : self.firstSetTextLayer(text!)
+            !isFirstSetTextLayer ? self.firstSetTextLayer() : self.firstSetTextLayer()
         }
     }
     
@@ -78,6 +78,16 @@ public class SYLabel: UILabel {
     public var isAnimating = false
     
     public var isFirstSetTextLayer = false
+    
+    public func systemFontOfSize(fontSize: CGFloat) {
+        self.font = UIFont.systemFontOfSize(fontSize)
+        self.resetTextLayer()
+    }
+    
+    public func fontNameWithSize(name: String, size: CGFloat) {
+        self.font = UIFont(name: name, size: size)
+        self.resetTextLayer()
+    }
     
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
@@ -104,23 +114,21 @@ public class SYLabel: UILabel {
         self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
     }
     
-    private func firstSetTextLayer(text: String) {
+    private func firstSetTextLayer() {
         self.isFirstSetTextLayer = true
-        self.setTextLayer(text)
+        self.setTextLayer()
         self.syLayer.firstSetTextLayer(textLayer)
     }
     
-    private func resetTextLayer(text: String) {
-        self.setTextLayer(text)
+    private func resetTextLayer() {
+        self.setTextLayer()
         self.syLayer.resetTextLayer(self.textLayer)
     }
     
-    private func setTextLayer(text: String) {
-        let font = UIFont.systemFontOfSize(17.0)//Fix
-        
+    private func setTextLayer() {
         var attributes = [String: AnyObject]()
-        attributes[NSFontAttributeName] = font
-        let size = text.sizeWithAttributes(attributes)
+        attributes[NSFontAttributeName] = self.font
+        let size = self.text!.sizeWithAttributes(attributes)
         
         let x = (CGRectGetWidth(self.frame) - size.width) / 2
         let y = (CGRectGetHeight(self.frame) - size.height) / 2
@@ -129,8 +137,8 @@ public class SYLabel: UILabel {
         let frame = CGRectMake(x, y, width, height)
         
         self.textLayer.font = self.font
-        self.textLayer.string = text
-        self.textLayer.fontSize = font.pointSize
+        self.textLayer.string = self.text
+        self.textLayer.fontSize = self.font.pointSize
         
         self.textLayer.foregroundColor = self.labelTextColor!.CGColor
         self.textLayer.contentsScale = UIScreen.mainScreen().scale

@@ -47,16 +47,19 @@ class ButtonViewController: UIViewController {
         textButton.syButtonAnimation = .Text
         self.view.addSubview(textButton)
         
+        
+        
         let rippleButton = SYButton(frame: CGRectMake(40, 290, 300, 50))
         rippleButton.setTitle("Ripple Animation", forState: .Normal)
-        rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        rippleButton.setTitleColor(UIColor.yellowColor(), forState: .Normal)
         rippleButton.buttonColor = UIColor.lightGrayColor()
 //        rippleButton.animationRippleColor = UIColor.redColor()
         rippleButton.addTarget(self, action: "rippleAnimation:", forControlEvents: .TouchUpInside)
         rippleButton.syButtonAnimation = .Ripple
         self.view.addSubview(rippleButton)
         
-        rippleButton.frame = CGRectMake(40, 290, 150, 50)
+//        rippleButton.frame = CGRectMake(40, 290, 150, 50)
+//        rippleButton.fontNameWithSize("Helvetica-Bold", size: 9)
     }
 
     override func didReceiveMemoryWarning() {

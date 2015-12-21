@@ -57,22 +57,6 @@ public class SYButton: UIButton {
     
     private var isFirstSetTextLayer = false
     
-    public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
-    
-    override public func setTitle(title: String?, forState state: UIControlState) {
-        super.setTitle(title, forState: state)
-        
-        !self.isFirstSetTextLayer ? self.firstSetTextLayer() : self.resetTextLayer()
-    }
-    
-    override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
-        super.setTitleColor(UIColor.clearColor(), forState: state)
-        
-        self.textLayer.foregroundColor = color?.CGColor
-        self.syLayer.textColor = color!
-        self.textColor = color!
-    }
-    
     override public var frame: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
@@ -85,12 +69,39 @@ public class SYButton: UIButton {
         }
     }
     
+    override public func setTitle(title: String?, forState state: UIControlState) {
+        super.setTitle(title, forState: state)
+        
+        !self.isFirstSetTextLayer ? self.firstSetTextLayer() : self.resetTextLayer()
+    }
+    
+    override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
+        super.setTitleColor(UIColor.clearColor(), forState: state)
+//        super.setTitleColor(color, forState: state)
+        
+        self.textLayer.foregroundColor = color?.CGColor
+        self.syLayer.textColor = color!
+        self.textColor = color!
+    }
+    
+    public func systemFontOfSize(fontSize: CGFloat) {
+        self.titleLabel?.font = UIFont.systemFontOfSize(fontSize)
+        self.resetTextLayer()
+    }
+    
+    public func fontNameWithSize(name: String, size: CGFloat) {
+        self.titleLabel!.font = UIFont(name: name, size: size)
+        self.resetTextLayer()
+    }
+    
+    public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setLayer()
     }
-
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -113,7 +124,9 @@ public class SYButton: UIButton {
     }
     
     private func setTextLayer() {
-        let font = UIFont.systemFontOfSize(17.0)//Fix 文字がずれている模様, size変更に対応
+        //Fix 文字がずれている模様, size変更に対応
+        //        let font = UIFont.systemFontOfSize(18.0)//うまく取得できないものか
+        let font = self.titleLabel?.font
         let text = self.currentTitle
         
         var attributes = [String: AnyObject]()
@@ -126,9 +139,9 @@ public class SYButton: UIButton {
         let width = size.width
         let frame = CGRectMake(x, y, width, height)
         
-        self.textLayer.font = self.titleLabel?.font
+        self.textLayer.font = font
         self.textLayer.string = text
-        self.textLayer.fontSize = font.pointSize
+        self.textLayer.fontSize = font!.pointSize
         
         self.textLayer.foregroundColor = self.textColor.CGColor
         self.textLayer.contentsScale = UIScreen.mainScreen().scale
