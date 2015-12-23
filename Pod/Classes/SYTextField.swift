@@ -43,6 +43,18 @@ public class SYTextField: UITextField {
     
     public var stopAnimationWithTouch = true
     
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+        didSet {
+            self.syLayer.setAnimationTimingFunction(animationTimingFunction)
+        }
+    }
+    
+    public var animationDuration: CFTimeInterval = 1.0 {
+        didSet {
+            self.syLayer.setAnimationDuration(animationDuration)
+        }
+    }
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {

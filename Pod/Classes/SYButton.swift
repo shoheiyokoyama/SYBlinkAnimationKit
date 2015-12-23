@@ -94,6 +94,18 @@ public class SYButton: UIButton {
         self.resetTextLayer()
     }
     
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+        didSet {
+            self.syLayer.setAnimationTimingFunction(animationTimingFunction)
+        }
+    }
+    
+    public var animationDuration: CFTimeInterval = 1.0 {
+        didSet {
+            self.syLayer.setAnimationDuration(animationDuration)
+        }
+    }
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {
@@ -110,10 +122,10 @@ public class SYButton: UIButton {
         self.layer.cornerRadius = 5.0
         self.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
         
-        self.textColor = UIColor.blackColor()
+        self.textColor = UIColor.blackColor()//
         
-        self.syLayer.syLayerAnimation = .Border
-        
+        self.syLayer.syLayerAnimation = .Border//これも
+        //ここら辺宣言時に初期化できるんじゃないか？　→CALAYERに書こうぜ
         self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
         self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
         self.buttonColor = UIColor.clearColor()
@@ -124,7 +136,6 @@ public class SYButton: UIButton {
     }
     
     private func setTextLayer() {
-        //Fix 文字がずれている模様, size変更に対応
         //        let font = UIFont.systemFontOfSize(18.0)//うまく取得できないものか
         let font = self.titleLabel?.font
         let text = self.currentTitle

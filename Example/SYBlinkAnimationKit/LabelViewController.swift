@@ -59,6 +59,7 @@ class LabelViewController: UIViewController {
         
         
         //animation on off の挙動確認
+        //time,functionのプロパティ
         //テスト
 //        ・文字変更
 //        ・サイズ変更

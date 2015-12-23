@@ -16,6 +16,30 @@ public enum SYLayerAnimation {
     case Ripple
 }
 
+public enum SYMediaTimingFunction {
+    case Linear
+    case EaseIn
+    case EaseOut
+    case EaseInEaseOut
+    
+    public var timingFunction : CAMediaTimingFunction {
+        switch self {
+        case .Linear:
+//            return CAMediaTimingFunction(name: "linear")
+            return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        case .EaseIn:
+//            return CAMediaTimingFunction(name: "easeIn")
+            return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        case .EaseOut:
+//            return CAMediaTimingFunction(name: "easeOut")
+            return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        case .EaseInEaseOut:
+//            return CAMediaTimingFunction(name: "easeInEaseOut")
+            return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        }
+    }
+}
+
 public class SYLayer {
     
     private var superLayer: CALayer!
@@ -35,7 +59,7 @@ public class SYLayer {
             self.animationShadowColor = self.animationBorderColor
         }
     }
-    public var animationTextColor = UIColor.redColor() {
+    public var animationTextColor = UIColor.blackColor() {
         didSet {
             self.textColorAnimation.toValue = self.animationTextColor.CGColor
         }
@@ -51,16 +75,19 @@ public class SYLayer {
         }
     }
     
-    public var animationRippleColor = UIColor.lightGrayColor() {
+    public var animationRippleColor = UIColor.blackColor() {
         didSet {
             self.rippleLayer.backgroundColor = self.animationRippleColor.CGColor
             self.subRippleLayer.borderColor = self.animationRippleColor.CGColor
         }
     }
     
-    public var animationDuration: CFTimeInterval = 1.0
+    private var animationDuration: CFTimeInterval = 1.0
+    
+    private var animationTimingFunction: SYMediaTimingFunction = .Linear
     
     public var textColor = UIColor.blackColor()
+    
     public var backgroundColor = UIColor.clearColor() {
         didSet {
             self.superLayer.backgroundColor = self.backgroundColor.CGColor
@@ -137,6 +164,14 @@ public class SYLayer {
 //        self.superLayer.addSublayer(self.subRippleLayer)
         self.superLayer.insertSublayer(self.subRippleLayer, atIndex: 1)
         
+    }
+    
+    public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
+        self.animationTimingFunction = timingFunction
+    }
+    
+    public func setAnimationDuration(animationDuration: CFTimeInterval) {
+        self.animationDuration = animationDuration
     }
     
     public func resizeSuperLayer() {
@@ -258,7 +293,7 @@ public class SYLayer {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.duration = self.animationDuration
         groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
-        groupAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear) //Fix
+        groupAnimation.timingFunction = self.animationTimingFunction.timingFunction
         groupAnimation.delegate = self
         groupAnimation.autoreverses = true
         groupAnimation.repeatCount = 1e100
@@ -281,7 +316,7 @@ public class SYLayer {
         self.backgroundColorAnimation.duration = self.animationDuration
         self.backgroundColorAnimation.autoreverses = true
         self.backgroundColorAnimation.repeatCount = 1e100
-        self.backgroundColorAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        self.backgroundColorAnimation.timingFunction = self.animationTimingFunction.timingFunction
         self.superLayer.addAnimation(backgroundColorAnimation, forKey: "Background")
     }
     
@@ -290,7 +325,8 @@ public class SYLayer {
         self.textColorAnimation.duration = self.animationDuration
         self.textColorAnimation.autoreverses = true
         self.textColorAnimation.repeatCount = 1e100
-        self.textColorAnimation.fromValue = UIColor.clearColor().CGColor
+        self.textColorAnimation.timingFunction = self.animationTimingFunction.timingFunction
+        self.textColorAnimation.fromValue = self.animationTextColor.colorWithAlphaComponent(0.15).CGColor
         self.textColorAnimation.toValue = self.animationTextColor.CGColor
         self.textLayer.foregroundColor = self.animationTextColor.CGColor
         self.textLayer.addAnimation(textColorAnimation, forKey: "TextColor")
@@ -308,6 +344,7 @@ public class SYLayer {
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = self.animationDuration
         animationGroup.repeatCount = 1e100
+        animationGroup.timingFunction = animationTimingFunction.timingFunction
         animationGroup.animations = [fadeOutOpacity, scale]
         
         self.rippleLayer.addAnimation(animationGroup, forKey: nil)

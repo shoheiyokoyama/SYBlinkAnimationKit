@@ -79,6 +79,18 @@ public class SYLabel: UILabel {
     
     public var isFirstSetTextLayer = false
     
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+        didSet {
+            self.syLayer.setAnimationTimingFunction(animationTimingFunction)
+        }
+    }
+    
+    public var animationDuration: CFTimeInterval = 1.0 {
+        didSet {
+            self.syLayer.setAnimationDuration(animationDuration)
+        }
+    }
+    
     public func systemFontOfSize(fontSize: CGFloat) {
         self.font = UIFont.systemFontOfSize(fontSize)
         self.resetTextLayer()
