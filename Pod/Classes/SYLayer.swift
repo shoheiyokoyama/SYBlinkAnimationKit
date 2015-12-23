@@ -156,6 +156,27 @@ public class SYLayer {
         
     }
     
+    private func setShadowForBorderWithShadowAnimation() {
+        let borderWidth: CGFloat = 5
+        let widthHalf: CGFloat = borderWidth / 2
+        
+        let pathRef: CGMutablePathRef = CGPathCreateMutable()
+        CGPathMoveToPoint(pathRef, nil, -widthHalf, -widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width + widthHalf, -widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width + widthHalf, widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, widthHalf, widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, widthHalf, self.superLayer.frame.height - widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width - widthHalf, self.superLayer.frame.height - widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width - widthHalf, widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width + widthHalf, widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, self.superLayer.frame.width + widthHalf, self.superLayer.frame.height + widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, -widthHalf, self.superLayer.frame.height + widthHalf)
+        CGPathAddLineToPoint(pathRef, nil, -widthHalf, -widthHalf)
+        CGPathCloseSubpath(pathRef)
+        
+        self.superLayer.shadowPath = pathRef
+    }
+    
     public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
         self.animationTimingFunction = timingFunction
     }
@@ -169,30 +190,8 @@ public class SYLayer {
           return self.backgroundColor
         }
         
-//        self.drawShadow()
+        self.setShadowForBorderWithShadowAnimation()
         return self.backgroundColor
-    }
-    
-    private func drawShadow() {
-        //http://stackoverflow.com/questions/23863280/uiview-drop-shadow-transparency-issue
-        
-//        let shadowPath = UIBezierPath(rect: self.superLayer.bounds)
-//        self.superLayer.shadowOffset = CGSizeMake(0.0, 0.0)
-//        self.superLayer.shadowPath = shadowPath.CGPath
-//        self.superLayer.shouldRasterize = true
-        
-//        https://www.system-i-enter.com/blog/development/2014/02/16/%E3%80%90ios%E3%80%91view%E3%82%92%E7%82%B9%E7%B7%9A%E3%81%A7%E5%9B%B2%E3%82%80%E6%96%B9%E6%B3%95/
-        
-        let path = UIBezierPath()//影を描く→共有してもいいかも
-        path.moveToPoint(CGPointZero)
-        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, 0))
-        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, self.superLayer.frame.height))
-        path.addLineToPoint(CGPointMake(0, self.superLayer.frame.height))
-        path.addLineToPoint(CGPointMake(0, 0))
-        path.stroke()
-        
-        UIColor.blackColor().setStroke()
-        
     }
     
     public func resizeSuperLayer() {
@@ -279,7 +278,7 @@ public class SYLayer {
         shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
         shadowAnimation.fromValue = fromValue
         shadowAnimation.toValue = toValue
-        self.superLayer.shadowOpacity = toValue
+        self.superLayer.shadowOpacity = toValue //ここら辺かな
     }
     
     public func startAnimation() {
