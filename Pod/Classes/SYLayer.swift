@@ -25,16 +25,12 @@ public enum SYMediaTimingFunction {
     public var timingFunction : CAMediaTimingFunction {
         switch self {
         case .Linear:
-//            return CAMediaTimingFunction(name: "linear")
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         case .EaseIn:
-//            return CAMediaTimingFunction(name: "easeIn")
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         case .EaseOut:
-//            return CAMediaTimingFunction(name: "easeOut")
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         case .EaseInEaseOut:
-//            return CAMediaTimingFunction(name: "easeInEaseOut")
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         }
     }
@@ -53,42 +49,39 @@ public class SYLayer {
     private var backgroundColorAnimation = CABasicAnimation()
     private var textColorAnimation = CABasicAnimation()
     
-    public var animationBorderColor = UIColor.blackColor() {
+    public var animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1) {
         didSet {
             self.borderColorAnimtion.toValue = self.animationBorderColor.CGColor
             self.animationShadowColor = self.animationBorderColor
         }
     }
-    public var animationTextColor = UIColor.blackColor() {
+    public var animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1) {
         didSet {
             self.textColorAnimation.toValue = self.animationTextColor.CGColor
         }
     }
-    public var animationBackgroundColor = UIColor.blackColor() {
+    public var animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1) {
         didSet {
             self.backgroundColorAnimation.toValue = self.animationBackgroundColor.CGColor
         }
     }
-    public var animationShadowColor = UIColor.blackColor() {
+    public var animationShadowColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1) {
         didSet {
             self.superLayer.shadowColor = self.animationShadowColor.CGColor
         }
     }
-    
-    public var animationRippleColor = UIColor.blackColor() {
+    public var animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1) {
         didSet {
             self.rippleLayer.backgroundColor = self.animationRippleColor.CGColor
             self.subRippleLayer.borderColor = self.animationRippleColor.CGColor
         }
     }
     
-    private var animationDuration: CFTimeInterval = 1.0
-    
+    private var animationDuration: CFTimeInterval = 1.5
     private var animationTimingFunction: SYMediaTimingFunction = .Linear
     
     public var textColor = UIColor.blackColor()
-    
-    public var backgroundColor = UIColor.clearColor() {
+    public var backgroundColor = UIColor.whiteColor() {
         didSet {
             self.superLayer.backgroundColor = self.backgroundColor.CGColor
         }
@@ -99,7 +92,6 @@ public class SYLayer {
             self.superLayer.borderWidth = self.borderWidth
         }
     }
-    
     public var borderColor = UIColor.clearColor() {
         didSet {
             self.superLayer.borderColor = self.borderColor.CGColor
@@ -111,13 +103,11 @@ public class SYLayer {
             self.superLayer.shadowRadius = self.shadowRadius
         }
     }
-    
     public var shadowOpacity: Float = 0.0 {
         didSet {
             self.superLayer.shadowOpacity = self.shadowOpacity
         }
     }
-    
     public var shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0) {
         didSet {
             self.superLayer.shadowOffset = self.shadowOffset
@@ -174,6 +164,37 @@ public class SYLayer {
         self.animationDuration = animationDuration
     }
     
+    private func getBackgroundColorExceptClearColor() -> UIColor {
+        if !CGColorEqualToColor(UIColor.clearColor().CGColor, self.backgroundColor.CGColor) {
+          return self.backgroundColor
+        }
+        
+//        self.drawShadow()
+        return self.backgroundColor
+    }
+    
+    private func drawShadow() {
+        //http://stackoverflow.com/questions/23863280/uiview-drop-shadow-transparency-issue
+        
+//        let shadowPath = UIBezierPath(rect: self.superLayer.bounds)
+//        self.superLayer.shadowOffset = CGSizeMake(0.0, 0.0)
+//        self.superLayer.shadowPath = shadowPath.CGPath
+//        self.superLayer.shouldRasterize = true
+        
+//        https://www.system-i-enter.com/blog/development/2014/02/16/%E3%80%90ios%E3%80%91view%E3%82%92%E7%82%B9%E7%B7%9A%E3%81%A7%E5%9B%B2%E3%82%80%E6%96%B9%E6%B3%95/
+        
+        let path = UIBezierPath()//影を描く→共有してもいいかも
+        path.moveToPoint(CGPointZero)
+        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, 0))
+        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, self.superLayer.frame.height))
+        path.addLineToPoint(CGPointMake(0, self.superLayer.frame.height))
+        path.addLineToPoint(CGPointMake(0, 0))
+        path.stroke()
+        
+        UIColor.blackColor().setStroke()
+        
+    }
+    
     public func resizeSuperLayer() {
         self.resizeRippleLayer()
         self.resizeTextLayer()
@@ -205,7 +226,6 @@ public class SYLayer {
     
     public func firstSetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
-//        self.superLayer.addSublayer(self.textLayer)
         self.superLayer.insertSublayer(self.textLayer, atIndex: 0)
     }
     
@@ -302,7 +322,8 @@ public class SYLayer {
     
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
         self.superLayer.masksToBounds = false
-        self.superLayer.backgroundColor = UIColor.whiteColor().CGColor //FIX
+//        self.superLayer.backgroundColor = self.backgroundColor.CGColor//clearの場合
+        self.superLayer.backgroundColor = self.getBackgroundColorExceptClearColor().CGColor
         self.superLayer.shadowRadius = 5.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")

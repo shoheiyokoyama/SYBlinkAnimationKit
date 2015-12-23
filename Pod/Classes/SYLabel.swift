@@ -115,15 +115,8 @@ public class SYLabel: UILabel {
     
     private func setLayer() {
         self.textColor = UIColor.clearColor()
-        self.labelTextColor = UIColor.blackColor()
-        self.labelColor = UIColor.clearColor()
+        self.labelTextColor = UIColor.blackColor()//?  
         
-        self.syLayer.syLayerAnimation = .Border
-        
-        self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
-        self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
-        self.animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1)
-        self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
     }
     
     private func firstSetTextLayer() {
@@ -184,5 +177,36 @@ public class SYLabel: UILabel {
     public func stopAnimation() {
         self.isAnimating = false
         self.syLayer.stopAnimation()
+    }
+    
+    override public func drawRect(rect: CGRect) {
+        //http://stackoverflow.com/questions/24843516/uibezierpath-stroke-and-fill-in-swift
+        let path = UIBezierPath()
+//        path.moveToPoint(CGPointZero)
+//        path.addLineToPoint(CGPointMake(self.frame.width, 0))
+//        path.addLineToPoint(CGPointMake(self.frame.width, self.frame.height))
+//        path.addLineToPoint(CGPointMake(0, self.frame.height))
+//        path.addLineToPoint(CGPointMake(0, 0))
+//        path.closePath()
+//        UIColor.blackColor().setStroke()
+//        path.stroke()
+        
+        path.moveToPoint(CGPointMake(0, -5))
+        path.addLineToPoint(CGPointMake(self.frame.width, -5))
+        path.addLineToPoint(CGPointMake(self.frame.width, 5))
+        path.addLineToPoint(CGPointMake(0, 5))
+//        path.addLineToPoint(CGPointMake(0, self.frame.height))
+//        path.addLineToPoint(CGPointMake(self.frame.width, self.frame.height))
+//        path.addLineToPoint(CGPointMake(self.frame.width, 0))
+//        path.addLineToPoint(CGPointMake(self.frame.width+10, 0))
+//        path.addLineToPoint(CGPointMake(self.frame.width+10, self.frame.height))
+//        path.addLineToPoint(CGPointMake(0, self.frame.height))
+//        path.addLineToPoint(CGPointMake(0, 0))
+
+        path.closePath()
+        UIColor.blackColor().setStroke()
+        path.stroke()
+        
+//        self.layer.shadowPath = path.CGPath
     }
 }

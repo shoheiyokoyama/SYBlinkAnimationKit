@@ -69,11 +69,7 @@ public class SYTextField: UITextField {
 
     
     private func setLayer() {
-        self.syLayer.syLayerAnimation = .Border
         self.layer.cornerRadius = 5.0 //Fix
-        
-        self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
-        self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
         
         self.syBorderStyle = .RoundedRect
     }

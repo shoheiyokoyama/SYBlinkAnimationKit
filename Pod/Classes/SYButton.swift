@@ -51,7 +51,7 @@ public class SYButton: UIButton {
         }
     }
     
-    public var textColor = UIColor()
+    public var textColor = UIColor.blackColor()
     
     public var isAnimating = false
     
@@ -122,21 +122,13 @@ public class SYButton: UIButton {
         self.layer.cornerRadius = 5.0
         self.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
         
-        self.textColor = UIColor.blackColor()//
-        
-        self.syLayer.syLayerAnimation = .Border//これも
         //ここら辺宣言時に初期化できるんじゃないか？　→CALAYERに書こうぜ
-        self.animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1)
-        self.animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1)
         self.buttonColor = UIColor.clearColor()
-        self.animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1)
-        self.animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1)
         
         self.setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
     private func setTextLayer() {
-        //        let font = UIFont.systemFontOfSize(18.0)//うまく取得できないものか
         let font = self.titleLabel?.font
         let text = self.currentTitle
         
