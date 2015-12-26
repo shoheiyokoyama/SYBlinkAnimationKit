@@ -115,8 +115,7 @@ public class SYLabel: UILabel {
     
     private func setLayer() {
         self.textColor = UIColor.clearColor()
-        self.labelTextColor = UIColor.blackColor()//?  
-        
+        self.labelTextColor = UIColor.blackColor()//?
     }
     
     private func firstSetTextLayer() {
