@@ -164,37 +164,6 @@ public class SYLayer {
         self.animationDuration = animationDuration
     }
     
-    private func getBackgroundColorExceptClearColor() -> UIColor {
-        if !CGColorEqualToColor(UIColor.clearColor().CGColor, self.backgroundColor.CGColor) {
-          return self.backgroundColor
-        }
-        
-//        self.drawShadow()
-        return self.backgroundColor
-    }
-    
-    private func drawShadow() {
-        //http://stackoverflow.com/questions/23863280/uiview-drop-shadow-transparency-issue
-        
-//        let shadowPath = UIBezierPath(rect: self.superLayer.bounds)
-//        self.superLayer.shadowOffset = CGSizeMake(0.0, 0.0)
-//        self.superLayer.shadowPath = shadowPath.CGPath
-//        self.superLayer.shouldRasterize = true
-        
-//        https://www.system-i-enter.com/blog/development/2014/02/16/%E3%80%90ios%E3%80%91view%E3%82%92%E7%82%B9%E7%B7%9A%E3%81%A7%E5%9B%B2%E3%82%80%E6%96%B9%E6%B3%95/
-        
-        let path = UIBezierPath()//影を描く→共有してもいいかも
-        path.moveToPoint(CGPointZero)
-        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, 0))
-        path.addLineToPoint(CGPointMake(self.superLayer.frame.width, self.superLayer.frame.height))
-        path.addLineToPoint(CGPointMake(0, self.superLayer.frame.height))
-        path.addLineToPoint(CGPointMake(0, 0))
-        path.stroke()
-        
-        UIColor.blackColor().setStroke()
-        
-    }
-    
     public func resizeSuperLayer() {
         self.resizeRippleLayer()
         self.resizeTextLayer()
@@ -322,8 +291,6 @@ public class SYLayer {
     
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
         self.superLayer.masksToBounds = false
-//        self.superLayer.backgroundColor = self.backgroundColor.CGColor//clearの場合
-        self.superLayer.backgroundColor = self.getBackgroundColorExceptClearColor().CGColor
         self.superLayer.shadowRadius = 5.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")

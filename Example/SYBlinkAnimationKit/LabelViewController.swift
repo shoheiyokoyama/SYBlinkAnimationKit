@@ -16,14 +16,14 @@ class LabelViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
         
-//        let borderLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
-//        borderLabel.text = "Border Animation"
-//        borderLabel.labelTextColor = UIColor.yellowColor()
-//        borderLabel.layer.cornerRadius = 5.0 // TODO: Animation の挙動が変わる
-////        borderLabel.animationBorderColor = UIColor.redColor()
-//        borderLabel.syLabelAnimation = .Border
-//        borderLabel.startAnimation()
-//        self.view.addSubview(borderLabel)
+        let borderLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
+        borderLabel.text = "Border Animation"
+        borderLabel.labelTextColor = UIColor.yellowColor()
+        borderLabel.layer.cornerRadius = 5.0 // TODO: Animation の挙動が変わる
+//        borderLabel.animationBorderColor = UIColor.redColor()
+        borderLabel.syLabelAnimation = .Border
+        borderLabel.startAnimation()
+        self.view.addSubview(borderLabel)
         
         let border2Label = SYLabel(frame: CGRectMake(40, 110, 300, 50))
         border2Label.text = "BorderWithShadow Animation"
@@ -37,30 +37,27 @@ class LabelViewController: UIViewController {
         border2Label.layer.borderWidth = 1
         border2Label.layer.borderColor = UIColor.yellowColor().CGColor
         
-//        let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
-//        backgroundLabel.text = "Background Animation"
-////        backgroundLabel.animationBackgroundColor = UIColor.yellowColor()
-//        backgroundLabel.syLabelAnimation = .Background
-//        backgroundLabel.startAnimation()
-//        self.view.addSubview(backgroundLabel)
+        let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
+        backgroundLabel.text = "Background Animation"
+//        backgroundLabel.animationBackgroundColor = UIColor.yellowColor()
+        backgroundLabel.syLabelAnimation = .Background
+        backgroundLabel.startAnimation()
+        self.view.addSubview(backgroundLabel)
         
-//        let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
-//        textLabel.text = "Text Animation"
-////        textLabel.animationTextColor = UIColor.greenColor()
-//        textLabel.syLabelAnimation = .Text
-//        textLabel.startAnimation()
-//        self.view.addSubview(textLabel)
+        let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
+        textLabel.text = "Text Animation"
+//        textLabel.animationTextColor = UIColor.greenColor()
+        textLabel.syLabelAnimation = .Text
+        textLabel.startAnimation()
+        self.view.addSubview(textLabel)
         
-//        let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))// TODO: Animation Time, Size
-//        rippleLabel.text = "Ripple Animation"
-//        rippleLabel.labelColor = UIColor.grayColor()
-////        rippleLabel.animationRippleColor = UIColor.orangeColor()
-//        rippleLabel.syLabelAnimation = .Ripple
-//        rippleLabel.startAnimation()
-//        self.view.addSubview(rippleLabel)
-        
-        
-        
+        let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))// TODO: Animation Time, Size
+        rippleLabel.text = "Ripple Animation"
+        rippleLabel.labelColor = UIColor.grayColor()
+//        rippleLabel.animationRippleColor = UIColor.orangeColor()
+        rippleLabel.syLabelAnimation = .Ripple
+        rippleLabel.startAnimation()
+        self.view.addSubview(rippleLabel)
         
         //animation on off の挙動確認
         //time,functionのプロパティ
