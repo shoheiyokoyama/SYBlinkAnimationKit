@@ -36,6 +36,10 @@ public enum SYMediaTimingFunction {
     }
 }
 
+struct Const {
+    static let borderWidthForAnimation: CGFloat = 1.0
+}
+
 public class SYLayer {
     
     private var superLayer: CALayer!
@@ -164,6 +168,80 @@ public class SYLayer {
         self.animationDuration = animationDuration
     }
     
+    // delete this method Eventually -> after white Qiita
+    private func resetSuperLayerShadowWithoutConsideringCornerRadius() {
+        if CGColorGetAlpha(self.backgroundColor.CGColor) == 1.0 {
+            return
+        }
+        
+        let borderWidth: CGFloat = 6
+        let bwh: CGFloat = borderWidth / 2
+        let sw = self.superLayer.frame.width
+        let sh = self.superLayer.frame.height
+        
+        let pathRef: CGMutablePathRef = CGPathCreateMutable()
+        CGPathMoveToPoint(pathRef   , nil, -bwh    , -bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh, -bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh, bwh)
+        CGPathAddLineToPoint(pathRef, nil, bwh     , bwh)
+        CGPathAddLineToPoint(pathRef, nil, bwh     , sh - bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw - bwh, sh - bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw - bwh, bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh, bwh)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh, sh + bwh)
+        CGPathAddLineToPoint(pathRef, nil, -bwh    , sh + bwh)
+        CGPathAddLineToPoint(pathRef, nil, -bwh    , -bwh)
+        CGPathCloseSubpath(pathRef)
+        
+        self.superLayer.shadowPath = pathRef
+    }
+    
+    private func resetSuperLayerShadow() {
+        if CGColorGetAlpha(self.backgroundColor.CGColor) == 1.0 {
+            return
+        }
+        
+        //Fix Border Width and shadow with
+        
+        let bw: CGFloat = Const.borderWidthForAnimation * 2.0
+        let bwh: CGFloat = bw / 2
+        let sw = self.superLayer.frame.width
+        let sh = self.superLayer.frame.height
+        let c = self.superLayer.cornerRadius
+        
+        let pathRef: CGMutablePathRef = CGPathCreateMutable()
+        CGPathMoveToPoint(pathRef   , nil, -bwh        , -bwh + c)
+        
+        CGPathAddArcToPoint(pathRef , nil, -bwh        , -bwh, -bwh + c, -bwh, c)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh - c, -bwh)
+        CGPathAddArcToPoint(pathRef , nil, sw+bwh      , -bwh, sw + bwh, -bwh+c, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, sw - bwh    , bwh + c)
+        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , bwh, sw - bwh - c, bwh, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, bwh + c     , bwh)
+        CGPathAddArcToPoint(pathRef , nil, bwh, bwh    , bwh, bwh + c, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, bwh         , sh - bwh - c)
+        CGPathAddArcToPoint(pathRef , nil, bwh         , sh - bwh, bwh + c, sh - bwh, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, sw - bwh - c, sh - bwh)
+        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , sh - bwh, sw - bwh, sh - bwh - c, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, sw - bwh    , bwh + c)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh    , -bwh + c)
+        CGPathAddLineToPoint(pathRef, nil, sw + bwh    , sh + bwh - c)
+        CGPathAddArcToPoint(pathRef , nil, sw + bwh    , sh + bwh, sw + bwh - c, sh + bwh, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, -bwh + c    , sh + bwh)
+        CGPathAddArcToPoint(pathRef , nil, -bwh        , sh + bwh, -bwh, sh + bwh - c, c)
+        
+        CGPathAddLineToPoint(pathRef, nil, -bwh        , -bwh + c)
+        
+        CGPathCloseSubpath(pathRef)
+        self.superLayer.shadowPath = pathRef
+    }
+    
     public func resizeSuperLayer() {
         self.resizeRippleLayer()
         self.resizeTextLayer()
@@ -223,13 +301,13 @@ public class SYLayer {
     
     private func setBorderAnimation() {
         self.setBorderColorAnimation()
-        self.setBorderWidthAnimation(0.0, toValue: 1.0)
+        self.setBorderWidthAnimation(0.0, toValue: Const.borderWidthForAnimation)
     }
     
     private func setBorderWithShadowAnimation() {
         self.setBorderColorAnimation()
-        self.setShadowAnimation(0.0, toValue: 0.5)
-        self.setBorderWidthAnimation(0.0, toValue: 0.6)
+        self.setShadowAnimation(0.0, toValue: 0.5)//Fix
+        self.setBorderWidthAnimation(0.0, toValue: Const.borderWidthForAnimation)
     }
     
     private func setBorderColorAnimation() {
@@ -290,8 +368,11 @@ public class SYLayer {
     }
     
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
+        self.resetSuperLayerShadow()
+        
         self.superLayer.masksToBounds = false
-        self.superLayer.shadowRadius = 5.0
+        self.superLayer.backgroundColor = self.backgroundColor.CGColor
+        self.superLayer.shadowRadius = 2.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")
     }
