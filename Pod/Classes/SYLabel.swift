@@ -58,8 +58,8 @@ public class SYLabel: UILabel {
     
     override public var backgroundColor: UIColor? {
         didSet {
+            print(backgroundColor)
             self.syLayer.backgroundColor = backgroundColor!
-            self.syLayer.animationBackgroundColor = backgroundColor!
         }
     }
     

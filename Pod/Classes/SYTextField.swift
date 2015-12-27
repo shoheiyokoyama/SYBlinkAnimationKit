@@ -11,7 +11,8 @@ import UIKit
 public enum SYTextFieldAnimation {
     case Border
     case BorderWithShadow
-    case Ripple//backgroung??
+    case Background
+    case Ripple
 }
 
 public enum SYBorderStyle {
@@ -33,6 +34,12 @@ public class SYTextField: UITextField {
         }
     }
     
+    public var animationBackgroundColor = UIColor() {
+        didSet {
+            self.syLayer.animationBackgroundColor = self.animationBackgroundColor
+        }
+    }
+    
     override public var frame: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
@@ -42,6 +49,8 @@ public class SYTextField: UITextField {
     public var isAnimating = false
     
     public var stopAnimationWithTouch = true
+    
+    private var oldSyBorderStyle = SYBorderStyle.RoundedRect
     
     public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
@@ -67,7 +76,6 @@ public class SYTextField: UITextField {
         didSet {
             guard backgroundColor == nil else {
                 self.syLayer.backgroundColor = backgroundColor!
-                self.syLayer.animationBackgroundColor = backgroundColor!
                 return
             }
         }
@@ -91,7 +99,9 @@ public class SYTextField: UITextField {
         
         self.syLayer.syLayerAnimation = .Border
         
-        self.syBorderStyle = .RoundedRect
+        self.syBorderStyle = .RoundedRect//この時に背景色がアニメーションしない！
+        
+        self.layer.masksToBounds = false
     }
     
     public var syTextFieldAnimation: SYTextFieldAnimation = .Border {
@@ -101,8 +111,11 @@ public class SYTextField: UITextField {
                 self.syLayer.syLayerAnimation = .Border
             case .BorderWithShadow:
                 self.syLayer.syLayerAnimation = .BorderWithShadow
+            case .Background:
+                self.syLayer.syLayerAnimation = .Background
             case .Ripple:
                 self.syLayer.syLayerAnimation = .Ripple
+            
             }
         }
     }
@@ -112,20 +125,28 @@ public class SYTextField: UITextField {
             switch syBorderStyle {
             case .RoundedRect:
                 self.borderStyle = .RoundedRect
+                self.oldSyBorderStyle = .RoundedRect
             case .None:
-                self.layer.backgroundColor = UIColor.whiteColor().CGColor
+                self.layer.backgroundColor = UIColor.whiteColor().CGColor//?
                 self.borderStyle = .None
+                self.oldSyBorderStyle = .None
             }
         }
     }
     
     public func startAnimation() {
         self.isAnimating = true
+        if self.syTextFieldAnimation == .Background {
+            self.borderStyle = .None
+        }
         self.syLayer.startAnimation()
     }
     
     public func stopAnimation() {
         self.isAnimating = false
+        if self.syTextFieldAnimation == .Background {
+            self.syBorderStyle = self.oldSyBorderStyle
+        }
         self.syLayer.stopAnimation()
     }
 }

@@ -300,7 +300,7 @@ public class SYLayer {
         shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
         shadowAnimation.fromValue = fromValue
         shadowAnimation.toValue = toValue
-        self.superLayer.shadowOpacity = toValue
+        self.superLayer.shadowOpacity = toValue//?
     }
     
     public func startAnimation() {
@@ -326,7 +326,7 @@ public class SYLayer {
         self.rippleLayer.removeAllAnimations()
         
         self.clearSuperLayerShadow()
-        self.superLayer.backgroundColor = self.backgroundColor.CGColor
+//        self.superLayer.backgroundColor = self.backgroundColor.CGColor
         self.textLayer.foregroundColor = self.textColor.CGColor
     }
     
@@ -355,12 +355,13 @@ public class SYLayer {
         self.backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
         self.backgroundColorAnimation.fromValue = UIColor.clearColor().CGColor
         self.backgroundColorAnimation.toValue = self.animationBackgroundColor.CGColor
-        self.superLayer.backgroundColor = self.animationBackgroundColor.CGColor
+//        self.superLayer.backgroundColor = self.animationBackgroundColor.CGColor //他のとこでも影響してるのか！？backgrondColorを設定してない場合
         self.backgroundColorAnimation.duration = self.animationDuration
         self.backgroundColorAnimation.autoreverses = true
         self.backgroundColorAnimation.repeatCount = 1e100
         self.backgroundColorAnimation.timingFunction = self.animationTimingFunction.timingFunction
         self.superLayer.addAnimation(backgroundColorAnimation, forKey: "Background")
+        print(self.animationBackgroundColor.CGColor)
     }
     
     private func animateText() {

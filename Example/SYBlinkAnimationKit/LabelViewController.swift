@@ -11,6 +11,8 @@ import SYBlinkAnimationKit
 
 class LabelViewController: UIViewController {
     
+    let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
+    let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,14 +36,14 @@ class LabelViewController: UIViewController {
         border2Label.startAnimation()
         self.view.addSubview(border2Label)
         
-        let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
+//        let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
         backgroundLabel.text = "Background Animation"
 //        backgroundLabel.animationBackgroundColor = UIColor.yellowColor()
         backgroundLabel.syLabelAnimation = .Background
         backgroundLabel.startAnimation()
         self.view.addSubview(backgroundLabel)
         
-        let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
+//        let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
         textLabel.text = "Text Animation"
 //        textLabel.animationTextColor = UIColor.greenColor()
         textLabel.syLabelAnimation = .Text
@@ -56,12 +58,24 @@ class LabelViewController: UIViewController {
         rippleLabel.startAnimation()
         self.view.addSubview(rippleLabel)
         
+        let toggleButton = UIButton(frame: CGRectMake(40, 350, 300, 50))
+        toggleButton.setTitle("toggle Animation", forState: .Normal)
+        toggleButton.backgroundColor = UIColor.yellowColor()
+        toggleButton.addTarget(self, action: "toggleAnimation:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(toggleButton)
+        
         //animation on off の挙動確認
         //テスト
 //        ・文字変更
 //        ・サイズ変更
 //        ・frame変更
 //        ・フォント変更
+    }
+    
+    // MARK: - SYButton Tap Events -
+    internal func toggleAnimation(sender: UIButton) {
+        backgroundLabel.isAnimating ? backgroundLabel.stopAnimation() : backgroundLabel.startAnimation()
+        textLabel.isAnimating ? textLabel.stopAnimation() : textLabel.startAnimation()
     }
     
     override func didReceiveMemoryWarning() {
