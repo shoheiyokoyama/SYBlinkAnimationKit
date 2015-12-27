@@ -11,7 +11,7 @@ import UIKit
 public enum SYTextFieldAnimation {
     case Border
     case BorderWithShadow
-    case Ripple
+    case Ripple//backgroung??
 }
 
 public enum SYBorderStyle {
@@ -55,6 +55,24 @@ public class SYTextField: UITextField {
         }
     }
     
+    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+        if self.stopAnimationWithTouch && isAnimating {
+            self.stopAnimation()
+        }
+        
+        return super.beginTrackingWithTouch(touch, withEvent: event)
+    }
+    
+    override public var backgroundColor: UIColor? {
+        didSet {
+            guard backgroundColor == nil else {
+                self.syLayer.backgroundColor = backgroundColor!
+                self.syLayer.animationBackgroundColor = backgroundColor!
+                return
+            }
+        }
+    }
+    
     public lazy var syLayer: SYLayer = SYLayer(superLayer: self.layer)
     
     public override init(frame: CGRect) {
@@ -70,6 +88,8 @@ public class SYTextField: UITextField {
     
     private func setLayer() {
         self.layer.cornerRadius = 5.0 //Fix
+        
+        self.syLayer.syLayerAnimation = .Border
         
         self.syBorderStyle = .RoundedRect
     }
@@ -107,13 +127,5 @@ public class SYTextField: UITextField {
     public func stopAnimation() {
         self.isAnimating = false
         self.syLayer.stopAnimation()
-    }
-    
-    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        if self.stopAnimationWithTouch {
-            self.stopAnimation()
-        }
-        
-        return super.beginTrackingWithTouch(touch, withEvent: event)
     }
 }

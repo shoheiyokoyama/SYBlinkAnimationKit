@@ -10,7 +10,7 @@ import UIKit
 import SYBlinkAnimationKit
 
 class ButtonViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +20,7 @@ class ButtonViewController: UIViewController {
         borderButton.setTitle("Border Animation", forState: .Normal)
 //        borderButton.animationBorderColor = UIColor.orangeColor()
         borderButton.addTarget(self, action: "borderAnimation:", forControlEvents: .TouchUpInside)
-        borderButton.syButtonAnimation = .Border
+//        borderButton.syButtonAnimation = .Border
         self.view.addSubview(borderButton)
         
         let border2Button = SYButton(frame: CGRectMake(40, 110, 300, 50))
@@ -38,28 +38,22 @@ class ButtonViewController: UIViewController {
         self.view.addSubview(backgroundButton)
         
         let textButton = SYButton(frame: CGRectMake(40, 230, 300, 50))
-//        textButton.setTitle("Text Animation", forState: .Normal)
-        textButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         textButton.setTitle("Text Animation", forState: .Normal)
-        textButton.buttonColor = UIColor.blackColor()
+        textButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        textButton.backgroundColor = UIColor.blackColor()
 //        textButton.animationTextColor = UIColor.blueColor()
         textButton.addTarget(self, action: "textAnimation:", forControlEvents: .TouchUpInside)
         textButton.syButtonAnimation = .Text
         self.view.addSubview(textButton)
         
-        
-        
         let rippleButton = SYButton(frame: CGRectMake(40, 290, 300, 50))
         rippleButton.setTitle("Ripple Animation", forState: .Normal)
         rippleButton.setTitleColor(UIColor.yellowColor(), forState: .Normal)
-        rippleButton.buttonColor = UIColor.lightGrayColor()
+        rippleButton.backgroundColor = UIColor.lightGrayColor()
 //        rippleButton.animationRippleColor = UIColor.redColor()
         rippleButton.addTarget(self, action: "rippleAnimation:", forControlEvents: .TouchUpInside)
         rippleButton.syButtonAnimation = .Ripple
         self.view.addSubview(rippleButton)
-        
-//        rippleButton.frame = CGRectMake(40, 290, 150, 50)
-//        rippleButton.fontNameWithSize("Helvetica-Bold", size: 9)
     }
 
     override func didReceiveMemoryWarning() {

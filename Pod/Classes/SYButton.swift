@@ -20,13 +20,6 @@ public class SYButton: UIButton {
     
     private let textLayer = CATextLayer()
     
-    public var buttonColor: UIColor = UIColor() {
-        didSet {
-            self.backgroundColor = UIColor.clearColor()
-            self.syLayer.backgroundColor = buttonColor
-        }
-    }
-    
     public var animationBorderColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
@@ -57,7 +50,7 @@ public class SYButton: UIButton {
     
     private var isFirstSetTextLayer = false
     
-    override public var frame: CGRect {
+    override public var frame: CGRect {//?
         didSet {
             self.syLayer.resizeSuperLayer()
         }
@@ -66,6 +59,13 @@ public class SYButton: UIButton {
     override public var bounds: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
+        }
+    }
+    
+    override public var backgroundColor: UIColor? {
+        didSet {
+            self.syLayer.backgroundColor = backgroundColor!
+            self.syLayer.animationBackgroundColor = backgroundColor!
         }
     }
     
@@ -123,7 +123,9 @@ public class SYButton: UIButton {
         self.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
         
         //ここら辺宣言時に初期化できるんじゃないか？　→CALAYERに書こうぜ
-        self.buttonColor = UIColor.clearColor()
+//        self.buttonColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clearColor()
+        self.syLayer.syLayerAnimation = .Border
         
         self.setTitleColor(UIColor.blackColor(), forState: .Normal)
     }

@@ -20,13 +20,6 @@ public class SYLabel: UILabel {
     
     private let textLayer = CATextLayer()
     
-    public var labelColor: UIColor = UIColor() {
-        didSet {
-            self.backgroundColor = UIColor.clearColor()
-            self.syLayer.backgroundColor = labelColor
-        }
-    }
-    
     public var animationBorderColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
@@ -60,6 +53,13 @@ public class SYLabel: UILabel {
     override public var bounds: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
+        }
+    }
+    
+    override public var backgroundColor: UIColor? {
+        didSet {
+            self.syLayer.backgroundColor = backgroundColor!
+            self.syLayer.animationBackgroundColor = backgroundColor!
         }
     }
     
@@ -116,6 +116,7 @@ public class SYLabel: UILabel {
     private func setLayer() {
         self.textColor = UIColor.clearColor()
         self.labelTextColor = UIColor.blackColor()//?
+        self.syLayer.syLayerAnimation = .Border
     }
     
     private func firstSetTextLayer() {

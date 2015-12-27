@@ -168,36 +168,9 @@ public class SYLayer {
         self.animationDuration = animationDuration
     }
     
-    // delete this method Eventually -> after white Qiita
-    private func resetSuperLayerShadowWithoutConsideringCornerRadius() {
-        if CGColorGetAlpha(self.backgroundColor.CGColor) == 1.0 {
-            return
-        }
-        
-        let borderWidth: CGFloat = 6
-        let bwh: CGFloat = borderWidth / 2
-        let sw = self.superLayer.frame.width
-        let sh = self.superLayer.frame.height
-        
-        let pathRef: CGMutablePathRef = CGPathCreateMutable()
-        CGPathMoveToPoint(pathRef   , nil, -bwh    , -bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, -bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, bwh)
-        CGPathAddLineToPoint(pathRef, nil, bwh     , bwh)
-        CGPathAddLineToPoint(pathRef, nil, bwh     , sh - bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw - bwh, sh - bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw - bwh, bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, bwh)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, sh + bwh)
-        CGPathAddLineToPoint(pathRef, nil, -bwh    , sh + bwh)
-        CGPathAddLineToPoint(pathRef, nil, -bwh    , -bwh)
-        CGPathCloseSubpath(pathRef)
-        
-        self.superLayer.shadowPath = pathRef
-    }
-    
     private func resetSuperLayerShadow() {
         if CGColorGetAlpha(self.backgroundColor.CGColor) == 1.0 {
+            self.superLayer.shadowRadius = 4.0
             return
         }
         
@@ -240,6 +213,7 @@ public class SYLayer {
         
         CGPathCloseSubpath(pathRef)
         self.superLayer.shadowPath = pathRef
+        self.superLayer.shadowRadius = 2.0
     }
     
     public func resizeSuperLayer() {
@@ -372,7 +346,7 @@ public class SYLayer {
         
         self.superLayer.masksToBounds = false
         self.superLayer.backgroundColor = self.backgroundColor.CGColor
-        self.superLayer.shadowRadius = 2.0
+//        self.superLayer.shadowRadius = 2.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")
     }

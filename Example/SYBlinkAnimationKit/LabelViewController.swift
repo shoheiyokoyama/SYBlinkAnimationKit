@@ -29,7 +29,7 @@ class LabelViewController: UIViewController {
         border2Label.text = "BorderWithShadow Animation"
         border2Label.layer.cornerRadius = 15.0 // TODO: Animation の挙動が変わる
 //        border2Label.animationBorderColor = UIColor.blueColor()
-        border2Label.labelColor = UIColor.clearColor()
+        border2Label.backgroundColor = UIColor.clearColor()
         border2Label.syLabelAnimation = .BorderWithShadow
         border2Label.startAnimation()
         self.view.addSubview(border2Label)
@@ -50,7 +50,7 @@ class LabelViewController: UIViewController {
         
         let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))// TODO: Animation Time, Size
         rippleLabel.text = "Ripple Animation"
-        rippleLabel.labelColor = UIColor.grayColor()
+        rippleLabel.backgroundColor = UIColor.grayColor()
 //        rippleLabel.animationRippleColor = UIColor.orangeColor()
         rippleLabel.syLabelAnimation = .Ripple
         rippleLabel.startAnimation()
