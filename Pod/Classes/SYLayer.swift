@@ -85,7 +85,7 @@ public class SYLayer {
     private var animationTimingFunction: SYMediaTimingFunction = .Linear
     
     public var textColor = UIColor.blackColor()
-    public var backgroundColor = UIColor.whiteColor() {
+    public var backgroundColor = UIColor.clearColor() {
         didSet {
             self.superLayer.backgroundColor = self.backgroundColor.CGColor
         }
@@ -183,31 +183,32 @@ public class SYLayer {
         let c = self.superLayer.cornerRadius
         
         let pathRef: CGMutablePathRef = CGPathCreateMutable()
+        
         CGPathMoveToPoint(pathRef   , nil, -bwh        , -bwh + c)
         
-        CGPathAddArcToPoint(pathRef , nil, -bwh        , -bwh, -bwh + c, -bwh, c)
+        CGPathAddArcToPoint(pathRef , nil, -bwh        , -bwh    , -bwh + c    , -bwh        , c)
         CGPathAddLineToPoint(pathRef, nil, sw + bwh - c, -bwh)
-        CGPathAddArcToPoint(pathRef , nil, sw+bwh      , -bwh, sw + bwh, -bwh+c, c)
+        CGPathAddArcToPoint(pathRef , nil, sw+bwh      , -bwh    , sw + bwh    , -bwh+c      , c)
         
         CGPathAddLineToPoint(pathRef, nil, sw - bwh    , bwh + c)
-        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , bwh, sw - bwh - c, bwh, c)
+        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , bwh     , sw - bwh - c, bwh         , c)
         
         CGPathAddLineToPoint(pathRef, nil, bwh + c     , bwh)
-        CGPathAddArcToPoint(pathRef , nil, bwh, bwh    , bwh, bwh + c, c)
+        CGPathAddArcToPoint(pathRef , nil, bwh         , bwh     , bwh         , bwh + c     , c)
         
         CGPathAddLineToPoint(pathRef, nil, bwh         , sh - bwh - c)
-        CGPathAddArcToPoint(pathRef , nil, bwh         , sh - bwh, bwh + c, sh - bwh, c)
+        CGPathAddArcToPoint(pathRef , nil, bwh         , sh - bwh, bwh + c     , sh - bwh    , c)
         
         CGPathAddLineToPoint(pathRef, nil, sw - bwh - c, sh - bwh)
-        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , sh - bwh, sw - bwh, sh - bwh - c, c)
+        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , sh - bwh, sw - bwh    , sh - bwh - c, c)
         
         CGPathAddLineToPoint(pathRef, nil, sw - bwh    , bwh + c)
         CGPathAddLineToPoint(pathRef, nil, sw + bwh    , -bwh + c)
         CGPathAddLineToPoint(pathRef, nil, sw + bwh    , sh + bwh - c)
-        CGPathAddArcToPoint(pathRef , nil, sw + bwh    , sh + bwh, sw + bwh - c, sh + bwh, c)
+        CGPathAddArcToPoint(pathRef , nil, sw + bwh    , sh + bwh, sw + bwh - c, sh + bwh    , c)
         
         CGPathAddLineToPoint(pathRef, nil, -bwh + c    , sh + bwh)
-        CGPathAddArcToPoint(pathRef , nil, -bwh        , sh + bwh, -bwh, sh + bwh - c, c)
+        CGPathAddArcToPoint(pathRef , nil, -bwh        , sh + bwh, -bwh        , sh + bwh - c, c)
         
         CGPathAddLineToPoint(pathRef, nil, -bwh        , -bwh + c)
         
@@ -361,7 +362,6 @@ public class SYLayer {
         self.backgroundColorAnimation.repeatCount = 1e100
         self.backgroundColorAnimation.timingFunction = self.animationTimingFunction.timingFunction
         self.superLayer.addAnimation(backgroundColorAnimation, forKey: "Background")
-        print(self.animationBackgroundColor.CGColor)
     }
     
     private func animateText() {

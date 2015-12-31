@@ -21,7 +21,7 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
 //        borderTextField.animationBorderColor = UIColor.redColor()
         borderTextField.startAnimation()
         self.view.addSubview(borderTextField)
-        
+
         let border2TextField = SYTextField(frame: CGRectMake(40, 110, 300, 50))
         border2TextField.delegate = self
         border2TextField.syTextFieldAnimation = .BorderWithShadow
@@ -33,19 +33,20 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         backgrondTextField.delegate = self
         backgrondTextField.syTextFieldAnimation = .Background
         backgrondTextField.startAnimation()
-        view.addSubview(backgrondTextField)
+
+        self.view.addSubview(backgrondTextField)
         
         let rippleTextField = SYTextField(frame: CGRectMake(40, 230, 300, 50))
         rippleTextField.delegate = self
         rippleTextField.syTextFieldAnimation = .Ripple
 //        rippleTextField.animationRippleColor = UIColor.purpleColor()
         rippleTextField.startAnimation()
-        view.addSubview(rippleTextField)
-                
+        self.view.addSubview(rippleTextField)
+        
+        
         // TODO: List
 //            ・animation on off の挙動確認
-//            ・UITextFieldのスタイル見直し
-//                ・タップしたとき色変えてるかもset backgroundColor
+//
         
         
     }
