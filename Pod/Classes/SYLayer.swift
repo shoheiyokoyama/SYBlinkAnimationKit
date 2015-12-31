@@ -130,34 +130,38 @@ public class SYLayer {
         
         self.superLayer.borderWidth = self.borderWidth
         
-        self.clearSuperLayerShadow()
+        self.superLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        
         self.setRippleLayer()
     }
     
     private func setRippleLayer() {
+        self.setRippleLayerPosition()
+        self.rippleLayer.opacity = 0.0
+        self.superLayer.addSublayer(self.rippleLayer)
+        
+        self.subRippleLayer.opacity = 0.0
+        self.superLayer.insertSublayer(self.subRippleLayer, atIndex: 1)
+    }
+    
+    private func setRippleLayerPosition() {
         let superLayerHeight = CGRectGetHeight(self.superLayer.frame)
         
-        let rippleDiameter: CGFloat = superLayerHeight * 0.75
+        let rippleDiameter: CGFloat = superLayerHeight * 0.7
         let rippleCornerRadius: CGFloat = rippleDiameter / 2
         
         self.rippleLayer.backgroundColor = self.animationRippleColor.CGColor
-        self.rippleLayer.opacity = 0.0
         self.rippleLayer.cornerRadius = rippleCornerRadius
         self.rippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - rippleDiameter) / 2, y: (self.superLayer.bounds.height - rippleDiameter) / 2, width: rippleDiameter, height: rippleDiameter)
-        self.superLayer.addSublayer(self.rippleLayer)
         
         let subRippleDiameter: CGFloat = superLayerHeight * 0.85
         let subRippleCornerRadius: CGFloat = subRippleDiameter / 2
         
         self.subRippleLayer.borderColor = self.animationRippleColor.CGColor
-        self.subRippleLayer.opacity = 0.0
         self.subRippleLayer.borderWidth = 1
         self.subRippleLayer.backgroundColor = UIColor.clearColor().CGColor
         self.subRippleLayer.cornerRadius = subRippleCornerRadius
         self.subRippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - subRippleDiameter) / 2, y: (self.superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
-//        self.superLayer.addSublayer(self.subRippleLayer)
-        self.superLayer.insertSublayer(self.subRippleLayer, atIndex: 1)
-        
     }
     
     public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
@@ -170,11 +174,10 @@ public class SYLayer {
     
     private func resetSuperLayerShadow() {
         if CGColorGetAlpha(self.backgroundColor.CGColor) == 1.0 {
+            self.superLayer.shadowPath = UIBezierPath(rect: self.superLayer.bounds).CGPath
             self.superLayer.shadowRadius = 4.0
             return
         }
-        
-        //Fix Border Width and shadow with
         
         let bw: CGFloat = Const.borderWidthForAnimation * 2.0
         let bwh: CGFloat = bw / 2
@@ -220,22 +223,11 @@ public class SYLayer {
     public func resizeSuperLayer() {
         self.resizeRippleLayer()
         self.resizeTextLayer()
+        self.resizeShadowPath()
     }
     
     private func resizeRippleLayer() {
-        let superLayerHeight = CGRectGetHeight(self.superLayer.frame)
-        
-        let rippleDiameter: CGFloat = superLayerHeight * 0.75
-        let rippleCornerRadius: CGFloat = rippleDiameter / 2
-        
-        self.rippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - rippleDiameter) / 2, y: (self.superLayer.bounds.height - rippleDiameter) / 2, width: rippleDiameter, height: rippleDiameter)
-        self.rippleLayer.cornerRadius = rippleCornerRadius
-        
-        let subRippleDiameter: CGFloat = superLayerHeight * 0.9
-        let subRippleCornerRadius: CGFloat = subRippleDiameter / 2
-        
-        self.subRippleLayer.cornerRadius = subRippleCornerRadius
-        self.subRippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - subRippleDiameter) / 2, y: (self.superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
+        self.setRippleLayerPosition()
     }
     
     private func resizeTextLayer() {
@@ -246,6 +238,10 @@ public class SYLayer {
         self.textLayer.frame.origin.y = (superLayerHeight - self.textLayer.frame.height) / 2
     }
     
+    private func resizeShadowPath() {
+        self.resetSuperLayerShadow()
+    }
+    
     public func firstSetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
         self.superLayer.insertSublayer(self.textLayer, atIndex: 0)
@@ -253,12 +249,6 @@ public class SYLayer {
     
     public func resetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
-    }
-    
-    private func clearSuperLayerShadow() {
-        self.superLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        self.superLayer.shadowRadius = 0.0
-        self.superLayer.shadowOpacity = 0.0
     }
     
     public var syLayerAnimation: SYLayerAnimation = .Border {
@@ -281,7 +271,7 @@ public class SYLayer {
     
     private func setBorderWithShadowAnimation() {
         self.setBorderColorAnimation()
-        self.setShadowAnimation(0.0, toValue: 0.5)//Fix
+        self.setShadowAnimation(0.0, toValue: 0.5)
         self.setBorderWidthAnimation(0.0, toValue: Const.borderWidthForAnimation)
     }
     
@@ -301,7 +291,6 @@ public class SYLayer {
         shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
         shadowAnimation.fromValue = fromValue
         shadowAnimation.toValue = toValue
-        self.superLayer.shadowOpacity = toValue//?
     }
     
     public func startAnimation() {
@@ -326,8 +315,6 @@ public class SYLayer {
         self.subRippleLayer.removeAllAnimations()
         self.rippleLayer.removeAllAnimations()
         
-        self.clearSuperLayerShadow()
-//        self.superLayer.backgroundColor = self.backgroundColor.CGColor
         self.textLayer.foregroundColor = self.textColor.CGColor
     }
     
@@ -347,7 +334,6 @@ public class SYLayer {
         
         self.superLayer.masksToBounds = false
         self.superLayer.backgroundColor = self.backgroundColor.CGColor
-//        self.superLayer.shadowRadius = 2.0
         groupAnimation.animations?.append(self.shadowAnimation)
         self.superLayer.addAnimation(groupAnimation, forKey: "BorderWithShadow")
     }
@@ -356,7 +342,6 @@ public class SYLayer {
         self.backgroundColorAnimation = CABasicAnimation(keyPath: "backgroundColor")
         self.backgroundColorAnimation.fromValue = UIColor.clearColor().CGColor
         self.backgroundColorAnimation.toValue = self.animationBackgroundColor.CGColor
-//        self.superLayer.backgroundColor = self.animationBackgroundColor.CGColor //他のとこでも影響してるのか！？backgrondColorを設定してない場合
         self.backgroundColorAnimation.duration = self.animationDuration
         self.backgroundColorAnimation.autoreverses = true
         self.backgroundColorAnimation.repeatCount = 1e100

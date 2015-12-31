@@ -58,7 +58,6 @@ public class SYLabel: UILabel {
     
     override public var backgroundColor: UIColor? {
         didSet {
-            print(backgroundColor)
             self.syLayer.backgroundColor = backgroundColor!
         }
     }
@@ -72,6 +71,7 @@ public class SYLabel: UILabel {
     public var labelTextColor: UIColor? {
         didSet {
             self.textLayer.foregroundColor = labelTextColor?.CGColor
+            self.syLayer.textColor = labelTextColor!
         }
     }
     
@@ -114,8 +114,9 @@ public class SYLabel: UILabel {
     }
     
     private func setLayer() {
+        self.layer.cornerRadius = 1.5
         self.textColor = UIColor.clearColor()
-        self.labelTextColor = UIColor.blackColor()//?
+        self.labelTextColor = UIColor.blackColor()
         self.syLayer.syLayerAnimation = .Border
     }
     

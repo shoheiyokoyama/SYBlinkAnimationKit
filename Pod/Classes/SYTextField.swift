@@ -41,6 +41,12 @@ public class SYTextField: UITextField {
         }
     }
     
+    override public var bounds: CGRect {
+        didSet {
+            self.syLayer.resizeSuperLayer()
+        }
+    }
+    
     public var isAnimating = false
     
     public var stopAnimationWithTouch = true
@@ -108,9 +114,7 @@ public class SYTextField: UITextField {
     private func setLayer() {
         self.syLayer.syLayerAnimation = .Border
         
-        self.borderStyle = .RoundedRect//この時に背景色がアニメーションしない！
-        
-        self.layer.masksToBounds = false
+        self.borderStyle = .RoundedRect
     }
     
     public var syTextFieldAnimation: SYTextFieldAnimation = .Border {

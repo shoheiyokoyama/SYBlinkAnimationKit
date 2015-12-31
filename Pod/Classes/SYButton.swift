@@ -44,13 +44,17 @@ public class SYButton: UIButton {
         }
     }
     
-    public var textColor = UIColor.blackColor()
+    public var textColor = UIColor.blackColor() {
+        didSet {
+            self.syLayer.textColor = textColor
+        }
+    }
     
     public var isAnimating = false
     
     private var isFirstSetTextLayer = false
     
-    override public var frame: CGRect {//?
+    override public var frame: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
         }
@@ -76,10 +80,8 @@ public class SYButton: UIButton {
     
     override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
         super.setTitleColor(UIColor.clearColor(), forState: state)
-//        super.setTitleColor(color, forState: state)
         
         self.textLayer.foregroundColor = color?.CGColor
-        self.syLayer.textColor = color!
         self.textColor = color!
     }
     
@@ -119,6 +121,7 @@ public class SYButton: UIButton {
     
     private func setLayer() {
         self.layer.cornerRadius = 5.0
+        
         self.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
         
 //        self.backgroundColor = UIColor.clearColor()//なんでー

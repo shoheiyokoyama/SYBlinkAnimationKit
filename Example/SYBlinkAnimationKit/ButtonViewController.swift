@@ -10,7 +10,6 @@ import UIKit
 import SYBlinkAnimationKit
 
 class ButtonViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -26,6 +26,7 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         border2TextField.delegate = self
         border2TextField.syTextFieldAnimation = .BorderWithShadow
 //        border2TextField.animationBorderColor = UIColor.redColor()
+        border2TextField.backgroundColor = UIColor.clearColor()
         border2TextField.startAnimation()
         self.view.addSubview(border2TextField)
 
@@ -33,7 +34,6 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         backgrondTextField.delegate = self
         backgrondTextField.syTextFieldAnimation = .Background
         backgrondTextField.startAnimation()
-
         self.view.addSubview(backgrondTextField)
         
         let rippleTextField = SYTextField(frame: CGRectMake(40, 230, 300, 50))
@@ -42,12 +42,6 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
 //        rippleTextField.animationRippleColor = UIColor.purpleColor()
         rippleTextField.startAnimation()
         self.view.addSubview(rippleTextField)
-        
-        
-        // TODO: List
-//            ・animation on off の挙動確認
-//
-        
         
     }
 
@@ -62,5 +56,4 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-
 }
