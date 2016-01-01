@@ -13,27 +13,27 @@
 
 - Border
 <p align="center">
-<img src="./DemoImage/Border.gif)" width="350" height="100">
+<img src="./DemoImage/Border.gif" width="350" height="100">
 </p>
 
 - BorderWithShadow
 <p align="center">
-<img src="./DemoImage/BorderWithShadow.gif)" width="350" height="100">
+<img src="./DemoImage/BorderWithShadow.gif" width="350" height="100">
 </p>
 
 - Background
 <p align="center">
-<img src="./DemoImage/Background.gif)" width="350" height="100">
+<img src="./DemoImage/Background.gif" width="350" height="100">
 </p>
 
 - Text
 <p align="center">
-<img src="./DemoImage/Text.gif)" width="350" height="100">
+<img src="./DemoImage/Text.gif" width="350" height="100">
 </p>
 
 - Ripple
 <p align="center">
-<img src="./DemoImage/Ripple.gif)" width="350" height="100">
+<img src="./DemoImage/Ripple.gif" width="350" height="100">
 </p>
 
 ## Features
