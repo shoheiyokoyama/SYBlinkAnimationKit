@@ -12,15 +12,29 @@
 ## Demo
 
 - Border
-![](./DemoImage/Border.gif)
+<p align="center">
+<img src="./DemoImage/Border.gif)" width="350" height="100">
+</p>
+
 - BorderWithShadow
-![](./DemoImage/BorderWithShadow.gif)
+<p align="center">
+<img src="./DemoImage/BorderWithShadow.gif)" width="350" height="100">
+</p>
+
 - Background
-![](./DemoImage/Background.gif)
+<p align="center">
+<img src="./DemoImage/Background.gif)" width="350" height="100">
+</p>
+
 - Text
-![](./DemoImage/Text.gif)
+<p align="center">
+<img src="./DemoImage/Text.gif)" width="350" height="100">
+</p>
+
 - Ripple
-![](./DemoImage/Ripple.gif)
+<p align="center">
+<img src="./DemoImage/Ripple.gif)" width="350" height="100">
+</p>
 
 ## Features
 - Animation like blink effect for UIKit
