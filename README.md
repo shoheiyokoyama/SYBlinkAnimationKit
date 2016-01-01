@@ -13,27 +13,27 @@
 
 There are 5 types of animation for component.
 
-- Border
+**Border**
 <p align="left">
 <img src="./DemoImage/Border.gif" width="300" height="55">
 </p>
 
-- BorderWithShadow
+**BorderWithShadow**
 <p align="left">
 <img src="./DemoImage/BorderWithShadow.gif" width="300" height="70">
 </p>
 
-- Background
+**Background**
 <p align="left">
 <img src="./DemoImage/Background.gif" width="300" height="70">
 </p>
 
-- Text
+**Text**
 <p align="left">
 <img src="./DemoImage/Text.gif" width="300" height="70">
 </p>
 
-- Ripple
+**Ripple**
 <p align="left">
 <img src="./DemoImage/Ripple.gif" width="300" height="70">
 </p>
@@ -55,6 +55,7 @@ There are 5 types of animation for component.
 
 ## Demo App
 Open Example/SYBlinkAnimationKit.xcworkspace and run SYBlinkAnimationKit-Example to see a simple demonstration.
+
 To run the example project, run `pod install` from the Example directory first.
 
 ## Usage
@@ -94,6 +95,7 @@ if you set text color, use ` labelTextColor` property
    let syLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
    syLabel.text = "Text Animation"
    syLabel.labelTextColor =  UIColor.darkGrayColor()
+   syLabel.fontNameWithSize("ArialHebew", size: 22.0)
    syLabel.syLabelAnimation = .Text
    self.view.addSubview(syLabel)
 ```
@@ -102,6 +104,7 @@ if you set text color, use ` labelTextColor` property
 SYTextField stop animation. when a touch.
 But you can control this behavior.
 ```swift
+   //The animation doesn't stop. when a touch.
    syTextField.stopAnimationWithTouch = false
 ```
 
@@ -109,6 +112,35 @@ But you can control this behavior.
 <img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
+## Customize properties
+
+If you just want to change the color of animation, you can use property :
+```swift
+   public var animationBorderColor: UIColor()
+```
+```swift
+   public var animationBackgroundColor: UIColor()
+```
+```swift
+   public var animationTextColor: UIColor()
+```
+```swift
+   public var animationRippleColor: UIColor()
+```
+
+If you just want to change animation duration, timing,  you can use property :
+```swift
+   public var animationTimingFunction: SYMediaTimingFunction
+```
+SYMediaTimingFunction : ` Linear`, ` EaseIn`, ` EaseOut`, ` EaseInEaseOut`
+```swift
+   public var animationDuration: CFTimeInterval
+```
+
+if SYClass is in middle of animation, this property is `true`
+```swift
+   public var isAnimating: Bool
+```
 
 ## Installation
 
