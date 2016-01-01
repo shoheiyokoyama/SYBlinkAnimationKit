@@ -22,7 +22,9 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         borderTextField.startAnimation()
         self.view.addSubview(borderTextField)
 
-        let border2TextField = SYTextField(frame: CGRectMake(40, 110, 300, 50))
+//        let border2TextField = SYTextField(frame: CGRectMake(40, 110, 300, 50))
+        let border2TextField = SYTextField(frame: CGRectMake(40, 330, 300, 50))
+        border2TextField.animationBorderColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1)//Demo Color
         border2TextField.delegate = self
         border2TextField.syTextFieldAnimation = .BorderWithShadow
 //        border2TextField.animationBorderColor = UIColor.redColor()

@@ -11,7 +11,7 @@
 
 ## Demo
 
-There are 5 types of Animation for Component.
+There are 5 types of animation for component.
 
 - Border
 <p align="left">
@@ -70,7 +70,7 @@ Import SYBlinkAnimationKit in class.
 ### SYButton
 ```swift
    let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
-   syButton.setTitle(“ Border Animation", forState: .Normal)
+   syButton.setTitle("Border Animation", forState: .Normal)
    syButton.syButtonAnimation = .Border
    self.view.addSubview(syButton)
 
@@ -104,6 +104,11 @@ But you can control this behavior.
 ```swift
    syTextField.stopAnimationWithTouch = false
 ```
+
+<p align="center">
+<img src="./DemoImage/SYTextFieldSample.gif">
+</p>
+
 
 ## Installation
 
