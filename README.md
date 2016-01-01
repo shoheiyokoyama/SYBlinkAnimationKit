@@ -1,9 +1,36 @@
 # SYBlinkAnimationKit
 
-[![CI Status](http://img.shields.io/travis/shoheiyokoyama/SYBlinkAnimationKit.svg?style=flat)](https://travis-ci.org/shoheiyokoyama/SYBlinkAnimationKit)
-[![Version](https://img.shields.io/cocoapods/v/SYBlinkAnimationKit.svg?style=flat)](http://cocoapods.org/pods/SYBlinkAnimationKit)
-[![License](https://img.shields.io/cocoapods/l/SYBlinkAnimationKit.svg?style=flat)](http://cocoapods.org/pods/SYBlinkAnimationKit)
-[![Platform](https://img.shields.io/cocoapods/p/SYBlinkAnimationKit.svg?style=flat)](http://cocoapods.org/pods/SYBlinkAnimationKit)
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+
+**SYBlinkAnimationKit** is a blink effect animation framework for iOS, written in **Swift**.
+
+## Demo
+
+- Border
+![](./DemoImage/Border.gif)
+- BorderWithShadow
+![](./DemoImage/BorderWithShadow.gif)
+- Background
+![](./DemoImage/Background.gif)
+- Text
+![](./DemoImage/Text.gif)
+- Ripple
+![](./DemoImage/Ripple.gif)
+
+## Features
+- Animation like blink effect for UIKit
+- The 5 types of Animation
+- Easily usable
+- Customizable in any properties
+- Support Swift2.0
+
+## Demo App
+Open Example/SYBlinkAnimationKit.xcworkspace and run SYBlinkAnimationKit-Example to see a simple demonstration
 
 ## Usage
 
