@@ -13,7 +13,7 @@
 
 - Border
 <p align="left">
-<img src="./DemoImage/Border.gif" width="300" height="70">
+<img src="./DemoImage/Border.gif" width="300" height="55">
 </p>
 
 - BorderWithShadow
