@@ -106,7 +106,7 @@ But you can control this behavior.
 ```
 
 <p align="center">
-<img src="./DemoImage/SYTextFieldSample.gif">
+<img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
 
