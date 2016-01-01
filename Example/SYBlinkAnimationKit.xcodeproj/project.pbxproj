@@ -13,9 +13,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6DB6B4481C1D6D6A000680E9 /* TextFieldViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B4471C1D6D6A000680E9 /* TextFieldViewViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6DB6B44A1C1D6DAA000680E9 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B4491C1D6DAA000680E9 /* ButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		6DB6B44C1C1D6DBD000680E9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B44B1C1D6DBD000680E9 /* LabelViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		6DB6B4481C1D6D6A000680E9 /* TextFieldViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B4471C1D6D6A000680E9 /* TextFieldViewViewController.swift */; };
+		6DB6B44A1C1D6DAA000680E9 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B4491C1D6DAA000680E9 /* ButtonViewController.swift */; };
+		6DB6B44C1C1D6DBD000680E9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B44B1C1D6DBD000680E9 /* LabelViewController.swift */; };
 		C37222DEC1C114CFE0275EA6 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC90B0520C75435E57AD42C /* Pods_SYBlinkAnimationKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -499,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYBlinkAnimationKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -512,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYBlinkAnimationKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
