@@ -65,6 +65,7 @@ First, Import **SYBlinkAnimationKit** in class.
 ```
 
 **SYBlinkAnimationKit** is designed to be easy to use.
+
 1. Call the SYClass. for example,` SYButton`, `SYLabel`, `SYTextField`, etc.
 2. If you use custom animation, call animation method ` startAnimation()`, ` stopAnimation()`
 
