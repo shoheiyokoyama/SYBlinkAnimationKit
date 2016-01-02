@@ -45,9 +45,9 @@ There are 5 types of animation for component.
 - Customizable in any properties
 - Support Swift 2.0
 
-- [x] SYButton : available 5 types of Animation
-- [x] SYLabel : available 5 types of Animation
-- [x] SYTextField : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
+- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYButton.swift) : available 5 types of Animation
+- [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYLabel.swift) : available 5 types of Animation
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYTextField.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
 
 ***Coming Soon***
 - [ ] SYView
@@ -59,16 +59,16 @@ Open Example/SYBlinkAnimationKit.xcworkspace and run SYBlinkAnimationKit-Example
 To run the example project, run `pod install` from the Example directory first.
 
 ## Usage
-SYBlinkAnimationKit is designed to be easy to use.
-Import SYBlinkAnimationKit in class.
+First, Import **SYBlinkAnimationKit** in class.
 ```swift
    import SYBlinkAnimationKit
 ```
 
+**SYBlinkAnimationKit** is designed to be easy to use.
 1. Call the SYClass. for example,` SYButton`, `SYLabel`, `SYTextField`, etc.
-2. if you use custom animation, call animation method ` startAnimation()` / ` stopAnimation()`
+2. If you use custom animation, call animation method ` startAnimation()`, ` stopAnimation()`
 
-### SYButton
+### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYButton.swift)
 ```swift
    let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
    syButton.setTitle("Border Animation", forState: .Normal)
@@ -81,7 +81,7 @@ Import SYBlinkAnimationKit in class.
   syButton.stopAnimation() 
 ```
 
-if you change font size, name, call font method
+If you change text font size, name, you are supposed to call the `systemFontOfSize()`, `fontNameWithSize()`
 ```swift
   syButton.systemFontOfSize(22.0)
 ```
@@ -89,8 +89,9 @@ if you change font size, name, call font method
   syButton.fontNameWithSize("ArialHebew", size: 22.0)
 ```
 
-### SYLabel
-if you set text color, use ` labelTextColor` property
+### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYLabel.swift)
+If you set text color, you are supposed to set the ` labelTextColor` property.
+To change text font, use font method as with SYButton.
 ```swift
    let syLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
    syLabel.text = "Text Animation"
@@ -100,12 +101,12 @@ if you set text color, use ` labelTextColor` property
    self.view.addSubview(syLabel)
 ```
 
-### SYTextField
+### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYTextField.swift)
 SYTextField stop animation. when a touch.
-But you can control this behavior.
+but you can control this behavior.
 ```swift
-   //The animation doesn't stop. when a touch.
-   syTextField.stopAnimationWithTouch = false
+   //The animation stop. when a touch. default is true
+   syTextField.stopAnimationWithTouch = true
 ```
 
 <p align="center">
@@ -132,19 +133,19 @@ If you just want to change animation duration, timing,  you can use property :
 ```swift
    public var animationTimingFunction: SYMediaTimingFunction
 ```
-SYMediaTimingFunction : ` Linear`, ` EaseIn`, ` EaseOut`, ` EaseInEaseOut`
+SYMediaTimingFunction : ` Linear`, ` EaseIn`, ` EaseOut`, ` EaseInEaseOut`.default is `Linear`
 ```swift
-   public var animationDuration: CFTimeInterval
+   public var animationDuration: CFTimeInterval //default is 2.0
 ```
 
-if SYClass is in middle of animation, this property is `true`
+If SYClass is in middle of animation, this property is `true`
 ```swift
    public var isAnimating: Bool
 ```
 
 ## Installation
 
-SYBlinkAnimationKit is available through [CocoaPods](http://cocoapods.org). To install
+***SYBlinkAnimationKit*** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -161,4 +162,4 @@ Shohei Yokoyama, shohei.yok0602@gmail.com
 
 ## License
 
-SYBlinkAnimationKit is available under the MIT license. See the LICENSE file for more info.
+***SYBlinkAnimationKit*** is available under the MIT license. See the [LICENSE file](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/LICENSE) for more info.
