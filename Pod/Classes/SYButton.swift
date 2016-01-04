@@ -16,35 +16,35 @@ public enum SYButtonAnimation {
     case Ripple
 }
 
-public class SYButton: UIButton {
+@IBDesignable public class SYButton: UIButton {
     
     private let textLayer = CATextLayer()
     
-    public var animationBorderColor = UIColor() {
+    @IBInspectable public var animationBorderColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
     
-    public var animationBackgroundColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
     }
     
-    public var animationTextColor = UIColor() {
+    @IBInspectable public var animationTextColor = UIColor() {
         didSet {
             self.syLayer.animationTextColor = self.animationTextColor
         }
     }
     
-    public var animationRippleColor = UIColor() {
+    @IBInspectable public var animationRippleColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
     }
     
-    public var textColor = UIColor.blackColor() {
+    private var textColor = UIColor.blackColor() {
         didSet {
             self.syLayer.textColor = textColor
         }
@@ -95,13 +95,13 @@ public class SYButton: UIButton {
         self.resetTextLayer()
     }
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    @IBInspectable public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var animationDuration: CFTimeInterval = 1.0 {
+    @IBInspectable public var animationDuration: CFTimeInterval = 1.0 {
         didSet {
             self.syLayer.setAnimationDuration(animationDuration)
         }

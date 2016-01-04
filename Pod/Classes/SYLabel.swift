@@ -16,29 +16,29 @@ public enum SYLabelAnimation {
     case Ripple
 }
 
-public class SYLabel: UILabel {
+@IBDesignable public class SYLabel: UILabel {
     
     private let textLayer = CATextLayer()
     
-    public var animationBorderColor = UIColor() {
+    @IBInspectable public var animationBorderColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
     
-    public var animationBackgroundColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
     }
     
-    public var animationTextColor = UIColor() {
+    @IBInspectable public var animationTextColor = UIColor() {
         didSet {
             self.syLayer.animationTextColor = self.animationTextColor
         }
     }
     
-    public var animationRippleColor = UIColor() {
+    @IBInspectable public var animationRippleColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
@@ -68,7 +68,7 @@ public class SYLabel: UILabel {
         }
     }
     
-    public var labelTextColor: UIColor? {
+    @IBInspectable public var labelTextColor: UIColor? {
         didSet {
             self.textLayer.foregroundColor = labelTextColor?.CGColor
             self.syLayer.textColor = labelTextColor!
@@ -79,13 +79,13 @@ public class SYLabel: UILabel {
     
     public var isFirstSetTextLayer = false
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    @IBInspectable public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var animationDuration: CFTimeInterval = 1.0 {
+    @IBInspectable public var animationDuration: CFTimeInterval = 1.0 {
         didSet {
             self.syLayer.setAnimationDuration(animationDuration)
         }
