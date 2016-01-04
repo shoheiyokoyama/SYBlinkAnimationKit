@@ -53,28 +53,28 @@ public class SYLayer {
     private var backgroundColorAnimation = CABasicAnimation()
     private var textColorAnimation = CABasicAnimation()
     
-    public var animationBorderColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1) {
+    public var animationBorderColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
         didSet {
             self.borderColorAnimtion.toValue = self.animationBorderColor.CGColor
             self.animationShadowColor = self.animationBorderColor
         }
     }
-    public var animationTextColor = UIColor(red: 189/255.0, green: 195/255.0, blue: 199/255.0, alpha: 1) {
+    public var animationTextColor = UIColor(red: 214/255, green: 69/255, blue: 65/255, alpha: 1) {
         didSet {
             self.textColorAnimation.toValue = self.animationTextColor.CGColor
         }
     }
-    public var animationBackgroundColor = UIColor(red: 89/255.0, green: 171/255.0, blue: 227/255.0, alpha: 1) {
+    public var animationBackgroundColor = UIColor(red: 248/255, green: 148/255, blue: 6/255, alpha: 1) {
         didSet {
             self.backgroundColorAnimation.toValue = self.animationBackgroundColor.CGColor
         }
     }
-    public var animationShadowColor = UIColor(red: 210/255.0, green: 77/255.0, blue: 87/255.0, alpha: 1) {
+    public var animationShadowColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
         didSet {
             self.superLayer.shadowColor = self.animationShadowColor.CGColor
         }
     }
-    public var animationRippleColor = UIColor(red: 65/255.0, green: 131/255.0, blue: 215/255.0, alpha: 1) {
+    public var animationRippleColor = UIColor(red: 171/255, green: 183/255, blue: 183/255, alpha: 1) {
         didSet {
             self.rippleLayer.backgroundColor = self.animationRippleColor.CGColor
             self.subRippleLayer.borderColor = self.animationRippleColor.CGColor

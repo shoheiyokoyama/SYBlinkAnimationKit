@@ -20,25 +20,22 @@ public enum SYLabelAnimation {
     
     private let textLayer = CATextLayer()
     
-    @IBInspectable public var animationBorderColor = UIColor() {
+    @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
-    
-    @IBInspectable public var animationBackgroundColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
     }
-    
-    @IBInspectable public var animationTextColor = UIColor() {
+    @IBInspectable public var animationTextColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationTextColor = self.animationTextColor
         }
     }
-    
-    @IBInspectable public var animationRippleColor = UIColor() {
+    @IBInspectable public var animationRippleColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
@@ -49,7 +46,6 @@ public enum SYLabelAnimation {
             self.syLayer.resizeSuperLayer()
         }
     }
-    
     override public var bounds: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
@@ -58,7 +54,10 @@ public enum SYLabelAnimation {
     
     override public var backgroundColor: UIColor? {
         didSet {
-            self.syLayer.backgroundColor = backgroundColor!
+            guard backgroundColor == nil else {
+                self.syLayer.backgroundColor = backgroundColor!
+                return
+            }
         }
     }
     
@@ -70,6 +69,7 @@ public enum SYLabelAnimation {
     
     @IBInspectable public var labelTextColor: UIColor? {
         didSet {
+            self.textColor = UIColor.clearColor()
             self.textLayer.foregroundColor = labelTextColor?.CGColor
             self.syLayer.textColor = labelTextColor!
         }
@@ -79,15 +79,15 @@ public enum SYLabelAnimation {
     
     public var isFirstSetTextLayer = false
     
-    @IBInspectable public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    @IBInspectable public var animationDuration: CFTimeInterval = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
-            self.syLayer.setAnimationDuration(animationDuration)
+            self.syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
     }
     
@@ -95,7 +95,6 @@ public enum SYLabelAnimation {
         self.font = UIFont.systemFontOfSize(fontSize)
         self.resetTextLayer()
     }
-    
     public func fontNameWithSize(name: String, size: CGFloat) {
         self.font = UIFont(name: name, size: size)
         self.resetTextLayer()

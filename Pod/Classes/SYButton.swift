@@ -20,30 +20,27 @@ public enum SYButtonAnimation {
     
     private let textLayer = CATextLayer()
     
-    @IBInspectable public var animationBorderColor = UIColor() {
+    @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
-    
-    @IBInspectable public var animationBackgroundColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
     }
-    
-    @IBInspectable public var animationTextColor = UIColor() {
+    @IBInspectable public var animationTextColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationTextColor = self.animationTextColor
         }
     }
-    
-    @IBInspectable public var animationRippleColor = UIColor() {
+    @IBInspectable public var animationRippleColor: UIColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
     }
-    
+
     private var textColor = UIColor.blackColor() {
         didSet {
             self.syLayer.textColor = textColor
@@ -59,7 +56,6 @@ public enum SYButtonAnimation {
             self.syLayer.resizeSuperLayer()
         }
     }
-    
     override public var bounds: CGRect {
         didSet {
             self.syLayer.resizeSuperLayer()
@@ -68,42 +64,49 @@ public enum SYButtonAnimation {
     
     override public var backgroundColor: UIColor? {
         didSet {
-            self.syLayer.backgroundColor = backgroundColor!
+            guard backgroundColor == nil else {
+                self.syLayer.backgroundColor = backgroundColor!
+                return
+            }
         }
     }
     
     override public func setTitle(title: String?, forState state: UIControlState) {
         super.setTitle(title, forState: state)
         
-        !self.isFirstSetTextLayer ? self.firstSetTextLayer() : self.resetTextLayer()
+        guard title == nil else {
+            !self.isFirstSetTextLayer ? self.firstSetTextLayer() : self.resetTextLayer()
+            return
+        }
     }
-    
     override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
         super.setTitleColor(UIColor.clearColor(), forState: state)
         
-        self.textLayer.foregroundColor = color?.CGColor
-        self.textColor = color!
+        guard color == nil else {
+            self.textLayer.foregroundColor = color?.CGColor
+            self.textColor = color!
+            return
+        }
     }
     
     public func systemFontOfSize(fontSize: CGFloat) {
         self.titleLabel?.font = UIFont.systemFontOfSize(fontSize)
         self.resetTextLayer()
     }
-    
     public func fontNameWithSize(name: String, size: CGFloat) {
         self.titleLabel!.font = UIFont(name: name, size: size)
         self.resetTextLayer()
     }
     
-    @IBInspectable public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    @IBInspectable public var animationDuration: CFTimeInterval = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
-            self.syLayer.setAnimationDuration(animationDuration)
+            self.syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
     }
     
@@ -124,7 +127,6 @@ public enum SYButtonAnimation {
         
         self.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
         
-//        self.backgroundColor = UIColor.clearColor()//なんでー
         self.syLayer.syLayerAnimation = .Border
         
         self.setTitleColor(UIColor.blackColor(), forState: .Normal)

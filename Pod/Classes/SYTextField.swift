@@ -17,19 +17,17 @@ public enum SYTextFieldAnimation {
 
 public class SYTextField: UITextField {
 
-    @IBInspectable public var animationBorderColor = UIColor() {
+    @IBInspectable public var animationBorderColor:UIColor = UIColor() {
         didSet {
             self.syLayer.animationBorderColor = self.animationBorderColor
         }
     }
-    
-    @IBInspectable public var animationRippleColor = UIColor() {
+    @IBInspectable public var animationRippleColor:UIColor = UIColor() {
         didSet {
             self.syLayer.animationRippleColor = self.animationRippleColor
         }
     }
-    
-    @IBInspectable public var animationBackgroundColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor:UIColor = UIColor() {
         didSet {
             self.syLayer.animationBackgroundColor = self.animationBackgroundColor
         }
@@ -53,15 +51,15 @@ public class SYTextField: UITextField {
     
     private var originalBackgroundColor = UIColor.clearColor()
     
-    @IBInspectable public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    @IBInspectable public var animationDuration: CFTimeInterval = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
-            self.syLayer.setAnimationDuration(animationDuration)
+            self.syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
     }
     
