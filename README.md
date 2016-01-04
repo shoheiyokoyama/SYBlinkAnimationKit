@@ -45,7 +45,6 @@ There are 5 types of animation for component.
 - Customizable in any properties for animation
 - Support Swift 2.0
 - Support @IBDesignable and @IBInspectable.
-
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
 - [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYButton.swift) : available 5 types of Animation
