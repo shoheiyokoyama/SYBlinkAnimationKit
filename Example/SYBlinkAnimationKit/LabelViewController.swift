@@ -17,13 +17,13 @@ class LabelViewController: UIViewController {
         
         let borderLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
         borderLabel.text = "Border Animation"
-        borderLabel.labelTextColor = UIColor.yellowColor()
         borderLabel.syLabelAnimation = .Border
         borderLabel.startAnimation()
-//        self.view.addSubview(borderLabel)
+        self.view.addSubview(borderLabel)
         
         let border2Label = SYLabel(frame: CGRectMake(40, 110, 300, 50))
         border2Label.text = "BorderWithShadow Animation"
+        border2Label.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Label.backgroundColor = UIColor.clearColor()
         border2Label.layer.masksToBounds = true
         border2Label.syLabelAnimation = .BorderWithShadow
@@ -49,7 +49,6 @@ class LabelViewController: UIViewController {
         rippleLabel.syLabelAnimation = .Ripple
         rippleLabel.startAnimation()
         self.view.addSubview(rippleLabel)
-        
     }
     
     override func didReceiveMemoryWarning() {

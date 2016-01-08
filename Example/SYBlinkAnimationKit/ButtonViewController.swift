@@ -24,7 +24,7 @@ class ButtonViewController: UIViewController {
         
         let border2Button = SYButton(frame: CGRectMake(40, 110, 300, 50))
         border2Button.setTitle("BorderWithShadow Animation", forState: .Normal)
-//        border2Button.animationBorderColor = UIColor.blueColor()
+        border2Button.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Button.addTarget(self, action: "BorderWithShadowAnimation:", forControlEvents: .TouchUpInside)
         border2Button.syButtonAnimation = .BorderWithShadow
         self.view.addSubview(border2Button)
@@ -38,18 +38,16 @@ class ButtonViewController: UIViewController {
         
         let textButton = SYButton(frame: CGRectMake(40, 230, 300, 50))
         textButton.setTitle("Text Animation", forState: .Normal)
-        textButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        textButton.backgroundColor = UIColor.blackColor()
-//        textButton.animationTextColor = UIColor.blueColor()
+        textButton.backgroundColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
+        textButton.animationTextColor = UIColor.whiteColor()
         textButton.addTarget(self, action: "textAnimation:", forControlEvents: .TouchUpInside)
         textButton.syButtonAnimation = .Text
         self.view.addSubview(textButton)
         
         let rippleButton = SYButton(frame: CGRectMake(40, 290, 300, 50))
         rippleButton.setTitle("Ripple Animation", forState: .Normal)
-        rippleButton.setTitleColor(UIColor.yellowColor(), forState: .Normal)
-        rippleButton.backgroundColor = UIColor.lightGrayColor()
-//        rippleButton.animationRippleColor = UIColor.redColor()
+        rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        rippleButton.backgroundColor = UIColor.blackColor()
         rippleButton.addTarget(self, action: "rippleAnimation:", forControlEvents: .TouchUpInside)
         rippleButton.syButtonAnimation = .Ripple
         self.view.addSubview(rippleButton)

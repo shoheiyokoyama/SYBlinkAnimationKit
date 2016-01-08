@@ -17,17 +17,12 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         
         let borderTextField = SYTextField(frame: CGRectMake(40, 50, 300, 50))
         borderTextField.delegate = self
-//        borderTextField.syTextFieldAnimation = .Border
-//        borderTextField.animationBorderColor = UIColor.redColor()
         borderTextField.startAnimation()
         self.view.addSubview(borderTextField)
 
-//        let border2TextField = SYTextField(frame: CGRectMake(40, 110, 300, 50))
-        let border2TextField = SYTextField(frame: CGRectMake(40, 330, 300, 50))
-        border2TextField.animationBorderColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1)//Demo Color
+        let border2TextField = SYTextField(frame: CGRectMake(40, 110, 300, 50))
         border2TextField.delegate = self
         border2TextField.syTextFieldAnimation = .BorderWithShadow
-//        border2TextField.animationBorderColor = UIColor.redColor()
         border2TextField.backgroundColor = UIColor.clearColor()
         border2TextField.startAnimation()
         self.view.addSubview(border2TextField)
@@ -41,10 +36,8 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         let rippleTextField = SYTextField(frame: CGRectMake(40, 230, 300, 50))
         rippleTextField.delegate = self
         rippleTextField.syTextFieldAnimation = .Ripple
-//        rippleTextField.animationRippleColor = UIColor.purpleColor()
         rippleTextField.startAnimation()
         self.view.addSubview(rippleTextField)
-        
     }
 
     override func didReceiveMemoryWarning() {
