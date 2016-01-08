@@ -16,7 +16,7 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*.swift",
+  "source_files": "Source/**/*.swift",
   "resource_bundles": {
     "SYBlinkAnimationKit": [
       "Pod/Assets/*.png"
