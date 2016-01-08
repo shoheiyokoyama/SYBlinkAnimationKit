@@ -138,7 +138,7 @@ If you just want to change animation duration, timing,  you can use property :
 ```
 SYMediaTimingFunction : ` Linear`, ` EaseIn`, ` EaseOut`, ` EaseInEaseOut`.default is `Linear`
 ```swift
-   public var animationDuration: CFTimeInterval //default is 2.0
+   public var animationDuration: CGFloat //default is 2.0
 ```
 
 If SYClass is in middle of animation, this property is `true`
