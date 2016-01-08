@@ -8,21 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = "SYBlinkAnimationKit"
-  s.version          = "0.1.0"
-  s.summary          = "SYBlinkAnimationKit can animate any properties like blink effect"
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.version          = "0.0.1"
+  s.summary          = "SYBlinkAnimationKit is a blink effect animation framework for iOS, written in Swift."
 
   s.homepage         = "https://github.com/shoheiyokoyama/SYBlinkAnimationKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "shoheiyokoyama" => "shohei.yok0602@gmail.com" }
+  s.author           = { "Shohei Yokoyama" => "shohei.yok0602@gmail.com" }
   s.source           = { :git => "https://github.com/shoheiyokoyama/SYBlinkAnimationKit.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -33,8 +24,4 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'SYBlinkAnimationKit' => ['Pod/Assets/*.png']
   }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
