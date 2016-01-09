@@ -14,35 +14,35 @@ class LabelViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.whiteColor()
+        self.navigationItem.title = "SYLabel"
         
-        let borderLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
+        let borderLabel = SYLabel(frame: CGRectMake(40, 100, 300, 50))
         borderLabel.text = "Border Animation"
         borderLabel.syLabelAnimation = .Border
         borderLabel.startAnimation()
         self.view.addSubview(borderLabel)
         
-        let border2Label = SYLabel(frame: CGRectMake(40, 110, 300, 50))
+        let border2Label = SYLabel(frame: CGRectMake(40, 160, 300, 50))
         border2Label.text = "BorderWithShadow Animation"
         border2Label.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Label.backgroundColor = UIColor.clearColor()
-        border2Label.layer.masksToBounds = true
         border2Label.syLabelAnimation = .BorderWithShadow
         border2Label.startAnimation()
         self.view.addSubview(border2Label)
         
-        let backgroundLabel = SYLabel(frame: CGRectMake(40, 170, 300, 50))
+        let backgroundLabel = SYLabel(frame: CGRectMake(40, 220, 300, 50))
         backgroundLabel.text = "Background Animation"
         backgroundLabel.syLabelAnimation = .Background
         backgroundLabel.startAnimation()
         self.view.addSubview(backgroundLabel)
         
-        let textLabel = SYLabel(frame: CGRectMake(40, 230, 300, 50))
+        let textLabel = SYLabel(frame: CGRectMake(40, 280, 300, 50))
         textLabel.text = "Text Animation"
         textLabel.syLabelAnimation = .Text
         textLabel.startAnimation()
         self.view.addSubview(textLabel)
         
-        let rippleLabel = SYLabel(frame: CGRectMake(40, 290, 300, 50))
+        let rippleLabel = SYLabel(frame: CGRectMake(40, 340, 300, 50))
         rippleLabel.text = "Ripple Animation"
         rippleLabel.backgroundColor = UIColor.blackColor()
         rippleLabel.labelTextColor = UIColor.whiteColor()
