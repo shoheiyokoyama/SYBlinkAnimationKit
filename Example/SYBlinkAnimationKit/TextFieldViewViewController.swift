@@ -17,11 +17,13 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         self.navigationItem.title = "SYTextField"
         
         let borderTextField = SYTextField(frame: CGRectMake(40, 100, 300, 50))
+        borderTextField.placeholder = "Border Animation"
         borderTextField.delegate = self
         borderTextField.startAnimation()
         self.view.addSubview(borderTextField)
 
         let border2TextField = SYTextField(frame: CGRectMake(40, 160, 300, 50))
+        border2TextField.placeholder = "BorderWithShadow Animation"
         border2TextField.delegate = self
         border2TextField.syTextFieldAnimation = .BorderWithShadow
         border2TextField.backgroundColor = UIColor.clearColor()
@@ -29,12 +31,14 @@ class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(border2TextField)
 
         let backgrondTextField = SYTextField(frame: CGRectMake(40, 220, 300, 50))
+        backgrondTextField.placeholder = "Background Animation"
         backgrondTextField.delegate = self
         backgrondTextField.syTextFieldAnimation = .Background
         backgrondTextField.startAnimation()
         self.view.addSubview(backgrondTextField)
         
         let rippleTextField = SYTextField(frame: CGRectMake(40, 280, 300, 50))
+        rippleTextField.placeholder = "Ripple Animation"
         rippleTextField.delegate = self
         rippleTextField.syTextFieldAnimation = .Ripple
         rippleTextField.startAnimation()
