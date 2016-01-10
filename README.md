@@ -47,9 +47,9 @@ There are 5 types of animation for component.
 - Support @IBDesignable and @IBInspectable.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
-- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYButton.swift) : available 5 types of Animation
-- [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYLabel.swift) : available 5 types of Animation
-- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYTextField.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
+- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) : available 5 types of Animation
+- [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift) : available 5 types of Animation
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
 
 ***Coming Soon***
 - [ ] SYView
@@ -71,7 +71,7 @@ First, Import **SYBlinkAnimationKit** in class.
 1. Call the SYClass. for example,` SYButton`, `SYLabel`, `SYTextField`, etc.
 2. If you use custom animation, call animation method ` startAnimation()`, ` stopAnimation()`
 
-### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYButton.swift)
+### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
 ```swift
    let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
    syButton.setTitle("Border Animation", forState: .Normal)
@@ -92,7 +92,7 @@ If you change text font size, name, you are supposed to call the `systemFontOfSi
   syButton.fontNameWithSize("ArialHebew", size: 22.0)
 ```
 
-### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYLabel.swift)
+### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
 If you set text color, you are supposed to set the ` labelTextColor` property.
 To change text font, use font method as with SYButton.
 ```swift
@@ -104,7 +104,7 @@ To change text font, use font method as with SYButton.
    self.view.addSubview(syLabel)
 ```
 
-### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Pod/Classes/SYTextField.swift)
+### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift)
 SYTextField stop animation. when a touch.
 but you can control this behavior.
 ```swift
