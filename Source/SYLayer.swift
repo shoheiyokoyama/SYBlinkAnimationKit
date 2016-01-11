@@ -124,6 +124,81 @@ public class SYLayer {
         self.setLayer()
     }
     
+    public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
+        self.animationTimingFunction = timingFunction
+    }
+    
+    public func setAnimationDuration(animationDuration: CFTimeInterval) {
+        self.animationDuration = animationDuration
+    }
+    
+    public func resizeSuperLayer() {
+        self.resizeRippleLayer()
+        self.resizeTextLayer()
+        self.resizeShadowPath()
+    }
+    
+    public func firstSetTextLayer(textLayer: CATextLayer) {
+        self.textLayer = textLayer
+        self.superLayer.insertSublayer(self.textLayer, atIndex: 0)
+    }
+    
+    public func resetTextLayer(textLayer: CATextLayer) {
+        self.textLayer = textLayer
+    }
+    
+    public var syLayerAnimation: SYLayerAnimation = .Border {
+        didSet {
+            switch syLayerAnimation {
+            case .Border:
+                self.setBorderAnimation()
+            case .BorderWithShadow:
+                self.setBorderWithShadowAnimation()
+            default:
+                return
+            }
+        }
+    }
+    
+    public func startAnimation() {
+        switch syLayerAnimation {
+            
+        case .Border:
+            self.animateBorderOrBorderWithShadow()
+        case .BorderWithShadow:
+            self.animateBorderOrBorderWithShadow()
+        case .Background:
+            self.animateBackground()
+        case .Text:
+            self.animateText()
+        case .Ripple:
+            self.animateRipple()
+        }
+    }
+    
+    public func stopAnimation() {
+        self.superLayer.removeAllAnimations()
+        self.textLayer.removeAllAnimations()
+        self.subRippleLayer.removeAllAnimations()
+        self.rippleLayer.removeAllAnimations()
+        
+        self.textLayer.foregroundColor = self.textColor.CGColor
+    }
+    
+    public func animateBorderOrBorderWithShadow() {
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.duration = self.animationDuration
+        groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
+        groupAnimation.timingFunction = self.animationTimingFunction.timingFunction
+        groupAnimation.delegate = self
+        groupAnimation.autoreverses = true
+        groupAnimation.repeatCount = 1e100
+        syLayerAnimation == .BorderWithShadow ? self.animateBorderWithShadow(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
+    }
+}
+
+private extension SYLayer {
+    
     private func setLayer() {
         self.superLayer.shadowColor = self.animationShadowColor.CGColor
         self.superLayer.borderColor = self.borderColor.CGColor
@@ -162,14 +237,6 @@ public class SYLayer {
         self.subRippleLayer.backgroundColor = UIColor.clearColor().CGColor
         self.subRippleLayer.cornerRadius = subRippleCornerRadius
         self.subRippleLayer.frame = CGRect(x: (self.superLayer.bounds.width - subRippleDiameter) / 2, y: (self.superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
-    }
-    
-    public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
-        self.animationTimingFunction = timingFunction
-    }
-    
-    public func setAnimationDuration(animationDuration: CFTimeInterval) {
-        self.animationDuration = animationDuration
     }
     
     private func resetSuperLayerShadow() {
@@ -220,12 +287,6 @@ public class SYLayer {
         self.superLayer.shadowRadius = 2.0
     }
     
-    public func resizeSuperLayer() {
-        self.resizeRippleLayer()
-        self.resizeTextLayer()
-        self.resizeShadowPath()
-    }
-    
     private func resizeRippleLayer() {
         self.setRippleLayerPosition()
     }
@@ -240,28 +301,6 @@ public class SYLayer {
     
     private func resizeShadowPath() {
         self.resetSuperLayerShadow()
-    }
-    
-    public func firstSetTextLayer(textLayer: CATextLayer) {
-        self.textLayer = textLayer
-        self.superLayer.insertSublayer(self.textLayer, atIndex: 0)
-    }
-    
-    public func resetTextLayer(textLayer: CATextLayer) {
-        self.textLayer = textLayer
-    }
-    
-    public var syLayerAnimation: SYLayerAnimation = .Border {
-        didSet {
-            switch syLayerAnimation {
-            case .Border:
-                self.setBorderAnimation()
-            case .BorderWithShadow:
-                self.setBorderWithShadowAnimation()
-            default:
-                return
-            }
-        }
     }
     
     private func setBorderAnimation() {
@@ -291,42 +330,6 @@ public class SYLayer {
         shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
         shadowAnimation.fromValue = fromValue
         shadowAnimation.toValue = toValue
-    }
-    
-    public func startAnimation() {
-        switch syLayerAnimation {
-            
-        case .Border:
-            self.animateBorderOrBorderWithShadow()
-        case .BorderWithShadow:
-            self.animateBorderOrBorderWithShadow()
-        case .Background:
-            self.animateBackground()
-        case .Text:
-            self.animateText()
-        case .Ripple:
-            self.animateRipple()
-        }
-    }
-    
-    public func stopAnimation() {
-        self.superLayer.removeAllAnimations()
-        self.textLayer.removeAllAnimations()
-        self.subRippleLayer.removeAllAnimations()
-        self.rippleLayer.removeAllAnimations()
-        
-        self.textLayer.foregroundColor = self.textColor.CGColor
-    }
-    
-    public func animateBorderOrBorderWithShadow() {
-        let groupAnimation = CAAnimationGroup()
-        groupAnimation.duration = self.animationDuration
-        groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
-        groupAnimation.timingFunction = self.animationTimingFunction.timingFunction
-        groupAnimation.delegate = self
-        groupAnimation.autoreverses = true
-        groupAnimation.repeatCount = 1e100
-        syLayerAnimation == .BorderWithShadow ? self.animateBorderWithShadow(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
     }
     
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {

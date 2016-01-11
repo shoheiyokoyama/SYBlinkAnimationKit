@@ -122,6 +122,36 @@ public enum SYButtonAnimation {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public var syButtonAnimation: SYButtonAnimation = .Border {
+        didSet {
+            switch syButtonAnimation {
+            case .Border:
+                self.syLayer.syLayerAnimation = .Border
+            case .BorderWithShadow:
+                self.syLayer.syLayerAnimation = .BorderWithShadow
+            case .Background:
+                self.syLayer.syLayerAnimation = .Background
+            case .Text:
+                self.syLayer.syLayerAnimation = .Text
+            case .Ripple:
+                self.syLayer.syLayerAnimation = .Ripple
+            }
+        }
+    }
+    
+    public func startAnimation() {
+        self.isAnimating = true
+        self.syLayer.startAnimation()
+    }
+    
+    public func stopAnimation() {
+        self.isAnimating = false
+        self.syLayer.stopAnimation()
+    }
+}
+
+private extension SYButton {
+    
     private func setLayer() {
         self.layer.cornerRadius = 5.0
         
@@ -166,32 +196,5 @@ public enum SYButtonAnimation {
     private func resetTextLayer(){
         self.setTextLayer()
         self.syLayer.resetTextLayer(self.textLayer)
-    }
-    
-    public var syButtonAnimation: SYButtonAnimation = .Border {
-        didSet {
-            switch syButtonAnimation {
-            case .Border:
-                self.syLayer.syLayerAnimation = .Border
-            case .BorderWithShadow:
-                self.syLayer.syLayerAnimation = .BorderWithShadow
-            case .Background:
-                self.syLayer.syLayerAnimation = .Background
-            case .Text:
-                self.syLayer.syLayerAnimation = .Text
-            case .Ripple:
-                self.syLayer.syLayerAnimation = .Ripple
-            }
-        }
-    }
-    
-    public func startAnimation() {
-        self.isAnimating = true
-        self.syLayer.startAnimation()
-    }
-    
-    public func stopAnimation() {
-        self.isAnimating = false
-        self.syLayer.stopAnimation()
     }
 }
