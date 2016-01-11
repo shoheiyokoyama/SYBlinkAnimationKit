@@ -357,6 +357,7 @@ private extension SYLayer {
         self.textColorAnimation.duration = self.animationDuration
         self.textColorAnimation.autoreverses = true
         self.textColorAnimation.repeatCount = 1e100
+        self.textColorAnimation.removedOnCompletion = false
         self.textColorAnimation.timingFunction = self.animationTimingFunction.timingFunction
         self.textColorAnimation.fromValue = self.animationTextColor.colorWithAlphaComponent(0.15).CGColor
         self.textColorAnimation.toValue = self.animationTextColor.CGColor

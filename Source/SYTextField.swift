@@ -146,7 +146,6 @@ private extension SYTextField {
     
     private func setLayer() {
         self.syLayer.syLayerAnimation = .Border
-        
         self.borderStyle = .RoundedRect
     }
 }
