@@ -1,16 +1,15 @@
 {
   "name": "SYBlinkAnimationKit",
-  "version": "0.1.0",
-  "summary": "SYBlinkAnimationKit can animate any properties like blink effect",
-  "description": "",
+  "version": "0.0.4",
+  "summary": "SYBlinkAnimationKit is a blink effect animation framework for iOS, written in Swift.",
   "homepage": "https://github.com/shoheiyokoyama/SYBlinkAnimationKit",
   "license": "MIT",
   "authors": {
-    "shoheiyokoyama": "shohei.yok0602@gmail.com"
+    "Shohei Yokoyama": "shohei.yok0602@gmail.com"
   },
   "source": {
     "git": "https://github.com/shoheiyokoyama/SYBlinkAnimationKit.git",
-    "tag": "0.1.0"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "8.0"

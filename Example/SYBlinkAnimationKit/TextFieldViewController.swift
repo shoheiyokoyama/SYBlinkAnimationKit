@@ -1,5 +1,5 @@
 //
-//  TextFieldViewViewController.swift
+//  TextFieldViewController.swift
 //  SYBlinkAnimationKit
 //
 //  Created by Shoehi Yokoyama on 2015/12/13.
@@ -9,7 +9,7 @@
 import UIKit
 import SYBlinkAnimationKit
 
-class TextFieldViewViewController: UIViewController, UITextFieldDelegate {
+class TextFieldViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 

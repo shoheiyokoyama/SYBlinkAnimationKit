@@ -35,7 +35,7 @@ class ButtonViewController: UIViewController {
         border2Button.startAnimation()
         self.view.addSubview(border2Button)
         
-        backgroundButton.setTitle("Background Animation", forState: .Normal)
+        backgroundButton.setTitle("SYView", forState: .Normal)
         backgroundButton.addTarget(self, action: "BackgroundAnimation:", forControlEvents: .TouchUpInside)
         backgroundButton.syButtonAnimation = .Background
         backgroundButton.startAnimation()
@@ -79,12 +79,14 @@ class ButtonViewController: UIViewController {
     }
     
     internal func BorderWithShadowAnimation(sender: SYButton) {
-        let textFieldViewViewController = TextFieldViewViewController()
-        self.navigationController?.pushViewController(textFieldViewViewController, animated: true)
+        let textFieldViewController = TextFieldViewController()
+        self.navigationController?.pushViewController(textFieldViewController, animated: true)
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
     internal func BackgroundAnimation(sender: SYButton) {
+        let animationViewController = AnimationViewController()
+        self.navigationController?.pushViewController(animationViewController, animated: true)
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
