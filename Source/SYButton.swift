@@ -16,7 +16,7 @@ public enum SYButtonAnimation {
     case Ripple
 }
 
-@IBDesignable public class SYButton: UIButton {
+@IBDesignable public class SYButton: UIButton, Animatable {
     
     private let textLayer = CATextLayer()
     

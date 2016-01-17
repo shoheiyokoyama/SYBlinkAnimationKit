@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.0.7)
   - FBSnapshotTestCase/SwiftSupport (2.0.7):
     - FBSnapshotTestCase/Core
-  - SYBlinkAnimationKit (0.0.4)
+  - SYBlinkAnimationKit (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -16,6 +16,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
-  SYBlinkAnimationKit: c22f654557832d7ddf36fd1bb0b5f88f4ec3898b
+  SYBlinkAnimationKit: 8886203dfd5c1866ef192be003c760388df6c5e9
 
 COCOAPODS: 0.39.0

@@ -15,7 +15,7 @@ public enum SYViewAnimation {
     case Ripple
 }
 
-public class SYView: UIView {
+public class SYView: UIView, Animatable {
     
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {

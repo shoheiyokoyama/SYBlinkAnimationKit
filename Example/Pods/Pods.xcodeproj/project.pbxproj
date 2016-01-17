@@ -8,21 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		163C6E8E5E7CEE1E0BEEB9CA0939DA3A /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 73003A0752F3CABAA497D1FD1F5E4E44 /* UIImage+Diff.m */; };
-		177374829A14B667237717533642067D /* SYBlinkAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8949A40EE5A5D5559729E4C1CF15D0 /* SYBlinkAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		177374829A14B667237717533642067D /* SYBlinkAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 182B9EE97CBB35D9514503873FA43414 /* SYBlinkAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F118728B3D74089480152A6B660EA9A /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = A729E2AD854B4CEB4EF52289C017EB3B /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2008EE8202B3A1ECAA4B766197F66F0A /* SYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFCCA047C897EE5589DABEF66A7B0B7 /* SYButton.swift */; };
 		28F2071FFF5C5B0E9DEB6C3FE43A30CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393D1A899C707F79A64672C46ED238F /* UIKit.framework */; };
-		2D35DDB7BBABA47E1A555C126315E612 /* SYTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30177896F2DDE530E55A5067B15BC662 /* SYTextField.swift */; };
+		33848F0D584EE4F4CD796382A6AF4EDF /* SYTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80591D6982EDE3600A9DFA60A46E334 /* SYTextField.swift */; };
 		35848D70EAC9237246BDF63457729694 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2523693A8A7BA4278BFC866F16021FFF /* FBSnapshotTestCase.m */; };
 		41D8739E2720D3535592391C25507158 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 12CC4BD9C5F6D514C917D7942DF2D2F4 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		438744C4F29DA0B916FF094F1B63B94D /* SYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B92186BA1FBE261E1E0FCD2DA84918 /* SYView.swift */; };
 		450B6D2D1CBBC278F7DC4CB31FC1D49D /* Pods-SYBlinkAnimationKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */; };
 		45C51F9E6947EC156012B9DB97BEAD52 /* Pods-SYBlinkAnimationKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C19E49D7A24E3BC1BD5851A4CC4D32A /* SYLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE09C14FD1BA2CBA81E9540758EBF9 /* SYLayer.swift */; };
-		4CEE0D4A71C3DE88FF948EBAE82750DE /* SYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D3AE55B15D4044729B6B61C7448AA /* SYLabel.swift */; };
 		52B0263F90696E7FD87CB146D5C5E2C1 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CAAAB29C54DB2D5220028C4110E45E6 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52F7A46AB0053D8BB1D793B917D37BB2 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5208FE4A05C9114818BC72105E5F7 /* SwiftSupport.swift */; };
 		5D14695A69EC4A8DF7488D0FC59C105C /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = E38041D93EDE9398D62F150F8F25DE47 /* FBSnapshotTestCasePlatform.m */; };
+		5EC01D9750FCA552516D16DF4625B36D /* SYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F7684679175F20AACC475420256001 /* SYButton.swift */; };
 		5F5F67627EC4784D6D210C5547D1FA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
 		723FDDFD804188090511DEFA8309A06B /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0345D737618C6A063BD152389ACCBF87 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		788E3D9458FE9540469981BE9A0B227C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5999002674B86E70DC7970CEA62F278E /* UIImage+Compare.m */; };
@@ -30,13 +27,17 @@
 		821A26883ED14BDCD7EBADD37D671D17 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE4692BF9A76DAAA67A8FF4DABD27E8 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D549E01DA1D5104335CCEABFF870005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
 		935E37624FABB2530AE441A47561EDCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		9D67184194D856C020B2678108875B09 /* SYBlinkAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2C7C778362E4AEBEF36AB21606AC41 /* SYBlinkAnimationKit-dummy.m */; };
 		AA8501741ABB8D75C6C47DE086BACD37 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFD97972C24EE7435D0E04686569BBE /* FBSnapshotTestController.m */; };
 		AD4D905241DED4AEAD67447088ACB23D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */; };
 		B9F506E7E55E2B9F43E65C7A99B9D930 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1D4CCC5950540866F59B11E7010A6B4 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA588CA390BA0E07E9E2B65C2E3041DE /* SYBlinkAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EB6F95FA8FC6C9B4192D25ECA68A9D /* SYBlinkAnimationKit-dummy.m */; };
 		CC2BD0A04199B280AD93F459968CAFC2 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF90F95FC2B36AB64D2FB3AF22E996D2 /* FBSnapshotTestCase-dummy.m */; };
 		CF9DB2096C715EA61E263021EE406DB1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0528444EFC68619AD1FEB8A7CD4A01BA /* QuartzCore.framework */; };
 		D7A4756398DCD4BA8CD2D6384DC0436B /* SYBlinkAnimationKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54DDE8271992D7B1449468A3DAD88FA0 /* SYBlinkAnimationKit.bundle */; };
+		D95791C2459A98D1CA1AD9F4268F31A9 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0568A0E33D04A21288744BB8BD99F16 /* Animatable.swift */; };
+		DA7237EC3C88BE9F3D658EEFABEA47DC /* SYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550CF50BC7E9A1F078E1B54C1A6E774 /* SYLabel.swift */; };
+		E7A152A8DC67AC69C4E0EF64BDC21726 /* SYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73539AA0500F011F560CA68A39240A /* SYView.swift */; };
+		E90D40B81C50D5C7E06F4FAFECF15CDA /* SYLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601D30EB8B74D8540C6505523A09065 /* SYLayer.swift */; };
 		EDD91D0CC316AC322E1607D3749F1C0A /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5121BCE99CCFB208275F3437CCF6EBB6 /* UIImage+Snapshot.m */; };
 		EF92DEB4035DB81E70E8D74A49D73DD7 /* Pods-SYBlinkAnimationKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF0E0A752F6C874DBC1F143E6EE88F /* Pods-SYBlinkAnimationKit_Tests-dummy.m */; };
 		FFFE0C8470131909B6828EF44C35B971 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
@@ -76,59 +77,60 @@
 /* Begin PBXFileReference section */
 		0345D737618C6A063BD152389ACCBF87 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		0528444EFC68619AD1FEB8A7CD4A01BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		0CB2B554906D4BA140E81882742369EA /* SYBlinkAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-prefix.pch"; sourceTree = "<group>"; };
 		0EE4692BF9A76DAAA67A8FF4DABD27E8 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		0F01AA0F45B0B5CC535F9884FF44262A /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		0F88358CE498BB079250C38419BFDA1B /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		12CC4BD9C5F6D514C917D7942DF2D2F4 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		14B92186BA1FBE261E1E0FCD2DA84918 /* SYView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYView.swift; sourceTree = "<group>"; };
-		1A2C7C778362E4AEBEF36AB21606AC41 /* SYBlinkAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYBlinkAnimationKit-dummy.m"; sourceTree = "<group>"; };
+		1601D30EB8B74D8540C6505523A09065 /* SYLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLayer.swift; sourceTree = "<group>"; };
+		182B9EE97CBB35D9514503873FA43414 /* SYBlinkAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-umbrella.h"; sourceTree = "<group>"; };
 		2393D1A899C707F79A64672C46ED238F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2523693A8A7BA4278BFC866F16021FFF /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		28FE09C14FD1BA2CBA81E9540758EBF9 /* SYLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLayer.swift; sourceTree = "<group>"; };
 		2A5FC5A9611E38248D67D983D3177DEF /* Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		30177896F2DDE530E55A5067B15BC662 /* SYTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYTextField.swift; sourceTree = "<group>"; };
-		30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYBlinkAnimationKit.xcconfig; sourceTree = "<group>"; };
 		3151E9A6157B7F064F22E5F330530E43 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3CDD9962E7C6687DEEC40FC2F5F6DC17 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42A681D3AF997235908A3089BB9BCB20 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		4597DE85D0FB5DA6A92377CD14B7E74D /* Pods-SYBlinkAnimationKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		4AC2C5814DCFC7590AC8C46AAB7FCEEF /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		4B2F584A99DE33BF08E200BBF0F317A5 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4B8CE731FF9162EAC17E9A167686584B /* SYBlinkAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SYBlinkAnimationKit.modulemap; sourceTree = "<group>"; };
-		4FFCCA047C897EE5589DABEF66A7B0B7 /* SYButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYButton.swift; sourceTree = "<group>"; };
+		50EB6F95FA8FC6C9B4192D25ECA68A9D /* SYBlinkAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYBlinkAnimationKit-dummy.m"; sourceTree = "<group>"; };
 		5121BCE99CCFB208275F3437CCF6EBB6 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		54DDE8271992D7B1449468A3DAD88FA0 /* SYBlinkAnimationKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYBlinkAnimationKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5999002674B86E70DC7970CEA62F278E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		5B524FD44CF04685144F544508837621 /* Pods-SYBlinkAnimationKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SYBlinkAnimationKit_Tests.modulemap"; sourceTree = "<group>"; };
 		5B52FE2EDC7FB0D6B83915A453E05D09 /* Pods-SYBlinkAnimationKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SYBlinkAnimationKit_Example.modulemap"; sourceTree = "<group>"; };
-		5B8949A40EE5A5D5559729E4C1CF15D0 /* SYBlinkAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-umbrella.h"; sourceTree = "<group>"; };
 		5E7A695122BAD79C997564F34560EC2B /* SYBlinkAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SYBlinkAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYBlinkAnimationKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		6E7299CB674EA65AF170A840B555D965 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6FDB25ACDFDD4FF715D4A858EEC67707 /* Pods-SYBlinkAnimationKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYBlinkAnimationKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		720DB9B8F296A373F3652BEC402AFF90 /* Pods_SYBlinkAnimationKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73003A0752F3CABAA497D1FD1F5E4E44 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYBlinkAnimationKit.xcconfig; sourceTree = "<group>"; };
+		7550CF50BC7E9A1F078E1B54C1A6E774 /* SYLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLabel.swift; sourceTree = "<group>"; };
 		7CAAAB29C54DB2D5220028C4110E45E6 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		89E52F4394B7F50DA24AD227CFFDE1A4 /* SYBlinkAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-prefix.pch"; sourceTree = "<group>"; };
+		8CE6942BD0E554AB2A8A8E7EB38C6AF8 /* SYBlinkAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SYBlinkAnimationKit.modulemap; sourceTree = "<group>"; };
+		8D73539AA0500F011F560CA68A39240A /* SYView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYView.swift; sourceTree = "<group>"; };
 		A1D4CCC5950540866F59B11E7010A6B4 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYBlinkAnimationKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A3736FF0F0AE09E1233C4935610CAA63 /* Pods-SYBlinkAnimationKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A729E2AD854B4CEB4EF52289C017EB3B /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		B3D08C65AB18ACF0D05C7C79DB5737E4 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		B80591D6982EDE3600A9DFA60A46E334 /* SYTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYTextField.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BFFD97972C24EE7435D0E04686569BBE /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		C037DB27DB20EC9D2D411A489FE971B9 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C80C0E413E908309463160B423D20315 /* Pods_SYBlinkAnimationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC8D3AE55B15D4044729B6B61C7448AA /* SYLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLabel.swift; sourceTree = "<group>"; };
 		D0F2BCC289349D1B758AE6B5FAFFE5AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D18E3CC37FA11AF8BB537758A48A3790 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DD6465C3902CF4E5E96E8439B99913EA /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF90F95FC2B36AB64D2FB3AF22E996D2 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		E008177C1226E7BA6B129AD883792ECE /* Pods-SYBlinkAnimationKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Example-resources.sh"; sourceTree = "<group>"; };
+		E0F7684679175F20AACC475420256001 /* SYButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYButton.swift; sourceTree = "<group>"; };
 		E38041D93EDE9398D62F150F8F25DE47 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		E54ECFEE27296950D4AFBF79C8C6DB00 /* Pods-SYBlinkAnimationKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		E81A4C6DF8095D43C20459A175D3E398 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9FF30526CDEC09A7C3E8A29D349406E /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0568A0E33D04A21288744BB8BD99F16 /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		F4250079DFEE83811C1219097EE48004 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYBlinkAnimationKit_Example-dummy.m"; sourceTree = "<group>"; };
 		F7AF0E0A752F6C874DBC1F143E6EE88F /* Pods-SYBlinkAnimationKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYBlinkAnimationKit_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -181,10 +183,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A07FB6975E340F13E8F965550DD01E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F0568A0E33D04A21288744BB8BD99F16 /* Animatable.swift */,
+				E0F7684679175F20AACC475420256001 /* SYButton.swift */,
+				7550CF50BC7E9A1F078E1B54C1A6E774 /* SYLabel.swift */,
+				1601D30EB8B74D8540C6505523A09065 /* SYLayer.swift */,
+				B80591D6982EDE3600A9DFA60A46E334 /* SYTextField.swift */,
+				8D73539AA0500F011F560CA68A39240A /* SYView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		0FEED6CF2078E93F5BF57AD747D7D416 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				467D8747F3042E46792D872BF53A2388 /* SYBlinkAnimationKit */,
+				628E1C1F8FC735D7AB228D8C0DB2056B /* SYBlinkAnimationKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -244,16 +259,6 @@
 			name = SwiftSupport;
 			sourceTree = "<group>";
 		};
-		467D8747F3042E46792D872BF53A2388 /* SYBlinkAnimationKit */ = {
-			isa = PBXGroup;
-			children = (
-				71D91EA8E7F7C2403DF92BEC614563CB /* Source */,
-				BA3DCFD870DE9D8396D342C1546A2D99 /* Support Files */,
-			);
-			name = SYBlinkAnimationKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		5060B33D8CFD3C2E88D6F156E54E3265 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,16 +278,14 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		71D91EA8E7F7C2403DF92BEC614563CB /* Source */ = {
+		628E1C1F8FC735D7AB228D8C0DB2056B /* SYBlinkAnimationKit */ = {
 			isa = PBXGroup;
 			children = (
-				4FFCCA047C897EE5589DABEF66A7B0B7 /* SYButton.swift */,
-				CC8D3AE55B15D4044729B6B61C7448AA /* SYLabel.swift */,
-				28FE09C14FD1BA2CBA81E9540758EBF9 /* SYLayer.swift */,
-				30177896F2DDE530E55A5067B15BC662 /* SYTextField.swift */,
-				14B92186BA1FBE261E1E0FCD2DA84918 /* SYView.swift */,
+				05A07FB6975E340F13E8F965550DD01E /* Source */,
+				D109C13A4A27BE94CC6E15BCE9C42E0F /* Support Files */,
 			);
-			path = Source;
+			name = SYBlinkAnimationKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7A6B3BDBD3CA21A291BA14EE1D4188FB /* Pods-SYBlinkAnimationKit_Example */ = {
@@ -338,20 +341,6 @@
 			path = "../Target Support Files/FBSnapshotTestCase";
 			sourceTree = "<group>";
 		};
-		BA3DCFD870DE9D8396D342C1546A2D99 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E81A4C6DF8095D43C20459A175D3E398 /* Info.plist */,
-				4B8CE731FF9162EAC17E9A167686584B /* SYBlinkAnimationKit.modulemap */,
-				30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */,
-				1A2C7C778362E4AEBEF36AB21606AC41 /* SYBlinkAnimationKit-dummy.m */,
-				0CB2B554906D4BA140E81882742369EA /* SYBlinkAnimationKit-prefix.pch */,
-				5B8949A40EE5A5D5559729E4C1CF15D0 /* SYBlinkAnimationKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SYBlinkAnimationKit";
-			sourceTree = "<group>";
-		};
 		CD3FB7D37E46A5379C926728A416D78E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +350,20 @@
 				853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D109C13A4A27BE94CC6E15BCE9C42E0F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D18E3CC37FA11AF8BB537758A48A3790 /* Info.plist */,
+				8CE6942BD0E554AB2A8A8E7EB38C6AF8 /* SYBlinkAnimationKit.modulemap */,
+				737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */,
+				50EB6F95FA8FC6C9B4192D25ECA68A9D /* SYBlinkAnimationKit-dummy.m */,
+				89E52F4394B7F50DA24AD227CFFDE1A4 /* SYBlinkAnimationKit-prefix.pch */,
+				182B9EE97CBB35D9514503873FA43414 /* SYBlinkAnimationKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SYBlinkAnimationKit";
 			sourceTree = "<group>";
 		};
 		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
@@ -435,7 +438,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DC5565B3DAD4EECB49BF20FDF2131AB /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit" */;
 			buildPhases = (
-				A8C68BB68EA030D91BF04B0509ECD05F /* Sources */,
+				FD8F9C570F92C8E98E0A4C369ACA818F /* Sources */,
 				3A4D3279C71B56BF8013327C27C13CF5 /* Frameworks */,
 				1A0F76379D7E03623B1B42A89FD8EFF5 /* Resources */,
 				C186D0007D3DBD78E08797A29B2DBF17 /* Headers */,
@@ -568,19 +571,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8C68BB68EA030D91BF04B0509ECD05F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D67184194D856C020B2678108875B09 /* SYBlinkAnimationKit-dummy.m in Sources */,
-				2008EE8202B3A1ECAA4B766197F66F0A /* SYButton.swift in Sources */,
-				4CEE0D4A71C3DE88FF948EBAE82750DE /* SYLabel.swift in Sources */,
-				4C19E49D7A24E3BC1BD5851A4CC4D32A /* SYLayer.swift in Sources */,
-				2D35DDB7BBABA47E1A555C126315E612 /* SYTextField.swift in Sources */,
-				438744C4F29DA0B916FF094F1B63B94D /* SYView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C39F00679DAB5512C905911EB86907D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +583,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				450B6D2D1CBBC278F7DC4CB31FC1D49D /* Pods-SYBlinkAnimationKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD8F9C570F92C8E98E0A4C369ACA818F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95791C2459A98D1CA1AD9F4268F31A9 /* Animatable.swift in Sources */,
+				BA588CA390BA0E07E9E2B65C2E3041DE /* SYBlinkAnimationKit-dummy.m in Sources */,
+				5EC01D9750FCA552516D16DF4625B36D /* SYButton.swift in Sources */,
+				DA7237EC3C88BE9F3D658EEFABEA47DC /* SYLabel.swift in Sources */,
+				E90D40B81C50D5C7E06F4FAFECF15CDA /* SYLayer.swift in Sources */,
+				33848F0D584EE4F4CD796382A6AF4EDF /* SYTextField.swift in Sources */,
+				E7A152A8DC67AC69C4E0EF64BDC21726 /* SYView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +731,7 @@
 		};
 		4C6AA2627E2876BE91CD1B8F8FF1A1E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */;
+			baseConfigurationReference = 737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = SYBlinkAnimationKit;
@@ -867,7 +871,7 @@
 		};
 		93A57CD9B5646191F9E513D8E0A7BCEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */;
+			baseConfigurationReference = 737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -895,7 +899,7 @@
 		};
 		B737CC19F0131FFAEFA157B7F4D2FEAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */;
+			baseConfigurationReference = 737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = SYBlinkAnimationKit;
@@ -907,7 +911,7 @@
 		};
 		D2DE62C6EF554ADC08CB4FF632D1D176 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B32C37F592F5341636F6CBC89F68AF /* SYBlinkAnimationKit.xcconfig */;
+			baseConfigurationReference = 737D1740AE84728D691283A7E46B7876 /* SYBlinkAnimationKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;

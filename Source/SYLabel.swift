@@ -16,7 +16,7 @@ public enum SYLabelAnimation {
     case Ripple
 }
 
-@IBDesignable public class SYLabel: UILabel {
+@IBDesignable public class SYLabel: UILabel, Animatable {
     
     private let textLayer = CATextLayer()
     
