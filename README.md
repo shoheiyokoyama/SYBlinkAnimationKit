@@ -120,16 +120,16 @@ but you can control this behavior.
 
 If you just want to change the color of animation, you can use property :
 ```swift
-   public var animationBorderColor: UIColor()
+   public var animationBorderColor: UIColor
 ```
 ```swift
-   public var animationBackgroundColor: UIColor()
+   public var animationBackgroundColor: UIColor
 ```
 ```swift
-   public var animationTextColor: UIColor()
+   public var animationTextColor: UIColor
 ```
 ```swift
-   public var animationRippleColor: UIColor()
+   public var animationRippleColor: UIColor
 ```
 
 If you just want to change animation duration, timing,  you can use property :
