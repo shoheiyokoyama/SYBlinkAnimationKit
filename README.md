@@ -50,9 +50,9 @@ you can change properties in Interface Builder(IB) inspector. then IB update you
 - [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) : available 5 types of Animation
 - [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift) : available 5 types of Animation
 - [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
+- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
 
 ***Coming Soon***
-- [ ] SYView
 - [ ] SYTextView
 
 ## Demo App

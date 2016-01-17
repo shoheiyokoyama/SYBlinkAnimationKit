@@ -40,6 +40,17 @@ public class SYView: UIView {
     
     public var isAnimating = false
     
+    override public var frame: CGRect {
+        didSet {
+            self.syLayer.resizeSuperLayer()
+        }
+    }
+    override public var bounds: CGRect {
+        didSet {
+            self.syLayer.resizeSuperLayer()
+        }
+    }
+    
     override public var backgroundColor: UIColor? {
         didSet {
             guard backgroundColor == nil else {
