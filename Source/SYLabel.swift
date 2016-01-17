@@ -91,11 +91,11 @@ public enum SYLabelAnimation {
         }
     }
     
-    public func systemFontOfSize(fontSize: CGFloat) {
+    public func setFontOfSize(fontSize: CGFloat) {
         self.font = UIFont.systemFontOfSize(fontSize)
         self.resetTextLayer()
     }
-    public func fontNameWithSize(name: String, size: CGFloat) {
+    public func setFontNameWithSize(name: String, size: CGFloat) {
         self.font = UIFont(name: name, size: size)
         self.resetTextLayer()
     }

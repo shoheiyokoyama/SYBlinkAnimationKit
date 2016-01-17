@@ -84,12 +84,12 @@ First, Import **SYBlinkAnimationKit** in class.
   syButton.stopAnimation() 
 ```
 
-If you change text font size, name, you are supposed to call the `systemFontOfSize()`, `fontNameWithSize()`
+If you change text font size, name, you are supposed to call the `setFontOfSize()`, `setFontNameWithSize()`
 ```swift
-  syButton.systemFontOfSize(22.0)
+  syButton.setFontOfSize(22.0)
 ```
 ```swift
-  syButton.fontNameWithSize("ArialHebew", size: 22.0)
+  syButton.setFontNameWithSize("ArialHebew", size: 22.0)
 ```
 
 ### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
@@ -99,7 +99,7 @@ To change text font, use font method as with SYButton.
    let syLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
    syLabel.text = "Text Animation"
    syLabel.labelTextColor =  UIColor.darkGrayColor()
-   syLabel.fontNameWithSize("ArialHebew", size: 22.0)
+   syLabel.setFontNameWithSize("ArialHebew", size: 22.0)
    syLabel.syLabelAnimation = .Text
    self.view.addSubview(syLabel)
 ```
