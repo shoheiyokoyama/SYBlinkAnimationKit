@@ -119,6 +119,7 @@ but you can control this behavior.
 ## Customize animation properties
 
 If you just want to change the types of animation, you can customize `syClassAnimation`.
+
 Set `syClassAnimationAdapter` (with Integer) in place of `syClassAnimation` in IB.
 SYClassAnimation : ` Border = 0`, ` BorderWithShadow = 1`, ` Background = 2`, ` Ripple = 3`, ` Text = 4`.
 default is `Border`.
@@ -129,6 +130,7 @@ default is `Border`.
 ```
 
 If you just want to change the color of animation, you can customize the properties of the color.
+
 These properties are *inspectable*.
 ```swift
    public var animationBorderColor: UIColor
@@ -144,6 +146,7 @@ These properties are *inspectable*.
 ```
 
 If you just want to change animation duration, timing,  you can customize `animationTimingFunction`, `animationDuration`.
+
 Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
 SYMediaTimingFunction : ` Linear = 0`, ` EaseIn = 1`, ` EaseOut = 2`, ` EaseInEaseOut = 3`.
 default is `Linear`.
