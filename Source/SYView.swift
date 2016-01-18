@@ -8,8 +8,8 @@
 
 import UIKit
 
-public enum SYViewAnimation {
-    case Border
+public enum SYViewAnimation: Int {
+    case Border = 0
     case BorderWithShadow
     case Background
     case Ripple
@@ -65,6 +65,14 @@ public class SYView: UIView, Animatable {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
+    @IBInspectable public var animationTimingAdapter: Int {
+        get {
+            return self.animationTimingFunction.rawValue
+        }
+        set(index) {
+            self.animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+        }
+    }
     
     @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
@@ -96,6 +104,14 @@ public class SYView: UIView, Animatable {
             case .Ripple:
                 self.syLayer.syLayerAnimation = .Ripple
             }
+        }
+    }
+    @IBInspectable public  var syViewAnimationAdapter: Int {
+        get {
+            return self.syViewAnimation.rawValue
+        }
+        set(index) {
+            self.syViewAnimation = SYViewAnimation(rawValue: index) ?? .Border
         }
     }
     

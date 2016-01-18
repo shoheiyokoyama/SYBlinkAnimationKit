@@ -28,19 +28,19 @@ There are 5 types of animation for component.
 <img src="./DemoImage/Background.gif" width="300" height="70">
 </p>
 
-**Text**
-<p align="left">
-<img src="./DemoImage/Text.gif" width="300" height="70">
-</p>
-
 **Ripple**
 <p align="left">
 <img src="./DemoImage/Ripple.gif" width="300" height="70">
 </p>
 
+**Text**
+<p align="left">
+<img src="./DemoImage/Text.gif" width="300" height="70">
+</p>
+
 ## Features
 - Animation like blink effect for UIKit
-- The 5 types of Animation : `Border`,  `BorderWithShadow`,  `Background`, `Text`, `Ripple`
+- The 5 types of animation : `Border`,  `BorderWithShadow`,  `Background`, `Ripple`, `Text`
 - Easily usable
 - Customizable in any properties for animation
 - Support Swift 2.0
@@ -116,9 +116,20 @@ but you can control this behavior.
 <img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
-## Customize properties
+## Customize animation properties
 
-If you just want to change the color of animation, you can use property :
+If you just want to change the types of animation, you can customize `syClassAnimation`.
+Set `syClassAnimationAdapter` (with Integer) in place of `syClassAnimation` in IB.
+SYClassAnimation : ` Border = 0`, ` BorderWithShadow = 1`, ` Background = 2`, ` Ripple = 3`, ` Text = 4`.
+default is `Border`.
+```swift
+   //SYLabel
+   public var syLabelAnimation: SYLabelAnimation
+   //Set syLabelAnimationAdapter in IB
+```
+
+If you just want to change the color of animation, you can customize the properties of the color.
+These properties are *inspectable*.
 ```swift
    public var animationBorderColor: UIColor
 ```
@@ -132,11 +143,15 @@ If you just want to change the color of animation, you can use property :
    public var animationRippleColor: UIColor
 ```
 
-If you just want to change animation duration, timing,  you can use property :
+If you just want to change animation duration, timing,  you can customize `animationTimingFunction`, `animationDuration`.
+Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
+SYMediaTimingFunction : ` Linear = 0`, ` EaseIn = 1`, ` EaseOut = 2`, ` EaseInEaseOut = 3`.
+default is `Linear`.
+
 ```swift
    public var animationTimingFunction: SYMediaTimingFunction
 ```
-SYMediaTimingFunction : ` Linear`, ` EaseIn`, ` EaseOut`, ` EaseInEaseOut`.default is `Linear`
+
 ```swift
    public var animationDuration: CGFloat //default is 2.0
 ```

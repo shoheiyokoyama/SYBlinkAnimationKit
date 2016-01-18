@@ -8,8 +8,8 @@
 
 import UIKit
 
-public enum SYTextFieldAnimation {
-    case Border
+public enum SYTextFieldAnimation: Int {
+    case Border = 0
     case BorderWithShadow
     case Background
     case Ripple
@@ -54,6 +54,14 @@ public class SYTextField: UITextField, Animatable {
     public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
+        }
+    }
+    @IBInspectable public var animationTimingAdapter: Int {
+        get {
+            return self.animationTimingFunction.rawValue
+        }
+        set(index) {
+            self.animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
     
@@ -121,6 +129,14 @@ public class SYTextField: UITextField, Animatable {
                 self.syLayer.syLayerAnimation = .Ripple
             
             }
+        }
+    }
+    @IBInspectable public  var syTextFieldAnimationAdapter: Int {
+        get {
+            return self.syTextFieldAnimation.rawValue
+        }
+        set(index) {
+            self.syTextFieldAnimation = SYTextFieldAnimation(rawValue: index) ?? .Border
         }
     }
     

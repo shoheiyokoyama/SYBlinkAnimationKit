@@ -8,12 +8,12 @@
 
 import UIKit
 
-public enum SYButtonAnimation {
-    case Border
+public enum SYButtonAnimation: Int {
+    case Border = 0
     case BorderWithShadow
     case Background
-    case Text
     case Ripple
+    case Text
 }
 
 @IBDesignable public class SYButton: UIButton, Animatable {
@@ -103,6 +103,14 @@ public enum SYButtonAnimation {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
+    @IBInspectable public  var animationTimingAdapter: Int {
+        get {
+            return self.animationTimingFunction.rawValue
+        }
+        set(index) {
+            self.animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+        }
+    }
     
     @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
@@ -131,11 +139,19 @@ public enum SYButtonAnimation {
                 self.syLayer.syLayerAnimation = .BorderWithShadow
             case .Background:
                 self.syLayer.syLayerAnimation = .Background
-            case .Text:
-                self.syLayer.syLayerAnimation = .Text
             case .Ripple:
                 self.syLayer.syLayerAnimation = .Ripple
+            case .Text:
+                self.syLayer.syLayerAnimation = .Text
             }
+        }
+    }
+    @IBInspectable public  var syButtonAnimationAdapter: Int {
+        get {
+            return self.syButtonAnimation.rawValue
+        }
+        set(index) {
+            self.syButtonAnimation = SYButtonAnimation(rawValue: index) ?? .Border
         }
     }
     

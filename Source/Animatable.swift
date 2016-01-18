@@ -16,6 +16,7 @@ protocol Animatable {
     var isAnimating: Bool {get set}
     
     var animationTimingFunction: SYMediaTimingFunction {get set}
+    var animationTimingAdapter: Int {get set}
     var animationDuration: CGFloat {get set}
     
     var syLayer: SYLayer {get set}
