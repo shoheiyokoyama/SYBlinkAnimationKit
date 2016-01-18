@@ -114,12 +114,12 @@ public enum SYButtonAnimation {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.setLayer()
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        self.setLayer()
     }
     
     public var syButtonAnimation: SYButtonAnimation = .Border {
