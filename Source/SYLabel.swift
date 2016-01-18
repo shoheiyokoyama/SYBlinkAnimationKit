@@ -8,12 +8,12 @@
 
 import UIKit
 
-public enum SYLabelAnimation {
-    case Border
+public enum SYLabelAnimation: Int {
+    case Border = 0
     case BorderWithShadow
     case Background
-    case Text
     case Ripple
+    case Text
 }
 
 @IBDesignable public class SYLabel: UILabel, Animatable {
@@ -84,6 +84,14 @@ public enum SYLabelAnimation {
             self.syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
+    @IBInspectable public var animationTimingAdapter: Int {
+        get {
+            return self.animationTimingFunction.rawValue
+        }
+        set(index) {
+            self.animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+        }
+    }
     
     @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
@@ -122,11 +130,19 @@ public enum SYLabelAnimation {
                 self.syLayer.syLayerAnimation = .BorderWithShadow
             case .Background:
                 self.syLayer.syLayerAnimation = .Background
-            case .Text:
-                self.syLayer.syLayerAnimation = .Text
             case .Ripple:
                 self.syLayer.syLayerAnimation = .Ripple
+            case .Text:
+                self.syLayer.syLayerAnimation = .Text
             }
+        }
+    }
+    @IBInspectable public  var syLabelAnimationAdapter: Int {
+        get {
+            return self.syLabelAnimation.rawValue
+        }
+        set(index) {
+            self.syLabelAnimation = SYLabelAnimation(rawValue: index) ?? .Border
         }
     }
     

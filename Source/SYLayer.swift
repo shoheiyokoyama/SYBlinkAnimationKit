@@ -12,12 +12,12 @@ public enum SYLayerAnimation {
     case Border
     case BorderWithShadow
     case Background
-    case Text
     case Ripple
+    case Text
 }
 
-public enum SYMediaTimingFunction {
-    case Linear
+public enum SYMediaTimingFunction: Int {
+    case Linear = 0
     case EaseIn
     case EaseOut
     case EaseInEaseOut
