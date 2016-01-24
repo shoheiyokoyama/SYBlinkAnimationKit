@@ -284,7 +284,7 @@ private extension SYLayer {
         
         CGPathCloseSubpath(pathRef)
         self.superLayer.shadowPath = pathRef
-        self.superLayer.shadowRadius = 2.0
+        self.superLayer.shadowRadius = 2.5
     }
     
     private func resizeRippleLayer() {
