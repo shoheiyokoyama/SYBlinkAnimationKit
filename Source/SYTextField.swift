@@ -19,17 +19,17 @@ public class SYTextField: UITextField, Animatable {
 
     @IBInspectable public var animationBorderColor:UIColor = UIColor() {
         didSet {
-            self.syLayer.animationBorderColor = self.animationBorderColor
-        }
-    }
-    @IBInspectable public var animationRippleColor:UIColor = UIColor() {
-        didSet {
-            self.syLayer.animationRippleColor = self.animationRippleColor
+            self.syLayer.setAnimationBorderColor(self.animationBorderColor)
         }
     }
     @IBInspectable public var animationBackgroundColor:UIColor = UIColor() {
         didSet {
-            self.syLayer.animationBackgroundColor = self.animationBackgroundColor
+            self.syLayer.setAnimationBackgroundColor(self.animationBackgroundColor)
+        }
+    }
+    @IBInspectable public var animationRippleColor:UIColor = UIColor() {
+        didSet {
+            self.syLayer.setAnimationRippleColor(self.animationRippleColor)
         }
     }
     
@@ -97,7 +97,7 @@ public class SYTextField: UITextField, Animatable {
     override public var backgroundColor: UIColor? {
         didSet {
             guard backgroundColor == nil else {
-                self.syLayer.backgroundColor = backgroundColor!
+                self.syLayer.setBackgroundColor(backgroundColor!)
                 self.originalBackgroundColor = backgroundColor!
                 return
             }

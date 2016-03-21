@@ -53,28 +53,28 @@ public class SYLayer {
     private var backgroundColorAnimation = CABasicAnimation()
     private var textColorAnimation = CABasicAnimation()
     
-    public var animationBorderColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
+    private var animationBorderColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
         didSet {
             self.borderColorAnimtion.toValue = self.animationBorderColor.CGColor
             self.animationShadowColor = self.animationBorderColor
         }
     }
-    public var animationTextColor = UIColor(red: 214/255, green: 69/255, blue: 65/255, alpha: 1) {
+    private var animationTextColor = UIColor(red: 214/255, green: 69/255, blue: 65/255, alpha: 1) {
         didSet {
             self.textColorAnimation.toValue = self.animationTextColor.CGColor
         }
     }
-    public var animationBackgroundColor = UIColor(red: 248/255, green: 148/255, blue: 6/255, alpha: 1) {
+    private var animationBackgroundColor = UIColor(red: 248/255, green: 148/255, blue: 6/255, alpha: 1) {
         didSet {
             self.backgroundColorAnimation.toValue = self.animationBackgroundColor.CGColor
         }
     }
-    public var animationShadowColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
+    private var animationShadowColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1) {
         didSet {
             self.superLayer.shadowColor = self.animationShadowColor.CGColor
         }
     }
-    public var animationRippleColor = UIColor(red: 171/255, green: 183/255, blue: 183/255, alpha: 1) {
+    private var animationRippleColor = UIColor(red: 171/255, green: 183/255, blue: 183/255, alpha: 1) {
         didSet {
             self.rippleLayer.backgroundColor = self.animationRippleColor.CGColor
             self.subRippleLayer.borderColor = self.animationRippleColor.CGColor
@@ -84,35 +84,35 @@ public class SYLayer {
     private var animationDuration: CFTimeInterval = 1.5
     private var animationTimingFunction: SYMediaTimingFunction = .Linear
     
-    public var textColor = UIColor.blackColor()
-    public var backgroundColor = UIColor.clearColor() {
+    private var textColor = UIColor.blackColor()
+    private var backgroundColor = UIColor.clearColor() {
         didSet {
             self.superLayer.backgroundColor = self.backgroundColor.CGColor
         }
     }
     
-    public var borderWidth: CGFloat = 0.0 {
+    private var borderWidth: CGFloat = 0.0 {
         didSet {
             self.superLayer.borderWidth = self.borderWidth
         }
     }
-    public var borderColor = UIColor.clearColor() {
+    private var borderColor = UIColor.clearColor() {
         didSet {
             self.superLayer.borderColor = self.borderColor.CGColor
         }
     }
     
-    public var shadowRadius: CGFloat = 0.0 {
+    private var shadowRadius: CGFloat = 0.0 {
         didSet {
             self.superLayer.shadowRadius = self.shadowRadius
         }
     }
-    public var shadowOpacity: Float = 0.0 {
+    private var shadowOpacity: Float = 0.0 {
         didSet {
             self.superLayer.shadowOpacity = self.shadowOpacity
         }
     }
-    public var shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0) {
+    private var shadowOffset: CGSize = CGSize(width: 0.0, height: 0.0) {
         didSet {
             self.superLayer.shadowOffset = self.shadowOffset
         }
@@ -124,6 +124,26 @@ public class SYLayer {
         self.setLayer()
     }
     
+    public func setAnimationBorderColor(borderColor: UIColor) {
+        self.animationBorderColor = borderColor
+    }
+    public func setAnimationBackgroundColor(backgroundColor: UIColor) {
+        self.animationBackgroundColor = backgroundColor
+    }
+    public func setAnimationTextColor(textColor: UIColor) {
+        self.animationTextColor = textColor
+    }
+    public func setAnimationRippleColor(rippleColor: UIColor) {
+        self.animationRippleColor = rippleColor
+    }
+
+    public func setBackgroundColor(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+    public func setTextColor(textColor: UIColor) {
+        self.textColor = textColor
+    }
+
     public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
         self.animationTimingFunction = timingFunction
     }
@@ -183,17 +203,6 @@ public class SYLayer {
         self.rippleLayer.removeAllAnimations()
         
         self.textLayer.foregroundColor = self.textColor.CGColor
-    }
-    
-    public func animateBorderOrBorderWithShadow() {
-        let groupAnimation = CAAnimationGroup()
-        groupAnimation.duration = self.animationDuration
-        groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
-        groupAnimation.timingFunction = self.animationTimingFunction.timingFunction
-        groupAnimation.delegate = self
-        groupAnimation.autoreverses = true
-        groupAnimation.repeatCount = 1e100
-        syLayerAnimation == .BorderWithShadow ? self.animateBorderWithShadow(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
     }
 }
 
@@ -332,6 +341,17 @@ private extension SYLayer {
         shadowAnimation.toValue = toValue
     }
     
+    private func animateBorderOrBorderWithShadow() {
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.duration = self.animationDuration
+        groupAnimation.animations = [borderColorAnimtion, borderWidthAnimation]
+        groupAnimation.timingFunction = self.animationTimingFunction.timingFunction
+        groupAnimation.delegate = self
+        groupAnimation.autoreverses = true
+        groupAnimation.repeatCount = 1e100
+        syLayerAnimation == .BorderWithShadow ? self.animateBorderWithShadow(groupAnimation) : self.superLayer.addAnimation(groupAnimation, forKey: "Border")
+    }
+
     private func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
         self.resetSuperLayerShadow()
         

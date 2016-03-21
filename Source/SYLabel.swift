@@ -22,22 +22,22 @@ public enum SYLabelAnimation: Int {
     
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
-            self.syLayer.animationBorderColor = self.animationBorderColor
+            self.syLayer.setAnimationBorderColor(self.animationBorderColor)
         }
     }
     @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
         didSet {
-            self.syLayer.animationBackgroundColor = self.animationBackgroundColor
+            self.syLayer.setAnimationBackgroundColor(self.animationBackgroundColor)
         }
     }
     @IBInspectable public var animationTextColor: UIColor = UIColor() {
         didSet {
-            self.syLayer.animationTextColor = self.animationTextColor
+            self.syLayer.setAnimationTextColor(self.animationTextColor)
         }
     }
     @IBInspectable public var animationRippleColor: UIColor = UIColor() {
         didSet {
-            self.syLayer.animationRippleColor = self.animationRippleColor
+            self.syLayer.setAnimationRippleColor(self.animationRippleColor)
         }
     }
     
@@ -55,7 +55,7 @@ public enum SYLabelAnimation: Int {
     override public var backgroundColor: UIColor? {
         didSet {
             guard backgroundColor == nil else {
-                self.syLayer.backgroundColor = backgroundColor!
+                self.syLayer.setBackgroundColor(backgroundColor!)
                 return
             }
         }
@@ -71,7 +71,7 @@ public enum SYLabelAnimation: Int {
         didSet {
             self.textColor = UIColor.clearColor()
             self.textLayer.foregroundColor = labelTextColor?.CGColor
-            self.syLayer.textColor = labelTextColor!
+            self.syLayer.setTextColor(labelTextColor!)
         }
     }
     
