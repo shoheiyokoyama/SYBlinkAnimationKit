@@ -22,22 +22,22 @@ public enum SYButtonAnimation: Int {
     
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
-            syLayer.setAnimationBorderColor(self.animationBorderColor)
+            syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
     @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
         didSet {
-            syLayer.setAnimationBackgroundColor(self.animationBackgroundColor)
+            syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
     @IBInspectable public var animationTextColor: UIColor = UIColor() {
         didSet {
-            syLayer.setAnimationTextColor(self.animationTextColor)
+            syLayer.setAnimationTextColor(animationTextColor)
         }
     }
     @IBInspectable public var animationRippleColor: UIColor = UIColor() {
         didSet {
-            syLayer.setAnimationRippleColor(self.animationRippleColor)
+            syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
 
