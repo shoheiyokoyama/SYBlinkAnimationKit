@@ -24,19 +24,19 @@ class ButtonViewController: UIViewController {
         self.navigationItem.title = "SYButton"
         
         borderButton.setTitle("SYLabel", forState: .Normal)
-        borderButton.addTarget(self, action: "borderAnimation:", forControlEvents: .TouchUpInside)
+        borderButton.addTarget(self, action: #selector(ButtonViewController.borderAnimation(_:)), forControlEvents: .TouchUpInside)
         borderButton.startAnimation()
         self.view.addSubview(borderButton)
         
         border2Button.setTitle("SYTextField", forState: .Normal)
         border2Button.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
-        border2Button.addTarget(self, action: "BorderWithShadowAnimation:", forControlEvents: .TouchUpInside)
+        border2Button.addTarget(self, action: #selector(ButtonViewController.BorderWithShadowAnimation(_:)), forControlEvents: .TouchUpInside)
         border2Button.syButtonAnimation = .BorderWithShadow
         border2Button.startAnimation()
         self.view.addSubview(border2Button)
         
         backgroundButton.setTitle("SYView", forState: .Normal)
-        backgroundButton.addTarget(self, action: "BackgroundAnimation:", forControlEvents: .TouchUpInside)
+        backgroundButton.addTarget(self, action: #selector(ButtonViewController.BackgroundAnimation(_:)), forControlEvents: .TouchUpInside)
         backgroundButton.syButtonAnimation = .Background
         backgroundButton.startAnimation()
         self.view.addSubview(backgroundButton)
@@ -44,7 +44,7 @@ class ButtonViewController: UIViewController {
         textButton.setTitle("Text Animation", forState: .Normal)
         textButton.backgroundColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         textButton.animationTextColor = UIColor.whiteColor()
-        textButton.addTarget(self, action: "textAnimation:", forControlEvents: .TouchUpInside)
+        textButton.addTarget(self, action: #selector(ButtonViewController.textAnimation(_:)), forControlEvents: .TouchUpInside)
         textButton.syButtonAnimation = .Text
         textButton.startAnimation()
         self.view.addSubview(textButton)
@@ -52,7 +52,7 @@ class ButtonViewController: UIViewController {
         rippleButton.setTitle("Ripple Animation", forState: .Normal)
         rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         rippleButton.backgroundColor = UIColor.blackColor()
-        rippleButton.addTarget(self, action: "rippleAnimation:", forControlEvents: .TouchUpInside)
+        rippleButton.addTarget(self, action: #selector(ButtonViewController.rippleAnimation(_:)), forControlEvents: .TouchUpInside)
         rippleButton.syButtonAnimation = .Ripple
         rippleButton.startAnimation()
         self.view.addSubview(rippleButton)
