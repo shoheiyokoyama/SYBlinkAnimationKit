@@ -9,7 +9,7 @@
 import UIKit
 
 public enum SYViewAnimation: Int {
-    case Border = 0
+    case Border
     case BorderWithShadow
     case Background
     case Ripple

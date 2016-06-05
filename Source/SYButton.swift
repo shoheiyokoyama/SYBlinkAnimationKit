@@ -9,7 +9,7 @@
 import UIKit
 
 public enum SYButtonAnimation: Int {
-    case Border = 0
+    case Border
     case BorderWithShadow
     case Background
     case Ripple
@@ -70,8 +70,8 @@ public enum SYButtonAnimation: Int {
     }
     
     override public func setTitle(title: String?, forState state: UIControlState) {
-        guard let _ = title else { return }
-        super.setTitle(title, forState: state)
+        guard let t = title else { return }
+        super.setTitle(t, forState: state)
         
         !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
     }
@@ -88,9 +88,9 @@ public enum SYButtonAnimation: Int {
         resetTextLayer()
     }
     public func setFontNameWithSize(name: String, size: CGFloat) {
-        guard let _ = titleLabel else { return }
-        
-        titleLabel!.font = UIFont(name: name, size: size)
+        guard let tLabel = titleLabel else { return }
+
+        tLabel.font = UIFont(name: name, size: size)
         resetTextLayer()
     }
     
@@ -166,17 +166,16 @@ private extension SYButton {
     
     private func setLayer() {
         layer.cornerRadius       = 5.0
-
         contentEdgeInsets        = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
-
         syLayer.syLayerAnimation = .Border
 
         setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
     private func setTextLayer() {
-        guard let font                  = titleLabel?.font else { return }
-        guard let text                  = currentTitle else { return }
+        guard let font = titleLabel?.font, text = currentTitle else {
+            return
+        }
 
         var attributes                  = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
@@ -184,9 +183,7 @@ private extension SYButton {
 
         let x                           = ( CGRectGetWidth(self.frame) - size.width ) / 2
         let y                           = ( CGRectGetHeight(self.frame) - size.height ) / 2
-        let height                      = size.height + layer.borderWidth
-        let width                       = size.width
-        let frame                       = CGRectMake(x, y, width, height)
+        let frame                       = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
         textLayer.font                  = font
         textLayer.string                = text

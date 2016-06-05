@@ -9,7 +9,7 @@
 import UIKit
 
 public enum SYLabelAnimation: Int {
-    case Border = 0
+    case Border
     case BorderWithShadow
     case Background
     case Ripple
@@ -176,17 +176,17 @@ private extension SYLabel {
     }
     
     private func setTextLayer() {
-        guard let t                     = text else { return }
+        guard let t = text else {
+            return
+        }
 
         var attributes                  = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
-
         let size                        = t.sizeWithAttributes(attributes)
+        
         let x                           = ( CGRectGetWidth(self.frame) - size.width ) / 2
         let y                           = ( CGRectGetHeight(self.frame) - size.height ) / 2
-        let height                      = size.height + layer.borderWidth
-        let width                       = size.width
-        let frame                       = CGRectMake(x, y, width, height)
+        let frame                       = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
         textLayer.font                  = font
         textLayer.string                = t

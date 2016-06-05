@@ -17,7 +17,7 @@ public enum SYLayerAnimation {
 }
 
 public enum SYMediaTimingFunction: Int {
-    case Linear = 0
+    case Linear
     case EaseIn
     case EaseOut
     case EaseInEaseOut

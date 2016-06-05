@@ -9,7 +9,7 @@
 import UIKit
 
 public enum SYTextFieldAnimation: Int {
-    case Border = 0
+    case Border
     case BorderWithShadow
     case Background
     case Ripple
@@ -67,7 +67,7 @@ public class SYTextField: UITextField, Animatable {
     
     @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
-            syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
+            syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
     
@@ -141,7 +141,7 @@ public class SYTextField: UITextField, Animatable {
     
     public func startAnimation() {
         isAnimating = true
-        if syTextFieldAnimation == .Background &&  borderStyle == .RoundedRect {
+        if syTextFieldAnimation == .Background && borderStyle == .RoundedRect {
             backgroundColor = UIColor.clearColor()
         }
         
