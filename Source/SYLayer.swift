@@ -162,13 +162,11 @@ final class SYLayer {
         resizeShadowPath()
     }
     
-    func firstSetTextLayer(textLayer: CATextLayer) {
-        self.textLayer = textLayer
-        superLayer.insertSublayer(self.textLayer, atIndex: 0)
-    }
-    
     func resetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
+        if let sublayers = superLayer.sublayers where sublayers.contains ({ $0 === textLayer }) == false {
+            superLayer.insertSublayer(self.textLayer, atIndex: 0)
+        }
     }
     
     var syLayerAnimation: SYLayerAnimation = .Border {

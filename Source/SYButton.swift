@@ -96,8 +96,8 @@ public final class SYButton: UIButton, Animatable {
     }
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let bgColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(bgColor)
+            guard let backgroundColor = backgroundColor else { return }
+            syLayer.setBackgroundColor(backgroundColor)
         }
     }
     
@@ -111,8 +111,6 @@ public final class SYButton: UIButton, Animatable {
             syLayer.setTextColor(textColor)
         }
     }
-    
-    private var isFirstSetTextLayer = false
     
     // MARK: - initializer -
     
@@ -132,7 +130,7 @@ public final class SYButton: UIButton, Animatable {
         guard let title = title else { return }
         super.setTitle(title, forState: state)
         
-        !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
+        resetTextLayer()
     }
     
     override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
@@ -185,7 +183,7 @@ private extension SYButton {
         setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
-    private func setTextLayer() {
+    private func configureTextLayer() {
         guard let font = titleLabel?.font, text = currentTitle else {
             return
         }
@@ -207,14 +205,8 @@ private extension SYButton {
         textLayer.alignmentMode   = kCAAlignmentCenter
     }
     
-    private func firstSetTextLayer() {
-        isFirstSetTextLayer = true
-        setTextLayer()
-        syLayer.firstSetTextLayer(textLayer)
-    }
-    
     private func resetTextLayer(){
-        setTextLayer()
+        configureTextLayer()
         syLayer.resetTextLayer(textLayer)
     }
 }

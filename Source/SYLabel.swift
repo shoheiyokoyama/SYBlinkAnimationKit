@@ -52,10 +52,8 @@ public final class SYLabel: UILabel, Animatable {
             syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
     }
-    @IBInspectable public var labelTextColor: UIColor? {
+    @IBInspectable public var labelTextColor: UIColor = UIColor.blackColor() {
         didSet {
-            guard let labelTextColor = labelTextColor else { return }
-            
             textColor = UIColor.clearColor()
             textLayer.foregroundColor = labelTextColor.CGColor
             syLayer.setTextColor(labelTextColor)
@@ -88,7 +86,7 @@ public final class SYLabel: UILabel, Animatable {
     }
     override public var text: String? {
         didSet {
-            !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
+            resetTextLayer()
         }
     }
     
@@ -110,8 +108,6 @@ public final class SYLabel: UILabel, Animatable {
     }
     
     public var isAnimating = false
-    
-    public var isFirstSetTextLayer = false
     
     public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
@@ -176,18 +172,12 @@ private extension SYLabel {
         syLayer.syLayerAnimation = .Border
     }
     
-    private func firstSetTextLayer() {
-        isFirstSetTextLayer = true
-        setTextLayer()
-        syLayer.firstSetTextLayer(textLayer)
-    }
-    
     private func resetTextLayer() {
-        setTextLayer()
+        configureTextLayer()
         syLayer.resetTextLayer(textLayer)
     }
     
-    private func setTextLayer() {
+    private func configureTextLayer() {
         guard let text = text else {
             return
         }
@@ -200,16 +190,12 @@ private extension SYLabel {
         let y     = ( self.frame.height - size.height ) / 2
         let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
-        textLayer.font     = font
-        textLayer.string   = text
-        textLayer.fontSize = font.pointSize
-
-        if let ltColor = labelTextColor {
-            textLayer.foregroundColor = ltColor.CGColor
-        }
-
-        textLayer.contentsScale = UIScreen.mainScreen().scale
-        textLayer.frame         = frame
-        textLayer.alignmentMode = kCAAlignmentCenter
+        textLayer.font            = font
+        textLayer.string          = text
+        textLayer.fontSize        = font.pointSize
+        textLayer.foregroundColor = labelTextColor.CGColor
+        textLayer.contentsScale   = UIScreen.mainScreen().scale
+        textLayer.frame           = frame
+        textLayer.alignmentMode   = kCAAlignmentCenter
     }
 }
