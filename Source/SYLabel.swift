@@ -191,8 +191,8 @@ private extension SYLabel {
         attributes[NSFontAttributeName] = font
         
         let size  = text.sizeWithAttributes(attributes)
-        let x     = ( CGRectGetWidth(self.frame) - size.width ) / 2
-        let y     = ( CGRectGetHeight(self.frame) - size.height ) / 2
+        let x     = ( self.frame.width - size.width ) / 2
+        let y     = ( self.frame.height - size.height ) / 2
         let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
         textLayer.font     = font

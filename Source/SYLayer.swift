@@ -236,7 +236,7 @@ private extension SYLayer {
     }
     
     private func setRippleLayerPosition() {
-        let superLayerHeight = CGRectGetHeight(superLayer.frame)
+        let superLayerHeight = superLayer.frame.height
 
         let rippleDiameter: CGFloat     = superLayerHeight * 0.7
         let rippleCornerRadius: CGFloat = rippleDiameter / 2
@@ -309,8 +309,8 @@ private extension SYLayer {
     }
     
     private func resizeTextLayer() {
-        let superLayerHeight = CGRectGetHeight(superLayer.frame)
-        let superLayerWidth  = CGRectGetWidth(superLayer.frame)
+        let superLayerHeight = superLayer.frame.height
+        let superLayerWidth  = superLayer.frame.width
 
         textLayer.frame.origin.x = (superLayerWidth - textLayer.frame.width) / 2
         textLayer.frame.origin.y = (superLayerHeight - textLayer.frame.height) / 2
