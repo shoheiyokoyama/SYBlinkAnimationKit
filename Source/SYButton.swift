@@ -19,22 +19,22 @@ public enum SYButtonAnimation: Int {
 @IBDesignable
 public final class SYButton: UIButton, Animatable {
     
-    @IBInspectable public var animationBorderColor: UIColor = UIColor() {
+    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationTextColor: UIColor = UIColor() {
+    @IBInspectable public var animationTextColor: UIColor = AnimationDefaultColor.text {
         didSet {
             syLayer.setAnimationTextColor(animationTextColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = UIColor() {
+    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
         didSet {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }

@@ -120,7 +120,7 @@ public final class SYTextField: UITextField, Animatable {
         }
     }
     
-    private var originalBackgroundColor = UIColor.clearColor()
+    private var originalBackgroundColor = UIColor.whiteColor()
     
     private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
