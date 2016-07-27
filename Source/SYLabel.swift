@@ -16,7 +16,8 @@ public enum SYLabelAnimation: Int {
     case Text
 }
 
-@IBDesignable public class SYLabel: UILabel, Animatable {
+@IBDesignable
+public final class SYLabel: UILabel, Animatable {
     
     private let textLayer = CATextLayer()
     

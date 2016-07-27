@@ -16,7 +16,8 @@ public enum SYButtonAnimation: Int {
     case Text
 }
 
-@IBDesignable public class SYButton: UIButton, Animatable {
+@IBDesignable
+public final class SYButton: UIButton, Animatable {
     
     private let textLayer = CATextLayer()
     

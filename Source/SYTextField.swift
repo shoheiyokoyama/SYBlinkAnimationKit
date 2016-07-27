@@ -15,7 +15,7 @@ public enum SYTextFieldAnimation: Int {
     case Ripple
 }
 
-public class SYTextField: UITextField, Animatable {
+public final class SYTextField: UITextField, Animatable {
 
     @IBInspectable public var animationBorderColor:UIColor = UIColor() {
         didSet {

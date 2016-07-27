@@ -40,7 +40,7 @@ struct Const {
     static let borderWidthForAnimation: CGFloat = 1.0
 }
 
-public class SYLayer {
+public final class SYLayer {
     
     private var superLayer: CALayer!
     private var textLayer = CATextLayer()
