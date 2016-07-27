@@ -10,6 +10,19 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0042CAD7B2C9683DB0A788C72B12124B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>0528444EFC68619AD1FEB8A7CD4A01BA</key>
 		<dict>
 			<key>isa</key>
@@ -22,26 +35,6 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>05A07FB6975E340F13E8F965550DD01E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F0568A0E33D04A21288744BB8BD99F16</string>
-				<string>E0F7684679175F20AACC475420256001</string>
-				<string>7550CF50BC7E9A1F078E1B54C1A6E774</string>
-				<string>1601D30EB8B74D8540C6505523A09065</string>
-				<string>B80591D6982EDE3600A9DFA60A46E334</string>
-				<string>8D73539AA0500F011F560CA68A39240A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Source</string>
-			<key>path</key>
-			<string>Source</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>05EE476F02D4CE36FE0766522AB666EC</key>
 		<dict>
@@ -129,6 +122,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0AA181BE90346BBAD1692809D8B7551C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E001C4F5DC82F1D2F6AE34FE3AE0F542</string>
+				<string>6BAB14B117AF45C7486C64290EB93635</string>
+				<string>60CF88925EC60B965D2551FAD7BC49C7</string>
+				<string>101E9DCE49E748F66A35F51B8BAF45E3</string>
+				<string>85585DB9F8E1DE2BF5358C1AF116DF1B</string>
+				<string>424249779FD3DD8D4E071B0466B055F1</string>
+				<string>8132EDB0BC2778866DFFC79631661715</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Source</string>
+			<key>path</key>
+			<string>Source</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>0CCFD7A05FE8BE766F617688B67FA85C</key>
 		<dict>
 			<key>buildConfigurationList</key>
@@ -190,12 +204,38 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>628E1C1F8FC735D7AB228D8C0DB2056B</string>
+				<string>C983E116F29C748BC2A3932C74032C98</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>101E9DCE49E748F66A35F51B8BAF45E3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SYLayer.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>10AFA97073746C15F86D83766891C596</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SYBlinkAnimationKit-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -307,19 +347,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1601D30EB8B74D8540C6505523A09065</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYLayer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>175E07AEBDAD15ABC9427FE1FC5774C5</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -338,7 +365,7 @@
 		<key>177374829A14B667237717533642067D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>182B9EE97CBB35D9514503873FA43414</string>
+			<string>10AFA97073746C15F86D83766891C596</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -361,19 +388,6 @@
 			<string>FBSnapshotTestCasePlatform.m</string>
 			<key>path</key>
 			<string>FBSnapshotTestCase/FBSnapshotTestCasePlatform.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>182B9EE97CBB35D9514503873FA43414</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -421,7 +435,7 @@
 			<string>7DC5565B3DAD4EECB49BF20FDF2131AB</string>
 			<key>buildPhases</key>
 			<array>
-				<string>FD8F9C570F92C8E98E0A4C369ACA818F</string>
+				<string>6688D98135505108E259F60792735755</string>
 				<string>3A4D3279C71B56BF8013327C27C13CF5</string>
 				<string>1A0F76379D7E03623B1B42A89FD8EFF5</string>
 				<string>C186D0007D3DBD78E08797A29B2DBF17</string>
@@ -635,10 +649,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>33848F0D584EE4F4CD796382A6AF4EDF</key>
+		<key>33083E0F3FF74BE4DD41B27B566A08AE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B80591D6982EDE3600A9DFA60A46E334</string>
+			<string>424249779FD3DD8D4E071B0466B055F1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -657,6 +671,13 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>34B5F25BB0C336BD8D2D0C8146125BAF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>101E9DCE49E748F66A35F51B8BAF45E3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>384A1B103C9D183D6A1C08DD450C61CA</key>
 		<dict>
@@ -713,6 +734,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>424249779FD3DD8D4E071B0466B055F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SYView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4396A99C0AAE10F414B527B80FC1DACB</key>
 		<dict>
@@ -801,7 +835,7 @@
 		<key>4C6AA2627E2876BE91CD1B8F8FF1A1E6</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>737D1740AE84728D691283A7E46B7876</string>
+			<string>B12C354D9D5B40B2D915365C3241AFB4</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -848,25 +882,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4FD9E27E7E0866E42AD91F998EB25E74</key>
+		<dict>
+			<key>fileRef</key>
+			<string>85585DB9F8E1DE2BF5358C1AF116DF1B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>500CFFB619BA25FB57B6AF48F8CCD8F3</key>
 		<dict>
 			<key>fileRef</key>
 			<string>4F88C74D733720F86716DAF1B048177E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>50EB6F95FA8FC6C9B4192D25ECA68A9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>511F06E70B61C5E13AC3434911EF65B3</key>
 		<dict>
@@ -1018,6 +1046,20 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>557AF9C936A8D05AE3D49E7E0F5261B1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E001C4F5DC82F1D2F6AE34FE3AE0F542</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>55F78BAE0076588908DF6600DDBF45AB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>60CF88925EC60B965D2551FAD7BC49C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>561B00C22FB1E3E7D31E7BEB2FD4F332</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1115,13 +1157,6 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>5EC01D9750FCA552516D16DF4625B36D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E0F7684679175F20AACC475420256001</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>5F5F67627EC4784D6D210C5547D1FA57</key>
 		<dict>
 			<key>fileRef</key>
@@ -1129,21 +1164,38 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>628E1C1F8FC735D7AB228D8C0DB2056B</key>
+		<key>60CF88925EC60B965D2551FAD7BC49C7</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>05A07FB6975E340F13E8F965550DD01E</string>
-				<string>D109C13A4A27BE94CC6E15BCE9C42E0F</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
 			<key>path</key>
-			<string>../..</string>
+			<string>SYLabel.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6688D98135505108E259F60792735755</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>557AF9C936A8D05AE3D49E7E0F5261B1</string>
+				<string>DB309E5D6BCD091961FC4D3BD0200B5A</string>
+				<string>92033FFC05E57867BD79D491A9D4B5CE</string>
+				<string>55F78BAE0076588908DF6600DDBF45AB</string>
+				<string>34B5F25BB0C336BD8D2D0C8146125BAF</string>
+				<string>4FD9E27E7E0866E42AD91F998EB25E74</string>
+				<string>33083E0F3FF74BE4DD41B27B566A08AE</string>
+				<string>D15AAD3D7269F6257A6F6C27BED8C9E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>683F6001EE50A021A8F6189C4A385ACF</key>
 		<dict>
@@ -1155,6 +1207,30 @@
 			<string>sourcecode.c.h</string>
 			<key>path</key>
 			<string>Pods-SYBlinkAnimationKit_Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69A039B376C35A426A91E5878C6B3614</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SYBlinkAnimationKit.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6BAB14B117AF45C7486C64290EB93635</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SYButton.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1229,19 +1305,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>737D1740AE84728D691283A7E46B7876</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>73CAB2ADEEBBF66198052A6F0C6179C2</key>
 		<dict>
 			<key>buildConfigurationList</key>
@@ -1269,19 +1332,6 @@
 			<string>720DB9B8F296A373F3652BEC402AFF90</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>7550CF50BC7E9A1F078E1B54C1A6E774</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYLabel.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>758DA1CBC128A58D65023AE2318D1257</key>
 		<dict>
@@ -1391,6 +1441,19 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>8132EDB0BC2778866DFFC79631661715</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TextConvertible.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>833B35A0E46EF39510BE2C2DE07E8101</key>
 		<dict>
 			<key>isa</key>
@@ -1414,6 +1477,19 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>85585DB9F8E1DE2BF5358C1AF116DF1B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SYTextField.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8575814874877CB96D9A13C7BBD6AB1A</key>
 		<dict>
@@ -1441,19 +1517,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>89E52F4394B7F50DA24AD227CFFDE1A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>8AC9643893E137DE5E32F231B8A240F1</key>
 		<dict>
 			<key>children</key>
@@ -1477,6 +1540,19 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B30E173BA81CCFA09F9C075C5FA04BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SYBlinkAnimationKit-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1557,30 +1633,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8CE6942BD0E554AB2A8A8E7EB38C6AF8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D73539AA0500F011F560CA68A39240A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>8DECB970785FCBAB4A6315DAA0DB0DF2</key>
 		<dict>
 			<key>fileRef</key>
@@ -1595,6 +1647,13 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>92033FFC05E57867BD79D491A9D4B5CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6BAB14B117AF45C7486C64290EB93635</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>935E37624FABB2530AE441A47561EDCF</key>
 		<dict>
 			<key>fileRef</key>
@@ -1605,7 +1664,7 @@
 		<key>93A57CD9B5646191F9E513D8E0A7BCEF</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>737D1740AE84728D691283A7E46B7876</string>
+			<string>B12C354D9D5B40B2D915365C3241AFB4</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1793,6 +1852,19 @@
 			<key>targetProxy</key>
 			<string>A4AFA101D16F0FC9B45EC9077C61F5C8</string>
 		</dict>
+		<key>B12C354D9D5B40B2D915365C3241AFB4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SYBlinkAnimationKit.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>B2AD796E0811AED05EEA7E020A7947B0</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1811,7 +1883,7 @@
 		<key>B737CC19F0131FFAEFA157B7F4D2FEAF</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>737D1740AE84728D691283A7E46B7876</string>
+			<string>B12C354D9D5B40B2D915365C3241AFB4</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -1829,19 +1901,6 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Debug</string>
-		</dict>
-		<key>B80591D6982EDE3600A9DFA60A46E334</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYTextField.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B9895C7F169E43B39773C99CF1AAE380</key>
 		<dict>
@@ -1869,13 +1928,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>BA588CA390BA0E07E9E2B65C2E3041DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50EB6F95FA8FC6C9B4192D25ECA68A9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -1952,6 +2004,26 @@
 			<key>targetProxy</key>
 			<string>4D6658D7723C958B49113CB94B138D22</string>
 		</dict>
+		<key>C2C2ABBCC45710EED4F43ADA0DAF65DF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0042CAD7B2C9683DB0A788C72B12124B</string>
+				<string>69A039B376C35A426A91E5878C6B3614</string>
+				<string>B12C354D9D5B40B2D915365C3241AFB4</string>
+				<string>8B30E173BA81CCFA09F9C075C5FA04BF</string>
+				<string>FBBD5035848696817C004E21ED6FBFD2</string>
+				<string>10AFA97073746C15F86D83766891C596</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/SYBlinkAnimationKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>C39F00679DAB5512C905911EB86907D0</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -2004,6 +2076,22 @@
 			<string>Pods_SYBlinkAnimationKit_Example.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C983E116F29C748BC2A3932C74032C98</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0AA181BE90346BBAD1692809D8B7551C</string>
+				<string>C2C2ABBCC45710EED4F43ADA0DAF65DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SYBlinkAnimationKit</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>CC0A504AF8FBBF1EA64EFA5943B7D3F3</key>
 		<dict>
@@ -2105,43 +2193,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D109C13A4A27BE94CC6E15BCE9C42E0F</key>
+		<key>D15AAD3D7269F6257A6F6C27BED8C9E7</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>D18E3CC37FA11AF8BB537758A48A3790</string>
-				<string>8CE6942BD0E554AB2A8A8E7EB38C6AF8</string>
-				<string>737D1740AE84728D691283A7E46B7876</string>
-				<string>50EB6F95FA8FC6C9B4192D25ECA68A9D</string>
-				<string>89E52F4394B7F50DA24AD227CFFDE1A4</string>
-				<string>182B9EE97CBB35D9514503873FA43414</string>
-			</array>
+			<key>fileRef</key>
+			<string>8132EDB0BC2778866DFFC79631661715</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/SYBlinkAnimationKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D18E3CC37FA11AF8BB537758A48A3790</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>D2DE62C6EF554ADC08CB4FF632D1D176</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>737D1740AE84728D691283A7E46B7876</string>
+			<string>B12C354D9D5B40B2D915365C3241AFB4</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -2284,17 +2346,10 @@
 			<key>remoteInfo</key>
 			<string>SYBlinkAnimationKit-SYBlinkAnimationKit</string>
 		</dict>
-		<key>D95791C2459A98D1CA1AD9F4268F31A9</key>
+		<key>DB309E5D6BCD091961FC4D3BD0200B5A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F0568A0E33D04A21288744BB8BD99F16</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DA7237EC3C88BE9F3D658EEFABEA47DC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7550CF50BC7E9A1F078E1B54C1A6E774</string>
+			<string>8B30E173BA81CCFA09F9C075C5FA04BF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2332,6 +2387,19 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
+		<key>E001C4F5DC82F1D2F6AE34FE3AE0F542</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Animatable.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E008177C1226E7BA6B129AD883792ECE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2342,19 +2410,6 @@
 			<string>text.script.sh</string>
 			<key>path</key>
 			<string>Pods-SYBlinkAnimationKit_Example-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0F7684679175F20AACC475420256001</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYButton.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2510,20 +2565,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>E7A152A8DC67AC69C4E0EF64BDC21726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D73539AA0500F011F560CA68A39240A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E90D40B81C50D5C7E06F4FAFECF15CDA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1601D30EB8B74D8540C6505523A09065</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>E9FF30526CDEC09A7C3E8A29D349406E</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2556,19 +2597,6 @@
 			<string>F7AF0E0A752F6C874DBC1F143E6EE88F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0568A0E33D04A21288744BB8BD99F16</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Animatable.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F294CE16D0BB89335EB3400EDAA363F5</key>
 		<dict>
@@ -2641,6 +2669,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>FBBD5035848696817C004E21ED6FBFD2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SYBlinkAnimationKit-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>FBD2D672921284E66F309CA3462F84D6</key>
 		<dict>
 			<key>children</key>
@@ -2653,25 +2694,6 @@
 			<string>Pods</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FD8F9C570F92C8E98E0A4C369ACA818F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D95791C2459A98D1CA1AD9F4268F31A9</string>
-				<string>BA588CA390BA0E07E9E2B65C2E3041DE</string>
-				<string>5EC01D9750FCA552516D16DF4625B36D</string>
-				<string>DA7237EC3C88BE9F3D658EEFABEA47DC</string>
-				<string>E90D40B81C50D5C7E06F4FAFECF15CDA</string>
-				<string>33848F0D584EE4F4CD796382A6AF4EDF</string>
-				<string>E7A152A8DC67AC69C4E0EF64BDC21726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>FDCF5EFC95C413E5DCF5133D3DFC4170</key>
 		<dict>

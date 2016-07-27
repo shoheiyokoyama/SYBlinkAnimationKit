@@ -17,7 +17,7 @@ public enum SYButtonAnimation: Int {
 }
 
 @IBDesignable
-public final class SYButton: UIButton, Animatable {
+public final class SYButton: UIButton, Animatable, TextConvertible {
     
     @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
@@ -103,8 +103,9 @@ public final class SYButton: UIButton, Animatable {
     
     public var isAnimating = false
     
+    var textLayer = CATextLayer()
+    
     private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
-    private let textLayer = CATextLayer()
     
     private var textColor = UIColor.blackColor() {
         didSet {
@@ -183,30 +184,8 @@ private extension SYButton {
         setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
-    private func configureTextLayer() {
-        guard let font = titleLabel?.font, text = currentTitle else {
-            return
-        }
-
-        var attributes = [String: AnyObject]()
-        attributes[NSFontAttributeName] = font
-        
-        let size  = text.sizeWithAttributes(attributes)
-        let x     = ( self.frame.width - size.width ) / 2
-        let y     = ( self.frame.height - size.height ) / 2
-        let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
-
-        textLayer.font            = font
-        textLayer.string          = text
-        textLayer.fontSize        = font.pointSize
-        textLayer.foregroundColor = textColor.CGColor
-        textLayer.contentsScale   = UIScreen.mainScreen().scale
-        textLayer.frame           = frame
-        textLayer.alignmentMode   = kCAAlignmentCenter
-    }
-    
     private func resetTextLayer(){
-        configureTextLayer()
+        configureTextLayer(currentTitle, font: titleLabel?.font, textColor: textColor)
         syLayer.resetTextLayer(textLayer)
     }
 }

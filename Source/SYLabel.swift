@@ -17,7 +17,7 @@ public enum SYLabelAnimation: Int {
 }
 
 @IBDesignable
-public final class SYLabel: UILabel, Animatable {
+public final class SYLabel: UILabel, Animatable, TextConvertible {
     
     @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
@@ -109,13 +109,14 @@ public final class SYLabel: UILabel, Animatable {
     
     public var isAnimating = false
     
+    var textLayer = CATextLayer()
+    
     public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    private let textLayer = CATextLayer()
     private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
     // MARK: - initializer -
@@ -173,29 +174,7 @@ private extension SYLabel {
     }
     
     private func resetTextLayer() {
-        configureTextLayer()
+        configureTextLayer(text, font: font, textColor: labelTextColor)
         syLayer.resetTextLayer(textLayer)
-    }
-    
-    private func configureTextLayer() {
-        guard let text = text else {
-            return
-        }
-
-        var attributes = [String: AnyObject]()
-        attributes[NSFontAttributeName] = font
-        
-        let size  = text.sizeWithAttributes(attributes)
-        let x     = ( self.frame.width - size.width ) / 2
-        let y     = ( self.frame.height - size.height ) / 2
-        let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
-
-        textLayer.font            = font
-        textLayer.string          = text
-        textLayer.fontSize        = font.pointSize
-        textLayer.foregroundColor = labelTextColor.CGColor
-        textLayer.contentsScale   = UIScreen.mainScreen().scale
-        textLayer.frame           = frame
-        textLayer.alignmentMode   = kCAAlignmentCenter
     }
 }
