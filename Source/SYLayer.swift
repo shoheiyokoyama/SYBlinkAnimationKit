@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum SYLayerAnimation {
+enum SYLayerAnimation {
     case Border
     case BorderWithShadow
     case Background
@@ -22,7 +22,7 @@ public enum SYMediaTimingFunction: Int {
     case EaseOut
     case EaseInEaseOut
     
-    public var timingFunction : CAMediaTimingFunction {
+    private var timingFunction : CAMediaTimingFunction {
         switch self {
         case .Linear:
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -36,57 +36,7 @@ public enum SYMediaTimingFunction: Int {
     }
 }
 
-public final class SYLayer {
-    
-    private struct AnimationConstants {
-        static let borderWidth: CGFloat = 1
-        static let defaultDuration: CFTimeInterval = 1.5
-        static let rippleDiameterRatio: CGFloat = 0.7
-        static let subRippleDiameterRatio: CGFloat = 0.85
-        static let shadowRadiusIfNotClear: CGFloat = 4
-        static let shadowRadius: CGFloat = 2.5
-        static let shadowOpacity: CGFloat = 0.5
-        static let repeatCount: Float = 1e100
-        static let fromTextColorAlpha: CGFloat = 0.15
-        static let rippleToAlpha: CGFloat = 0
-        static let rippleToScale: CGFloat = 1
-    }
-    
-    private enum AnimationType: String {
-        case borderColor
-        case borderWidth
-        case shadowOpacity
-        case backgroundColor
-        case foregroundColor
-        case opacity
-        case transformScale  = "transform.scale"
-        
-        private var keyPath: String {
-            get {
-                return rawValue
-            }
-        }
-        
-        private var fromValue: AnyObject {
-            switch self {
-            case .borderColor:
-                return UIColor.clearColor().CGColor
-            case .borderWidth:
-                return 0
-            case .shadowOpacity:
-                return 0
-            case .backgroundColor:
-                return UIColor.clearColor().CGColor
-            case .foregroundColor:
-                //Don't use
-                return UIColor.clearColor().CGColor
-            case .opacity:
-                return 1
-            case .transformScale:
-                return 0.4
-            }
-        }
-    }
+final class SYLayer {
     
     private var superLayer: CALayer!
     private var textLayer = CATextLayer()
@@ -166,62 +116,62 @@ public final class SYLayer {
     
     // MARK: - initializer -
     
-    public init(sLayer: CALayer) {
+    init(sLayer: CALayer) {
         superLayer = sLayer
         
         setLayer()
     }
     
-    // MARK: - Public Methods -
+    // MARK: - Internal Methods -
     
-    public func setAnimationBorderColor(borderColor: UIColor) {
+    func setAnimationBorderColor(borderColor: UIColor) {
         animationBorderColor = borderColor
     }
     
-    public func setAnimationBackgroundColor(backgroundColor: UIColor) {
+    func setAnimationBackgroundColor(backgroundColor: UIColor) {
         animationBackgroundColor = backgroundColor
     }
     
-    public func setAnimationTextColor(textColor: UIColor) {
+    func setAnimationTextColor(textColor: UIColor) {
         animationTextColor = textColor
     }
     
-    public func setAnimationRippleColor(rippleColor: UIColor) {
+    func setAnimationRippleColor(rippleColor: UIColor) {
         animationRippleColor = rippleColor
     }
 
-    public func setBackgroundColor(backgroundColor: UIColor) {
+    func setBackgroundColor(backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
     
-    public func setTextColor(textColor: UIColor) {
+    func setTextColor(textColor: UIColor) {
         self.textColor = textColor
     }
     
-    public func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
+    func setAnimationTimingFunction(timingFunction: SYMediaTimingFunction) {
         animationTimingFunction = timingFunction
     }
     
-    public func setAnimationDuration(animationDuration: CFTimeInterval) {
+    func setAnimationDuration(animationDuration: CFTimeInterval) {
         self.animationDuration = animationDuration
     }
     
-    public func resizeSuperLayer() {
+    func resizeSuperLayer() {
         resizeRippleLayer()
         resizeTextLayer()
         resizeShadowPath()
     }
     
-    public func firstSetTextLayer(textLayer: CATextLayer) {
+    func firstSetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
         superLayer.insertSublayer(self.textLayer, atIndex: 0)
     }
     
-    public func resetTextLayer(textLayer: CATextLayer) {
+    func resetTextLayer(textLayer: CATextLayer) {
         self.textLayer = textLayer
     }
     
-    public var syLayerAnimation: SYLayerAnimation = .Border {
+    var syLayerAnimation: SYLayerAnimation = .Border {
         didSet {
             switch syLayerAnimation {
             case .Border:
@@ -234,7 +184,7 @@ public final class SYLayer {
         }
     }
     
-    public func startAnimation() {
+    func startAnimation() {
         switch syLayerAnimation {
         case .Border:
             animateBorderOrBorderWithShadow()
@@ -249,7 +199,7 @@ public final class SYLayer {
         }
     }
     
-    public func stopAnimation() {
+    func stopAnimation() {
         superLayer.removeAllAnimations()
         textLayer.removeAllAnimations()
         subRippleLayer.removeAllAnimations()
@@ -262,6 +212,56 @@ public final class SYLayer {
 // MARK: - Private Methods -
 
 private extension SYLayer {
+    
+    private struct AnimationConstants {
+        static let borderWidth: CGFloat            = 1
+        static let defaultDuration: CFTimeInterval = 1.5
+        static let rippleDiameterRatio: CGFloat    = 0.7
+        static let subRippleDiameterRatio: CGFloat = 0.85
+        static let shadowRadiusIfNotClear: CGFloat = 4
+        static let shadowRadius: CGFloat           = 2.5
+        static let shadowOpacity: CGFloat          = 0.5
+        static let repeatCount: Float              = 1e100
+        static let fromTextColorAlpha: CGFloat     = 0.15
+        static let rippleToAlpha: CGFloat          = 0
+        static let rippleToScale: CGFloat          = 1
+    }
+    
+    private enum AnimationKeyType: String {
+        case borderColor
+        case borderWidth
+        case shadowOpacity
+        case backgroundColor
+        case foregroundColor
+        case opacity
+        case transformScale  = "transform.scale"
+        
+        private var keyPath: String {
+            get {
+                return rawValue
+            }
+        }
+        
+        private var fromValue: AnyObject {
+            switch self {
+            case .borderColor:
+                return UIColor.clearColor().CGColor
+            case .borderWidth:
+                return 0
+            case .shadowOpacity:
+                return 0
+            case .backgroundColor:
+                return UIColor.clearColor().CGColor
+            case .foregroundColor:
+                //Don't use
+                return UIColor.clearColor().CGColor
+            case .opacity:
+                return 1
+            case .transformScale:
+                return 0.4
+            }
+        }
+    }
     
     private func setLayer() {
         superLayer.shadowColor  = animationShadowColor.CGColor
@@ -378,21 +378,21 @@ private extension SYLayer {
     }
     
     private func setBorderColorAnimation() {
-        let type: AnimationType = .borderColor
+        let type: AnimationKeyType = .borderColor
         borderColorAnimtion = CABasicAnimation(keyPath: type.keyPath)
         borderColorAnimtion.fromValue = type.fromValue
         borderColorAnimtion.toValue   = animationBorderColor.CGColor
     }
     
     private func setBorderWidthAnimation() {
-        let type: AnimationType = .borderWidth
+        let type: AnimationKeyType = .borderWidth
         borderWidthAnimation = CABasicAnimation(keyPath: type.keyPath)
         borderWidthAnimation.fromValue = type.fromValue
         borderWidthAnimation.toValue   = AnimationConstants.borderWidth
     }
     
     private func setShadowAnimation() {
-        let type: AnimationType = .shadowOpacity
+        let type: AnimationKeyType = .shadowOpacity
         shadowAnimation = CABasicAnimation(keyPath: type.keyPath)
         shadowAnimation.fromValue = type.fromValue
         shadowAnimation.toValue   = AnimationConstants.shadowOpacity
@@ -419,7 +419,7 @@ private extension SYLayer {
     }
     
     private func animateBackground() {
-        let type: AnimationType = .backgroundColor
+        let type: AnimationKeyType = .backgroundColor
         backgroundColorAnimation = CABasicAnimation(keyPath: type.keyPath)
         backgroundColorAnimation.fromValue      = type.fromValue
         backgroundColorAnimation.toValue        = animationBackgroundColor.CGColor
@@ -431,7 +431,7 @@ private extension SYLayer {
     }
     
     private func animateText() {
-        textColorAnimation = CABasicAnimation(keyPath: AnimationType.foregroundColor.keyPath)
+        textColorAnimation = CABasicAnimation(keyPath: AnimationKeyType.foregroundColor.keyPath)
         textColorAnimation.duration            = animationDuration
         textColorAnimation.autoreverses        = true
         textColorAnimation.repeatCount         = AnimationConstants.repeatCount
@@ -444,12 +444,12 @@ private extension SYLayer {
     }
     
     private func animateRipple() {
-        let opacityType: AnimationType = .opacity
+        let opacityType: AnimationKeyType = .opacity
         let fadeOutOpacity = CABasicAnimation(keyPath: opacityType.keyPath)
         fadeOutOpacity.fromValue = opacityType.fromValue
         fadeOutOpacity.toValue   = AnimationConstants.rippleToAlpha
 
-        let scaleType: AnimationType = .transformScale
+        let scaleType: AnimationKeyType = .transformScale
         let scale = CABasicAnimation(keyPath: scaleType.keyPath)
         scale.fromValue = scaleType.fromValue
         scale.toValue   = AnimationConstants.rippleToScale

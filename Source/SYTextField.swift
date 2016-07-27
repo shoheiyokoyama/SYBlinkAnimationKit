@@ -162,7 +162,7 @@ public final class SYTextField: UITextField, Animatable {
 private extension SYTextField {
     
     private struct TextFieldConstants {
-        static let cornerRadius: CGFloat = 5
+        static let cornerRadius: CGFloat    = 5
         static let defaultDuration: CGFloat = 1
     }
     

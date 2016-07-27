@@ -52,7 +52,7 @@ public final class SYButton: UIButton, Animatable {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public  var syButtonAnimationAdapter: Int {
+    @IBInspectable public var syButtonAnimationAdapter: Int {
         get {
             return syButtonAnimation.rawValue
         }

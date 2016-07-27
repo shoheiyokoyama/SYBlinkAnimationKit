@@ -133,7 +133,7 @@ public final class SYView: UIView, Animatable {
 private extension SYView {
     
     private struct ViewConstants {
-        static let cornerRadius: CGFloat = 1.5
+        static let cornerRadius: CGFloat    = 1.5
         static let defaultDuration: CGFloat = 1
     }
     
