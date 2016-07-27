@@ -19,8 +19,6 @@ public enum SYButtonAnimation: Int {
 @IBDesignable
 public final class SYButton: UIButton, Animatable {
     
-    private let textLayer = CATextLayer()
-    
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
@@ -41,65 +39,6 @@ public final class SYButton: UIButton, Animatable {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
-
-    private var textColor = UIColor.blackColor() {
-        didSet {
-            syLayer.setTextColor(textColor)
-        }
-    }
-    
-    public var isAnimating = false
-    
-    private var isFirstSetTextLayer = false
-    
-    override public var frame: CGRect {
-        didSet {
-            syLayer.resizeSuperLayer()
-        }
-    }
-    override public var bounds: CGRect {
-        didSet {
-            syLayer.resizeSuperLayer()
-        }
-    }
-    
-    override public var backgroundColor: UIColor? {
-        didSet {
-            guard let bgColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(bgColor)
-        }
-    }
-    
-    override public func setTitle(title: String?, forState state: UIControlState) {
-        guard let t = title else { return }
-        super.setTitle(t, forState: state)
-        
-        !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
-    }
-    override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
-        super.setTitleColor(UIColor.clearColor(), forState: state)
-        
-        guard let c = color else { return }
-        textLayer.foregroundColor = c.CGColor
-        textColor = c
-    }
-    
-    public func setFontOfSize(fontSize: CGFloat) {
-        titleLabel?.font = UIFont.systemFontOfSize(fontSize)
-        resetTextLayer()
-    }
-    public func setFontNameWithSize(name: String, size: CGFloat) {
-        guard let tLabel = titleLabel else { return }
-
-        tLabel.font = UIFont(name: name, size: size)
-        resetTextLayer()
-    }
-    
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
-        didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
-        }
-    }
     @IBInspectable public  var animationTimingAdapter: Int {
         get {
             return animationTimingFunction.rawValue
@@ -108,23 +47,24 @@ public final class SYButton: UIButton, Animatable {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
-    
     @IBInspectable public var animationDuration: CGFloat = 1.0 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setLayer()
+    @IBInspectable public  var syButtonAnimationAdapter: Int {
+        get {
+            return syButtonAnimation.rawValue
+        }
+        set(index) {
+            syButtonAnimation = SYButtonAnimation(rawValue: index) ?? .Border
+        }
     }
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setLayer()
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+        didSet {
+            syLayer.setAnimationTimingFunction(animationTimingFunction)
+        }
     }
     
     public var syButtonAnimation: SYButtonAnimation = .Border {
@@ -143,13 +83,76 @@ public final class SYButton: UIButton, Animatable {
             }
         }
     }
-    @IBInspectable public  var syButtonAnimationAdapter: Int {
-        get {
-            return syButtonAnimation.rawValue
+    
+    override public var bounds: CGRect {
+        didSet {
+            syLayer.resizeSuperLayer()
         }
-        set(index) {
-            syButtonAnimation = SYButtonAnimation(rawValue: index) ?? .Border
+    }
+    override public var frame: CGRect {
+        didSet {
+            syLayer.resizeSuperLayer()
         }
+    }
+    override public var backgroundColor: UIColor? {
+        didSet {
+            guard let bgColor = backgroundColor else { return }
+            syLayer.setBackgroundColor(bgColor)
+        }
+    }
+    
+    public var isAnimating = false
+    
+    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    private let textLayer = CATextLayer()
+    
+    private var textColor = UIColor.blackColor() {
+        didSet {
+            syLayer.setTextColor(textColor)
+        }
+    }
+    
+    private var isFirstSetTextLayer = false
+    
+    // MARK: - initializer -
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setLayer()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setLayer()
+    }
+    
+    // MARK: - Public Methods -
+    
+    override public func setTitle(title: String?, forState state: UIControlState) {
+        guard let title = title else { return }
+        super.setTitle(title, forState: state)
+        
+        !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
+    }
+    
+    override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
+        super.setTitleColor(UIColor.clearColor(), forState: state)
+        
+        guard let color = color else { return }
+        textLayer.foregroundColor = color.CGColor
+        textColor = color
+    }
+    
+    public func setFontOfSize(fontSize: CGFloat) {
+        titleLabel?.font = UIFont.systemFontOfSize(fontSize)
+        resetTextLayer()
+    }
+    
+    public func setFontNameWithSize(name: String, size: CGFloat) {
+        guard let titleLabel = titleLabel else { return }
+        
+        titleLabel.font = UIFont(name: name, size: size)
+        resetTextLayer()
     }
     
     public func startAnimation() {
@@ -163,11 +166,14 @@ public final class SYButton: UIButton, Animatable {
     }
 }
 
+// MARK: - Private Methods -
+
 private extension SYButton {
     
     private func setLayer() {
-        layer.cornerRadius       = 5.0
-        contentEdgeInsets        = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+        layer.cornerRadius = 5.0
+        contentEdgeInsets  = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+        
         syLayer.syLayerAnimation = .Border
 
         setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -178,23 +184,21 @@ private extension SYButton {
             return
         }
 
-        var attributes                  = [String: AnyObject]()
+        var attributes = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
-        let size                        = text.sizeWithAttributes(attributes)
+        
+        let size  = text.sizeWithAttributes(attributes)
+        let x     = ( CGRectGetWidth(self.frame) - size.width ) / 2
+        let y     = ( CGRectGetHeight(self.frame) - size.height ) / 2
+        let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
-        let x                           = ( CGRectGetWidth(self.frame) - size.width ) / 2
-        let y                           = ( CGRectGetHeight(self.frame) - size.height ) / 2
-        let frame                       = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
-
-        textLayer.font                  = font
-        textLayer.string                = text
-        textLayer.fontSize              = font.pointSize
-
-        textLayer.foregroundColor       = textColor.CGColor
-        textLayer.contentsScale         = UIScreen.mainScreen().scale
-
-        textLayer.frame                 = frame
-        textLayer.alignmentMode         = kCAAlignmentCenter
+        textLayer.font            = font
+        textLayer.string          = text
+        textLayer.fontSize        = font.pointSize
+        textLayer.foregroundColor = textColor.CGColor
+        textLayer.contentsScale   = UIScreen.mainScreen().scale
+        textLayer.frame           = frame
+        textLayer.alignmentMode   = kCAAlignmentCenter
     }
     
     private func firstSetTextLayer() {

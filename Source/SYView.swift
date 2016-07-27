@@ -15,6 +15,7 @@ public enum SYViewAnimation: Int {
     case Ripple
 }
 
+@IBDesignable
 public final class SYView: UIView, Animatable {
     
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
@@ -37,8 +38,27 @@ public final class SYView: UIView, Animatable {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
-    
-    public var isAnimating = false
+    @IBInspectable public var animationTimingAdapter: Int {
+        get {
+            return animationTimingFunction.rawValue
+        }
+        set(index) {
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+        }
+    }
+    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+        didSet {
+            syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
+        }
+    }
+    @IBInspectable public  var syViewAnimationAdapter: Int {
+        get {
+            return syViewAnimation.rawValue
+        }
+        set(index) {
+            syViewAnimation = SYViewAnimation(rawValue: index) ?? .Border
+        }
+    }
     
     override public var frame: CGRect {
         didSet {
@@ -50,45 +70,19 @@ public final class SYView: UIView, Animatable {
             syLayer.resizeSuperLayer()
         }
     }
-    
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let bgColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(bgColor)
+            guard let backgroundColor = backgroundColor else { return }
+            syLayer.setBackgroundColor(backgroundColor)
         }
     }
+    
+    public var isAnimating = false
     
     public var animationTimingFunction: SYMediaTimingFunction = .Linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
-    }
-    @IBInspectable public var animationTimingAdapter: Int {
-        get {
-            return animationTimingFunction.rawValue
-        }
-        set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
-        }
-    }
-    
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
-        didSet {
-            syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
-        }
-    }
-    
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setLayer()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setLayer()
     }
     
     public var syViewAnimation: SYViewAnimation = .Border {
@@ -105,14 +99,23 @@ public final class SYView: UIView, Animatable {
             }
         }
     }
-    @IBInspectable public  var syViewAnimationAdapter: Int {
-        get {
-            return syViewAnimation.rawValue
-        }
-        set(index) {
-            syViewAnimation = SYViewAnimation(rawValue: index) ?? .Border
-        }
+    
+    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    
+    // MARK: - initializer -
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setLayer()
     }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setLayer()
+    }
+    
+    // MARK: - Public Methods -
     
     public func startAnimation() {
         isAnimating = true
@@ -124,6 +127,8 @@ public final class SYView: UIView, Animatable {
         syLayer.stopAnimation()
     }
 }
+
+// MARK: - Private Methods -
 
 private extension SYView {
     

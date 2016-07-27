@@ -19,8 +19,6 @@ public enum SYLabelAnimation: Int {
 @IBDesignable
 public final class SYLabel: UILabel, Animatable {
     
-    private let textLayer = CATextLayer()
-    
     @IBInspectable public var animationBorderColor: UIColor = UIColor() {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
@@ -41,6 +39,36 @@ public final class SYLabel: UILabel, Animatable {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
+    @IBInspectable public var animationTimingAdapter: Int {
+        get {
+            return animationTimingFunction.rawValue
+        }
+        set(index) {
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+        }
+    }
+    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+        didSet {
+            syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
+        }
+    }
+    @IBInspectable public var labelTextColor: UIColor? {
+        didSet {
+            guard let labelTextColor = labelTextColor else { return }
+            
+            textColor = UIColor.clearColor()
+            textLayer.foregroundColor = labelTextColor.CGColor
+            syLayer.setTextColor(labelTextColor)
+        }
+    }
+    @IBInspectable public  var syLabelAnimationAdapter: Int {
+        get {
+            return syLabelAnimation.rawValue
+        }
+        set(index) {
+            syLabelAnimation = SYLabelAnimation(rawValue: index) ?? .Border
+        }
+    }
     
     override public var frame: CGRect {
         didSet {
@@ -52,72 +80,16 @@ public final class SYLabel: UILabel, Animatable {
             syLayer.resizeSuperLayer()
         }
     }
-    
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let bgColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(bgColor)
+            guard let backgroundColor = backgroundColor else { return }
+            syLayer.setBackgroundColor(backgroundColor)
         }
     }
-    
     override public var text: String? {
         didSet {
             !isFirstSetTextLayer ? firstSetTextLayer() : resetTextLayer()
         }
-    }
-    
-    @IBInspectable public var labelTextColor: UIColor? {
-        didSet {
-            guard let ltColor = labelTextColor else { return }
-            textColor = UIColor.clearColor()
-            textLayer.foregroundColor = ltColor.CGColor
-            syLayer.setTextColor(ltColor)
-        }
-    }
-    
-    public var isAnimating = false
-    public var isFirstSetTextLayer = false
-    
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
-        didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
-        }
-    }
-    @IBInspectable public var animationTimingAdapter: Int {
-        get {
-            return animationTimingFunction.rawValue
-        }
-        set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
-        }
-    }
-    
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
-        didSet {
-            syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
-        }
-    }
-    
-    public func setFontOfSize(fontSize: CGFloat) {
-        font = UIFont.systemFontOfSize(fontSize)
-        resetTextLayer()
-    }
-    public func setFontNameWithSize(name: String, size: CGFloat) {
-        font = UIFont(name: name, size: size)
-        resetTextLayer()
-    }
-    
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setLayer()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setLayer()
     }
     
     public var syLabelAnimation: SYLabelAnimation = .Border {
@@ -136,13 +108,43 @@ public final class SYLabel: UILabel, Animatable {
             }
         }
     }
-    @IBInspectable public  var syLabelAnimationAdapter: Int {
-        get {
-            return syLabelAnimation.rawValue
+    
+    public var isAnimating = false
+    
+    public var isFirstSetTextLayer = false
+    
+    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+        didSet {
+            syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
-        set(index) {
-            syLabelAnimation = SYLabelAnimation(rawValue: index) ?? .Border
-        }
+    }
+    
+    private let textLayer = CATextLayer()
+    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    
+    // MARK: - initializer -
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setLayer()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setLayer()
+    }
+    
+    // MARK: - Public Methods -
+    
+    public func setFontOfSize(fontSize: CGFloat) {
+        font = UIFont.systemFontOfSize(fontSize)
+        resetTextLayer()
+    }
+    
+    public func setFontNameWithSize(name: String, size: CGFloat) {
+        font = UIFont(name: name, size: size)
+        resetTextLayer()
     }
     
     public func startAnimation() {
@@ -156,12 +158,16 @@ public final class SYLabel: UILabel, Animatable {
     }
 }
 
+// MARK: - Private Methods -
+
 private extension SYLabel {
     
     private func setLayer() {
-        layer.cornerRadius       = 1.5
-        textColor                = UIColor.clearColor()
-        labelTextColor           = UIColor.blackColor()
+        layer.cornerRadius = 1.5
+        
+        textColor      = UIColor.clearColor()
+        labelTextColor = UIColor.blackColor()
+        
         syLayer.syLayerAnimation = .Border
     }
     
@@ -177,29 +183,28 @@ private extension SYLabel {
     }
     
     private func setTextLayer() {
-        guard let t = text else {
+        guard let text = text else {
             return
         }
 
-        var attributes                  = [String: AnyObject]()
+        var attributes = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
-        let size                        = t.sizeWithAttributes(attributes)
         
-        let x                           = ( CGRectGetWidth(self.frame) - size.width ) / 2
-        let y                           = ( CGRectGetHeight(self.frame) - size.height ) / 2
-        let frame                       = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
+        let size  = text.sizeWithAttributes(attributes)
+        let x     = ( CGRectGetWidth(self.frame) - size.width ) / 2
+        let y     = ( CGRectGetHeight(self.frame) - size.height ) / 2
+        let frame = CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: size.width, height: size.height + layer.borderWidth))
 
-        textLayer.font                  = font
-        textLayer.string                = t
-        textLayer.fontSize              = font.pointSize
+        textLayer.font     = font
+        textLayer.string   = text
+        textLayer.fontSize = font.pointSize
 
         if let ltColor = labelTextColor {
             textLayer.foregroundColor = ltColor.CGColor
         }
 
-        textLayer.contentsScale         = UIScreen.mainScreen().scale
-
-        textLayer.frame                 = frame
-        textLayer.alignmentMode         = kCAAlignmentCenter
+        textLayer.contentsScale = UIScreen.mainScreen().scale
+        textLayer.frame         = frame
+        textLayer.alignmentMode = kCAAlignmentCenter
     }
 }
