@@ -142,7 +142,7 @@ public final class SYLayer {
             superLayer.borderWidth = borderWidth
         }
     }
-    private var borderColor = UIColor.clearColor() {
+    private var borderColor = UIColor.whiteColor() {
         didSet {
             superLayer.borderColor = borderColor.CGColor
         }
@@ -158,7 +158,7 @@ public final class SYLayer {
             superLayer.shadowOpacity = shadowOpacity
         }
     }
-    private var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
+    private var shadowOffset: CGSize = CGSize.zero {
         didSet {
             superLayer.shadowOffset = shadowOffset
         }
@@ -267,7 +267,7 @@ private extension SYLayer {
         superLayer.shadowColor  = animationShadowColor.CGColor
         superLayer.borderColor  = borderColor.CGColor
         superLayer.borderWidth  = borderWidth
-        superLayer.shadowOffset = CGSize(width: 0, height: 0)
+        superLayer.shadowOffset = CGSize.zero
         
         setRippleLayer()
     }

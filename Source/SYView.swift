@@ -18,22 +18,22 @@ public enum SYViewAnimation: Int {
 @IBDesignable
 public final class SYView: UIView, Animatable {
     
-    @IBInspectable public var animationBorderColor: UIColor = UIColor() {
+    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationTextColor: UIColor = UIColor() {
+    @IBInspectable public var animationTextColor: UIColor = AnimationDefaultColor.text {
         didSet {
             syLayer.setAnimationTextColor(animationTextColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = UIColor() {
+    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
         didSet {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
@@ -46,7 +46,7 @@ public final class SYView: UIView, Animatable {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = ViewConstants.defaultDuration {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
@@ -132,8 +132,13 @@ public final class SYView: UIView, Animatable {
 
 private extension SYView {
     
+    private struct ViewConstants {
+        static let cornerRadius: CGFloat = 1.5
+        static let defaultDuration: CGFloat = 1
+    }
+    
     private func setLayer() {
         syViewAnimation = .Border
-        layer.cornerRadius = 1.5
+        layer.cornerRadius = ViewConstants.cornerRadius
     }
 }

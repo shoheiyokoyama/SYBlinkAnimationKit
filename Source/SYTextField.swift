@@ -18,17 +18,17 @@ public enum SYTextFieldAnimation: Int {
 @IBDesignable
 public final class SYTextField: UITextField, Animatable {
 
-    @IBInspectable public var animationBorderColor:UIColor = UIColor() {
+    @IBInspectable public var animationBorderColor:UIColor = AnimationDefaultColor.border {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor:UIColor = UIColor() {
+    @IBInspectable public var animationBackgroundColor:UIColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationRippleColor:UIColor = UIColor() {
+    @IBInspectable public var animationRippleColor:UIColor = AnimationDefaultColor.ripple {
         didSet {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
@@ -41,7 +41,7 @@ public final class SYTextField: UITextField, Animatable {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = TextFieldConstants.defaultDuration {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
@@ -77,13 +77,13 @@ public final class SYTextField: UITextField, Animatable {
         didSet {
             switch borderStyle {
             case .Bezel:
-                self.layer.cornerRadius = 0.0
+                self.layer.cornerRadius = 0
             case .Line:
-                self.layer.cornerRadius = 0.0
+                self.layer.cornerRadius = 0
             case .None:
-                self.layer.cornerRadius = 5.0
+                self.layer.cornerRadius = TextFieldConstants.cornerRadius
             case .RoundedRect:
-                self.layer.cornerRadius = 5.0
+                self.layer.cornerRadius = TextFieldConstants.cornerRadius
             }
         }
     }
@@ -160,6 +160,11 @@ public final class SYTextField: UITextField, Animatable {
 // MARK: - Private Methods -
 
 private extension SYTextField {
+    
+    private struct TextFieldConstants {
+        static let cornerRadius: CGFloat = 5
+        static let defaultDuration: CGFloat = 1
+    }
     
     private func setLayer() {
         syLayer.syLayerAnimation = .Border

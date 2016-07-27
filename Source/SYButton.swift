@@ -47,7 +47,7 @@ public final class SYButton: UIButton, Animatable {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = ButtonConstants.defaultDuration {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
@@ -170,9 +170,15 @@ public final class SYButton: UIButton, Animatable {
 
 private extension SYButton {
     
+    private struct ButtonConstants {
+        static let cornerRadius: CGFloat    = 5
+        static let padding: CGFloat         = 5
+        static let defaultDuration: CGFloat = 1
+    }
+    
     private func setLayer() {
-        layer.cornerRadius = 5.0
-        contentEdgeInsets  = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+        layer.cornerRadius = ButtonConstants.cornerRadius
+        contentEdgeInsets  = UIEdgeInsets(top: ButtonConstants.padding, left: ButtonConstants.padding, bottom: ButtonConstants.padding, right: ButtonConstants.padding)
         
         syLayer.syLayerAnimation = .Border
 

@@ -47,7 +47,7 @@ public final class SYLabel: UILabel, Animatable {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1.0 {
+    @IBInspectable public var animationDuration: CGFloat = LabelConstants.defaultDuration {
         didSet {
             syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
@@ -162,8 +162,13 @@ public final class SYLabel: UILabel, Animatable {
 
 private extension SYLabel {
     
+    private struct LabelConstants {
+        static let cornerRadius: CGFloat    = 1.5
+        static let defaultDuration: CGFloat = 1
+    }
+    
     private func setLayer() {
-        layer.cornerRadius = 1.5
+        layer.cornerRadius = LabelConstants.cornerRadius
         
         textColor      = UIColor.clearColor()
         labelTextColor = UIColor.blackColor()
