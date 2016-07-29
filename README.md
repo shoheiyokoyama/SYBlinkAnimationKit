@@ -118,19 +118,39 @@ but you can control this behavior.
 
 ## Customize animation properties
 
-If you just want to change the types of animation, you can customize `syClassAnimation`.
+### Animation Type
 
-Set `syClassAnimationAdapter` (with Integer) in place of `syClassAnimation` in IB.
-SYClassAnimation : ` border = 0`, ` borderWithShadow = 1`, ` background = 2`, ` ripple = 3`, ` text = 4`.
-default is `border`.
+If you just want to change the types of animation, you can customize `animationType`.
+
+
+Support 5 types of animation
+
+- border
+- borderWithShadow
+- background
+- ripple
+- text
+
 ```swift
-   //settable as animationAdapter in IB
+   // default is border
    public var animationType: AnimationType
 ```
 
-If you just want to change the color of animation, you can customize the properties of the color.
+#### *inspectable*
 
+Set `animationAdapter` (with Integer) in place of `animationType` in IB.
+
+- border: 0
+- borderWithShadow: 1
+- background: 2
+- ripple: 3
+- text: 4
+
+### Animation Color
+
+You can customize the properties of the color.
 These properties are *inspectable*.
+
 ```swift
    public var animationBorderColor: UIColor
 ```
@@ -144,19 +164,45 @@ These properties are *inspectable*.
    public var animationRippleColor: UIColor
 ```
 
-If you just want to change animation duration, timing,  you can customize `animationTimingFunction`, `animationDuration`.
+### Animation Duration, Timing
 
-Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
-SYMediaTimingFunction : ` linear = 0`, ` easeIn = 1`, ` easeOut = 2`, ` easeInEaseOut = 3`.
-default is `linear`.
+You can customize `animationTimingFunction`, `animationDuration`.
+
 
 ```swift
+   //default is linear
    public var animationTimingFunction: SYMediaTimingFunction
 ```
 
 ```swift
    public var animationDuration: CGFloat //default is 2.0
 ```
+
+#### *inspectable*
+
+Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
+
+- linear: 0
+- easeIn: 1
+- easeOut: 2
+- easeInEaseOut: 3
+
+### Customize Animatable Text
+
+You can customize Animatable Text alignment.
+Support 9 types of alignment
+
+- topLeft
+- topCenter
+- topRight
+- left
+- center
+- right
+- bottomLeft
+- bottomCenter
+- bottomRight
+
+### whether animating or not
 
 If SYClass is in middle of animation, this property is `true`
 ```swift
