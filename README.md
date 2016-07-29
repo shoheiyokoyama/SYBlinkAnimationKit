@@ -175,7 +175,8 @@ You can customize `animationTimingFunction`, `animationDuration`.
 ```
 
 ```swift
-   public var animationDuration: CGFloat //default is 2.0
+   //default is 2.0
+   public var animationDuration: CGFloat 
 ```
 
 #### *inspectable*
