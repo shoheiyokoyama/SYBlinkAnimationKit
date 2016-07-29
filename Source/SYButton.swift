@@ -107,7 +107,11 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     var textLayer = CATextLayer()
     
-    public var textPosition: TextPosition = .center
+    public var textPosition: TextPosition = .center {
+        didSet {
+            resetTextLayer()
+        }
+    }
     
     private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     

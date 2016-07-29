@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '07D7AB4212409C29DBC8E1BC'
+               BlueprintIdentifier = 'A69049D636C155DCDC60D88E'
                BlueprintName = 'SYBlinkAnimationKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SYBlinkAnimationKit.framework'>
