@@ -123,8 +123,6 @@ but you can control this behavior.
 If you just want to change the types of animation, you can customize `animationType`.
 
 
-Support 5 types of animation
-
 - border
 - borderWithShadow
 - background
@@ -133,7 +131,16 @@ Support 5 types of animation
 
 ```swift
    // default is border
-   public var animationType: AnimationType
+   var animationType: AnimationType
+   
+   // Support 5 types of animation
+   enum AnimationType: Int {
+        case border
+        case borderWithShadow
+        case background
+        case ripple
+        case text
+    }
 ```
 
 #### *inspectable*
@@ -152,16 +159,16 @@ You can customize the properties of the color.
 These properties are *inspectable*.
 
 ```swift
-   public var animationBorderColor: UIColor
+   var animationBorderColor: UIColor
 ```
 ```swift
-   public var animationBackgroundColor: UIColor
+   var animationBackgroundColor: UIColor
 ```
 ```swift
-   public var animationTextColor: UIColor
+   var animationTextColor: UIColor
 ```
 ```swift
-   public var animationRippleColor: UIColor
+   var animationRippleColor: UIColor
 ```
 
 ### Animation Duration, Timing
@@ -171,7 +178,15 @@ You can customize `animationTimingFunction`, `animationDuration`.
 
 ```swift
    //default is linear
-   public var animationTimingFunction: SYMediaTimingFunction
+   var animationTimingFunction: SYMediaTimingFunction
+   
+   enum SYMediaTimingFunction: Int {
+        case linear
+        case easeIn
+        case easeOut
+        case easeInEaseOut
+   }
+
 ```
 
 ```swift
@@ -194,15 +209,15 @@ You can customize Animatable Text alignment.
 Support 9 types of alignment.
 Available `SYButton`, `SYLabel` now.
 
-- topLeft
-- topCenter
-- topRight
-- left
-- center
-- right
-- bottomLeft
-- bottomCenter
-- bottomRight
+````swift
+    var textPosition: TextPosition
+    
+    enum TextPosition {
+        case topLeft, topCenter, topRight
+        case left, center, right
+        case bottomLeft, bottomCenter, bottomRight
+    }
+````
 
 ### Whether animating or not
 
