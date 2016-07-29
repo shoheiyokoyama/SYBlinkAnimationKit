@@ -175,9 +175,9 @@ final class SYLayer {
     func startAnimation() {
         switch syLayerAnimation {
         case .Border:
-            animateBorderOrBorderWithShadow()
+            animateBorder()
         case .BorderWithShadow:
-            animateBorderOrBorderWithShadow()
+            animateBorder()
         case .Background:
             animateBackground()
         case .Text:
@@ -261,7 +261,7 @@ private extension SYLayer {
     }
     
     private func setRippleLayer() {
-        setRippleLayerPosition()
+        configureRippleLayer()
         rippleLayer.opacity = 0
         superLayer.addSublayer(rippleLayer)
 
@@ -269,24 +269,24 @@ private extension SYLayer {
         superLayer.insertSublayer(subRippleLayer, atIndex: 1)
     }
     
-    private func setRippleLayerPosition() {
-        let superLayerHeight = superLayer.frame.height
+    private func configureRippleLayer() {
+        let height = superLayer.frame.height
 
-        let rippleDiameter: CGFloat     = superLayerHeight * AnimationConstants.rippleDiameterRatio
-        let rippleCornerRadius: CGFloat = rippleDiameter / 2
+        let diameter: CGFloat     = height * AnimationConstants.rippleDiameterRatio
+        let cornerRadius: CGFloat = diameter / 2
 
         rippleLayer.backgroundColor = animationRippleColor.CGColor
-        rippleLayer.cornerRadius    = rippleCornerRadius
-        rippleLayer.frame           = CGRect(x: (superLayer.bounds.width - rippleDiameter) / 2, y: (superLayer.bounds.height - rippleDiameter) / 2, width: rippleDiameter, height: rippleDiameter)
+        rippleLayer.cornerRadius    = cornerRadius
+        rippleLayer.frame           = CGRect(x: (superLayer.bounds.width - diameter) / 2, y: (superLayer.bounds.height - diameter) / 2, width: diameter, height: diameter)
 
-        let subRippleDiameter: CGFloat     = superLayerHeight * AnimationConstants.subRippleDiameterRatio
-        let subRippleCornerRadius: CGFloat = subRippleDiameter / 2
+        let subDiameter: CGFloat     = height * AnimationConstants.subRippleDiameterRatio
+        let subCornerRadius: CGFloat = subDiameter / 2
 
         subRippleLayer.borderColor     = animationRippleColor.CGColor
         subRippleLayer.borderWidth     = AnimationConstants.borderWidth
         subRippleLayer.backgroundColor = UIColor.clearColor().CGColor
-        subRippleLayer.cornerRadius    = subRippleCornerRadius
-        subRippleLayer.frame           = CGRect(x: (superLayer.bounds.width - subRippleDiameter) / 2, y: (superLayer.bounds.height - subRippleDiameter) / 2, width: subRippleDiameter, height: subRippleDiameter)
+        subRippleLayer.cornerRadius    = subCornerRadius
+        subRippleLayer.frame           = CGRect(x: (superLayer.bounds.width - subDiameter) / 2, y: (superLayer.bounds.height - subDiameter) / 2, width: subDiameter, height: subDiameter)
     }
     
     private func resetSuperLayerShadow() {
@@ -339,7 +339,7 @@ private extension SYLayer {
     }
     
     private func resizeRippleLayer() {
-        setRippleLayerPosition()
+        configureRippleLayer()
     }
     
     private func resizeTextLayer() {
@@ -380,7 +380,7 @@ private extension SYLayer {
         shadowAnimation.toValue   = AnimationConstants.shadowOpacity
     }
     
-    private func animateBorderOrBorderWithShadow() {
+    private func animateBorder() {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.duration       = animationDuration
         groupAnimation.animations     = [borderColorAnimtion, borderWidthAnimation]
