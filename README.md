@@ -44,13 +44,13 @@ There are 5 types of animation for component.
 - Easily usable
 - Customizable in any properties for animation
 - Support Swift 2.0
-- Support @IBDesignable and @IBInspectable.
+- Support `@IBDesignable` and `@IBInspectable`.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
 - [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) : available 5 types of Animation
 - [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift) : available 5 types of Animation
-- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `Border`,  `borderWithShadow`,  `background`, `ripple`
-- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `Border`,  `borderWithShadow`,  `background`, `ripple`
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
+- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
 
 ***Coming Soon***
 - [ ] SYTextView
@@ -124,9 +124,8 @@ Set `syClassAnimationAdapter` (with Integer) in place of `syClassAnimation` in I
 SYClassAnimation : ` border = 0`, ` borderWithShadow = 1`, ` background = 2`, ` ripple = 3`, ` text = 4`.
 default is `border`.
 ```swift
-   //SYLabel
+   //settable as animationAdapter in IB
    public var animationType: AnimationType
-   //Set animationAdapter in IB
 ```
 
 If you just want to change the color of animation, you can customize the properties of the color.
