@@ -1,5 +1,5 @@
 //
-//  Animator.swift
+//  Animatable.swift
 //  Pods
 //
 //  Created by Shohei Yokoyama on 2016/07/29.
@@ -16,7 +16,6 @@ struct AnimationConstants {
     static let shadowRadiusIfNotClear: CGFloat = 4
     static let shadowRadius: CGFloat           = 2.5
     static let shadowOpacity: CGFloat          = 0.5
-    static let repeatCount: Float              = 1e100
     static let fromTextColorAlpha: CGFloat     = 0.15
     static let rippleToAlpha: CGFloat          = 0
     static let rippleToScale: CGFloat          = 1
@@ -138,7 +137,7 @@ extension Animatable {
         groupAnimation.animations     = [borderColorAnimtion, borderWidthAnimation]
         groupAnimation.timingFunction = animationTimingFunction.timingFunction
         groupAnimation.autoreverses   = true
-        groupAnimation.repeatCount    = AnimationConstants.repeatCount
+        groupAnimation.repeatCount    = 1e100
         animationType == .borderWithShadow ? animateBorderWithShadow(groupAnimation) : superLayer.addAnimation(groupAnimation, forKey: nil)
     }
     
@@ -157,7 +156,7 @@ extension Animatable {
         backgroundColorAnimation.toValue        = animationBackgroundColor.CGColor
         backgroundColorAnimation.duration       = animationDuration
         backgroundColorAnimation.autoreverses   = true
-        backgroundColorAnimation.repeatCount    = AnimationConstants.repeatCount
+        backgroundColorAnimation.repeatCount    = 1e100
         backgroundColorAnimation.timingFunction = animationTimingFunction.timingFunction
         superLayer.addAnimation(backgroundColorAnimation, forKey: nil)
     }
@@ -166,7 +165,7 @@ extension Animatable {
         let textColorAnimation = CABasicAnimation(type: .foregroundColor)
         textColorAnimation.duration            = animationDuration
         textColorAnimation.autoreverses        = true
-        textColorAnimation.repeatCount         = AnimationConstants.repeatCount
+        textColorAnimation.repeatCount         = 1e100
         textColorAnimation.removedOnCompletion = false
         textColorAnimation.timingFunction      = animationTimingFunction.timingFunction
         textColorAnimation.fromValue           = animationTextColor.colorWithAlphaComponent(AnimationConstants.fromTextColorAlpha).CGColor
@@ -187,7 +186,7 @@ extension Animatable {
         
         let animationGroup = CAAnimationGroup()
         animationGroup.duration       = animationDuration
-        animationGroup.repeatCount    = AnimationConstants.repeatCount
+        animationGroup.repeatCount    = 1e100
         animationGroup.timingFunction = animationTimingFunction.timingFunction
         animationGroup.animations     = [fadeOutOpacity, scale]
         
