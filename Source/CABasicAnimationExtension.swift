@@ -1,5 +1,5 @@
 //
-//  SYAnimation.swift
+//  CABasicAnimationExtension.swift
 //  Pods
 //
 //  Created by Shohei Yokoyama on 2016/07/29.
