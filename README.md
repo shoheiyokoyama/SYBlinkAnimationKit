@@ -13,44 +13,44 @@
 
 There are 5 types of animation for component.
 
-**Border**
+**border**
 <p align="left">
 <img src="./DemoImage/Border.gif" width="300" height="55">
 </p>
 
-**BorderWithShadow**
+**borderWithShadow**
 <p align="left">
 <img src="./DemoImage/BorderWithShadow.gif" width="300" height="70">
 </p>
 
-**Background**
+**background**
 <p align="left">
 <img src="./DemoImage/Background.gif" width="300" height="70">
 </p>
 
-**Ripple**
+**ripple**
 <p align="left">
 <img src="./DemoImage/Ripple.gif" width="300" height="70">
 </p>
 
-**Text**
+**text**
 <p align="left">
 <img src="./DemoImage/Text.gif" width="300" height="70">
 </p>
 
 ## Features
 - Animation like blink effect for UIKit
-- The 5 types of animation : `Border`,  `BorderWithShadow`,  `Background`, `Ripple`, `Text`
+- The 5 types of animation : `border`,  `borderWithShadow`,  `background`, `ripple`, `text`
 - Easily usable
 - Customizable in any properties for animation
 - Support Swift 2.0
-- Support @IBDesignable and @IBInspectable.
+- Support `@IBDesignable` and `@IBInspectable`.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
 - [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) : available 5 types of Animation
 - [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift) : available 5 types of Animation
-- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
-- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `Border`,  `BorderWithShadow`,  `Background`, `Ripple`
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
+- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
 
 ***Coming Soon***
 - [ ] SYTextView
@@ -75,8 +75,8 @@ First, Import **SYBlinkAnimationKit** in class.
 ```swift
    let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
    syButton.setTitle("Border Animation", forState: .Normal)
-   syButton.syButtonAnimation = .Border
-   self.view.addSubview(syButton)
+   syButton.animationType = .border
+   view.addSubview(syButton)
 
   //Run Animation
   syButton.startAnimation()
@@ -100,8 +100,8 @@ To change text font, use font method as with SYButton.
    syLabel.text = "Text Animation"
    syLabel.labelTextColor =  UIColor.darkGrayColor()
    syLabel.setFontNameWithSize("ArialHebew", size: 22.0)
-   syLabel.syLabelAnimation = .Text
-   self.view.addSubview(syLabel)
+   syLabel.animationType = .text
+   view.addSubview(syLabel)
 ```
 
 ### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift)
@@ -121,12 +121,11 @@ but you can control this behavior.
 If you just want to change the types of animation, you can customize `syClassAnimation`.
 
 Set `syClassAnimationAdapter` (with Integer) in place of `syClassAnimation` in IB.
-SYClassAnimation : ` Border = 0`, ` BorderWithShadow = 1`, ` Background = 2`, ` Ripple = 3`, ` Text = 4`.
-default is `Border`.
+SYClassAnimation : ` border = 0`, ` borderWithShadow = 1`, ` background = 2`, ` ripple = 3`, ` text = 4`.
+default is `border`.
 ```swift
-   //SYLabel
-   public var syLabelAnimation: SYLabelAnimation
-   //Set syLabelAnimationAdapter in IB
+   //settable as animationAdapter in IB
+   public var animationType: AnimationType
 ```
 
 If you just want to change the color of animation, you can customize the properties of the color.
@@ -148,8 +147,8 @@ These properties are *inspectable*.
 If you just want to change animation duration, timing,  you can customize `animationTimingFunction`, `animationDuration`.
 
 Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
-SYMediaTimingFunction : ` Linear = 0`, ` EaseIn = 1`, ` EaseOut = 2`, ` EaseInEaseOut = 3`.
-default is `Linear`.
+SYMediaTimingFunction : ` linear = 0`, ` easeIn = 1`, ` easeOut = 2`, ` easeInEaseOut = 3`.
+default is `linear`.
 
 ```swift
    public var animationTimingFunction: SYMediaTimingFunction
