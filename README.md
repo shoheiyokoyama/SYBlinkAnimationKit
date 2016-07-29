@@ -122,13 +122,6 @@ but you can control this behavior.
 
 If you just want to change the types of animation, you can customize `animationType`.
 
-
-- border
-- borderWithShadow
-- background
-- ripple
-- text
-
 ```swift
    // default is border
    var animationType: AnimationType
