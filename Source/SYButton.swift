@@ -8,16 +8,16 @@
 
 import UIKit
 
-public enum SYButtonAnimation: Int {
-    case Border
-    case BorderWithShadow
-    case Background
-    case Ripple
-    case Text
-}
-
 @IBDesignable
-public final class SYButton: UIButton, Animatable, TextConvertible {
+public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
+    
+    public enum AnimationType: Int {
+        case border
+        case borderWithShadow
+        case background
+        case ripple
+        case text
+    }
     
     @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
@@ -44,7 +44,7 @@ public final class SYButton: UIButton, Animatable, TextConvertible {
             return animationTimingFunction.rawValue
         }
         set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
     @IBInspectable public var animationDuration: CGFloat = ButtonConstants.defaultDuration {
@@ -52,34 +52,34 @@ public final class SYButton: UIButton, Animatable, TextConvertible {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public var syButtonAnimationAdapter: Int {
+    @IBInspectable public var animationAdapter: Int {
         get {
-            return syButtonAnimation.rawValue
+            return animationType.rawValue
         }
         set(index) {
-            syButtonAnimation = SYButtonAnimation(rawValue: index) ?? .Border
+            animationType = AnimationType(rawValue: index) ?? .border
         }
     }
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var syButtonAnimation: SYButtonAnimation = .Border {
+    public var animationType: AnimationType = .border {
         didSet {
-            switch syButtonAnimation {
-            case .Border:
-                syLayer.syLayerAnimation = .Border
-            case .BorderWithShadow:
-                syLayer.syLayerAnimation = .BorderWithShadow
-            case .Background:
-                syLayer.syLayerAnimation = .Background
-            case .Ripple:
-                syLayer.syLayerAnimation = .Ripple
-            case .Text:
-                syLayer.syLayerAnimation = .Text
+            switch animationType {
+            case .border:
+                syLayer.animationType = .border
+            case .borderWithShadow:
+                syLayer.animationType = .borderWithShadow
+            case .background:
+                syLayer.animationType = .background
+            case .ripple:
+                syLayer.animationType = .ripple
+            case .text:
+                syLayer.animationType = .text
             }
         }
     }
@@ -179,12 +179,12 @@ private extension SYButton {
         layer.cornerRadius = ButtonConstants.cornerRadius
         contentEdgeInsets  = UIEdgeInsets(top: ButtonConstants.padding, left: ButtonConstants.padding, bottom: ButtonConstants.padding, right: ButtonConstants.padding)
         
-        syLayer.syLayerAnimation = .Border
+        syLayer.animationType = .border
 
         setTitleColor(UIColor.blackColor(), forState: .Normal)
     }
     
-    private func resetTextLayer(){
+    private func resetTextLayer() {
         configureTextLayer(currentTitle, font: titleLabel?.font, textColor: textColor)
         syLayer.resetTextLayer(textLayer)
     }

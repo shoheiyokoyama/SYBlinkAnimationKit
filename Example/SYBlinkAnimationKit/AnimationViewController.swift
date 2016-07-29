@@ -22,18 +22,18 @@ class AnimationViewController: UIViewController {
         self.view.addSubview(borderView)
         
         let border2View = SYView(frame: CGRectMake(40, 210, 300, 100))
-        border2View.syViewAnimation = .BorderWithShadow
+        border2View.animationType = .borderWithShadow
         border2View.backgroundColor = UIColor.clearColor()
         border2View.startAnimation()
         self.view.addSubview(border2View)
         
         let backgrondView = SYView(frame: CGRectMake(40, 320, 300, 100))
-        backgrondView.syViewAnimation = .Background
+        backgrondView.animationType = .background
         backgrondView.startAnimation()
         self.view.addSubview(backgrondView)
         
         let rippleView = SYView(frame: CGRectMake(40, 430, 300, 100))
-        rippleView.syViewAnimation = .Ripple
+        rippleView.animationType = .ripple
         rippleView.startAnimation()
         self.view.addSubview(rippleView)
     }

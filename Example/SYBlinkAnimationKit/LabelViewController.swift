@@ -18,7 +18,7 @@ class LabelViewController: UIViewController {
         
         let borderLabel = SYLabel(frame: CGRectMake(40, 100, 300, 50))
         borderLabel.text = "Border Animation"
-        borderLabel.syLabelAnimation = .Border
+        borderLabel.animationType = .border
         borderLabel.startAnimation()
         self.view.addSubview(borderLabel)
         
@@ -26,19 +26,19 @@ class LabelViewController: UIViewController {
         border2Label.text = "BorderWithShadow Animation"
         border2Label.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Label.backgroundColor = UIColor.clearColor()
-        border2Label.syLabelAnimation = .BorderWithShadow
+        border2Label.animationType = .borderWithShadow
         border2Label.startAnimation()
         self.view.addSubview(border2Label)
         
         let backgroundLabel = SYLabel(frame: CGRectMake(40, 220, 300, 50))
         backgroundLabel.text = "Background Animation"
-        backgroundLabel.syLabelAnimation = .Background
+        backgroundLabel.animationType = .background
         backgroundLabel.startAnimation()
         self.view.addSubview(backgroundLabel)
         
         let textLabel = SYLabel(frame: CGRectMake(40, 280, 300, 50))
         textLabel.text = "Text Animation"
-        textLabel.syLabelAnimation = .Text
+        textLabel.animationType = .text
         textLabel.startAnimation()
         self.view.addSubview(textLabel)
         
@@ -46,7 +46,7 @@ class LabelViewController: UIViewController {
         rippleLabel.text = "Ripple Animation"
         rippleLabel.backgroundColor = UIColor.blackColor()
         rippleLabel.labelTextColor = UIColor.whiteColor()
-        rippleLabel.syLabelAnimation = .Ripple
+        rippleLabel.animationType = .ripple
         rippleLabel.startAnimation()
         self.view.addSubview(rippleLabel)
     }

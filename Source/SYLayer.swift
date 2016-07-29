@@ -8,21 +8,21 @@
 
 import UIKit
 
-final class SYLayer: Animator {
+final class SYLayer: Animatable {
     var superLayer     = CALayer()
     var textLayer      = CATextLayer()
     var rippleLayer    = CALayer()
     var subRippleLayer = CALayer()
     
     var animationDuration: CFTimeInterval = AnimationConstants.defaultDuration
-    var animationTimingFunction: SYMediaTimingFunction = .Linear
+    var animationTimingFunction: SYMediaTimingFunction = .linear
     
-    var syLayerAnimation: SYLayerAnimation = .Border {
+    var animationType: AnimationType = .border {
         didSet {
-            switch syLayerAnimation {
-            case .Border:
+            switch animationType {
+            case .border:
                 configureBorderAnimation()
-            case .BorderWithShadow:
+            case .borderWithShadow:
                 configureBorderWithShadowAnimation()
             default:
                 return

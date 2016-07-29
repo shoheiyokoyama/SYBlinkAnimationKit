@@ -8,16 +8,16 @@
 
 import UIKit
 
-public enum SYLabelAnimation: Int {
-    case Border
-    case BorderWithShadow
-    case Background
-    case Ripple
-    case Text
-}
-
 @IBDesignable
-public final class SYLabel: UILabel, Animatable, TextConvertible {
+public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
+    
+    public enum AnimationType: Int {
+        case border
+        case borderWithShadow
+        case background
+        case ripple
+        case text
+    }
     
     @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
@@ -44,7 +44,7 @@ public final class SYLabel: UILabel, Animatable, TextConvertible {
             return animationTimingFunction.rawValue
         }
         set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
     @IBInspectable public var animationDuration: CGFloat = LabelConstants.defaultDuration {
@@ -59,12 +59,12 @@ public final class SYLabel: UILabel, Animatable, TextConvertible {
             syLayer.setTextColor(labelTextColor)
         }
     }
-    @IBInspectable public  var syLabelAnimationAdapter: Int {
+    @IBInspectable public  var animationAdapter: Int {
         get {
-            return syLabelAnimation.rawValue
+            return animationType.rawValue
         }
         set(index) {
-            syLabelAnimation = SYLabelAnimation(rawValue: index) ?? .Border
+            animationType = AnimationType(rawValue: index) ?? .border
         }
     }
     
@@ -90,19 +90,19 @@ public final class SYLabel: UILabel, Animatable, TextConvertible {
         }
     }
     
-    public var syLabelAnimation: SYLabelAnimation = .Border {
+    public var animationType: AnimationType = .border {
         didSet {
-            switch syLabelAnimation {
-            case .Border:
-                syLayer.syLayerAnimation = .Border
-            case .BorderWithShadow:
-                syLayer.syLayerAnimation = .BorderWithShadow
-            case .Background:
-                syLayer.syLayerAnimation = .Background
-            case .Ripple:
-                syLayer.syLayerAnimation = .Ripple
-            case .Text:
-                syLayer.syLayerAnimation = .Text
+            switch animationType {
+            case .border:
+                syLayer.animationType = .border
+            case .borderWithShadow:
+                syLayer.animationType = .borderWithShadow
+            case .background:
+                syLayer.animationType = .background
+            case .ripple:
+                syLayer.animationType = .ripple
+            case .text:
+                syLayer.animationType = .text
             }
         }
     }
@@ -111,7 +111,7 @@ public final class SYLabel: UILabel, Animatable, TextConvertible {
     
     var textLayer = CATextLayer()
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
@@ -170,7 +170,7 @@ private extension SYLabel {
         textColor      = UIColor.clearColor()
         labelTextColor = UIColor.blackColor()
         
-        syLayer.syLayerAnimation = .Border
+        syLayer.animationType = .border
     }
     
     private func resetTextLayer() {

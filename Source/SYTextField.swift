@@ -8,15 +8,15 @@
 
 import UIKit
 
-public enum SYTextFieldAnimation: Int {
-    case Border
-    case BorderWithShadow
-    case Background
-    case Ripple
-}
-
 @IBDesignable
-public final class SYTextField: UITextField, Animatable {
+public final class SYTextField: UITextField, AnimatableComponent {
+    
+    public enum AnimationType: Int {
+        case border
+        case borderWithShadow
+        case background
+        case ripple
+    }
 
     @IBInspectable public var animationBorderColor:UIColor = AnimationDefaultColor.border {
         didSet {
@@ -38,7 +38,7 @@ public final class SYTextField: UITextField, Animatable {
             return animationTimingFunction.rawValue
         }
         set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
     @IBInspectable public var animationDuration: CGFloat = TextFieldConstants.defaultDuration {
@@ -48,10 +48,10 @@ public final class SYTextField: UITextField, Animatable {
     }
     @IBInspectable public  var syTextFieldAnimationAdapter: Int {
         get {
-            return syTextFieldAnimation.rawValue
+            return animationType.rawValue
         }
         set(index) {
-            syTextFieldAnimation = SYTextFieldAnimation(rawValue: index) ?? .Border
+            animationType = AnimationType(rawValue: index) ?? .border
         }
     }
     @IBInspectable public var stopAnimationWithTouch = true
@@ -98,23 +98,23 @@ public final class SYTextField: UITextField, Animatable {
     
     public var isAnimating = false
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var syTextFieldAnimation: SYTextFieldAnimation = .Border {
+    public var animationType: AnimationType = .border {
         didSet {
-            switch syTextFieldAnimation {
-            case .Border:
-                syLayer.syLayerAnimation = .Border
-            case .BorderWithShadow:
-                syLayer.syLayerAnimation = .BorderWithShadow
-            case .Background:
-                syLayer.syLayerAnimation = .Background
-            case .Ripple:
-                syLayer.syLayerAnimation = .Ripple
+            switch animationType {
+            case .border:
+                syLayer.animationType = .border
+            case .borderWithShadow:
+                syLayer.animationType = .borderWithShadow
+            case .background:
+                syLayer.animationType = .background
+            case .ripple:
+                syLayer.animationType = .ripple
                 
             }
         }
@@ -141,7 +141,7 @@ public final class SYTextField: UITextField, Animatable {
     
     public func startAnimation() {
         isAnimating = true
-        if syTextFieldAnimation == .Background && borderStyle == .RoundedRect {
+        if animationType == .background && borderStyle == .RoundedRect {
             backgroundColor = UIColor.clearColor()
         }
         
@@ -150,7 +150,7 @@ public final class SYTextField: UITextField, Animatable {
     
     public func stopAnimation() {
         isAnimating = false
-        if syTextFieldAnimation == .Background &&  borderStyle == .RoundedRect {
+        if animationType == .background &&  borderStyle == .RoundedRect {
             backgroundColor = originalBackgroundColor
         }
         syLayer.stopAnimation()
@@ -167,7 +167,7 @@ private extension SYTextField {
     }
     
     private func setLayer() {
-        syLayer.syLayerAnimation = .Border
+        syLayer.animationType = .border
         borderStyle = .RoundedRect
     }
 }

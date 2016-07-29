@@ -31,13 +31,13 @@ class ButtonViewController: UIViewController {
         border2Button.setTitle("SYTextField", forState: .Normal)
         border2Button.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Button.addTarget(self, action: #selector(ButtonViewController.BorderWithShadowAnimation(_:)), forControlEvents: .TouchUpInside)
-        border2Button.syButtonAnimation = .BorderWithShadow
+        border2Button.animationType = .borderWithShadow
         border2Button.startAnimation()
         self.view.addSubview(border2Button)
         
         backgroundButton.setTitle("SYView", forState: .Normal)
         backgroundButton.addTarget(self, action: #selector(ButtonViewController.BackgroundAnimation(_:)), forControlEvents: .TouchUpInside)
-        backgroundButton.syButtonAnimation = .Background
+        backgroundButton.animationType = .background
         backgroundButton.startAnimation()
         self.view.addSubview(backgroundButton)
         
@@ -45,7 +45,7 @@ class ButtonViewController: UIViewController {
         textButton.backgroundColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         textButton.animationTextColor = UIColor.whiteColor()
         textButton.addTarget(self, action: #selector(ButtonViewController.textAnimation(_:)), forControlEvents: .TouchUpInside)
-        textButton.syButtonAnimation = .Text
+        textButton.animationType = .text
         textButton.startAnimation()
         self.view.addSubview(textButton)
         
@@ -53,7 +53,7 @@ class ButtonViewController: UIViewController {
         rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         rippleButton.backgroundColor = UIColor.blackColor()
         rippleButton.addTarget(self, action: #selector(ButtonViewController.rippleAnimation(_:)), forControlEvents: .TouchUpInside)
-        rippleButton.syButtonAnimation = .Ripple
+        rippleButton.animationType = .ripple
         rippleButton.startAnimation()
         self.view.addSubview(rippleButton)
     }

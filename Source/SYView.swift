@@ -8,15 +8,15 @@
 
 import UIKit
 
-public enum SYViewAnimation: Int {
-    case Border
-    case BorderWithShadow
-    case Background
-    case Ripple
-}
-
 @IBDesignable
-public final class SYView: UIView, Animatable {
+public final class SYView: UIView, AnimatableComponent {
+    
+    public enum AnimationType: Int {
+        case border
+        case borderWithShadow
+        case background
+        case ripple
+    }
     
     @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
@@ -43,7 +43,7 @@ public final class SYView: UIView, Animatable {
             return animationTimingFunction.rawValue
         }
         set(index) {
-            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .Linear
+            animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
     @IBInspectable public var animationDuration: CGFloat = ViewConstants.defaultDuration {
@@ -51,12 +51,12 @@ public final class SYView: UIView, Animatable {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public  var syViewAnimationAdapter: Int {
+    @IBInspectable public  var animationAdapter: Int {
         get {
-            return syViewAnimation.rawValue
+            return animationType.rawValue
         }
         set(index) {
-            syViewAnimation = SYViewAnimation(rawValue: index) ?? .Border
+            animationType = AnimationType(rawValue: index) ?? .border
         }
     }
     
@@ -79,23 +79,23 @@ public final class SYView: UIView, Animatable {
     
     public var isAnimating = false
     
-    public var animationTimingFunction: SYMediaTimingFunction = .Linear {
+    public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var syViewAnimation: SYViewAnimation = .Border {
+    public var animationType: AnimationType = .border {
         didSet {
-            switch syViewAnimation {
-            case .Border:
-                syLayer.syLayerAnimation = .Border
-            case .BorderWithShadow:
-                syLayer.syLayerAnimation = .BorderWithShadow
-            case .Background:
-                syLayer.syLayerAnimation = .Background
-            case .Ripple:
-                syLayer.syLayerAnimation = .Ripple
+            switch animationType {
+            case .border:
+                syLayer.animationType = .border
+            case .borderWithShadow:
+                syLayer.animationType = .borderWithShadow
+            case .background:
+                syLayer.animationType = .background
+            case .ripple:
+                syLayer.animationType = .ripple
             }
         }
     }
@@ -138,7 +138,7 @@ private extension SYView {
     }
     
     private func setLayer() {
-        syViewAnimation = .Border
+        animationType = .border
         layer.cornerRadius = ViewConstants.cornerRadius
     }
 }
