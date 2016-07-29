@@ -190,7 +190,8 @@ Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction
 ### Customize Animatable Text
 
 You can customize Animatable Text alignment.
-Support 9 types of alignment
+Support 9 types of alignment.
+Available `SYButton`, `SYLabel` now.
 
 - topLeft
 - topCenter
@@ -202,7 +203,7 @@ Support 9 types of alignment
 - bottomCenter
 - bottomRight
 
-### whether animating or not
+### Whether animating or not
 
 If SYClass is in middle of animation, this property is `true`
 ```swift
