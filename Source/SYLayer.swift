@@ -39,32 +39,22 @@ public enum SYMediaTimingFunction: Int {
 final class SYLayer {
     
     private var superLayer: CALayer!
-    private var textLayer = CATextLayer()
-    private var rippleLayer = CALayer()
+    
+    private var textLayer      = CATextLayer()
+    private var rippleLayer    = CALayer()
     private var subRippleLayer = CALayer()
     
-    private var borderColorAnimtion = CABasicAnimation()
-    private var borderWidthAnimation = CABasicAnimation()
-    private var shadowAnimation = CABasicAnimation()
-    private var backgroundColorAnimation = CABasicAnimation()
-    private var textColorAnimation = CABasicAnimation()
+    private var borderColorAnimtion  = CABasicAnimation(keyPath: AnimationKeyType.borderColor.keyPath)
+    private var borderWidthAnimation = CABasicAnimation(keyPath: AnimationKeyType.borderWidth.keyPath)
+    private var shadowAnimation      = CABasicAnimation(keyPath: AnimationKeyType.shadowOpacity.keyPath)
     
     private var animationBorderColor = AnimationDefaultColor.border {
         didSet {
-            borderColorAnimtion.toValue = animationBorderColor.CGColor
             animationShadowColor = animationBorderColor
         }
     }
-    private var animationTextColor = AnimationDefaultColor.text {
-        didSet {
-            textColorAnimation.toValue = animationTextColor.CGColor
-        }
-    }
-    private var animationBackgroundColor = AnimationDefaultColor.background {
-        didSet {
-            backgroundColorAnimation.toValue = animationBackgroundColor.CGColor
-        }
-    }
+    private var animationTextColor = AnimationDefaultColor.text
+    private var animationBackgroundColor = AnimationDefaultColor.background
     private var animationShadowColor = AnimationDefaultColor.border {
         didSet {
             superLayer.shadowColor = animationShadowColor.CGColor
@@ -173,9 +163,9 @@ final class SYLayer {
         didSet {
             switch syLayerAnimation {
             case .Border:
-                setBorderAnimation()
+                configureBorderAnimation()
             case .BorderWithShadow:
-                setBorderWithShadowAnimation()
+                configureBorderWithShadowAnimation()
             default:
                 return
             }
@@ -364,35 +354,29 @@ private extension SYLayer {
         resetSuperLayerShadow()
     }
     
-    private func setBorderAnimation() {
-        setBorderColorAnimation()
-        setBorderWidthAnimation()
+    private func configureBorderAnimation() {
+        configureBorderColorAnimation()
+        configureBorderWidthAnimation()
     }
     
-    private func setBorderWithShadowAnimation() {
-        setBorderColorAnimation()
-        setShadowAnimation()
-        setBorderWidthAnimation()
+    private func configureBorderWithShadowAnimation() {
+        configureBorderColorAnimation()
+        configureShadowAnimation()
+        configureBorderWidthAnimation()
     }
     
-    private func setBorderColorAnimation() {
-        let type: AnimationKeyType = .borderColor
-        borderColorAnimtion = CABasicAnimation(keyPath: type.keyPath)
-        borderColorAnimtion.fromValue = type.fromValue
+    private func configureBorderColorAnimation() {
+        borderColorAnimtion.fromValue = AnimationKeyType.borderColor.fromValue
         borderColorAnimtion.toValue   = animationBorderColor.CGColor
     }
     
-    private func setBorderWidthAnimation() {
-        let type: AnimationKeyType = .borderWidth
-        borderWidthAnimation = CABasicAnimation(keyPath: type.keyPath)
-        borderWidthAnimation.fromValue = type.fromValue
+    private func configureBorderWidthAnimation() {
+        borderWidthAnimation.fromValue = AnimationKeyType.borderWidth.fromValue
         borderWidthAnimation.toValue   = AnimationConstants.borderWidth
     }
     
-    private func setShadowAnimation() {
-        let type: AnimationKeyType = .shadowOpacity
-        shadowAnimation = CABasicAnimation(keyPath: type.keyPath)
-        shadowAnimation.fromValue = type.fromValue
+    private func configureShadowAnimation() {
+        shadowAnimation.fromValue = AnimationKeyType.shadowOpacity.fromValue
         shadowAnimation.toValue   = AnimationConstants.shadowOpacity
     }
     
@@ -418,7 +402,7 @@ private extension SYLayer {
     
     private func animateBackground() {
         let type: AnimationKeyType = .backgroundColor
-        backgroundColorAnimation = CABasicAnimation(keyPath: type.keyPath)
+        let backgroundColorAnimation = CABasicAnimation(keyPath: type.keyPath)
         backgroundColorAnimation.fromValue      = type.fromValue
         backgroundColorAnimation.toValue        = animationBackgroundColor.CGColor
         backgroundColorAnimation.duration       = animationDuration
@@ -429,7 +413,7 @@ private extension SYLayer {
     }
     
     private func animateText() {
-        textColorAnimation = CABasicAnimation(keyPath: AnimationKeyType.foregroundColor.keyPath)
+        let textColorAnimation = CABasicAnimation(keyPath: AnimationKeyType.foregroundColor.keyPath)
         textColorAnimation.duration            = animationDuration
         textColorAnimation.autoreverses        = true
         textColorAnimation.repeatCount         = AnimationConstants.repeatCount
@@ -437,6 +421,7 @@ private extension SYLayer {
         textColorAnimation.timingFunction      = animationTimingFunction.timingFunction
         textColorAnimation.fromValue           = animationTextColor.colorWithAlphaComponent(AnimationConstants.fromTextColorAlpha).CGColor
         textColorAnimation.toValue             = animationTextColor.CGColor
+        
         textLayer.foregroundColor = animationTextColor.CGColor
         textLayer.addAnimation(textColorAnimation, forKey: nil)
     }
