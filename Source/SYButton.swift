@@ -107,6 +107,8 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     var textLayer = CATextLayer()
     
+    public var textPosition: TextPosition = .center
+    
     private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
     private var textColor = UIColor.blackColor() {

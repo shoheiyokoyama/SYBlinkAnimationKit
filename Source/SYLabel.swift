@@ -112,6 +112,7 @@ public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
     public var isAnimating = false
     
     var textLayer = CATextLayer()
+    public var textPosition: TextPosition = .center
     
     public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
