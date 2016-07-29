@@ -22,13 +22,7 @@ struct AnimationConstants {
 }
 
 enum AnimationKeyType: String {
-    case borderColor
-    case borderWidth
-    case shadowOpacity
-    case backgroundColor
-    case foregroundColor
-    case opacity
-    case transformScale  = "transform.scale"
+    case borderColor, borderWidth, shadowOpacity, backgroundColor, foregroundColor, opacity, transformScale  = "transform.scale"
     
     var fromValue: AnyObject {
         switch self {
@@ -45,10 +39,7 @@ enum AnimationKeyType: String {
 }
 
 public enum SYMediaTimingFunction: Int {
-    case linear
-    case easeIn
-    case easeOut
-    case easeInEaseOut
+    case linear, easeIn, easeOut, easeInEaseOut
     
     var timingFunction : CAMediaTimingFunction {
         switch self {
@@ -65,11 +56,7 @@ public enum SYMediaTimingFunction: Int {
 }
 
 enum AnimationType {
-    case border
-    case borderWithShadow
-    case background
-    case ripple
-    case text
+    case border, borderWithShadow, background, ripple, text
 }
 
 // MARK: - Protocol -

@@ -12,10 +12,7 @@ import UIKit
 public final class SYTextField: UITextField, AnimatableComponent {
     
     public enum AnimationType: Int {
-        case border
-        case borderWithShadow
-        case background
-        case ripple
+        case border, borderWithShadow, background, ripple
     }
 
     @IBInspectable public var animationBorderColor:UIColor = AnimationDefaultColor.border {

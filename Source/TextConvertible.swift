@@ -42,7 +42,7 @@ extension TextConvertible where Self: UIView {
     
     private func textPoint(size: CGSize) -> CGPoint {
         let horizonalCenter = ( self.frame.width - size.width ) / 2
-        let horizonalRight = self.frame.width - size.width
+        let horizonalRight  = self.frame.width - size.width
         let verticalCenter  = ( self.frame.height - size.height ) / 2
         let verticalBottom  = self.frame.height - size.height
         
