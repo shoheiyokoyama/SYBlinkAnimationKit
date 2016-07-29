@@ -87,16 +87,18 @@ public final class SYView: UIView, AnimatableComponent {
     
     public var animationType: AnimationType = .border {
         didSet {
-            switch animationType {
-            case .border:
-                syLayer.animationType = .border
-            case .borderWithShadow:
-                syLayer.animationType = .borderWithShadow
-            case .background:
-                syLayer.animationType = .background
-            case .ripple:
-                syLayer.animationType = .ripple
-            }
+            syLayer.animationType = {
+                switch animationType {
+                case .border:
+                    return .border
+                case .borderWithShadow:
+                    return .borderWithShadow
+                case .background:
+                    return .background
+                case .ripple:
+                    return .ripple
+                }
+            }()
         }
     }
     

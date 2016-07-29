@@ -33,17 +33,10 @@ enum AnimationKeyType: String {
     
     var fromValue: AnyObject {
         switch self {
-        case .borderColor:
+        case .borderColor, .backgroundColor, .foregroundColor/* Don't use */:
             return UIColor.clearColor().CGColor
-        case .borderWidth:
+        case .borderWidth, .shadowOpacity:
             return 0
-        case .shadowOpacity:
-            return 0
-        case .backgroundColor:
-            return UIColor.clearColor().CGColor
-        case .foregroundColor:
-            //Don't use
-            return UIColor.clearColor().CGColor
         case .opacity:
             return 1
         case .transformScale:
@@ -108,9 +101,7 @@ protocol Animatable {
 extension Animatable {
     func startAnimation() {
         switch animationType {
-        case .border:
-            animateBorder()
-        case .borderWithShadow:
+        case .border, .borderWithShadow:
             animateBorder()
         case .background:
             animateBackground()

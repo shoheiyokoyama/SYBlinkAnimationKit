@@ -69,18 +69,20 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     public var animationType: AnimationType = .border {
         didSet {
-            switch animationType {
-            case .border:
-                syLayer.animationType = .border
-            case .borderWithShadow:
-                syLayer.animationType = .borderWithShadow
-            case .background:
-                syLayer.animationType = .background
-            case .ripple:
-                syLayer.animationType = .ripple
-            case .text:
-                syLayer.animationType = .text
-            }
+            syLayer.animationType = {
+                switch animationType {
+                case .border:
+                    return .border
+                case .borderWithShadow:
+                    return .borderWithShadow
+                case .background:
+                    return .background
+                case .ripple:
+                    return .ripple
+                case .text:
+                    return .text
+                }
+            }()
         }
     }
     

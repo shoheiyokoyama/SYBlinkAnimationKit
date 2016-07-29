@@ -75,16 +75,14 @@ public final class SYTextField: UITextField, AnimatableComponent {
     }
     override public var borderStyle: UITextBorderStyle {
         didSet {
-            switch borderStyle {
-            case .Bezel:
-                self.layer.cornerRadius = 0
-            case .Line:
-                self.layer.cornerRadius = 0
-            case .None:
-                self.layer.cornerRadius = TextFieldConstants.cornerRadius
-            case .RoundedRect:
-                self.layer.cornerRadius = TextFieldConstants.cornerRadius
-            }
+            self.layer.cornerRadius = {
+                switch borderStyle {
+                case .Bezel, .Line:
+                    return CGFloat(0)
+                case .None, .RoundedRect:
+                    return CGFloat(5)
+                }
+            }()
         }
     }
     override public var backgroundColor: UIColor? {
@@ -106,17 +104,18 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public var animationType: AnimationType = .border {
         didSet {
-            switch animationType {
-            case .border:
-                syLayer.animationType = .border
-            case .borderWithShadow:
-                syLayer.animationType = .borderWithShadow
-            case .background:
-                syLayer.animationType = .background
-            case .ripple:
-                syLayer.animationType = .ripple
-                
-            }
+            syLayer.animationType = {
+                switch animationType {
+                case .border:
+                    return .border
+                case .borderWithShadow:
+                    return .borderWithShadow
+                case .background:
+                    return .background
+                case .ripple:
+                    return .ripple
+                }
+            }()
         }
     }
     
@@ -141,7 +140,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public func startAnimation() {
         isAnimating = true
-        if animationType == .background && borderStyle == .RoundedRect {
+        if case (.background, .RoundedRect) = (animationType, borderStyle) {
             backgroundColor = UIColor.clearColor()
         }
         
@@ -150,7 +149,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public func stopAnimation() {
         isAnimating = false
-        if animationType == .background &&  borderStyle == .RoundedRect {
+        if case (.background, .RoundedRect) = (animationType, borderStyle) {
             backgroundColor = originalBackgroundColor
         }
         syLayer.stopAnimation()
@@ -162,7 +161,6 @@ public final class SYTextField: UITextField, AnimatableComponent {
 private extension SYTextField {
     
     private struct TextFieldConstants {
-        static let cornerRadius: CGFloat    = 5
         static let defaultDuration: CGFloat = 1
     }
     
