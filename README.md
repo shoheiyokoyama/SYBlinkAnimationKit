@@ -96,11 +96,10 @@ First, Import **SYBlinkAnimationKit** in class.
 
 Available ***Text Animation*** because of handleable text.
 
-If you change text font size, name, you are supposed to call the `setFontOfSize()`, `setFontNameWithSize()`
+If you change text font size, name, you are supposed to call the `setFontOfSize()` or `setFontNameWithSize()`
 ```swift
   syButton.setFontOfSize(22.0)
-```
-```swift
+  // or
   syButton.setFontNameWithSize("ArialHebew", size: 22.0)
 ```
 
@@ -121,6 +120,27 @@ If you change text font size, name, you are supposed to call the `setFontOfSize(
 
 If you set text color, you are supposed to set the ` labelTextColor` property.
 To change text font, use font method as with SYButton.
+
+### [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
+
+<p align="center">
+<img src="./DemoImage/ExampleTableView.gif">
+</p>
+
+
+```swift
+class YourCell: SYTableViewCell {
+    ...
+```
+
+```swift
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
+        cell.animationType = .background
+        cell.startAnimation()
+        return cell
+    }
+```
 
 ### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift)
 SYTextField stop animation. when a touch.
