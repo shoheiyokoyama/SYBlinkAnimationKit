@@ -73,20 +73,14 @@ class ButtonViewController: UIViewController {
     
     // MARK: - SYButton Tap Events -
     internal func borderAnimation(sender: SYButton) {
-        let labelViewController = LabelViewController()
-        self.navigationController?.pushViewController(labelViewController, animated: true)
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
     internal func BorderWithShadowAnimation(sender: SYButton) {
-        let textFieldViewController = TextFieldViewController()
-        self.navigationController?.pushViewController(textFieldViewController, animated: true)
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
     internal func BackgroundAnimation(sender: SYButton) {
-        let animationViewController = AnimationViewController()
-        self.navigationController?.pushViewController(animationViewController, animated: true)
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     

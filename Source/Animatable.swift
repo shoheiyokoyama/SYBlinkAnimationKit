@@ -120,11 +120,12 @@ extension Animatable {
     
     func animateBorder() {
         let groupAnimation = CAAnimationGroup()
-        groupAnimation.duration       = animationDuration
-        groupAnimation.animations     = [borderColorAnimtion, borderWidthAnimation]
-        groupAnimation.timingFunction = animationTimingFunction.timingFunction
-        groupAnimation.autoreverses   = true
-        groupAnimation.repeatCount    = 1e100
+        groupAnimation.duration            = animationDuration
+        groupAnimation.animations          = [borderColorAnimtion, borderWidthAnimation]
+        groupAnimation.timingFunction      = animationTimingFunction.timingFunction
+        groupAnimation.autoreverses        = true
+        groupAnimation.removedOnCompletion = false
+        groupAnimation.repeatCount         = 1e100
         animationType == .borderWithShadow ? animateBorderWithShadow(groupAnimation) : superLayer.addAnimation(groupAnimation, forKey: nil)
     }
     
@@ -139,12 +140,13 @@ extension Animatable {
     
     func animateBackground() {
         let backgroundColorAnimation = CABasicAnimation(type: .backgroundColor)
-        backgroundColorAnimation.fromValue      = AnimationKeyType.backgroundColor.fromValue
-        backgroundColorAnimation.toValue        = animationBackgroundColor.CGColor
-        backgroundColorAnimation.duration       = animationDuration
-        backgroundColorAnimation.autoreverses   = true
-        backgroundColorAnimation.repeatCount    = 1e100
-        backgroundColorAnimation.timingFunction = animationTimingFunction.timingFunction
+        backgroundColorAnimation.fromValue           = AnimationKeyType.backgroundColor.fromValue
+        backgroundColorAnimation.toValue             = animationBackgroundColor.CGColor
+        backgroundColorAnimation.duration            = animationDuration
+        backgroundColorAnimation.autoreverses        = true
+        backgroundColorAnimation.removedOnCompletion = false
+        backgroundColorAnimation.repeatCount         = 1e100
+        backgroundColorAnimation.timingFunction      = animationTimingFunction.timingFunction
         superLayer.addAnimation(backgroundColorAnimation, forKey: nil)
     }
     
@@ -172,10 +174,11 @@ extension Animatable {
         scale.toValue   = AnimationConstants.rippleToScale
         
         let animationGroup = CAAnimationGroup()
-        animationGroup.duration       = animationDuration
-        animationGroup.repeatCount    = 1e100
-        animationGroup.timingFunction = animationTimingFunction.timingFunction
-        animationGroup.animations     = [fadeOutOpacity, scale]
+        animationGroup.duration            = animationDuration
+        animationGroup.repeatCount         = 1e100
+        animationGroup.removedOnCompletion = false
+        animationGroup.timingFunction      = animationTimingFunction.timingFunction
+        animationGroup.animations          = [fadeOutOpacity, scale]
         
         rippleLayer.addAnimation(animationGroup, forKey: nil)
         subRippleLayer.addAnimation(animationGroup, forKey: nil)

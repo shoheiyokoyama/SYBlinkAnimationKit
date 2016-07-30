@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1OH-MJ-dft">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="gSL-ib-Hti">
+            <objects>
+                <navigationController id="1OH-MJ-dft" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTw-Da-NoI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="u6y-uH-MCY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUU-IX-I78" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781" y="14"/>
+        </scene>
+        <!--Button View Controller-->
+        <scene sceneID="cXB-52-Tcl">
+            <objects>
+                <viewController id="XaQ-Nl-GVO" customClass="ButtonViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UlW-st-bAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Su8-qh-ART"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ol0-1n-MOV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nDe-Z6-xNr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPY-qZ-Qtp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="-338"/>
+        </scene>
+        <!--Label View Controller-->
+        <scene sceneID="zXV-sr-dNo">
+            <objects>
+                <viewController id="AQ4-f8-I01" customClass="LabelViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bYy-bA-9Vc"/>
+                        <viewControllerLayoutGuide type="bottom" id="AxN-yw-wjd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ti4-3z-Slw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T98-KU-gEy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlI-9o-AqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="325"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="gWH-bN-gRu">
+            <objects>
+                <viewController id="akY-9H-MHV" customClass="AnimationViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="34H-cp-E14"/>
+                        <viewControllerLayoutGuide type="bottom" id="JP8-ul-9hq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1dG-gg-3Gg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ocO-yj-TWz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSl-Ca-yN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="1721"/>
+        </scene>
+        <!--Text Field View Controller-->
+        <scene sceneID="xnf-w0-iMT">
+            <objects>
+                <viewController id="Lrn-KK-1sM" customClass="TextFieldViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dB-Vo-oyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xHJ-Xz-TOb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKJ-H4-yTw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QPA-1l-qoc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYB-mu-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="1029"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="TableViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,11 +108,31 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bnZ-AC-sgD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bnZ-AC-sgD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1R5-fJ-gbM"/>
+                            <constraint firstAttribute="trailing" secondItem="bnZ-AC-sgD" secondAttribute="trailing" id="8J5-ZD-9ZJ"/>
+                            <constraint firstItem="bnZ-AC-sgD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CyB-F7-8r0"/>
+                            <constraint firstAttribute="bottom" secondItem="bnZ-AC-sgD" secondAttribute="bottom" id="bmg-D2-pcg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rCt-li-GfY"/>
+                    <connections>
+                        <outlet property="tableView" destination="bnZ-AC-sgD" id="0bx-RM-OaI"/>
+                        <segue destination="XaQ-Nl-GVO" kind="push" identifier="ButtonView" id="jml-L5-6IT"/>
+                        <segue destination="AQ4-f8-I01" kind="push" identifier="LabelView" id="K2U-xJ-DdC"/>
+                        <segue destination="Lrn-KK-1sM" kind="push" identifier="TextFieldView" id="Uh8-x3-jOD"/>
+                        <segue destination="akY-9H-MHV" kind="push" identifier="AnimationView" id="GvI-HY-1vg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-105" y="14"/>
         </scene>
     </scenes>
 </document>
