@@ -13,7 +13,7 @@ class TableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let titles = [["SYButton", "SYLabel", "SYTextField", "SYView", "SYCollectionView", "SYImageView", "SYTextView", "SYAlertView", "SYNavigationBar", "SYSwitch", "SYControll", "SYSlider", "SYMKActivityIndicator"]]
+    let titles = [["SYButton", "SYLabel", "SYTextField", "SYView", "SYCollectionView", "SYImageView", "SYTextView", "SYAlertView", "SYNavigationBar", "SYSwitch", "SYControll", "SYSlider", "SYActivityIndicator"]]
     let controllers = ["ButtonView", "LabelView", "TextFieldView", "AnimationView"]
     
     override func viewDidLoad() {
