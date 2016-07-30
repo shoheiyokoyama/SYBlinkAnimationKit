@@ -75,6 +75,11 @@ First, Import **SYBlinkAnimationKit** in class.
 2. If you use custom animation, call animation method ` startAnimation()`, ` stopAnimation()`
 
 ### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
+
+<p align="center">
+<img src="./DemoImage/ButtonExample.gif">
+</p>
+
 ```swift
    let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
    syButton.setTitle("Border Animation", forState: .Normal)
