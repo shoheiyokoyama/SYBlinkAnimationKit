@@ -77,7 +77,7 @@ First, Import **SYBlinkAnimationKit** in class.
 ### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
 
 <p align="center">
-<img src="./DemoImage/ButtonExample.gif">
+<img src="./DemoImage/ExampleButton.gif">
 </p>
 
 ```swift
