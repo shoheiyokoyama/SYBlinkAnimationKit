@@ -30,7 +30,7 @@ There are 5 types of animation for component.
 
 **ripple**
 <p align="left">
-<img src="./DemoImage/RippleAnimation.gif" width="300" height="70">
+<img src="./DemoImage/RippleAnimation.gif" width="253" height="55" style="margin-left:27px">
 </p>
 
 **text**
