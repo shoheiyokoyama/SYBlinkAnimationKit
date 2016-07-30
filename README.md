@@ -29,7 +29,7 @@ There are 5 types of animation for component.
 </p>
 
 **ripple**
-<p align="left"><a>style="margin-left:27px"</a>
+<p align="left"><a style="margin-left:27px"></a>
 <img src="./DemoImage/RippleAnimation.gif" width="253" height="55">
 </p>
 
