@@ -59,7 +59,7 @@ you can change properties in Interface Builder(IB) inspector. then IB update you
 - [ ] SYImageView
 
 ## Demo App
-Open Example/SYBlinkAnimationKit.xcworkspace and run SYBlinkAnimationKit-Example to see a simple demonstration.
+Open `Example/SYBlinkAnimationKit.xcworkspace` and run `SYBlinkAnimationKit-Example` to see a simple demonstration.
 
 To run the example project, run `pod install` from the Example directory first.
 
@@ -92,6 +92,10 @@ First, Import **SYBlinkAnimationKit** in class.
   syButton.stopAnimation() 
 ```
 
+#### Text Animation
+
+Available ***Text Animation*** because of handleable text.
+
 If you change text font size, name, you are supposed to call the `setFontOfSize()`, `setFontNameWithSize()`
 ```swift
   syButton.setFontOfSize(22.0)
@@ -101,8 +105,7 @@ If you change text font size, name, you are supposed to call the `setFontOfSize(
 ```
 
 ### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
-If you set text color, you are supposed to set the ` labelTextColor` property.
-To change text font, use font method as with SYButton.
+
 ```swift
    let syLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
    syLabel.text = "Text Animation"
@@ -111,6 +114,13 @@ To change text font, use font method as with SYButton.
    syLabel.animationType = .text
    view.addSubview(syLabel)
 ```
+
+#### Text Animation
+
+`SYLabel` Available ***Text Animation*** because of handleable text.
+
+If you set text color, you are supposed to set the ` labelTextColor` property.
+To change text font, use font method as with SYButton.
 
 ### [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift)
 SYTextField stop animation. when a touch.
