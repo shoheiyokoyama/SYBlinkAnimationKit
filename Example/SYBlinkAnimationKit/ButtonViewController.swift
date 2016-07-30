@@ -11,11 +11,11 @@ import SYBlinkAnimationKit
 
 class ButtonViewController: UIViewController {
     
-    let borderButton     = SYButton(frame: CGRectMake(40, 100, 300, 50))
-    let border2Button    = SYButton(frame: CGRectMake(40, 160, 300, 50))
-    let backgroundButton = SYButton(frame: CGRectMake(40, 220, 300, 50))
-    let textButton       = SYButton(frame: CGRectMake(40, 280, 300, 50))
-    let rippleButton     = SYButton(frame: CGRectMake(40, 340, 300, 50))
+    @IBOutlet weak var borderButton: SYButton!
+    @IBOutlet weak var border2Button: SYButton!
+    @IBOutlet weak var backgroundButton: SYButton!
+    @IBOutlet weak var textButton: SYButton!
+    @IBOutlet weak var rippleButton: SYButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +56,6 @@ class ButtonViewController: UIViewController {
         rippleButton.animationType = .ripple
         rippleButton.startAnimation()
         self.view.addSubview(rippleButton)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        borderButton.startAnimation()
-        border2Button.startAnimation()
-        backgroundButton.startAnimation()
-        textButton.startAnimation()
-        rippleButton.startAnimation()
     }
     
     // MARK: - SYButton Tap Events -

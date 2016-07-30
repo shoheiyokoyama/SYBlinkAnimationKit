@@ -32,9 +32,62 @@
                     <view key="view" contentMode="scaleToFill" id="Ol0-1n-MOV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-da-2Tf" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="94" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6No-BU-Uf3"/>
+                                    <constraint firstAttribute="height" constant="50" id="FfZ-EP-wBo"/>
+                                </constraints>
+                                <state key="normal" title="Border Animation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sb-B8-nz9" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="164" width="300" height="50"/>
+                                <state key="normal" title="BorderWithShadow Animation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxw-p8-LK2" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="234" width="300" height="50"/>
+                                <state key="normal" title="Background Animation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ql-Bp-1dS" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="304" width="300" height="50"/>
+                                <state key="normal" title="Text Animation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU9-le-gKA" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="374" width="300" height="50"/>
+                                <state key="normal" title="Ripple Animation"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5ql-Bp-1dS" firstAttribute="width" secondItem="zxw-p8-LK2" secondAttribute="width" id="3GF-uc-KhA"/>
+                            <constraint firstItem="KXQ-da-2Tf" firstAttribute="centerX" secondItem="Ol0-1n-MOV" secondAttribute="centerX" id="7ox-lQ-IUn"/>
+                            <constraint firstItem="zxw-p8-LK2" firstAttribute="height" secondItem="7Sb-B8-nz9" secondAttribute="height" id="DbD-j8-Cg7"/>
+                            <constraint firstItem="7Sb-B8-nz9" firstAttribute="height" secondItem="KXQ-da-2Tf" secondAttribute="height" id="G2R-Sg-hbn"/>
+                            <constraint firstItem="7Sb-B8-nz9" firstAttribute="centerX" secondItem="Ol0-1n-MOV" secondAttribute="centerX" id="HLf-zX-Gt9"/>
+                            <constraint firstItem="7Sb-B8-nz9" firstAttribute="width" secondItem="KXQ-da-2Tf" secondAttribute="width" id="KgR-CB-DRe"/>
+                            <constraint firstItem="5ql-Bp-1dS" firstAttribute="top" secondItem="zxw-p8-LK2" secondAttribute="bottom" constant="20" id="LP3-OA-oai"/>
+                            <constraint firstItem="zxw-p8-LK2" firstAttribute="width" secondItem="7Sb-B8-nz9" secondAttribute="width" id="S5Y-PG-ZUH"/>
+                            <constraint firstItem="rU9-le-gKA" firstAttribute="centerX" secondItem="Ol0-1n-MOV" secondAttribute="centerX" id="T1Z-6x-FgZ"/>
+                            <constraint firstItem="zxw-p8-LK2" firstAttribute="centerX" secondItem="Ol0-1n-MOV" secondAttribute="centerX" id="VF4-Cd-8Kp"/>
+                            <constraint firstItem="5ql-Bp-1dS" firstAttribute="centerX" secondItem="Ol0-1n-MOV" secondAttribute="centerX" id="VXX-f9-LUx"/>
+                            <constraint firstItem="7Sb-B8-nz9" firstAttribute="top" secondItem="KXQ-da-2Tf" secondAttribute="bottom" constant="20" id="aRy-5J-qYA"/>
+                            <constraint firstItem="KXQ-da-2Tf" firstAttribute="top" secondItem="UlW-st-bAG" secondAttribute="bottom" constant="30" id="byF-dN-YTj"/>
+                            <constraint firstItem="5ql-Bp-1dS" firstAttribute="height" secondItem="zxw-p8-LK2" secondAttribute="height" id="gCj-ei-oVn"/>
+                            <constraint firstItem="rU9-le-gKA" firstAttribute="width" secondItem="5ql-Bp-1dS" secondAttribute="width" id="nzX-ap-enk"/>
+                            <constraint firstItem="rU9-le-gKA" firstAttribute="height" secondItem="5ql-Bp-1dS" secondAttribute="height" id="sgJ-76-RxV"/>
+                            <constraint firstItem="rU9-le-gKA" firstAttribute="top" secondItem="5ql-Bp-1dS" secondAttribute="bottom" constant="20" id="uCw-ys-rMz"/>
+                            <constraint firstItem="zxw-p8-LK2" firstAttribute="top" secondItem="7Sb-B8-nz9" secondAttribute="bottom" constant="20" id="unT-n1-gAP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nDe-Z6-xNr"/>
+                    <connections>
+                        <outlet property="backgroundButton" destination="zxw-p8-LK2" id="bs1-ej-hXi"/>
+                        <outlet property="border2Button" destination="7Sb-B8-nz9" id="ylK-9E-gUv"/>
+                        <outlet property="borderButton" destination="KXQ-da-2Tf" id="TGp-Ek-pXB"/>
+                        <outlet property="rippleButton" destination="rU9-le-gKA" id="Sbv-hr-tyW"/>
+                        <outlet property="textButton" destination="5ql-Bp-1dS" id="I7u-Ot-gIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPY-qZ-Qtp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,9 +104,72 @@
                     <view key="view" contentMode="scaleToFill" id="Ti4-3z-Slw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-Tw-cM3" customClass="SYLabel" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="129" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kKe-np-VPo"/>
+                                    <constraint firstAttribute="width" constant="300" id="vZe-Mc-PbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekc-Xd-uIy" customClass="SYLabel" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="199" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utv-Bq-bgs" customClass="SYLabel" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="269" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-Cp-JNc" customClass="SYLabel" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="409" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIb-lL-CKd" customClass="SYLabel" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="339" width="300" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="utv-Bq-bgs" firstAttribute="centerX" secondItem="Ti4-3z-Slw" secondAttribute="centerX" id="1Bc-gH-RaN"/>
+                            <constraint firstItem="Ekc-Xd-uIy" firstAttribute="height" secondItem="bOI-Tw-cM3" secondAttribute="height" id="1Qh-o3-iAz"/>
+                            <constraint firstItem="bOI-Tw-cM3" firstAttribute="top" secondItem="bYy-bA-9Vc" secondAttribute="bottom" constant="65" id="5Jo-ak-t26"/>
+                            <constraint firstItem="utv-Bq-bgs" firstAttribute="width" secondItem="Ekc-Xd-uIy" secondAttribute="width" id="9o8-1H-WtU"/>
+                            <constraint firstItem="jk7-Cp-JNc" firstAttribute="top" secondItem="UIb-lL-CKd" secondAttribute="bottom" constant="20" id="BNk-yJ-b2x"/>
+                            <constraint firstItem="Ekc-Xd-uIy" firstAttribute="centerX" secondItem="Ti4-3z-Slw" secondAttribute="centerX" id="E0m-bq-b83"/>
+                            <constraint firstItem="Ekc-Xd-uIy" firstAttribute="top" secondItem="bOI-Tw-cM3" secondAttribute="bottom" constant="20" id="H3L-ai-M4p"/>
+                            <constraint firstItem="jk7-Cp-JNc" firstAttribute="width" secondItem="utv-Bq-bgs" secondAttribute="width" id="KD0-7W-ydr"/>
+                            <constraint firstItem="bOI-Tw-cM3" firstAttribute="centerX" secondItem="Ti4-3z-Slw" secondAttribute="centerX" id="Tzr-EQ-PU3"/>
+                            <constraint firstItem="utv-Bq-bgs" firstAttribute="height" secondItem="Ekc-Xd-uIy" secondAttribute="height" id="Yu5-sG-MnU"/>
+                            <constraint firstItem="UIb-lL-CKd" firstAttribute="width" secondItem="utv-Bq-bgs" secondAttribute="width" id="ZCq-NT-yG7"/>
+                            <constraint firstItem="utv-Bq-bgs" firstAttribute="top" secondItem="Ekc-Xd-uIy" secondAttribute="bottom" constant="20" id="ZUl-aD-XSi"/>
+                            <constraint firstItem="UIb-lL-CKd" firstAttribute="height" secondItem="utv-Bq-bgs" secondAttribute="height" id="dlz-SC-dbx"/>
+                            <constraint firstItem="Ekc-Xd-uIy" firstAttribute="width" secondItem="bOI-Tw-cM3" secondAttribute="width" id="dz4-Hx-Lrd"/>
+                            <constraint firstItem="jk7-Cp-JNc" firstAttribute="centerX" secondItem="Ti4-3z-Slw" secondAttribute="centerX" id="kye-x8-AMU"/>
+                            <constraint firstItem="UIb-lL-CKd" firstAttribute="top" secondItem="utv-Bq-bgs" secondAttribute="bottom" constant="20" id="rVk-Vy-A8R"/>
+                            <constraint firstItem="jk7-Cp-JNc" firstAttribute="height" secondItem="utv-Bq-bgs" secondAttribute="height" id="sWz-SC-PMx"/>
+                            <constraint firstItem="UIb-lL-CKd" firstAttribute="centerX" secondItem="Ti4-3z-Slw" secondAttribute="centerX" id="v9R-5d-mZH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T98-KU-gEy"/>
+                    <connections>
+                        <outlet property="backgroundLabel" destination="utv-Bq-bgs" id="Fgo-QP-NhP"/>
+                        <outlet property="border2Label" destination="Ekc-Xd-uIy" id="SUG-ze-1eq"/>
+                        <outlet property="borderLabel" destination="bOI-Tw-cM3" id="KEa-Ne-ETh"/>
+                        <outlet property="rippleLabel" destination="jk7-Cp-JNc" id="4sF-sM-KNA"/>
+                        <outlet property="textLabel" destination="UIb-lL-CKd" id="gao-YL-sN4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlI-9o-AqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,9 +186,59 @@
                     <view key="view" contentMode="scaleToFill" id="1dG-gg-3Gg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-5F-8Bi" customClass="SYView" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="94" width="300" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4pM-gx-YbR"/>
+                                    <constraint firstAttribute="width" constant="300" id="JDv-nY-wep"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-Sr-XTg" customClass="SYView" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="184" width="300" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="TOa-Oa-WqG"/>
+                                    <constraint firstAttribute="height" constant="70" id="rOd-a4-fRB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08h-M8-MX8" customClass="SYView" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="274" width="300" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="cei-ok-ysy"/>
+                                    <constraint firstAttribute="height" constant="70" id="hYz-Sb-78k"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-TV-tji" customClass="SYView" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="364" width="300" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8CK-av-ZT1"/>
+                                    <constraint firstAttribute="width" constant="300" id="iVv-zQ-WS7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EeH-Sr-XTg" firstAttribute="centerX" secondItem="1dG-gg-3Gg" secondAttribute="centerX" id="2l5-fL-IDP"/>
+                            <constraint firstItem="08h-M8-MX8" firstAttribute="top" secondItem="EeH-Sr-XTg" secondAttribute="bottom" constant="20" id="BSQ-W7-mQH"/>
+                            <constraint firstItem="EeH-Sr-XTg" firstAttribute="top" secondItem="3Yw-5F-8Bi" secondAttribute="bottom" constant="20" id="XfM-JC-iEs"/>
+                            <constraint firstItem="3Yw-5F-8Bi" firstAttribute="centerX" secondItem="1dG-gg-3Gg" secondAttribute="centerX" id="iAs-ZE-v3G"/>
+                            <constraint firstItem="k2i-TV-tji" firstAttribute="top" secondItem="08h-M8-MX8" secondAttribute="bottom" constant="20" id="iLA-YF-jop"/>
+                            <constraint firstItem="08h-M8-MX8" firstAttribute="centerX" secondItem="1dG-gg-3Gg" secondAttribute="centerX" id="sTu-Rk-Mq8"/>
+                            <constraint firstItem="3Yw-5F-8Bi" firstAttribute="top" secondItem="34H-cp-E14" secondAttribute="bottom" constant="30" id="t8m-Tf-c7q"/>
+                            <constraint firstItem="k2i-TV-tji" firstAttribute="centerX" secondItem="1dG-gg-3Gg" secondAttribute="centerX" id="wjL-C6-fja"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ocO-yj-TWz"/>
+                    <connections>
+                        <outlet property="backgrondView" destination="08h-M8-MX8" id="gtx-Rd-Nto"/>
+                        <outlet property="border2View" destination="EeH-Sr-XTg" id="f2y-5Q-HpY"/>
+                        <outlet property="borderView" destination="3Yw-5F-8Bi" id="nEf-cf-V7T"/>
+                        <outlet property="rippleView" destination="k2i-TV-tji" id="eFS-0D-Ary"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSl-Ca-yN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,9 +255,63 @@
                     <view key="view" contentMode="scaleToFill" id="OKJ-H4-yTw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-LN-gVK" customClass="SYTextField" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="94" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dwb-DX-FQI"/>
+                                    <constraint firstAttribute="width" constant="300" id="Jsp-zB-e75"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-Rq-9vq" customClass="SYTextField" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="164" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Eoz-b2-ruJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="hzA-tQ-dkW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA0-p2-6uR" customClass="SYTextField" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="304" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6SX-K8-4Xs"/>
+                                    <constraint firstAttribute="height" constant="50" id="shx-cL-jAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-Lf-RUc" customClass="SYTextField" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="150" y="234" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hzy-Fm-puY"/>
+                                    <constraint firstAttribute="width" constant="300" id="jGM-rO-x0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LA0-p2-6uR" firstAttribute="top" secondItem="ObG-Lf-RUc" secondAttribute="bottom" constant="20" id="C6l-4M-6Zd"/>
+                            <constraint firstItem="LA0-p2-6uR" firstAttribute="centerX" secondItem="OKJ-H4-yTw" secondAttribute="centerX" id="Dbc-QB-ibS"/>
+                            <constraint firstItem="Oli-LN-gVK" firstAttribute="top" secondItem="7dB-Vo-oyX" secondAttribute="bottom" constant="30" id="Hfn-PY-VJd"/>
+                            <constraint firstItem="ObG-Lf-RUc" firstAttribute="top" secondItem="BmS-Rq-9vq" secondAttribute="bottom" constant="20" id="aYy-M1-YzU"/>
+                            <constraint firstItem="BmS-Rq-9vq" firstAttribute="top" secondItem="Oli-LN-gVK" secondAttribute="bottom" constant="20" id="eXu-RC-NWe"/>
+                            <constraint firstItem="ObG-Lf-RUc" firstAttribute="centerX" secondItem="OKJ-H4-yTw" secondAttribute="centerX" id="jdS-AQ-JEt"/>
+                            <constraint firstItem="Oli-LN-gVK" firstAttribute="centerX" secondItem="OKJ-H4-yTw" secondAttribute="centerX" id="m81-5D-RzU"/>
+                            <constraint firstItem="BmS-Rq-9vq" firstAttribute="centerX" secondItem="OKJ-H4-yTw" secondAttribute="centerX" id="rmY-fK-C4s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QPA-1l-qoc"/>
+                    <connections>
+                        <outlet property="backgrondTextField" destination="ObG-Lf-RUc" id="1uS-mo-aGI"/>
+                        <outlet property="border2TextField" destination="BmS-Rq-9vq" id="q5p-AP-Vyq"/>
+                        <outlet property="borderTextField" destination="Oli-LN-gVK" id="EB5-aQ-VCA"/>
+                        <outlet property="rippleTextField" destination="LA0-p2-6uR" id="Q41-IB-xx6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYB-mu-PNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
