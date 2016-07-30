@@ -124,9 +124,10 @@ To change text font, use font method as with SYButton.
 ### [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 
 <p align="center">
-<img src="./DemoImage/ExampleTableView.gif">
+<img src="./DemoImage/ExampleTableViewCell.gif">
 </p>
 
+Inherit SYTableViewCell. customize yourCell in `UITableViewDataSource`.
 
 ```swift
 class YourCell: SYTableViewCell {
