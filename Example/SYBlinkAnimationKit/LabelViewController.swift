@@ -44,7 +44,7 @@ class LabelViewController: UIViewController {
         
         let rippleLabel = SYLabel(frame: CGRectMake(40, 340, 300, 50))
         rippleLabel.text = "Ripple Animation"
-        rippleLabel.backgroundColor = UIColor.blackColor()
+        rippleLabel.backgroundColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
         rippleLabel.labelTextColor = UIColor.whiteColor()
         rippleLabel.animationType = .ripple
         rippleLabel.startAnimation()

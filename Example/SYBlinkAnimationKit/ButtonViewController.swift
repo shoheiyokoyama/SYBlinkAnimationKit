@@ -51,7 +51,7 @@ class ButtonViewController: UIViewController {
         
         rippleButton.setTitle("Ripple Animation", forState: .Normal)
         rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        rippleButton.backgroundColor = UIColor.blackColor()
+        rippleButton.backgroundColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
         rippleButton.addTarget(self, action: #selector(ButtonViewController.rippleAnimation(_:)), forControlEvents: .TouchUpInside)
         rippleButton.animationType = .ripple
         rippleButton.startAnimation()
