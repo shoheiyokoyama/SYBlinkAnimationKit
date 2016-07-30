@@ -47,13 +47,16 @@ There are 5 types of animation for component.
 - Support `@IBDesignable` and `@IBInspectable`.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
-- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) : available 5 types of Animation
-- [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift) : available 5 types of Animation
-- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
-- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift) : available `border`,  `borderWithShadow`,  `background`, `ripple`
+- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) 
+- [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) 
+- [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift)
+- [x] [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 
 ***Coming Soon***
 - [ ] SYTextView
+- [ ] SYCollectionViewCell
+- [ ] SYImageView
 
 ## Demo App
 Open Example/SYBlinkAnimationKit.xcworkspace and run SYBlinkAnimationKit-Example to see a simple demonstration.
