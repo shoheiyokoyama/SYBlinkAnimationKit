@@ -11,11 +11,11 @@ import SYBlinkAnimationKit
 
 class ButtonViewController: UIViewController {
     
-    let borderButton = SYButton(frame: CGRectMake(40, 100, 300, 50))
-    let border2Button = SYButton(frame: CGRectMake(40, 160, 300, 50))
+    let borderButton     = SYButton(frame: CGRectMake(40, 100, 300, 50))
+    let border2Button    = SYButton(frame: CGRectMake(40, 160, 300, 50))
     let backgroundButton = SYButton(frame: CGRectMake(40, 220, 300, 50))
-    let textButton = SYButton(frame: CGRectMake(40, 280, 300, 50))
-    let rippleButton = SYButton(frame: CGRectMake(40, 340, 300, 50))
+    let textButton       = SYButton(frame: CGRectMake(40, 280, 300, 50))
+    let rippleButton     = SYButton(frame: CGRectMake(40, 340, 300, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +23,19 @@ class ButtonViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationItem.title = "SYButton"
         
-        borderButton.setTitle("SYLabel", forState: .Normal)
+        borderButton.setTitle("Border Animation", forState: .Normal)
         borderButton.addTarget(self, action: #selector(ButtonViewController.borderAnimation(_:)), forControlEvents: .TouchUpInside)
         borderButton.startAnimation()
         self.view.addSubview(borderButton)
         
-        border2Button.setTitle("SYTextField", forState: .Normal)
+        border2Button.setTitle("BorderWithShadow Animation", forState: .Normal)
         border2Button.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
         border2Button.addTarget(self, action: #selector(ButtonViewController.BorderWithShadowAnimation(_:)), forControlEvents: .TouchUpInside)
         border2Button.animationType = .borderWithShadow
         border2Button.startAnimation()
         self.view.addSubview(border2Button)
         
-        backgroundButton.setTitle("SYView", forState: .Normal)
+        backgroundButton.setTitle("Background Animation", forState: .Normal)
         backgroundButton.addTarget(self, action: #selector(ButtonViewController.BackgroundAnimation(_:)), forControlEvents: .TouchUpInside)
         backgroundButton.animationType = .background
         backgroundButton.startAnimation()
@@ -66,12 +66,9 @@ class ButtonViewController: UIViewController {
         textButton.startAnimation()
         rippleButton.startAnimation()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: - SYButton Tap Events -
+    
     internal func borderAnimation(sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
