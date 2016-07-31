@@ -52,10 +52,10 @@ you can change properties in Interface Builder(IB) inspector. then IB update you
 - [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) 
 - [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift)
 - [x] [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
+- [x] [SYCollectionViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYCollectionViewCell.swift)
 
 ***Coming Soon***
 - [ ] SYTextView
-- [ ] SYCollectionViewCell
 - [ ] SYImageView
 
 ## Demo App
@@ -137,6 +137,24 @@ class YourCell: SYTableViewCell {
 ```swift
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
+        cell.animationType = .background
+        cell.startAnimation()
+        return cell
+    }
+```
+
+### [SYCollectionViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYCollectionViewCell.swift)
+
+Inherit SYCollectionViewCell. customize yourCell in `UICollectionViewDataSource`.
+
+```swift
+class YourCell: SYCollectionViewCell {
+    ...
+```
+
+```swift
+func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
         cell.animationType = .background
         cell.startAnimation()
         return cell
