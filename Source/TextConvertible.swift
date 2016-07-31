@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum TextPosition {
+public enum TextAlignmentMode {
     case topLeft, topCenter, topRight
     case left, center, right
     case bottomLeft, bottomCenter, bottomRight
@@ -16,7 +16,7 @@ public enum TextPosition {
 
 protocol TextConvertible {
     var textLayer: CATextLayer { get set }
-    var textPosition: TextPosition { get set }
+    var textAlignmentMode: TextAlignmentMode { get set }
     
     func configureTextLayer(text: String?, font: UIFont?, textColor: UIColor)
 }
@@ -38,6 +38,15 @@ extension TextConvertible where Self: UIView {
         textLayer.foregroundColor = textColor.CGColor
         textLayer.contentsScale   = UIScreen.mainScreen().scale
         textLayer.frame           = frame
+        textLayer.alignmentMode   = alignmentMode()
+    }
+    
+    private func alignmentMode() -> String {
+        switch textAlignmentMode {
+        case .left, .topLeft, .bottomLeft:       return "left"
+        case .center, .topCenter, .bottomCenter: return "center"
+        case .right, .topRight, .bottomRight:    return "right"
+        }
     }
     
     private func textPoint(size: CGSize) -> CGPoint {
@@ -46,7 +55,7 @@ extension TextConvertible where Self: UIView {
         let verticalCenter  = ( self.frame.height - size.height ) / 2
         let verticalBottom  = self.frame.height - size.height
         
-        switch textPosition {
+        switch textAlignmentMode {
         case .topLeft:
             return CGPoint(x: 0, y: 0)
         case .topCenter:

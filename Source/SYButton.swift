@@ -103,7 +103,7 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     var textLayer = CATextLayer()
     
-    public var textPosition: TextPosition = .center {
+    public var textAlignmentMode: TextAlignmentMode = .center {
         didSet {
             resetTextLayer()
         }

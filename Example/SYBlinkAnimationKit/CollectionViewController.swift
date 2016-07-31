@@ -45,6 +45,7 @@ class CollectionViewController: UIViewController {
         case 1:
             cell.titileLabel.text = "BorderWithShadow\nAnimation"
             cell.animationType    = .borderWithShadow
+            cell.titileLabel.textAlignmentMode = .center
         case 2:
             cell.titileLabel.text = "Background Animation"
             cell.animationType    = .background
