@@ -262,7 +262,7 @@ Available `SYButton`, `SYLabel` now.
 ````swift
     var textAlignmentMode: TextAlignmentMode
     
-    enum TextPosition {
+    enum TextAlignmentMode {
         case topLeft, topCenter, topRight
         case left, center, right
         case bottomLeft, bottomCenter, bottomRight
