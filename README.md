@@ -52,10 +52,10 @@ you can change properties in Interface Builder(IB) inspector. then IB update you
 - [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) 
 - [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift)
 - [x] [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
+- [x] [SYCollectionViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYCollectionViewCell.swift)
 
 ***Coming Soon***
 - [ ] SYTextView
-- [ ] SYCollectionViewCell
 - [ ] SYImageView
 
 ## Demo App
@@ -119,7 +119,7 @@ If you change text font size, name, you are supposed to call the `setFontOfSize(
 `SYLabel` Available ***Text Animation*** because of handleable text.
 
 If you set text color, you are supposed to set the ` labelTextColor` property.
-To change text font, use font method as with SYButton.
+To change text font, use font method as with `SYButton`.
 
 ### [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 
@@ -127,7 +127,7 @@ To change text font, use font method as with SYButton.
 <img src="./DemoImage/ExampleTableViewCell.gif">
 </p>
 
-Inherit SYTableViewCell. customize yourCell in `UITableViewDataSource`.
+Inherit `SYTableViewCell`. customize your `TableViewCell` in `UITableViewDataSource`.
 
 ```swift
 class YourCell: SYTableViewCell {
@@ -137,6 +137,24 @@ class YourCell: SYTableViewCell {
 ```swift
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
+        cell.animationType = .background
+        cell.startAnimation()
+        return cell
+    }
+```
+
+### [SYCollectionViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYCollectionViewCell.swift)
+
+Inherit `SYCollectionViewCell`. customize your `CollectionViewCell` in `UICollectionViewDataSource`.
+
+```swift
+class YourCell: SYCollectionViewCell {
+    ...
+```
+
+```swift
+func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
         cell.animationType = .background
         cell.startAnimation()
         return cell
@@ -179,11 +197,11 @@ If you just want to change the types of animation, you can customize `animationT
 
 Set `animationAdapter` (with Integer) in place of `animationType` in IB.
 
-- border: 0
-- borderWithShadow: 1
-- background: 2
-- ripple: 3
-- text: 4
+- `border`: 0
+- `borderWithShadow`: 1
+- `background`: 2
+- `ripple`: 3
+- `text`: 4
 
 ### Animation Color
 
@@ -230,10 +248,10 @@ You can customize `animationTimingFunction`, `animationDuration`.
 
 Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
 
-- linear: 0
-- easeIn: 1
-- easeOut: 2
-- easeInEaseOut: 3
+- `linear`: 0
+- `easeIn`: 1
+- `easeOut`: 2
+- `easeInEaseOut`: 3
 
 ### Customize Animatable Text
 
