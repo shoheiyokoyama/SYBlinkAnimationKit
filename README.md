@@ -260,7 +260,7 @@ Support 9 types of alignment.
 Available `SYButton`, `SYLabel` now.
 
 ````swift
-    var textPosition: TextPosition
+    var textAlignmentMode: TextAlignmentMode
     
     enum TextPosition {
         case topLeft, topCenter, topRight
