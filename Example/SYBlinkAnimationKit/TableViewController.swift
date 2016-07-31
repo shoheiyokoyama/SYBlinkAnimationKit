@@ -2,7 +2,7 @@
 //  TableViewController.swift
 //  SYBlinkAnimationKit
 //
-//  Created by 横山祥平 on 2016/07/30.
+//  Created by Shohei Yokoyama on 2016/07/30.
 //  Copyright © 2016年 CocoaPods. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class TableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let titles = [["SYButton", "SYLabel", "SYTextField", "SYView", "SYCollectionView", "SYImageView", "SYTextView", "SYAlertView", "SYNavigationBar", "SYSwitch", "SYControll", "SYSlider", "SYActivityIndicator"]]
-    let controllers = ["ButtonView", "LabelView", "TextFieldView", "AnimationView"]
+    let controllers = ["ButtonView", "LabelView", "TextFieldView", "AnimationView", "CollectionView"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

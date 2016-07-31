@@ -35,7 +35,7 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
-    @IBInspectable public  var animationTimingAdapter: Int {
+    @IBInspectable public var animationTimingAdapter: Int {
         get {
             return animationTimingFunction.rawValue
         }

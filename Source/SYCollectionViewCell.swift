@@ -1,15 +1,15 @@
 //
-//  SYTableViewCell.swift
+//  SYCollectionViewCell.swift
 //  Pods
 //
-//  Created by Shohei Yokoyama on 2016/07/29.
+//  Created by Shohei Yokoyama on 2016/07/31.
 //
 //
 
 import UIKit
 
 @IBDesignable
-public class SYTableViewCell: UITableViewCell, AnimatableComponent {
+public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
     
     public enum AnimationType: Int {
         case border, borderWithShadow, background, ripple

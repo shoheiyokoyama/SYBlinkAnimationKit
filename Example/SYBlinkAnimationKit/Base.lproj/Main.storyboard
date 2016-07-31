@@ -348,11 +348,62 @@
                         <segue destination="AQ4-f8-I01" kind="push" identifier="LabelView" id="K2U-xJ-DdC"/>
                         <segue destination="Lrn-KK-1sM" kind="push" identifier="TextFieldView" id="Uh8-x3-jOD"/>
                         <segue destination="akY-9H-MHV" kind="push" identifier="AnimationView" id="GvI-HY-1vg"/>
+                        <segue destination="ghU-CZ-L54" kind="push" identifier="CollectionView" id="A7g-OI-HRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-105" y="14"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="sVF-CZ-hQd">
+            <objects>
+                <viewController id="ghU-CZ-L54" customClass="CollectionViewController" customModule="SYBlinkAnimationKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zln-y2-VVt"/>
+                        <viewControllerLayoutGuide type="bottom" id="K6K-DH-BEz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Md7-B9-Mxa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-8w-IjG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MO5-u2-ixo">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YY0-sc-IbG">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="z4j-8w-IjG" secondAttribute="bottom" id="1ZL-um-MCb"/>
+                            <constraint firstItem="z4j-8w-IjG" firstAttribute="top" secondItem="Md7-B9-Mxa" secondAttribute="top" id="8jx-IA-iCP"/>
+                            <constraint firstItem="z4j-8w-IjG" firstAttribute="leading" secondItem="Md7-B9-Mxa" secondAttribute="leading" id="Dgr-4k-9Sh"/>
+                            <constraint firstAttribute="trailing" secondItem="z4j-8w-IjG" secondAttribute="trailing" id="eUq-US-lHu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cHU-7V-fVt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="z4j-8w-IjG" id="g3g-5T-i33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8y8-BH-FMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="-1020"/>
         </scene>
     </scenes>
 </document>

@@ -15,17 +15,17 @@ public final class SYTextField: UITextField, AnimatableComponent {
         case border, borderWithShadow, background, ripple
     }
 
-    @IBInspectable public var animationBorderColor:UIColor = AnimationDefaultColor.border {
+    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor:UIColor = AnimationDefaultColor.background {
+    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationRippleColor:UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
         didSet {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
@@ -43,7 +43,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public  var syTextFieldAnimationAdapter: Int {
+    @IBInspectable public  var animationAdapter: Int {
         get {
             return animationType.rawValue
         }
