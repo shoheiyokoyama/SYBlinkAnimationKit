@@ -1,5 +1,3 @@
-# SYBlinkAnimationKit
-
 <p align="center">
 <img src="./DemoImage/logo.png">
 </p>
