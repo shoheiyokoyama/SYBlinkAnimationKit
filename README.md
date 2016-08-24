@@ -83,7 +83,7 @@ First, Import **SYBlinkAnimationKit** in class.
 </p>
 
 ```swift
-   let syButton = SYButton(frame: CGRectMake(40, 50, 300, 50))
+   let syButton = SYButton(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
    syButton.setTitle("Border Animation", forState: .Normal)
    syButton.animationType = .border
    view.addSubview(syButton)
@@ -108,7 +108,7 @@ If you change text font size, name, you are supposed to call the `setFontOfSize(
 ### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
 
 ```swift
-   let syLabel = SYLabel(frame: CGRectMake(40, 50, 300, 50))
+   let syLabel = SYLabel(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
    syLabel.text = "Text Animation"
    syLabel.labelTextColor =  UIColor.darkGrayColor()
    syLabel.setFontNameWithSize("ArialHebew", size: 22.0)
