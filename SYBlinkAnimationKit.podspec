@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Source/**/*.swift'
-  s.resource_bundles = {
-    'SYBlinkAnimationKit' => ['Pod/Assets/*.png']
-  }
+#  s.resource_bundles = {
+#    'SYBlinkAnimationKit' => ['Pod/Assets/*.png']
+#  }
 end
