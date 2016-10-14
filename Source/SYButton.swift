@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
+public class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     public enum AnimationType: Int {
         case border, borderWithShadow, background, ripple, text
@@ -109,9 +109,9 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
         }
     }
     
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
-    private var textColor = UIColor.blackColor() {
+    fileprivate var textColor = UIColor.black {
         didSet {
             syLayer.setTextColor(textColor)
         }
@@ -131,27 +131,27 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     // MARK: - Public Methods -
     
-    override public func setTitle(title: String?, forState state: UIControlState) {
+    override public func setTitle(_ title: String?, for state: UIControlState) {
         guard let title = title else { return }
-        super.setTitle(title, forState: state)
+        super.setTitle(title, for: state)
         
         resetTextLayer()
     }
     
-    override public func setTitleColor(color: UIColor?, forState state: UIControlState) {
-        super.setTitleColor(UIColor.clearColor(), forState: state)
+    override public func setTitleColor(_ color: UIColor?, for state: UIControlState) {
+        super.setTitleColor(UIColor.clear, for: state)
         
         guard let color = color else { return }
-        textLayer.foregroundColor = color.CGColor
+        textLayer.foregroundColor = color.cgColor
         textColor = color
     }
     
-    public func setFontOfSize(fontSize: CGFloat) {
-        titleLabel?.font = UIFont.systemFontOfSize(fontSize)
+    public func setFontOfSize(_ fontSize: CGFloat) {
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         resetTextLayer()
     }
     
-    public func setFontNameWithSize(name: String, size: CGFloat) {
+    public func setFontNameWithSize(_ name: String, size: CGFloat) {
         guard let titleLabel = titleLabel else { return }
         
         titleLabel.font = UIFont(name: name, size: size)
@@ -169,26 +169,26 @@ public final class SYButton: UIButton, AnimatableComponent, TextConvertible {
     }
 }
 
-// MARK: - Private Methods -
+// MARK: - Fileprivate Methods -
 
-private extension SYButton {
+fileprivate extension SYButton {
     
-    private struct ButtonConstants {
+    struct ButtonConstants {
         static let cornerRadius: CGFloat    = 5
         static let padding: CGFloat         = 5
         static let defaultDuration: CGFloat = 1
     }
     
-    private func setLayer() {
+    func setLayer() {
         layer.cornerRadius = ButtonConstants.cornerRadius
         contentEdgeInsets  = UIEdgeInsets(top: ButtonConstants.padding, left: ButtonConstants.padding, bottom: ButtonConstants.padding, right: ButtonConstants.padding)
         
         syLayer.animationType = .border
 
-        setTitleColor(UIColor.blackColor(), forState: .Normal)
+        setTitleColor(UIColor.black, for: UIControlState())
     }
     
-    private func resetTextLayer() {
+    func resetTextLayer() {
         configureTextLayer(currentTitle, font: titleLabel?.font, textColor: textColor)
         syLayer.resetTextLayer(textLayer)
     }

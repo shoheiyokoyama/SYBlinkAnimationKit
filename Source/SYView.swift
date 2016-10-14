@@ -99,7 +99,7 @@ public final class SYView: UIView, AnimatableComponent {
         }
     }
     
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
     // MARK: - initializer -
     
@@ -127,16 +127,16 @@ public final class SYView: UIView, AnimatableComponent {
     }
 }
 
-// MARK: - Private Methods -
+// MARK: - Fileprivate Methods -
 
-private extension SYView {
+fileprivate extension SYView {
     
-    private struct ViewConstants {
+    struct ViewConstants {
         static let cornerRadius: CGFloat    = 1.5
         static let defaultDuration: CGFloat = 1
     }
     
-    private func setLayer() {
+    func setLayer() {
         animationType = .border
         layer.cornerRadius = ViewConstants.cornerRadius
     }

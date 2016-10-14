@@ -1,2839 +1,1139 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0422ECB8E34D3F23FA3CB6652B55997A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C0D8C39CBFDB3BA1372FAD7C52E95B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0528444EFC68619AD1FEB8A7CD4A01BA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>05EE476F02D4CE36FE0766522AB666EC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3151E9A6157B7F064F22E5F330530E43</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_SYBlinkAnimationKit_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>069F325CD10C30294E2A51959C0C29DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DDA74BFB7BD1F38A2058E8D76A0A3481</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>08BE39E8A6BF986160FAD67AC4D890E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>09A0BD9256B310C2155EB75660E0620C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A4C0F64AD3D2EF17F9447806B7DB433</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0CCFD7A05FE8BE766F617688B67FA85C</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>9DCA535B0E5D25493DD149CC231609DA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C39F00679DAB5512C905911EB86907D0</string>
-				<string>2914BA08F2D3398D902383EFBA4F6ADB</string>
-				<string>85C93A693BC737A7300BED4F27F492D3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit-SYBlinkAnimationKit</string>
-			<key>productName</key>
-			<string>SYBlinkAnimationKit-SYBlinkAnimationKit</string>
-			<key>productReference</key>
-			<string>54DDE8271992D7B1449468A3DAD88FA0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>0EF4B33C5C9AD4642E9C4AB1DA204623</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A7F9AAC65FC2D87C34EA9D6A5ACB4401</string>
-				<string>2696638529960E774A76D99A13D595BB</string>
-				<string>3FF33EF2BEA328811C6BC7C97A9776A3</string>
-				<string>125E9AB8D9F3FA41A578627E57C1B37A</string>
-				<string>E44BA8216CB73A40822467A02D7D847B</string>
-				<string>AEBA7273A59F2B043A31661C1CB1604C</string>
-				<string>C5C081A0337FC266B8C37E0D858AB743</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0F88358CE498BB079250C38419BFDA1B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0FB8A387ABE22F3A74FE5D901A852BB7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0FEED6CF2078E93F5BF57AD747D7D416</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>362B0CAE7682A7236ACFBA15D313DDE2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10DE1947DAC0ED28F6C0A9F9BD75D546</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>125E9AB8D9F3FA41A578627E57C1B37A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B2AD796E0811AED05EEA7E020A7947B0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Project</string>
-				</array>
-			</dict>
-		</dict>
-		<key>14800E346BC7E7A3347E3D915E45EED6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FFFE0C8470131909B6828EF44C35B971</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>14B8B9B15ECBE87983FF987239AB2D7B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CD3FB7D37E46A5379C926728A416D78E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1576DFE0B610C6A875FF569DA744C575</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Animatable.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>175E07AEBDAD15ABC9427FE1FC5774C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+Snapshot.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Snapshot.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>177374829A14B667237717533642067D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>47BE0775528781D5FF4083F623772F7C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>17BE969126FF0EDA7A0F3522919CB4C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>FBSnapshotTestCasePlatform.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestCasePlatform.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18A987C29DC3DFA38BD0526CAD74530A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYTextField.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A0F76379D7E03623B1B42A89FD8EFF5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D7A4756398DCD4BA8CD2D6384DC0436B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1B0B731E510D940F23F3C9847374794E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7A6B3BDBD3CA21A291BA14EE1D4188FB</string>
-				<string>27AF04A2A9E74A57145B73EDFFD8F893</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1CD31BAD4BFBF927F0E950A8F6512B73</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit</string>
-			<key>target</key>
-			<string>20D4C5E9D0F0F3E5FDEB36F050481A09</string>
-			<key>targetProxy</key>
-			<string>EDCC90A508574AC39A10519DD40DBB24</string>
-		</dict>
-		<key>20D4C5E9D0F0F3E5FDEB36F050481A09</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7DC5565B3DAD4EECB49BF20FDF2131AB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>92CD42AFA5B72A6751EF9A3A3D57E6C2</string>
-				<string>3A4D3279C71B56BF8013327C27C13CF5</string>
-				<string>1A0F76379D7E03623B1B42A89FD8EFF5</string>
-				<string>C186D0007D3DBD78E08797A29B2DBF17</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>833B35A0E46EF39510BE2C2DE07E8101</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit</string>
-			<key>productName</key>
-			<string>SYBlinkAnimationKit</string>
-			<key>productReference</key>
-			<string>5E7A695122BAD79C997564F34560EC2B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>214320F9FD894607856A34F442784B90</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5A7EBA8F7628DFE671259DC99635A4E2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2393D1A899C707F79A64672C46ED238F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>23A5D64A8DED45B714F8DF2F0AFAC719</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>FBSnapshotTestController.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2696638529960E774A76D99A13D595BB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4396A99C0AAE10F414B527B80FC1DACB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>27AF04A2A9E74A57145B73EDFFD8F893</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F4250079DFEE83811C1219097EE48004</string>
-				<string>5B524FD44CF04685144F544508837621</string>
-				<string>6E7299CB674EA65AF170A840B555D965</string>
-				<string>4B2F584A99DE33BF08E200BBF0F317A5</string>
-				<string>F7AF0E0A752F6C874DBC1F143E6EE88F</string>
-				<string>E54ECFEE27296950D4AFBF79C8C6DB00</string>
-				<string>4597DE85D0FB5DA6A92377CD14B7E74D</string>
-				<string>A1D4CCC5950540866F59B11E7010A6B4</string>
-				<string>E9FF30526CDEC09A7C3E8A29D349406E</string>
-				<string>0F88358CE498BB079250C38419BFDA1B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-SYBlinkAnimationKit_Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-SYBlinkAnimationKit_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2914BA08F2D3398D902383EFBA4F6ADB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2A5FC5A9611E38248D67D983D3177DEF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2A9EC5FBD0380465FD28994C1030C989</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1576DFE0B610C6A875FF569DA744C575</string>
-				<string>796AA5F5C03E90707672F421DD79DCF6</string>
-				<string>83767197225060F0A46CAA7577ECB6B1</string>
-				<string>7DE930EF34CA8D53D055E3AFE435BE61</string>
-				<string>A591FF47DEA2C3AB3A6AA21C2E35FF3D</string>
-				<string>4C0D8C39CBFDB3BA1372FAD7C52E95B6</string>
-				<string>9D6E577D7E91B99630A3F78853895CB0</string>
-				<string>0FB8A387ABE22F3A74FE5D901A852BB7</string>
-				<string>18A987C29DC3DFA38BD0526CAD74530A</string>
-				<string>DDA74BFB7BD1F38A2058E8D76A0A3481</string>
-				<string>E927546D2A46696BC1E1B33F05755BA2</string>
-				<string>5A7EBA8F7628DFE671259DC99635A4E2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Source</string>
-			<key>path</key>
-			<string>Source</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>552D02D5BA751AC2E8790D2811D496CA</string>
-				<string>10DE1947DAC0ED28F6C0A9F9BD75D546</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2F73BBAF40A73B9FAF1F90C7DD60B693</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E25DF0E3013D15E06F5E0CE782762B26</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/FBSnapshotTestCase/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>FBSnapshotTestCase</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>30FA75B16200AFBD4570B243EDB56747</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DD6465C3902CF4E5E96E8439B99913EA</string>
-				<string>C80C0E413E908309463160B423D20315</string>
-				<string>720DB9B8F296A373F3652BEC402AFF90</string>
-				<string>54DDE8271992D7B1449468A3DAD88FA0</string>
-				<string>5E7A695122BAD79C997564F34560EC2B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3151E9A6157B7F064F22E5F330530E43</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>348965C17AB71570477C9F47F95328DF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>47F4252DEFDE1FD558C94B874F716335</string>
-				<string>3C18F29E03CADC58B278518F22B7B517</string>
-				<string>A38506CF4700DA06E89C871D8388D83E</string>
-				<string>FDCF5EFC95C413E5DCF5133D3DFC4170</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>362B0CAE7682A7236ACFBA15D313DDE2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2A9EC5FBD0380465FD28994C1030C989</string>
-				<string>5BBDAA221E784666C569C65D341F8517</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>384A1B103C9D183D6A1C08DD450C61CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+Diff.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Diff.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A4D3279C71B56BF8013327C27C13CF5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5F5F67627EC4784D6D210C5547D1FA57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3C18F29E03CADC58B278518F22B7B517</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0528444EFC68619AD1FEB8A7CD4A01BA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3C85E62EBD0D660C3DB557FABF9B8E10</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8575814874877CB96D9A13C7BBD6AB1A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3FF33EF2BEA328811C6BC7C97A9776A3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>721CC07FAB91C1143E71B21BB3E20BC6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4396A99C0AAE10F414B527B80FC1DACB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FBSnapshotTestCasePlatform.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestCasePlatform.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>450B6D2D1CBBC278F7DC4CB31FC1D49D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F71763A6601E82DBF9839EEE1717BC01</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4597DE85D0FB5DA6A92377CD14B7E74D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45C51F9E6947EC156012B9DB97BEAD52</key>
-		<dict>
-			<key>fileRef</key>
-			<string>683F6001EE50A021A8F6189C4A385ACF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>47BE0775528781D5FF4083F623772F7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47F4252DEFDE1FD558C94B874F716335</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>49FE25CB0990A912973D24121C151E6A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestCase.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4B2F584A99DE33BF08E200BBF0F317A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C0D8C39CBFDB3BA1372FAD7C52E95B6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYLabel.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4C6AA2627E2876BE91CD1B8F8FF1A1E6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>09A0BD9256B310C2155EB75660E0620C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SYBlinkAnimationKit</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4D6658D7723C958B49113CB94B138D22</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>20D4C5E9D0F0F3E5FDEB36F050481A09</string>
-			<key>remoteInfo</key>
-			<string>SYBlinkAnimationKit</string>
-		</dict>
-		<key>4F88C74D733720F86716DAF1B048177E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+Compare.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Compare.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>500CFFB619BA25FB57B6AF48F8CCD8F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F88C74D733720F86716DAF1B048177E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>511F06E70B61C5E13AC3434911EF65B3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0F88358CE498BB079250C38419BFDA1B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_SYBlinkAnimationKit_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>54DDE8271992D7B1449468A3DAD88FA0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit.bundle</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>552D02D5BA751AC2E8790D2811D496CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>561B00C22FB1E3E7D31E7BEB2FD4F332</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58A1305D922FF21E64916EBF07C5A689</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6DD9EBDCF7067F613B689BB4D2D7F07D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SwiftSupport</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58CA52BCED9F6E2A9CCE4DF19E873D3E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>23A5D64A8DED45B714F8DF2F0AFAC719</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5A7EBA8F7628DFE671259DC99635A4E2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIColorExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B524FD44CF04685144F544508837621</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B52FE2EDC7FB0D6B83915A453E05D09</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5BBDAA221E784666C569C65D341F8517</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>649CED23999487052CF529B165FD8845</string>
-				<string>A4D9B6BDAE0555D1654347471F7D25A0</string>
-				<string>09A0BD9256B310C2155EB75660E0620C</string>
-				<string>858A3E2536E2A969021F8E8F199AEFA7</string>
-				<string>AAB1AD3F3600557D539E2ABC499B60A6</string>
-				<string>47BE0775528781D5FF4083F623772F7C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/SYBlinkAnimationKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C08A6F6BD2854A3F5A01A1BF181FF8C</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>9A94BD31E38B40BCBC294B015E640927</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E5006C7FFA3541C259B9C440A2F18F4D</string>
-				<string>14800E346BC7E7A3347E3D915E45EED6</string>
-				<string>B9895C7F169E43B39773C99CF1AAE380</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C1E17AC65429DC78DD61633BE6F91543</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-SYBlinkAnimationKit_Example</string>
-			<key>productName</key>
-			<string>Pods-SYBlinkAnimationKit_Example</string>
-			<key>productReference</key>
-			<string>C80C0E413E908309463160B423D20315</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>5CF625AF65FDC6575F5C55D1BC7542E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7DE930EF34CA8D53D055E3AFE435BE61</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E7A695122BAD79C997564F34560EC2B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit.framework</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5F5F67627EC4784D6D210C5547D1FA57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>649CED23999487052CF529B165FD8845</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>683F6001EE50A021A8F6189C4A385ACF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6DD9EBDCF7067F613B689BB4D2D7F07D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>SwiftSupport.swift</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/SwiftSupport.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6E7299CB674EA65AF170A840B555D965</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6FDB25ACDFDD4FF715D4A858EEC67707</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>720DB9B8F296A373F3652BEC402AFF90</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_SYBlinkAnimationKit_Tests.framework</string>
-			<key>path</key>
-			<string>Pods_SYBlinkAnimationKit_Tests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>721CC07FAB91C1143E71B21BB3E20BC6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FBSnapshotTestController.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73CAB2ADEEBBF66198052A6F0C6179C2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>784449A99C9249CE18733A69A017F66A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>FEDFD823D2B0393C37CD72823B429301</string>
-				<string>973905154DBB6FA55869DC6F023A0A82</string>
-				<string>C7574354A1C901ED5DCD46E5A2EB8975</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B05A2826B2D1C924978CC0AF5B14CE24</string>
-				<string>1CD31BAD4BFBF927F0E950A8F6512B73</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-SYBlinkAnimationKit_Tests</string>
-			<key>productName</key>
-			<string>Pods-SYBlinkAnimationKit_Tests</string>
-			<key>productReference</key>
-			<string>720DB9B8F296A373F3652BEC402AFF90</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>758DA1CBC128A58D65023AE2318D1257</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+Compare.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Compare.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>772A3FF3D8A39494464ADDC12B7096CF</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>BA7FB690F3A08BB1E33865B1F9974E46</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E6598C946CB8C42DFF6CB23648937553</string>
-				<string>348965C17AB71570477C9F47F95328DF</string>
-				<string>0EF4B33C5C9AD4642E9C4AB1DA204623</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase</string>
-			<key>productName</key>
-			<string>FBSnapshotTestCase</string>
-			<key>productReference</key>
-			<string>DD6465C3902CF4E5E96E8439B99913EA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>784449A99C9249CE18733A69A017F66A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E60708EF5A98CCB694F83F724D81871C</string>
-				<string>511F06E70B61C5E13AC3434911EF65B3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>796AA5F5C03E90707672F421DD79DCF6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AnimatableComponent.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7A6B3BDBD3CA21A291BA14EE1D4188FB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D0F2BCC289349D1B758AE6B5FAFFE5AF</string>
-				<string>5B52FE2EDC7FB0D6B83915A453E05D09</string>
-				<string>2A5FC5A9611E38248D67D983D3177DEF</string>
-				<string>6FDB25ACDFDD4FF715D4A858EEC67707</string>
-				<string>F71763A6601E82DBF9839EEE1717BC01</string>
-				<string>A3736FF0F0AE09E1233C4935610CAA63</string>
-				<string>E008177C1226E7BA6B129AD883792ECE</string>
-				<string>683F6001EE50A021A8F6189C4A385ACF</string>
-				<string>C037DB27DB20EC9D2D411A489FE971B9</string>
-				<string>3151E9A6157B7F064F22E5F330530E43</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-SYBlinkAnimationKit_Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-SYBlinkAnimationKit_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>0FEED6CF2078E93F5BF57AD747D7D416</string>
-				<string>14B8B9B15ECBE87983FF987239AB2D7B</string>
-				<string>FBD2D672921284E66F309CA3462F84D6</string>
-				<string>30FA75B16200AFBD4570B243EDB56747</string>
-				<string>1B0B731E510D940F23F3C9847374794E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DC5565B3DAD4EECB49BF20FDF2131AB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>93A57CD9B5646191F9E513D8E0A7BCEF</string>
-				<string>D2DE62C6EF554ADC08CB4FF632D1D176</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7DE930EF34CA8D53D055E3AFE435BE61</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYButton.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>833B35A0E46EF39510BE2C2DE07E8101</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit-SYBlinkAnimationKit</string>
-			<key>target</key>
-			<string>0CCFD7A05FE8BE766F617688B67FA85C</string>
-			<key>targetProxy</key>
-			<string>D7E37DF872A5BE45C71EA67F37C6C838</string>
-		</dict>
-		<key>83767197225060F0A46CAA7577ECB6B1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CABasicAnimationExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>853C84AC883B6FC690E82525E7ECB377</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8575814874877CB96D9A13C7BBD6AB1A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+Diff.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Diff.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>858A3E2536E2A969021F8E8F199AEFA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>85C93A693BC737A7300BED4F27F492D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>87191F629CDAF3F63BC2147AFD88ECC8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>83767197225060F0A46CAA7577ECB6B1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8AC9643893E137DE5E32F231B8A240F1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F2B58D5BA3EB09C98A4C815311C792DC</string>
-				<string>49FE25CB0990A912973D24121C151E6A</string>
-				<string>4396A99C0AAE10F414B527B80FC1DACB</string>
-				<string>17BE969126FF0EDA7A0F3522919CB4C5</string>
-				<string>721CC07FAB91C1143E71B21BB3E20BC6</string>
-				<string>23A5D64A8DED45B714F8DF2F0AFAC719</string>
-				<string>B2AD796E0811AED05EEA7E020A7947B0</string>
-				<string>CD9224AD343A9456F0D12695DF9141B2</string>
-				<string>758DA1CBC128A58D65023AE2318D1257</string>
-				<string>4F88C74D733720F86716DAF1B048177E</string>
-				<string>384A1B103C9D183D6A1C08DD450C61CA</string>
-				<string>8575814874877CB96D9A13C7BBD6AB1A</string>
-				<string>175E07AEBDAD15ABC9427FE1FC5774C5</string>
-				<string>D62B8F28F934EDA4C96FE5B166C7AF0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B92B74075951E640E0FE064AC654C41</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C037DB27DB20EC9D2D411A489FE971B9</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_SYBlinkAnimationKit_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8CDE673C8BA909DDDDB8BFAE9848BFC0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DECB970785FCBAB4A6315DAA0DB0DF2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6DD9EBDCF7067F613B689BB4D2D7F07D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90B7E2F40E17730F3E28449559B458E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D62B8F28F934EDA4C96FE5B166C7AF0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>92CD42AFA5B72A6751EF9A3A3D57E6C2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD3517B8A49575233B1BE9439424914F</string>
-				<string>B9210FD97EAEF1622F02D734DD9CAB90</string>
-				<string>87191F629CDAF3F63BC2147AFD88ECC8</string>
-				<string>C9CA236B80E9FE7456A26F852A666E9E</string>
-				<string>5CF625AF65FDC6575F5C55D1BC7542E0</string>
-				<string>BF25B299DBFC5A1793235CFDB770BC5A</string>
-				<string>0422ECB8E34D3F23FA3CB6652B55997A</string>
-				<string>E044914AF3808CE66F915DEF147F9693</string>
-				<string>B00BCEF3D2C360C943ED868D14A50B64</string>
-				<string>BA9228E533C0C6E004AEAA1DC4AF23D9</string>
-				<string>069F325CD10C30294E2A51959C0C29DB</string>
-				<string>A28F80D041E4F984D25A298032489667</string>
-				<string>214320F9FD894607856A34F442784B90</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>935E37624FABB2530AE441A47561EDCF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>93A57CD9B5646191F9E513D8E0A7BCEF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>09A0BD9256B310C2155EB75660E0620C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SYBlinkAnimationKit/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SYBlinkAnimationKit</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>94FDCD720E559DF4C535B3A8E93080C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>17BE969126FF0EDA7A0F3522919CB4C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>973905154DBB6FA55869DC6F023A0A82</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>935E37624FABB2530AE441A47561EDCF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9A94BD31E38B40BCBC294B015E640927</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8B92B74075951E640E0FE064AC654C41</string>
-				<string>05EE476F02D4CE36FE0766522AB666EC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>9D6E577D7E91B99630A3F78853895CB0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYLayer.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DCA535B0E5D25493DD149CC231609DA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B737CC19F0131FFAEFA157B7F4D2FEAF</string>
-				<string>4C6AA2627E2876BE91CD1B8F8FF1A1E6</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A1D4CCC5950540866F59B11E7010A6B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A28F80D041E4F984D25A298032489667</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E927546D2A46696BC1E1B33F05755BA2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A3736FF0F0AE09E1233C4935610CAA63</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A38506CF4700DA06E89C871D8388D83E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2393D1A899C707F79A64672C46ED238F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A4AFA101D16F0FC9B45EC9077C61F5C8</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>772A3FF3D8A39494464ADDC12B7096CF</string>
-			<key>remoteInfo</key>
-			<string>FBSnapshotTestCase</string>
-		</dict>
-		<key>A4D9B6BDAE0555D1654347471F7D25A0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A591FF47DEA2C3AB3A6AA21C2E35FF3D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYCollectionViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A7F9AAC65FC2D87C34EA9D6A5ACB4401</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F2B58D5BA3EB09C98A4C815311C792DC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>AAB1AD3F3600557D539E2ABC499B60A6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SYBlinkAnimationKit-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AEBA7273A59F2B043A31661C1CB1604C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>384A1B103C9D183D6A1C08DD450C61CA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Private</string>
-				</array>
-			</dict>
-		</dict>
-		<key>B00BCEF3D2C360C943ED868D14A50B64</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0FB8A387ABE22F3A74FE5D901A852BB7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B05A2826B2D1C924978CC0AF5B14CE24</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase</string>
-			<key>target</key>
-			<string>772A3FF3D8A39494464ADDC12B7096CF</string>
-			<key>targetProxy</key>
-			<string>A4AFA101D16F0FC9B45EC9077C61F5C8</string>
-		</dict>
-		<key>B2AD796E0811AED05EEA7E020A7947B0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIApplication+StrictKeyWindow.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B737CC19F0131FFAEFA157B7F4D2FEAF</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>09A0BD9256B310C2155EB75660E0620C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SYBlinkAnimationKit</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B9210FD97EAEF1622F02D734DD9CAB90</key>
-		<dict>
-			<key>fileRef</key>
-			<string>796AA5F5C03E90707672F421DD79DCF6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B9895C7F169E43B39773C99CF1AAE380</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>45C51F9E6947EC156012B9DB97BEAD52</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B9F506E7E55E2B9F43E65C7A99B9D930</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1D4CCC5950540866F59B11E7010A6B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BA7FB690F3A08BB1E33865B1F9974E46</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2F73BBAF40A73B9FAF1F90C7DD60B693</string>
-				<string>CC0A504AF8FBBF1EA64EFA5943B7D3F3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>BA9228E533C0C6E004AEAA1DC4AF23D9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18A987C29DC3DFA38BD0526CAD74530A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD3517B8A49575233B1BE9439424914F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1576DFE0B610C6A875FF569DA744C575</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BD3C7ABB0598A03B729F141633113043</key>
-		<dict>
-			<key>fileRef</key>
-			<string>49FE25CB0990A912973D24121C151E6A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BF25B299DBFC5A1793235CFDB770BC5A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A591FF47DEA2C3AB3A6AA21C2E35FF3D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C037DB27DB20EC9D2D411A489FE971B9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C186D0007D3DBD78E08797A29B2DBF17</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>177374829A14B667237717533642067D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C1E17AC65429DC78DD61633BE6F91543</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SYBlinkAnimationKit</string>
-			<key>target</key>
-			<string>20D4C5E9D0F0F3E5FDEB36F050481A09</string>
-			<key>targetProxy</key>
-			<string>4D6658D7723C958B49113CB94B138D22</string>
-		</dict>
-		<key>C39F00679DAB5512C905911EB86907D0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5C081A0337FC266B8C37E0D858AB743</key>
-		<dict>
-			<key>fileRef</key>
-			<string>175E07AEBDAD15ABC9427FE1FC5774C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Private</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C7574354A1C901ED5DCD46E5A2EB8975</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B9F506E7E55E2B9F43E65C7A99B9D930</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C80C0E413E908309463160B423D20315</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_SYBlinkAnimationKit_Example.framework</string>
-			<key>path</key>
-			<string>Pods_SYBlinkAnimationKit_Example.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C9CA236B80E9FE7456A26F852A666E9E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>858A3E2536E2A969021F8E8F199AEFA7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CC0A504AF8FBBF1EA64EFA5943B7D3F3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E25DF0E3013D15E06F5E0CE782762B26</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/FBSnapshotTestCase/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>FBSnapshotTestCase</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CD3FB7D37E46A5379C926728A416D78E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
-				<string>0528444EFC68619AD1FEB8A7CD4A01BA</string>
-				<string>2393D1A899C707F79A64672C46ED238F</string>
-				<string>853C84AC883B6FC690E82525E7ECB377</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD9224AD343A9456F0D12695DF9141B2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIApplication+StrictKeyWindow.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0F2BCC289349D1B758AE6B5FAFFE5AF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D2DE62C6EF554ADC08CB4FF632D1D176</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>09A0BD9256B310C2155EB75660E0620C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SYBlinkAnimationKit/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>SYBlinkAnimationKit</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D31B096AB4A0164C61B63F0E59AD76C9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>30FA75B16200AFBD4570B243EDB56747</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>772A3FF3D8A39494464ADDC12B7096CF</string>
-				<string>5C08A6F6BD2854A3F5A01A1BF181FF8C</string>
-				<string>73CAB2ADEEBBF66198052A6F0C6179C2</string>
-				<string>20D4C5E9D0F0F3E5FDEB36F050481A09</string>
-				<string>0CCFD7A05FE8BE766F617688B67FA85C</string>
-			</array>
-		</dict>
-		<key>D62B8F28F934EDA4C96FE5B166C7AF0E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+Snapshot.m</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/Categories/UIImage+Snapshot.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D7A4756398DCD4BA8CD2D6384DC0436B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>54DDE8271992D7B1449468A3DAD88FA0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D7E37DF872A5BE45C71EA67F37C6C838</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0CCFD7A05FE8BE766F617688B67FA85C</string>
-			<key>remoteInfo</key>
-			<string>SYBlinkAnimationKit-SYBlinkAnimationKit</string>
-		</dict>
-		<key>DD30E5B9BE40CE7D2DEB812E1E170DD7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>08BE39E8A6BF986160FAD67AC4D890E9</string>
-				<string>E25DF0E3013D15E06F5E0CE782762B26</string>
-				<string>8CDE673C8BA909DDDDB8BFAE9848BFC0</string>
-				<string>0A4C0F64AD3D2EF17F9447806B7DB433</string>
-				<string>561B00C22FB1E3E7D31E7BEB2FD4F332</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/FBSnapshotTestCase</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD6465C3902CF4E5E96E8439B99913EA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase.framework</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>DDA74BFB7BD1F38A2058E8D76A0A3481</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SYView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E008177C1226E7BA6B129AD883792ECE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E044914AF3808CE66F915DEF147F9693</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9D6E577D7E91B99630A3F78853895CB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E25DF0E3013D15E06F5E0CE782762B26</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E44BA8216CB73A40822467A02D7D847B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>758DA1CBC128A58D65023AE2318D1257</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Private</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E5006C7FFA3541C259B9C440A2F18F4D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>450B6D2D1CBBC278F7DC4CB31FC1D49D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E529CF6315E6EB33FBA413EDC4BD9CF7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CDE673C8BA909DDDDB8BFAE9848BFC0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E54ECFEE27296950D4AFBF79C8C6DB00</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5EFBFEA24204492935B2FB2BA7D21B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CD9224AD343A9456F0D12695DF9141B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E60708EF5A98CCB694F83F724D81871C</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E9FF30526CDEC09A7C3E8A29D349406E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_SYBlinkAnimationKit_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E6598C946CB8C42DFF6CB23648937553</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E529CF6315E6EB33FBA413EDC4BD9CF7</string>
-				<string>BD3C7ABB0598A03B729F141633113043</string>
-				<string>94FDCD720E559DF4C535B3A8E93080C3</string>
-				<string>58CA52BCED9F6E2A9CCE4DF19E873D3E</string>
-				<string>8DECB970785FCBAB4A6315DAA0DB0DF2</string>
-				<string>E5EFBFEA24204492935B2FB2BA7D21B6</string>
-				<string>500CFFB619BA25FB57B6AF48F8CCD8F3</string>
-				<string>3C85E62EBD0D660C3DB557FABF9B8E10</string>
-				<string>90B7E2F40E17730F3E28449559B458E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E927546D2A46696BC1E1B33F05755BA2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TextConvertible.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E9FF30526CDEC09A7C3E8A29D349406E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EDCC90A508574AC39A10519DD40DBB24</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>20D4C5E9D0F0F3E5FDEB36F050481A09</string>
-			<key>remoteInfo</key>
-			<string>SYBlinkAnimationKit</string>
-		</dict>
-		<key>EF92DEB4035DB81E70E8D74A49D73DD7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F7AF0E0A752F6C874DBC1F143E6EE88F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F294CE16D0BB89335EB3400EDAA363F5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8AC9643893E137DE5E32F231B8A240F1</string>
-				<string>DD30E5B9BE40CE7D2DEB812E1E170DD7</string>
-				<string>58A1305D922FF21E64916EBF07C5A689</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F2B58D5BA3EB09C98A4C815311C792DC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FBSnapshotTestCase.h</string>
-			<key>path</key>
-			<string>FBSnapshotTestCase/FBSnapshotTestCase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F4250079DFEE83811C1219097EE48004</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F71763A6601E82DBF9839EEE1717BC01</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F7AF0E0A752F6C874DBC1F143E6EE88F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-SYBlinkAnimationKit_Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FBD2D672921284E66F309CA3462F84D6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F294CE16D0BB89335EB3400EDAA363F5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDCF5EFC95C413E5DCF5133D3DFC4170</key>
-		<dict>
-			<key>fileRef</key>
-			<string>853C84AC883B6FC690E82525E7ECB377</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FEDFD823D2B0393C37CD72823B429301</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EF92DEB4035DB81E70E8D74A49D73DD7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FFFE0C8470131909B6828EF44C35B971</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FAF84DF9519BA774CEBEF0AA94B39EB /* CABasicAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151C504850D77A76911A50C174FD5DA /* CABasicAnimationExtension.swift */; };
+		1046EAC1AC96210E9E7D75FF44295396 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1D4CCC5950540866F59B11E7010A6B4 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
+		11DD143019C18F955646C3BCEEFCD13E /* Pods-SYBlinkAnimationKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */; };
+		130F048002A62769FAFCC66F2C79391A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13353ADEAFA2C6874BEFE2E4514C2FBF /* SYBlinkAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8389EB45484DA72DB0F2E1CAC7729144 /* SYBlinkAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15B18DDA4F58AA026EBE323BA116A291 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC88DF3CFC39F5BA38BA4398DDFCADB /* Animatable.swift */; };
+		2C87E1788C8FA06AE3481A2226E3AF2D /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
+		2FCB379B649C622442E7139EEF94A112 /* SYTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B97E4D43EBE65B90145FD6CED54DFA5 /* SYTextField.swift */; };
+		34A1C7E576C58A9D3F3101448308BF3E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		497AA8816FC08215EF4C2431E1986992 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */; };
+		55029745BD567DA805D0730EA6213B1B /* SYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718916C9800CEB17DB4B7ACD58E4FE80 /* SYCollectionViewCell.swift */; };
+		600A83959E7CDA0C40CDAB2A3861574B /* SYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736A2D24A50F1AD0017818CE4EE456 /* SYLabel.swift */; };
+		61EBC5CF0D5E065C88028B49C6B8D3B3 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		63CE840A7B3638B49273A53BD5D622EA /* SYTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347BA621F6074C8F775ABCE5921F8CAF /* SYTableViewCell.swift */; };
+		66F0D97F69355BE870F01550FCF4D887 /* SYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CB1C18EDA2F1375D0D6BA7BA26B57A /* SYButton.swift */; };
+		68B245DB47CA60F8F9ADCA1E8CCDC324 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6914EE43A9B8B8D30220B3B6B0D57523 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
+		6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
+		73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF31F155B6FBBDD8C6F4E390A699C8D8 /* XCTest.framework */; };
+		76BF836A912E5BDF5D455D49832AA015 /* SYBlinkAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A61C7E42E494F50B98AF98A83BBBA2 /* SYBlinkAnimationKit-dummy.m */; };
+		7B8D786270F12A31019DE730D4EEB2D0 /* SYBlinkAnimationKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F64CF49F37AE6388B17273DE606A50A4 /* SYBlinkAnimationKit.bundle */; };
+		7BE8B133BF63AEECA97C215566FEDA5F /* Pods-SYBlinkAnimationKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AF0E0A752F6C874DBC1F143E6EE88F /* Pods-SYBlinkAnimationKit_Tests-dummy.m */; };
+		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
+		893A506DA3AA53788BA85D6052D24691 /* AnimatableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AA44123EDB751FDC62E47E70B4FBD1 /* AnimatableComponent.swift */; };
+		8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C1C87EB318EF31B0D6AA857CDC4C5A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */; };
+		919F4E6AFCBD94E3C859AB9C7E8FB62F /* SYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFA4CE1668CB3EE8FF2ABDAF11221BC /* SYView.swift */; };
+		9CE98B7D46891667922B3E5EBF0EC3F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */; };
+		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A932B89F114B02D24B5FBF362FD0B9F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */; };
+		B6A67A3B998747E4290BF6010EC33806 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BED4B859F71007AE8A5AA4BBCAECA020 /* TextConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A3FE2D059B2AFFDA7635F1AFE6BA6E /* TextConvertible.swift */; };
+		C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
+		D57947AE816F17481F2FD57BFB5F0C66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */; };
+		D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
+		E21F92BF8ABABCC00EB18B2AAFED4E9E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8AEA1966E14465FEE7E54F27F8526 /* UIColorExtension.swift */; };
+		E5A5A6ACEF75417D6E293BD7960EF21D /* SYLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAAF54A411E0089DAA5F26A486FC5D3 /* SYLayer.swift */; };
+		EAA652557B70F493923A3447B5D64E0D /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CD3E7B203996A0AD52CB5A5492AB0D /* UIKit.framework */; };
+		F366B775C22BBE1DBAC7BDB7DE8F0A26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A69AD0237CBECB2ED21B40E60E958C3 /* QuartzCore.framework */; };
+		F47158C234C50FFB069A1EF8AB26D9F1 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
+		FF0EEBF5A6FC0E7C75044F559369FC66 /* Pods-SYBlinkAnimationKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		243A4BD6F8EDDB9306AE2A55CB0D590F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20649E2A64BEDBBADA4520D8F2E492E;
+			remoteInfo = SYBlinkAnimationKit;
+		};
+		4D76B208B377B35DC9F5F908A9D1337E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DB46EA499F9A5E22765121102FCC34B;
+			remoteInfo = FBSnapshotTestCase;
+		};
+		7759B2F1794E32D4D0D7AABFF27DED3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE22C7F64A611FF9990003D8BDC99F5;
+			remoteInfo = "SYBlinkAnimationKit-SYBlinkAnimationKit";
+		};
+		97DE2D9253B7B97F474930D3B7E02022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20649E2A64BEDBBADA4520D8F2E492E;
+			remoteInfo = SYBlinkAnimationKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0151C504850D77A76911A50C174FD5DA /* CABasicAnimationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CABasicAnimationExtension.swift; sourceTree = "<group>"; };
+		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
+		0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYBlinkAnimationKit.xcconfig; sourceTree = "<group>"; };
+		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		0C4BB5DF830DE12C13CAE0958D49DECE /* Pods_SYBlinkAnimationKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F88358CE498BB079250C38419BFDA1B /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
+		186EB7BD3369C37125630AD4964D3204 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A1D102F7897E03217F788EB93FAD9E /* SYBlinkAnimationKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SYBlinkAnimationKit.modulemap; sourceTree = "<group>"; };
+		23CD3E7B203996A0AD52CB5A5492AB0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		29C8AEA1966E14465FEE7E54F27F8526 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2A5FC5A9611E38248D67D983D3177DEF /* Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
+		2EFA4CE1668CB3EE8FF2ABDAF11221BC /* SYView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYView.swift; sourceTree = "<group>"; };
+		2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3151E9A6157B7F064F22E5F330530E43 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		347BA621F6074C8F775ABCE5921F8CAF /* SYTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYTableViewCell.swift; sourceTree = "<group>"; };
+		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
+		4597DE85D0FB5DA6A92377CD14B7E74D /* Pods-SYBlinkAnimationKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		4B2F584A99DE33BF08E200BBF0F317A5 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4B97E4D43EBE65B90145FD6CED54DFA5 /* SYTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYTextField.swift; sourceTree = "<group>"; };
+		52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		54261A626D0BBB39DA906FAD311D55CE /* SYBlinkAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-prefix.pch"; sourceTree = "<group>"; };
+		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		58CB1C18EDA2F1375D0D6BA7BA26B57A /* SYButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYButton.swift; sourceTree = "<group>"; };
+		5B524FD44CF04685144F544508837621 /* Pods-SYBlinkAnimationKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SYBlinkAnimationKit_Tests.modulemap"; sourceTree = "<group>"; };
+		5B52FE2EDC7FB0D6B83915A453E05D09 /* Pods-SYBlinkAnimationKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SYBlinkAnimationKit_Example.modulemap"; sourceTree = "<group>"; };
+		683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYBlinkAnimationKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E7299CB674EA65AF170A840B555D965 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6FDB25ACDFDD4FF715D4A858EEC67707 /* Pods-SYBlinkAnimationKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYBlinkAnimationKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		718916C9800CEB17DB4B7ACD58E4FE80 /* SYCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYCollectionViewCell.swift; sourceTree = "<group>"; };
+		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
+		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		8389EB45484DA72DB0F2E1CAC7729144 /* SYBlinkAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYBlinkAnimationKit-umbrella.h"; sourceTree = "<group>"; };
+		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
+		8E91A59BDC75DC92E75181BF7A7F8587 /* SYBlinkAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SYBlinkAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A69AD0237CBECB2ED21B40E60E958C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A1D4CCC5950540866F59B11E7010A6B4 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYBlinkAnimationKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A3736FF0F0AE09E1233C4935610CAA63 /* Pods-SYBlinkAnimationKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B1A3FE2D059B2AFFDA7635F1AFE6BA6E /* TextConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextConvertible.swift; sourceTree = "<group>"; };
+		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		BC736A2D24A50F1AD0017818CE4EE456 /* SYLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLabel.swift; sourceTree = "<group>"; };
+		C037DB27DB20EC9D2D411A489FE971B9 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		CCAAF54A411E0089DAA5F26A486FC5D3 /* SYLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYLayer.swift; sourceTree = "<group>"; };
+		CF31F155B6FBBDD8C6F4E390A699C8D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0F2BCC289349D1B758AE6B5FAFFE5AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
+		DF6B011B4C728A35761C417D29731E11 /* ResourceBundle-SYBlinkAnimationKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SYBlinkAnimationKit-Info.plist"; sourceTree = "<group>"; };
+		DFC88DF3CFC39F5BA38BA4398DDFCADB /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		E008177C1226E7BA6B129AD883792ECE /* Pods-SYBlinkAnimationKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Example-resources.sh"; sourceTree = "<group>"; };
+		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		E54ECFEE27296950D4AFBF79C8C6DB00 /* Pods-SYBlinkAnimationKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYBlinkAnimationKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		E9FF30526CDEC09A7C3E8A29D349406E /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F124343017DF3F3155DE5F454D815EE0 /* Pods_SYBlinkAnimationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E5E1B03797EFE15DA2AAEF161DFADC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A61C7E42E494F50B98AF98A83BBBA2 /* SYBlinkAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYBlinkAnimationKit-dummy.m"; sourceTree = "<group>"; };
+		F4250079DFEE83811C1219097EE48004 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64CF49F37AE6388B17273DE606A50A4 /* SYBlinkAnimationKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYBlinkAnimationKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYBlinkAnimationKit_Example-dummy.m"; sourceTree = "<group>"; };
+		F7AF0E0A752F6C874DBC1F143E6EE88F /* Pods-SYBlinkAnimationKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYBlinkAnimationKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		F9AA44123EDB751FDC62E47E70B4FBD1 /* AnimatableComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimatableComponent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59DFB050D6798E646513DA07C48BFB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C1C87EB318EF31B0D6AA857CDC4C5A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8728BD94FFDAC40F56E6DCE238E85F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57947AE816F17481F2FD57BFB5F0C66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1F075D8AB910C7368E751A52EF7A88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C068D0D03EB929ACB5364E53E0C78DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CE98B7D46891667922B3E5EBF0EC3F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1A13ADE6C7840452C8DD4B939BFD24B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A932B89F114B02D24B5FBF362FD0B9F9 /* Foundation.framework in Frameworks */,
+				F366B775C22BBE1DBAC7BDB7DE8F0A26 /* QuartzCore.framework in Frameworks */,
+				F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */,
+				73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FEED6CF2078E93F5BF57AD747D7D416 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				321820B0DF39333EC69DFACB91E883EF /* SYBlinkAnimationKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AB6481CFE5F8A7F7E7C212E6398EC0C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */,
+				DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */,
+				52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */,
+				CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */,
+				73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */,
+				6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
+		1B0B731E510D940F23F3C9847374794E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A6B3BDBD3CA21A291BA14EE1D4188FB /* Pods-SYBlinkAnimationKit_Example */,
+				27AF04A2A9E74A57145B73EDFFD8F893 /* Pods-SYBlinkAnimationKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				F35791481CAFDD8E7715AE1B44687328 /* Core */,
+				1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */,
+				99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		27AF04A2A9E74A57145B73EDFFD8F893 /* Pods-SYBlinkAnimationKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4250079DFEE83811C1219097EE48004 /* Info.plist */,
+				5B524FD44CF04685144F544508837621 /* Pods-SYBlinkAnimationKit_Tests.modulemap */,
+				6E7299CB674EA65AF170A840B555D965 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.markdown */,
+				4B2F584A99DE33BF08E200BBF0F317A5 /* Pods-SYBlinkAnimationKit_Tests-acknowledgements.plist */,
+				F7AF0E0A752F6C874DBC1F143E6EE88F /* Pods-SYBlinkAnimationKit_Tests-dummy.m */,
+				E54ECFEE27296950D4AFBF79C8C6DB00 /* Pods-SYBlinkAnimationKit_Tests-frameworks.sh */,
+				4597DE85D0FB5DA6A92377CD14B7E74D /* Pods-SYBlinkAnimationKit_Tests-resources.sh */,
+				A1D4CCC5950540866F59B11E7010A6B4 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h */,
+				E9FF30526CDEC09A7C3E8A29D349406E /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */,
+				0F88358CE498BB079250C38419BFDA1B /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-SYBlinkAnimationKit_Tests";
+			path = "Target Support Files/Pods-SYBlinkAnimationKit_Tests";
+			sourceTree = "<group>";
+		};
+		321820B0DF39333EC69DFACB91E883EF /* SYBlinkAnimationKit */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0AEFFC313ABBFC4F032C78BF5DFDD /* Source */,
+				3327C48EE51817AD3AAF460147FA8F06 /* Support Files */,
+			);
+			name = SYBlinkAnimationKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3327C48EE51817AD3AAF460147FA8F06 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1E5E1B03797EFE15DA2AAEF161DFADC /* Info.plist */,
+				DF6B011B4C728A35761C417D29731E11 /* ResourceBundle-SYBlinkAnimationKit-Info.plist */,
+				20A1D102F7897E03217F788EB93FAD9E /* SYBlinkAnimationKit.modulemap */,
+				0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */,
+				F3A61C7E42E494F50B98AF98A83BBBA2 /* SYBlinkAnimationKit-dummy.m */,
+				54261A626D0BBB39DA906FAD311D55CE /* SYBlinkAnimationKit-prefix.pch */,
+				8389EB45484DA72DB0F2E1CAC7729144 /* SYBlinkAnimationKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SYBlinkAnimationKit";
+			sourceTree = "<group>";
+		};
+		7A6B3BDBD3CA21A291BA14EE1D4188FB /* Pods-SYBlinkAnimationKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2BCC289349D1B758AE6B5FAFFE5AF /* Info.plist */,
+				5B52FE2EDC7FB0D6B83915A453E05D09 /* Pods-SYBlinkAnimationKit_Example.modulemap */,
+				2A5FC5A9611E38248D67D983D3177DEF /* Pods-SYBlinkAnimationKit_Example-acknowledgements.markdown */,
+				6FDB25ACDFDD4FF715D4A858EEC67707 /* Pods-SYBlinkAnimationKit_Example-acknowledgements.plist */,
+				F71763A6601E82DBF9839EEE1717BC01 /* Pods-SYBlinkAnimationKit_Example-dummy.m */,
+				A3736FF0F0AE09E1233C4935610CAA63 /* Pods-SYBlinkAnimationKit_Example-frameworks.sh */,
+				E008177C1226E7BA6B129AD883792ECE /* Pods-SYBlinkAnimationKit_Example-resources.sh */,
+				683F6001EE50A021A8F6189C4A385ACF /* Pods-SYBlinkAnimationKit_Example-umbrella.h */,
+				C037DB27DB20EC9D2D411A489FE971B9 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */,
+				3151E9A6157B7F064F22E5F330530E43 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */,
+			);
+			name = "Pods-SYBlinkAnimationKit_Example";
+			path = "Target Support Files/Pods-SYBlinkAnimationKit_Example";
+			sourceTree = "<group>";
+		};
+		7AB6481CFE5F8A7F7E7C212E6398EC0C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2F1B0A45F864B16BBE8E470C07F8F740 /* Foundation.framework */,
+				9A69AD0237CBECB2ED21B40E60E958C3 /* QuartzCore.framework */,
+				23CD3E7B203996A0AD52CB5A5492AB0D /* UIKit.framework */,
+				CF31F155B6FBBDD8C6F4E390A699C8D8 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0FEED6CF2078E93F5BF57AD747D7D416 /* Development Pods */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				FBD2D672921284E66F309CA3462F84D6 /* Pods */,
+				FF7BFA05D88AA3E06DAA72EDC4CB602E /* Products */,
+				1B0B731E510D940F23F3C9847374794E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */ = {
+			isa = PBXGroup;
+			children = (
+				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
+			);
+			name = SwiftSupport;
+			sourceTree = "<group>";
+		};
+		A0C0AEFFC313ABBFC4F032C78BF5DFDD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DFC88DF3CFC39F5BA38BA4398DDFCADB /* Animatable.swift */,
+				F9AA44123EDB751FDC62E47E70B4FBD1 /* AnimatableComponent.swift */,
+				0151C504850D77A76911A50C174FD5DA /* CABasicAnimationExtension.swift */,
+				58CB1C18EDA2F1375D0D6BA7BA26B57A /* SYButton.swift */,
+				718916C9800CEB17DB4B7ACD58E4FE80 /* SYCollectionViewCell.swift */,
+				BC736A2D24A50F1AD0017818CE4EE456 /* SYLabel.swift */,
+				CCAAF54A411E0089DAA5F26A486FC5D3 /* SYLayer.swift */,
+				347BA621F6074C8F775ABCE5921F8CAF /* SYTableViewCell.swift */,
+				4B97E4D43EBE65B90145FD6CED54DFA5 /* SYTextField.swift */,
+				2EFA4CE1668CB3EE8FF2ABDAF11221BC /* SYView.swift */,
+				B1A3FE2D059B2AFFDA7635F1AFE6BA6E /* TextConvertible.swift */,
+				29C8AEA1966E14465FEE7E54F27F8526 /* UIColorExtension.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */,
+				39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */,
+				7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */,
+				58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */,
+				1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */,
+				052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */,
+				B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */,
+				2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */,
+				432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */,
+				3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */,
+				85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */,
+				B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */,
+				0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */,
+				3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF7BFA05D88AA3E06DAA72EDC4CB602E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				186EB7BD3369C37125630AD4964D3204 /* FBSnapshotTestCase.framework */,
+				F124343017DF3F3155DE5F454D815EE0 /* Pods_SYBlinkAnimationKit_Example.framework */,
+				0C4BB5DF830DE12C13CAE0958D49DECE /* Pods_SYBlinkAnimationKit_Tests.framework */,
+				F64CF49F37AE6388B17273DE606A50A4 /* SYBlinkAnimationKit.bundle */,
+				8E91A59BDC75DC92E75181BF7A7F8587 /* SYBlinkAnimationKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AA9BDD2EE167077970D198258CF5519 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6A67A3B998747E4290BF6010EC33806 /* FBSnapshotTestCase-umbrella.h in Headers */,
+				8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */,
+				9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */,
+				130F048002A62769FAFCC66F2C79391A /* FBSnapshotTestController.h in Headers */,
+				68B245DB47CA60F8F9ADCA1E8CCDC324 /* UIApplication+StrictKeyWindow.h in Headers */,
+				EAA652557B70F493923A3447B5D64E0D /* UIImage+Compare.h in Headers */,
+				61EBC5CF0D5E065C88028B49C6B8D3B3 /* UIImage+Diff.h in Headers */,
+				34A1C7E576C58A9D3F3101448308BF3E /* UIImage+Snapshot.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8FCA609594E166CC2DA8507184A27F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF0EEBF5A6FC0E7C75044F559369FC66 /* Pods-SYBlinkAnimationKit_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A20DA23325476400E32FD95E6D5A9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1046EAC1AC96210E9E7D75FF44295396 /* Pods-SYBlinkAnimationKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7647A865B532E44F31C0D4CC0946FED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13353ADEAFA2C6874BEFE2E4514C2FBF /* SYBlinkAnimationKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D492E06A9E9F494492A2A3B4D19493E /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
+			buildPhases = (
+				7DE474775CBF413C7A124107E34E5614 /* Sources */,
+				F1A13ADE6C7840452C8DD4B939BFD24B /* Frameworks */,
+				0AA9BDD2EE167077970D198258CF5519 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBSnapshotTestCase;
+			productName = FBSnapshotTestCase;
+			productReference = 186EB7BD3369C37125630AD4964D3204 /* FBSnapshotTestCase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D0FE23433955449C99D5181D5E2D95F /* Pods-SYBlinkAnimationKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDE940B87D702228DE15C23AAFB468A4 /* Build configuration list for PBXNativeTarget "Pods-SYBlinkAnimationKit_Tests" */;
+			buildPhases = (
+				E2965CA744A9EFE62281718A32769268 /* Sources */,
+				59DFB050D6798E646513DA07C48BFB9F /* Frameworks */,
+				A2A20DA23325476400E32FD95E6D5A9A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E4177312D6B79D7A4C69E6ABCDF4048 /* PBXTargetDependency */,
+				7D0478DF5DAF45763653663AD09796A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-SYBlinkAnimationKit_Tests";
+			productName = "Pods-SYBlinkAnimationKit_Tests";
+			productReference = 0C4BB5DF830DE12C13CAE0958D49DECE /* Pods_SYBlinkAnimationKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C20649E2A64BEDBBADA4520D8F2E492E /* SYBlinkAnimationKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA201C2EA36EACFE046887D73ABC9924 /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit" */;
+			buildPhases = (
+				9440DC8A998FB73FC31E6D2B0B2BA0C7 /* Sources */,
+				C068D0D03EB929ACB5364E53E0C78DCA /* Frameworks */,
+				250416AB51F72862D69B95C29D511BA7 /* Resources */,
+				A7647A865B532E44F31C0D4CC0946FED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42236EF862B7741F4B2C323B579A5B15 /* PBXTargetDependency */,
+			);
+			name = SYBlinkAnimationKit;
+			productName = SYBlinkAnimationKit;
+			productReference = 8E91A59BDC75DC92E75181BF7A7F8587 /* SYBlinkAnimationKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C73E1A01E4059B57CBE492F456372370 /* Pods-SYBlinkAnimationKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E53FA1CE4CBA5F8B18F634B60F2497E /* Build configuration list for PBXNativeTarget "Pods-SYBlinkAnimationKit_Example" */;
+			buildPhases = (
+				E65B1631FB6DEE6C7FA697E15E65A83F /* Sources */,
+				9D8728BD94FFDAC40F56E6DCE238E85F /* Frameworks */,
+				5A8FCA609594E166CC2DA8507184A27F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6967B0BAF0BEF2AA6B20375048D277A2 /* PBXTargetDependency */,
+			);
+			name = "Pods-SYBlinkAnimationKit_Example";
+			productName = "Pods-SYBlinkAnimationKit_Example";
+			productReference = F124343017DF3F3155DE5F454D815EE0 /* Pods_SYBlinkAnimationKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDE22C7F64A611FF9990003D8BDC99F5 /* SYBlinkAnimationKit-SYBlinkAnimationKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D11A8980F6030CC33A281A72E4900A2E /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit-SYBlinkAnimationKit" */;
+			buildPhases = (
+				CA8465CF706575AFA3081BFDF88F2BEA /* Sources */,
+				BA1F075D8AB910C7368E751A52EF7A88 /* Frameworks */,
+				3CD93CF148D25D7B8B9C02F634D7092F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SYBlinkAnimationKit-SYBlinkAnimationKit";
+			productName = "SYBlinkAnimationKit-SYBlinkAnimationKit";
+			productReference = F64CF49F37AE6388B17273DE606A50A4 /* SYBlinkAnimationKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FF7BFA05D88AA3E06DAA72EDC4CB602E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */,
+				C73E1A01E4059B57CBE492F456372370 /* Pods-SYBlinkAnimationKit_Example */,
+				8D0FE23433955449C99D5181D5E2D95F /* Pods-SYBlinkAnimationKit_Tests */,
+				C20649E2A64BEDBBADA4520D8F2E492E /* SYBlinkAnimationKit */,
+				EDE22C7F64A611FF9990003D8BDC99F5 /* SYBlinkAnimationKit-SYBlinkAnimationKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		250416AB51F72862D69B95C29D511BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8D786270F12A31019DE730D4EEB2D0 /* SYBlinkAnimationKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD93CF148D25D7B8B9C02F634D7092F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DE474775CBF413C7A124107E34E5614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497AA8816FC08215EF4C2431E1986992 /* FBSnapshotTestCase-dummy.m in Sources */,
+				6914EE43A9B8B8D30220B3B6B0D57523 /* FBSnapshotTestCase.m in Sources */,
+				6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */,
+				F47158C234C50FFB069A1EF8AB26D9F1 /* FBSnapshotTestController.m in Sources */,
+				85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */,
+				2C87E1788C8FA06AE3481A2226E3AF2D /* UIApplication+StrictKeyWindow.m in Sources */,
+				11C22C7B844DF31A5EBDC9AC132C5E94 /* UIImage+Compare.m in Sources */,
+				C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */,
+				D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9440DC8A998FB73FC31E6D2B0B2BA0C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B18DDA4F58AA026EBE323BA116A291 /* Animatable.swift in Sources */,
+				893A506DA3AA53788BA85D6052D24691 /* AnimatableComponent.swift in Sources */,
+				0FAF84DF9519BA774CEBEF0AA94B39EB /* CABasicAnimationExtension.swift in Sources */,
+				76BF836A912E5BDF5D455D49832AA015 /* SYBlinkAnimationKit-dummy.m in Sources */,
+				66F0D97F69355BE870F01550FCF4D887 /* SYButton.swift in Sources */,
+				55029745BD567DA805D0730EA6213B1B /* SYCollectionViewCell.swift in Sources */,
+				600A83959E7CDA0C40CDAB2A3861574B /* SYLabel.swift in Sources */,
+				E5A5A6ACEF75417D6E293BD7960EF21D /* SYLayer.swift in Sources */,
+				63CE840A7B3638B49273A53BD5D622EA /* SYTableViewCell.swift in Sources */,
+				2FCB379B649C622442E7139EEF94A112 /* SYTextField.swift in Sources */,
+				919F4E6AFCBD94E3C859AB9C7E8FB62F /* SYView.swift in Sources */,
+				BED4B859F71007AE8A5AA4BBCAECA020 /* TextConvertible.swift in Sources */,
+				E21F92BF8ABABCC00EB18B2AAFED4E9E /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA8465CF706575AFA3081BFDF88F2BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2965CA744A9EFE62281718A32769268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE8B133BF63AEECA97C215566FEDA5F /* Pods-SYBlinkAnimationKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65B1631FB6DEE6C7FA697E15E65A83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD143019C18F955646C3BCEEFCD13E /* Pods-SYBlinkAnimationKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42236EF862B7741F4B2C323B579A5B15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SYBlinkAnimationKit-SYBlinkAnimationKit";
+			target = EDE22C7F64A611FF9990003D8BDC99F5 /* SYBlinkAnimationKit-SYBlinkAnimationKit */;
+			targetProxy = 7759B2F1794E32D4D0D7AABFF27DED3E /* PBXContainerItemProxy */;
+		};
+		6967B0BAF0BEF2AA6B20375048D277A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SYBlinkAnimationKit;
+			target = C20649E2A64BEDBBADA4520D8F2E492E /* SYBlinkAnimationKit */;
+			targetProxy = 243A4BD6F8EDDB9306AE2A55CB0D590F /* PBXContainerItemProxy */;
+		};
+		7D0478DF5DAF45763653663AD09796A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SYBlinkAnimationKit;
+			target = C20649E2A64BEDBBADA4520D8F2E492E /* SYBlinkAnimationKit */;
+			targetProxy = 97DE2D9253B7B97F474930D3B7E02022 /* PBXContainerItemProxy */;
+		};
+		8E4177312D6B79D7A4C69E6ABCDF4048 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSnapshotTestCase;
+			target = 5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */;
+			targetProxy = 4D76B208B377B35DC9F5F908A9D1337E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10B61BB14878FC48CA7A5AC0C6B4672D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9FF30526CDEC09A7C3E8A29D349406E /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SYBlinkAnimationKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E0BB1DF64852CFEE16112349F41506F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F88358CE498BB079250C38419BFDA1B /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SYBlinkAnimationKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3A8037245175F717A1A7F44313D1B0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYBlinkAnimationKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SYBlinkAnimationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45F6D4A57DA8EBADD94877A6D6A1EFCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		613C97AA572411D067B59C478B717D95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63F0D86876C8A66A158EBAC51AE476F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYBlinkAnimationKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SYBlinkAnimationKit/SYBlinkAnimationKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SYBlinkAnimationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C8EBD8FDF9A879030236B49FB5A0A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYBlinkAnimationKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SYBlinkAnimationKit/ResourceBundle-SYBlinkAnimationKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SYBlinkAnimationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		8A2A980DFC6E22C88D1B22FF5AED8367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7FE2D51D3B27944D993C2055820B52 /* SYBlinkAnimationKit.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYBlinkAnimationKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SYBlinkAnimationKit/ResourceBundle-SYBlinkAnimationKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SYBlinkAnimationKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E6DE8BC354198AA0A4B9322700E33AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3151E9A6157B7F064F22E5F330530E43 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SYBlinkAnimationKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD4AF0CEAF3D560F87EF068EE96150AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C037DB27DB20EC9D2D411A489FE971B9 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SYBlinkAnimationKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E53FA1CE4CBA5F8B18F634B60F2497E /* Build configuration list for PBXNativeTarget "Pods-SYBlinkAnimationKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4AF0CEAF3D560F87EF068EE96150AD /* Debug */,
+				E6DE8BC354198AA0A4B9322700E33AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D492E06A9E9F494492A2A3B4D19493E /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				613C97AA572411D067B59C478B717D95 /* Debug */,
+				45F6D4A57DA8EBADD94877A6D6A1EFCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA201C2EA36EACFE046887D73ABC9924 /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8037245175F717A1A7F44313D1B0D8 /* Debug */,
+				63F0D86876C8A66A158EBAC51AE476F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D11A8980F6030CC33A281A72E4900A2E /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit-SYBlinkAnimationKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A2A980DFC6E22C88D1B22FF5AED8367 /* Debug */,
+				7C8EBD8FDF9A879030236B49FB5A0A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDE940B87D702228DE15C23AAFB468A4 /* Build configuration list for PBXNativeTarget "Pods-SYBlinkAnimationKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B61BB14878FC48CA7A5AC0C6B4672D /* Debug */,
+				1E0BB1DF64852CFEE16112349F41506F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

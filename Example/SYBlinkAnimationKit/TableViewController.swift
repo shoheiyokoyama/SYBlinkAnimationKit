@@ -27,16 +27,16 @@ class TableViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .none
         
         let nib = UINib(nibName: "ExampleTableViewCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "ExampleTableViewCell")
+        tableView.register(nib, forCellReuseIdentifier: "ExampleTableViewCell")
     }
     
-    func configureCell(cell: ExampleTableViewCell, indexPath: NSIndexPath) {
-        cell.titleLabel.text = titles[indexPath.section][indexPath.row]
+    func configureCell(_ cell: ExampleTableViewCell, indexPath: IndexPath) {
+        cell.titleLabel.text = titles[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         
-        switch indexPath.row {
+        switch (indexPath as NSIndexPath).row {
         case 0:
             cell.titleLabel.animationType = .text
             cell.titleLabel.startAnimation()
@@ -76,17 +76,17 @@ class TableViewController: UIViewController {
 // MARK: - UITableViewDataSource -
 
 extension TableViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCellWithIdentifier("ExampleTableViewCell", forIndexPath: indexPath) as! ExampleTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "ExampleTableViewCell", for: indexPath) as! ExampleTableViewCell
         configureCell(cell, indexPath: indexPath)
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return titles.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles[section].count
     }
 }
@@ -94,14 +94,14 @@ extension TableViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate -
 
 extension TableViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if 0..<controllers.count ~= indexPath.row {
-            let identifier = controllers[indexPath.row]
-            performSegueWithIdentifier(identifier, sender: self)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if 0..<controllers.count ~= (indexPath as NSIndexPath).row {
+            let identifier = controllers[(indexPath as NSIndexPath).row]
+            performSegue(withIdentifier: identifier, sender: self)
         }
     }
 }

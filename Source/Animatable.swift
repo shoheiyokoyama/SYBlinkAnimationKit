@@ -27,13 +27,13 @@ enum AnimationKeyType: String {
     var fromValue: AnyObject {
         switch self {
         case .borderColor, .backgroundColor, .foregroundColor/* Don't use */:
-            return UIColor.clearColor().CGColor
+            return UIColor.clear.cgColor
         case .borderWidth, .shadowOpacity:
-            return 0
+            return 0 as AnyObject
         case .opacity:
-            return 1
+            return 1 as AnyObject
         case .transformScale:
-            return 0.4
+            return 0.4 as AnyObject
         }
     }
 }
@@ -104,7 +104,7 @@ extension Animatable {
         subRippleLayer.removeAllAnimations()
         rippleLayer.removeAllAnimations()
         
-        textLayer.foregroundColor = textColor.CGColor
+        textLayer.foregroundColor = textColor.cgColor
     }
     
     func configureBorderAnimation() {
@@ -124,30 +124,30 @@ extension Animatable {
         groupAnimation.animations          = [borderColorAnimtion, borderWidthAnimation]
         groupAnimation.timingFunction      = animationTimingFunction.timingFunction
         groupAnimation.autoreverses        = true
-        groupAnimation.removedOnCompletion = false
+        groupAnimation.isRemovedOnCompletion = false
         groupAnimation.repeatCount         = 1e100
-        animationType == .borderWithShadow ? animateBorderWithShadow(groupAnimation) : superLayer.addAnimation(groupAnimation, forKey: nil)
+        animationType == .borderWithShadow ? animateBorderWithShadow(groupAnimation) : superLayer.add(groupAnimation, forKey: nil)
     }
     
-    func animateBorderWithShadow(groupAnimation: CAAnimationGroup) {
+    func animateBorderWithShadow(_ groupAnimation: CAAnimationGroup) {
         resetSuperLayerShadow()
         
         superLayer.masksToBounds   = false
-        superLayer.backgroundColor = backgroundColor.CGColor
+        superLayer.backgroundColor = backgroundColor.cgColor
         groupAnimation.animations?.append(shadowAnimation)
-        superLayer.addAnimation(groupAnimation, forKey: nil)
+        superLayer.add(groupAnimation, forKey: nil)
     }
     
     func animateBackground() {
         let backgroundColorAnimation = CABasicAnimation(type: .backgroundColor)
         backgroundColorAnimation.fromValue           = AnimationKeyType.backgroundColor.fromValue
-        backgroundColorAnimation.toValue             = animationBackgroundColor.CGColor
+        backgroundColorAnimation.toValue             = animationBackgroundColor.cgColor
         backgroundColorAnimation.duration            = animationDuration
         backgroundColorAnimation.autoreverses        = true
-        backgroundColorAnimation.removedOnCompletion = false
+        backgroundColorAnimation.isRemovedOnCompletion = false
         backgroundColorAnimation.repeatCount         = 1e100
         backgroundColorAnimation.timingFunction      = animationTimingFunction.timingFunction
-        superLayer.addAnimation(backgroundColorAnimation, forKey: nil)
+        superLayer.add(backgroundColorAnimation, forKey: nil)
     }
     
     func animateText() {
@@ -155,13 +155,13 @@ extension Animatable {
         textColorAnimation.duration            = animationDuration
         textColorAnimation.autoreverses        = true
         textColorAnimation.repeatCount         = 1e100
-        textColorAnimation.removedOnCompletion = false
+        textColorAnimation.isRemovedOnCompletion = false
         textColorAnimation.timingFunction      = animationTimingFunction.timingFunction
-        textColorAnimation.fromValue           = animationTextColor.colorWithAlphaComponent(AnimationConstants.fromTextColorAlpha).CGColor
-        textColorAnimation.toValue             = animationTextColor.CGColor
+        textColorAnimation.fromValue           = animationTextColor.withAlphaComponent(AnimationConstants.fromTextColorAlpha).cgColor
+        textColorAnimation.toValue             = animationTextColor.cgColor
         
-        textLayer.foregroundColor = animationTextColor.CGColor
-        textLayer.addAnimation(textColorAnimation, forKey: nil)
+        textLayer.foregroundColor = animationTextColor.cgColor
+        textLayer.add(textColorAnimation, forKey: nil)
     }
     
     func animateRipple() {
@@ -176,74 +176,74 @@ extension Animatable {
         let animationGroup = CAAnimationGroup()
         animationGroup.duration            = animationDuration
         animationGroup.repeatCount         = 1e100
-        animationGroup.removedOnCompletion = false
+        animationGroup.isRemovedOnCompletion = false
         animationGroup.timingFunction      = animationTimingFunction.timingFunction
         animationGroup.animations          = [fadeOutOpacity, scale]
         
-        rippleLayer.addAnimation(animationGroup, forKey: nil)
-        subRippleLayer.addAnimation(animationGroup, forKey: nil)
+        rippleLayer.add(animationGroup, forKey: nil)
+        subRippleLayer.add(animationGroup, forKey: nil)
     }
     
     func resetSuperLayerShadow() {
-        if CGColorGetAlpha(backgroundColor.CGColor) == 1 {
-            superLayer.shadowPath   = UIBezierPath(rect: superLayer.bounds).CGPath
+        if backgroundColor.cgColor.alpha == 1 {
+            superLayer.shadowPath   = UIBezierPath(rect: superLayer.bounds).cgPath
             superLayer.shadowRadius = AnimationConstants.shadowRadiusIfNotClear
             return
         }
         
         let bw: CGFloat  = AnimationConstants.borderWidth * 2
         let bwh: CGFloat = bw / 2
-        let sw           = superLayer.frame.width
-        let sh           = superLayer.frame.height
-        let c            = superLayer.cornerRadius
+        let sw = superLayer.frame.width
+        let sh = superLayer.frame.height
+        let c  = superLayer.cornerRadius
         
-        let pathRef: CGMutablePathRef = CGPathCreateMutable()
+        let pathRef = CGMutablePath()
+
+        pathRef.move(to: CGPoint(x: -bwh, y: -bwh + c))
         
-        CGPathMoveToPoint(pathRef, nil, -bwh, -bwh + c)
+        pathRef.addArc(tangent1End: CGPoint(x: -bwh, y: -bwh), tangent2End: CGPoint(x: -bwh + c, y: -bwh), radius: c)
+        pathRef.addLine(to: CGPoint(x: sw + bwh - c, y: -bwh))
+        pathRef.addArc(tangent1End: CGPoint(x: sw+bwh, y: -bwh), tangent2End: CGPoint(x: sw + bwh, y: -bwh+c), radius: c)
         
-        CGPathAddArcToPoint(pathRef , nil, -bwh        , -bwh, -bwh + c, -bwh  , c)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh - c, -bwh)
-        CGPathAddArcToPoint(pathRef , nil, sw+bwh      , -bwh, sw + bwh, -bwh+c, c)
+        pathRef.addLine(to: CGPoint(x: sw - bwh, y: bwh + c))
+        pathRef.addArc(tangent1End: CGPoint(x: sw - bwh, y: bwh), tangent2End: CGPoint(x: sw - bwh - c, y: bwh), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, sw - bwh, bwh + c)
-        CGPathAddArcToPoint(pathRef , nil, sw - bwh, bwh, sw - bwh - c, bwh, c)
+        pathRef.addLine(to: CGPoint(x: bwh + c, y: bwh))
+        pathRef.addArc(tangent1End: CGPoint(x: bwh, y: bwh), tangent2End: CGPoint(x: bwh, y: bwh + c), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, bwh + c, bwh)
-        CGPathAddArcToPoint(pathRef , nil, bwh    , bwh, bwh, bwh + c, c)
+        pathRef.addLine(to: CGPoint(x: bwh, y: sh - bwh - c))
+        pathRef.addArc(tangent1End: CGPoint(x: bwh, y: sh - bwh), tangent2End: CGPoint(x: bwh + c, y: sh - bwh), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, bwh, sh - bwh - c)
-        CGPathAddArcToPoint(pathRef , nil, bwh, sh - bwh, bwh + c, sh - bwh, c)
+        pathRef.addLine(to: CGPoint(x: sw - bwh - c, y: sh - bwh))
+        pathRef.addArc(tangent1End: CGPoint(x: sw - bwh, y: sh - bwh), tangent2End: CGPoint(x: sw - bwh, y: sh - bwh - c), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, sw - bwh - c, sh - bwh)
-        CGPathAddArcToPoint(pathRef , nil, sw - bwh    , sh - bwh, sw - bwh, sh - bwh - c, c)
+        pathRef.addLine(to: CGPoint(x: sw - bwh, y: bwh + c))
+        pathRef.addLine(to: CGPoint(x: sw + bwh, y: -bwh + c))
+        pathRef.addLine(to: CGPoint(x: sw + bwh, y: sh + bwh - c))
+        pathRef.addArc(tangent1End: CGPoint(x: sw + bwh, y: sh + bwh), tangent2End: CGPoint(x: sw + bwh - c, y: sh + bwh), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, sw - bwh, bwh + c)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, -bwh + c)
-        CGPathAddLineToPoint(pathRef, nil, sw + bwh, sh + bwh - c)
-        CGPathAddArcToPoint(pathRef , nil, sw + bwh, sh + bwh    , sw + bwh - c, sh + bwh, c)
+        pathRef.addLine(to: CGPoint(x: -bwh + c, y: sh + bwh))
+        pathRef.addArc(tangent1End: CGPoint(x: -bwh, y: sh + bwh), tangent2End: CGPoint(x: -bwh, y: sh + bwh - c), radius: c)
         
-        CGPathAddLineToPoint(pathRef, nil, -bwh + c, sh + bwh)
-        CGPathAddArcToPoint(pathRef , nil, -bwh    , sh + bwh, -bwh, sh + bwh - c, c)
+        pathRef.addLine(to: CGPoint(x: -bwh, y: -bwh + c))
         
-        CGPathAddLineToPoint(pathRef, nil, -bwh, -bwh + c)
-        
-        CGPathCloseSubpath(pathRef)
+        pathRef.closeSubpath()
         
         superLayer.shadowPath   = pathRef
         superLayer.shadowRadius = AnimationConstants.shadowRadius
     }
     
-    private func configureBorderColorAnimation() {
+    fileprivate func configureBorderColorAnimation() {
         borderColorAnimtion.fromValue = AnimationKeyType.borderColor.fromValue
-        borderColorAnimtion.toValue   = animationBorderColor.CGColor
+        borderColorAnimtion.toValue   = animationBorderColor.cgColor
     }
     
-    private func configureBorderWidthAnimation() {
+    fileprivate func configureBorderWidthAnimation() {
         borderWidthAnimation.fromValue = AnimationKeyType.borderWidth.fromValue
         borderWidthAnimation.toValue   = AnimationConstants.borderWidth
     }
     
-    private func configureShadowAnimation() {
+    fileprivate func configureShadowAnimation() {
         shadowAnimation.fromValue = AnimationKeyType.shadowOpacity.fromValue
         shadowAnimation.toValue   = AnimationConstants.shadowOpacity
     }

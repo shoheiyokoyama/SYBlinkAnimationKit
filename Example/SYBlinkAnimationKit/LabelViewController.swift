@@ -20,7 +20,7 @@ class LabelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         navigationItem.title = "SYLabel"
         
         borderLabel.text = "Border Animation"
@@ -30,7 +30,7 @@ class LabelViewController: UIViewController {
         
         border2Label.text = "BorderWithShadow Animation"
         border2Label.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
-        border2Label.backgroundColor = UIColor.clearColor()
+        border2Label.backgroundColor = UIColor.clear
         border2Label.animationType = .borderWithShadow
         border2Label.startAnimation()
         view.addSubview(border2Label)
@@ -47,7 +47,7 @@ class LabelViewController: UIViewController {
         
         rippleLabel.text = "Ripple Animation"
         rippleLabel.backgroundColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
-        rippleLabel.labelTextColor = UIColor.whiteColor()
+        rippleLabel.labelTextColor = UIColor.white
         rippleLabel.animationType = .ripple
         rippleLabel.startAnimation()
         view.addSubview(rippleLabel)

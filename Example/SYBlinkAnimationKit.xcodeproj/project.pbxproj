@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01DE1D3639F247C7F76464E7 /* Pods_SYBlinkAnimationKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F602E2CA2AF26E1A94D842 /* Pods_SYBlinkAnimationKit_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6B7A772A1D9A8401D534E613 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD0D1B0CF0ECBBAB71E9905 /* Pods_SYBlinkAnimationKit_Example.framework */; };
+		6D2C74171DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */; };
+		6D2C74191DB0A2AB0053AF4A /* SYBlinkAnimationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6DA9213F1D4BAB0400454C88 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9213E1D4BAB0400454C88 /* TableViewController.swift */; };
 		6DA921421D4BACC300454C88 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA921401D4BACC300454C88 /* ExampleTableViewCell.swift */; };
 		6DA921431D4BACC300454C88 /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA921411D4BACC300454C88 /* ExampleTableViewCell.xib */; };
@@ -23,7 +25,7 @@
 		6DB6B44A1C1D6DAA000680E9 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B4491C1D6DAA000680E9 /* ButtonViewController.swift */; };
 		6DB6B44C1C1D6DBD000680E9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6B44B1C1D6DBD000680E9 /* LabelViewController.swift */; };
 		6DED1E7D1C4A219B00A33514 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED1E7C1C4A219B00A33514 /* AnimationViewController.swift */; };
-		C37222DEC1C114CFE0275EA6 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC90B0520C75435E57AD42C /* Pods_SYBlinkAnimationKit_Example.framework */; };
+		83DA82E30386F417993E0FD9 /* Pods_SYBlinkAnimationKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1D012F01C1CC0C5753C803 /* Pods_SYBlinkAnimationKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +38,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6D2C741A1DB0A2AB0053AF4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6D2C74191DB0A2AB0053AF4A /* SYBlinkAnimationKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0869F7C81957A3A6D86F8A1D /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0CC90B0520C75435E57AD42C /* Pods_SYBlinkAnimationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD0D1B0CF0ECBBAB71E9905 /* Pods_SYBlinkAnimationKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE63DCE0743D28A9B37FBC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		146CFC4D314BE36EF9201312 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		152ED1CE78CD5530D3FF46D1 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1A1D012F01C1CC0C5753C803 /* Pods_SYBlinkAnimationKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2016E64BFE9D329F166AB6A3 /* SYBlinkAnimationKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SYBlinkAnimationKit.podspec; path = ../SYBlinkAnimationKit.podspec; sourceTree = "<group>"; };
 		26C8EBAEADFD4EF853F26080 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2C732A74EBF93D46EE994433 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		36964F370989A17903F6BFF9 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		603805ABB0BE9A1FFBE0B524 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SYBlinkAnimationKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYBlinkAnimationKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +70,7 @@
 		607FACE51AFB9204008FA782 /* SYBlinkAnimationKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYBlinkAnimationKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SYBlinkAnimationKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/SYBlinkAnimationKit-beyykhzqdxeqgcghkxmayghanyrb/Build/Products/Debug-iphonesimulator/SYBlinkAnimationKit/SYBlinkAnimationKit.framework"; sourceTree = "<group>"; };
 		6DA9213E1D4BAB0400454C88 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		6DA921401D4BACC300454C88 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		6DA921411D4BACC300454C88 /* ExampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTableViewCell.xib; sourceTree = "<group>"; };
@@ -63,8 +81,7 @@
 		6DB6B4491C1D6DAA000680E9 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		6DB6B44B1C1D6DBD000680E9 /* LabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		6DED1E7C1C4A219B00A33514 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
-		97F602E2CA2AF26E1A94D842 /* Pods_SYBlinkAnimationKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYBlinkAnimationKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C496518F44288235041F00E4 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		6F6D317777A9370409DF2003 /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C37222DEC1C114CFE0275EA6 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */,
+				6D2C74171DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework in Frameworks */,
+				6B7A772A1D9A8401D534E613 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DE1D3639F247C7F76464E7 /* Pods_SYBlinkAnimationKit_Tests.framework in Frameworks */,
+				83DA82E30386F417993E0FD9 /* Pods_SYBlinkAnimationKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +112,8 @@
 				607FACD21AFB9204008FA782 /* Example for SYBlinkAnimationKit */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				64C71C3A9B970F0ABEDFEE69 /* Pods */,
-				CAC563AFBC53B6BA84C95783 /* Frameworks */,
+				9222A3F085BD4F18F9D01006 /* Pods */,
+				D8F8F4A9A9ED373222D8521E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,22 +184,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		64C71C3A9B970F0ABEDFEE69 /* Pods */ = {
+		9222A3F085BD4F18F9D01006 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C496518F44288235041F00E4 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */,
-				2C732A74EBF93D46EE994433 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */,
-				0869F7C81957A3A6D86F8A1D /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */,
-				36964F370989A17903F6BFF9 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */,
+				603805ABB0BE9A1FFBE0B524 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */,
+				152ED1CE78CD5530D3FF46D1 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */,
+				6F6D317777A9370409DF2003 /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */,
+				146CFC4D314BE36EF9201312 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CAC563AFBC53B6BA84C95783 /* Frameworks */ = {
+		D8F8F4A9A9ED373222D8521E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0CC90B0520C75435E57AD42C /* Pods_SYBlinkAnimationKit_Example.framework */,
-				97F602E2CA2AF26E1A94D842 /* Pods_SYBlinkAnimationKit_Tests.framework */,
+				6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */,
+				0DD0D1B0CF0ECBBAB71E9905 /* Pods_SYBlinkAnimationKit_Example.framework */,
+				1A1D012F01C1CC0C5753C803 /* Pods_SYBlinkAnimationKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,12 +212,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit_Example" */;
 			buildPhases = (
-				5F029D4E68174B1EC7B7A8D0 /* Check Pods Manifest.lock */,
+				385061614EC92A2C881B7BF7 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				C2C7726D4D2678857F441611 /* Embed Pods Frameworks */,
-				55D5F688B89306EE7D4A6D68 /* Copy Pods Resources */,
+				0F31BAAC8FC84DC8A402E4C6 /* [CP] Embed Pods Frameworks */,
+				27FA0A058114FE8507F6C4D3 /* [CP] Copy Pods Resources */,
+				6D2C741A1DB0A2AB0053AF4A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,12 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SYBlinkAnimationKit_Tests" */;
 			buildPhases = (
-				890ECC19B28C103FA6179B0C /* Check Pods Manifest.lock */,
+				5141E2B732492B3D12EE8BF4 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				2971C5CB485C0D7D875A41E8 /* Embed Pods Frameworks */,
-				121BFAE9BBACF61960FAD1F9 /* Copy Pods Resources */,
+				7B22D20A251C49511F2DE6FC /* [CP] Embed Pods Frameworks */,
+				4D47E3A3E4C1F714C2C8BCB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,14 +258,16 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -292,44 +314,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		121BFAE9BBACF61960FAD1F9 /* Copy Pods Resources */ = {
+		0F31BAAC8FC84DC8A402E4C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2971C5CB485C0D7D875A41E8 /* Embed Pods Frameworks */ = {
+		27FA0A058114FE8507F6C4D3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55D5F688B89306EE7D4A6D68 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,49 +344,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F029D4E68174B1EC7B7A8D0 /* Check Pods Manifest.lock */ = {
+		385061614EC92A2C881B7BF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		890ECC19B28C103FA6179B0C /* Check Pods Manifest.lock */ = {
+		4D47E3A3E4C1F714C2C8BCB8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2C7726D4D2678857F441611 /* Embed Pods Frameworks */ = {
+		5141E2B732492B3D12EE8BF4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Example/Pods-SYBlinkAnimationKit_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B22D20A251C49511F2DE6FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYBlinkAnimationKit_Tests/Pods-SYBlinkAnimationKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -452,8 +474,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -497,8 +521,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -517,43 +543,61 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C496518F44288235041F00E4 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 603805ABB0BE9A1FFBE0B524 /* Pods-SYBlinkAnimationKit_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYBlinkAnimationKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"SYBlinkAnimationKit\"",
+					"$(inherited)",
+				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C732A74EBF93D46EE994433 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */;
+			baseConfigurationReference = 152ED1CE78CD5530D3FF46D1 /* Pods-SYBlinkAnimationKit_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYBlinkAnimationKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"SYBlinkAnimationKit\"",
+					"$(inherited)",
+				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0869F7C81957A3A6D86F8A1D /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 6F6D317777A9370409DF2003 /* Pods-SYBlinkAnimationKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -567,14 +611,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SYBlinkAnimationKit_Example.app/SYBlinkAnimationKit_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36964F370989A17903F6BFF9 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */;
+			baseConfigurationReference = 146CFC4D314BE36EF9201312 /* Pods-SYBlinkAnimationKit_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -584,6 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SYBlinkAnimationKit_Example.app/SYBlinkAnimationKit_Example";
 			};
 			name = Release;

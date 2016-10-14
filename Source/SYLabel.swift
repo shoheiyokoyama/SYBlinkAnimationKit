@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
+public class SYLabel: UILabel, AnimatableComponent, TextConvertible {
     
     public enum AnimationType: Int {
         case border, borderWithShadow, background, ripple, text
@@ -48,10 +48,10 @@ public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
             syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }
     }
-    @IBInspectable public var labelTextColor: UIColor = UIColor.blackColor() {
+    @IBInspectable public var labelTextColor: UIColor = UIColor.black {
         didSet {
-            textColor = UIColor.clearColor()
-            textLayer.foregroundColor = labelTextColor.CGColor
+            textColor = UIColor.clear
+            textLayer.foregroundColor = labelTextColor.cgColor
             syLayer.setTextColor(labelTextColor)
         }
     }
@@ -120,7 +120,7 @@ public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
         }
     }
     
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
     // MARK: - initializer -
     
@@ -137,12 +137,12 @@ public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
     
     // MARK: - Public Methods -
     
-    public func setFontOfSize(fontSize: CGFloat) {
-        font = UIFont.systemFontOfSize(fontSize)
+    public func setFontOfSize(_ fontSize: CGFloat) {
+        font = UIFont.systemFont(ofSize: fontSize)
         resetTextLayer()
     }
     
-    public func setFontNameWithSize(name: String, size: CGFloat) {
+    public func setFontNameWithSize(_ name: String, size: CGFloat) {
         font = UIFont(name: name, size: size)
         resetTextLayer()
     }
@@ -158,25 +158,25 @@ public final class SYLabel: UILabel, AnimatableComponent, TextConvertible {
     }
 }
 
-// MARK: - Private Methods -
+// MARK: - Fileprivate Methods -
 
-private extension SYLabel {
+fileprivate extension SYLabel {
     
-    private struct LabelConstants {
+    struct LabelConstants {
         static let cornerRadius: CGFloat    = 1.5
         static let defaultDuration: CGFloat = 1
     }
     
-    private func setLayer() {
+    func setLayer() {
         layer.cornerRadius = LabelConstants.cornerRadius
         
-        textColor      = UIColor.clearColor()
-        labelTextColor = UIColor.blackColor()
+        textColor      = UIColor.clear
+        labelTextColor = UIColor.black
         
         syLayer.animationType = .border
     }
     
-    private func resetTextLayer() {
+    func resetTextLayer() {
         configureTextLayer(text, font: font, textColor: labelTextColor)
         syLayer.resetTextLayer(textLayer)
     }

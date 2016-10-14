@@ -63,20 +63,20 @@ public final class SYTextField: UITextField, AnimatableComponent {
             syLayer.resizeSuperLayer()
         }
     }
-    override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+    override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         if stopAnimationWithTouch && isAnimating {
             stopAnimation()
         }
         
-        return super.beginTrackingWithTouch(touch, withEvent: event)
+        return super.beginTracking(touch, with: event)
     }
     override public var borderStyle: UITextBorderStyle {
         didSet {
             self.layer.cornerRadius = {
                 switch borderStyle {
-                case .Bezel, .Line:
+                case .bezel, .line:
                     return CGFloat(0)
-                case .None, .RoundedRect:
+                case .none, .roundedRect:
                     return CGFloat(5)
                 }
             }()
@@ -116,9 +116,9 @@ public final class SYTextField: UITextField, AnimatableComponent {
         }
     }
     
-    private var originalBackgroundColor = UIColor.whiteColor()
+    fileprivate var originalBackgroundColor = UIColor.white
     
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
     // MARK: - initializer -
     
@@ -137,8 +137,8 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public func startAnimation() {
         isAnimating = true
-        if case (.background, .RoundedRect) = (animationType, borderStyle) {
-            backgroundColor = UIColor.clearColor()
+        if case (.background, .roundedRect) = (animationType, borderStyle) {
+            backgroundColor = UIColor.clear
         }
         
         syLayer.startAnimation()
@@ -146,23 +146,23 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public func stopAnimation() {
         isAnimating = false
-        if case (.background, .RoundedRect) = (animationType, borderStyle) {
+        if case (.background, .roundedRect) = (animationType, borderStyle) {
             backgroundColor = originalBackgroundColor
         }
         syLayer.stopAnimation()
     }
 }
 
-// MARK: - Private Methods -
+// MARK: - Fileprivate Methods -
 
-private extension SYTextField {
+fileprivate extension SYTextField {
     
-    private struct TextFieldConstants {
+    struct TextFieldConstants {
         static let defaultDuration: CGFloat = 1
     }
     
-    private func setLayer() {
+    func setLayer() {
         syLayer.animationType = .border
-        borderStyle = .RoundedRect
+        borderStyle = .roundedRect
     }
 }

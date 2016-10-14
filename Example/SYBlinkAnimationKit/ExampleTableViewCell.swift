@@ -16,6 +16,6 @@ class ExampleTableViewCell: SYTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        selectionStyle = .None
+        selectionStyle = .none
     }
 }

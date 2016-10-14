@@ -20,39 +20,39 @@ class ButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "SYButton"
         
-        borderButton.setTitle("Border Animation", forState: .Normal)
-        borderButton.addTarget(self, action: #selector(ButtonViewController.borderAnimation(_:)), forControlEvents: .TouchUpInside)
+        borderButton.setTitle("Border Animation", for: UIControlState())
+        borderButton.addTarget(self, action: #selector(ButtonViewController.borderAnimation(_:)), for: .touchUpInside)
         borderButton.startAnimation()
         self.view.addSubview(borderButton)
         
-        border2Button.setTitle("BorderWithShadow Animation", forState: .Normal)
+        border2Button.setTitle("BorderWithShadow Animation", for: UIControlState())
         border2Button.animationBorderColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
-        border2Button.addTarget(self, action: #selector(ButtonViewController.BorderWithShadowAnimation(_:)), forControlEvents: .TouchUpInside)
+        border2Button.addTarget(self, action: #selector(ButtonViewController.BorderWithShadowAnimation(_:)), for: .touchUpInside)
         border2Button.animationType = .borderWithShadow
         border2Button.startAnimation()
         self.view.addSubview(border2Button)
         
-        backgroundButton.setTitle("Background Animation", forState: .Normal)
-        backgroundButton.addTarget(self, action: #selector(ButtonViewController.BackgroundAnimation(_:)), forControlEvents: .TouchUpInside)
+        backgroundButton.setTitle("Background Animation", for: UIControlState())
+        backgroundButton.addTarget(self, action: #selector(ButtonViewController.BackgroundAnimation(_:)), for: .touchUpInside)
         backgroundButton.animationType = .background
         backgroundButton.startAnimation()
         self.view.addSubview(backgroundButton)
         
-        textButton.setTitle("Text Animation", forState: .Normal)
+        textButton.setTitle("Text Animation", for: UIControlState())
         textButton.backgroundColor = UIColor(red: 34/255, green: 167/255, blue: 240/255, alpha: 1)
-        textButton.animationTextColor = UIColor.whiteColor()
-        textButton.addTarget(self, action: #selector(ButtonViewController.textAnimation(_:)), forControlEvents: .TouchUpInside)
+        textButton.animationTextColor = UIColor.white
+        textButton.addTarget(self, action: #selector(ButtonViewController.textAnimation(_:)), for: .touchUpInside)
         textButton.animationType = .text
         textButton.startAnimation()
         self.view.addSubview(textButton)
         
-        rippleButton.setTitle("Ripple Animation", forState: .Normal)
-        rippleButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        rippleButton.setTitle("Ripple Animation", for: UIControlState())
+        rippleButton.setTitleColor(UIColor.white, for: UIControlState())
         rippleButton.backgroundColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
-        rippleButton.addTarget(self, action: #selector(ButtonViewController.rippleAnimation(_:)), forControlEvents: .TouchUpInside)
+        rippleButton.addTarget(self, action: #selector(ButtonViewController.rippleAnimation(_:)), for: .touchUpInside)
         rippleButton.animationType = .ripple
         rippleButton.startAnimation()
         self.view.addSubview(rippleButton)
@@ -60,23 +60,23 @@ class ButtonViewController: UIViewController {
     
     // MARK: - SYButton Tap Events -
     
-    internal func borderAnimation(sender: SYButton) {
+    internal func borderAnimation(_ sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
-    internal func BorderWithShadowAnimation(sender: SYButton) {
+    internal func BorderWithShadowAnimation(_ sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
-    internal func BackgroundAnimation(sender: SYButton) {
+    internal func BackgroundAnimation(_ sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
-    internal func textAnimation(sender: SYButton) {
+    internal func textAnimation(_ sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
     
-    internal func rippleAnimation(sender: SYButton) {
+    internal func rippleAnimation(_ sender: SYButton) {
         sender.isAnimating ? sender.stopAnimation() : sender.startAnimation()
     }
 }

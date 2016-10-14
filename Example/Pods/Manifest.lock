@@ -1,10 +1,10 @@
 PODS:
-  - FBSnapshotTestCase (2.1.0):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.0)
-  - FBSnapshotTestCase/Core (2.1.0)
-  - FBSnapshotTestCase/SwiftSupport (2.1.0):
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - SYBlinkAnimationKit (0.2.1)
+  - SYBlinkAnimationKit (0.2.3)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -15,7 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
-  SYBlinkAnimationKit: 4a534bbb40d48aeca1cc6fb6417d29d5699739c0
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SYBlinkAnimationKit: 77b955f51cf8769a9ae1b4898f82a2f6cbb66902
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f127078931ff5769899ccaad96d846f0c7489fa3
+
+COCOAPODS: 1.1.0.rc.3

@@ -9,28 +9,28 @@
 import UIKit
 
 @IBDesignable
-public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
+open class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
     
     public enum AnimationType: Int {
         case border, borderWithShadow, background, ripple
     }
     
-    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
+    @IBInspectable open var animationBorderColor: UIColor = AnimationDefaultColor.border {
         didSet {
             syLayer.setAnimationBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
+    @IBInspectable open var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable open var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
         didSet {
             syLayer.setAnimationRippleColor(animationRippleColor)
         }
     }
-    @IBInspectable public var animationTimingAdapter: Int {
+    @IBInspectable open var animationTimingAdapter: Int {
         get {
             return animationTimingFunction.rawValue
         }
@@ -38,12 +38,12 @@ public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1 {
+    @IBInspectable open var animationDuration: CGFloat = 1 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public  var animationAdapter: Int {
+    @IBInspectable open  var animationAdapter: Int {
         get {
             return animationType.rawValue
         }
@@ -52,15 +52,15 @@ public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
         }
     }
     
-    public var isAnimating = false
+    open var isAnimating = false
     
-    public var animationTimingFunction: SYMediaTimingFunction = .linear {
+    open var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
             syLayer.setAnimationTimingFunction(animationTimingFunction)
         }
     }
     
-    public var animationType: AnimationType = .border {
+    open var animationType: AnimationType = .border {
         didSet {
             syLayer.animationType = {
                 switch animationType {
@@ -77,9 +77,9 @@ public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
         }
     }
     
-    private lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
     
-    private let cornerRadius: CGFloat = 1.1
+    fileprivate let cornerRadius: CGFloat = 1.1
     
     // MARK: - initializer -
     
@@ -91,19 +91,19 @@ public class SYCollectionViewCell: UICollectionViewCell, AnimatableComponent {
     
     // MARK: - Public Methods -
     
-    public func startAnimation() {
+    open func startAnimation() {
         isAnimating = true
         syLayer.startAnimation()
     }
     
-    public func stopAnimation() {
+    open func stopAnimation() {
         isAnimating = false
         syLayer.stopAnimation()
     }
     
-    // MARK: - Private Methods -
+    // MARK: - Fileprivate Methods -
     
-    private func setLayer() {
+    fileprivate func setLayer() {
         layer.cornerRadius = cornerRadius
     }
 }

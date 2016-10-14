@@ -19,7 +19,7 @@ class TextFieldViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "SYTextField"
         
         borderTextField.placeholder = "Border Animation"
@@ -30,7 +30,7 @@ class TextFieldViewController: UIViewController, UITextFieldDelegate {
         border2TextField.placeholder = "BorderWithShadow Animation"
         border2TextField.delegate = self
         border2TextField.animationType = .borderWithShadow
-        border2TextField.backgroundColor = UIColor.clearColor()
+        border2TextField.backgroundColor = UIColor.clear
         border2TextField.startAnimation()
         view.addSubview(border2TextField)
 
@@ -48,7 +48,7 @@ class TextFieldViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - UITextFieldDelegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true

@@ -19,14 +19,14 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "SYView"
         
         borderView.startAnimation()
         self.view.addSubview(borderView)
         
         border2View.animationType = .borderWithShadow
-        border2View.backgroundColor = UIColor.clearColor()
+        border2View.backgroundColor = UIColor.clear
         border2View.startAnimation()
         self.view.addSubview(border2View)
         

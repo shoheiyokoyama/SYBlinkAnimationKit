@@ -18,30 +18,30 @@ protocol TextConvertible {
     var textLayer: CATextLayer { get set }
     var textAlignmentMode: TextAlignmentMode { get set }
     
-    func configureTextLayer(text: String?, font: UIFont?, textColor: UIColor)
+    func configureTextLayer(_ text: String?, font: UIFont?, textColor: UIColor)
 }
 
 extension TextConvertible where Self: UIView {
-    func configureTextLayer(text: String?, font: UIFont?, textColor: UIColor) {
-        guard let text = text, font = font else { return }
+    func configureTextLayer(_ text: String?, font: UIFont?, textColor: UIColor) {
+        guard let text = text, let font = font else { return }
         
         var attributes = [String: AnyObject]()
         attributes[NSFontAttributeName] = font
         
-        let size   = text.sizeWithAttributes(attributes)
+        let size   = text.size(attributes: attributes)
         let origin = textPoint(size)
         let frame  = CGRect(origin: origin, size: CGSize(width: size.width, height: size.height + layer.borderWidth))
         
         textLayer.font            = font
         textLayer.string          = text
         textLayer.fontSize        = font.pointSize
-        textLayer.foregroundColor = textColor.CGColor
-        textLayer.contentsScale   = UIScreen.mainScreen().scale
+        textLayer.foregroundColor = textColor.cgColor
+        textLayer.contentsScale   = UIScreen.main.scale
         textLayer.frame           = frame
         textLayer.alignmentMode   = alignmentMode()
     }
     
-    private func alignmentMode() -> String {
+    fileprivate func alignmentMode() -> String {
         switch textAlignmentMode {
         case .left, .topLeft, .bottomLeft:       return "left"
         case .center, .topCenter, .bottomCenter: return "center"
@@ -49,7 +49,7 @@ extension TextConvertible where Self: UIView {
         }
     }
     
-    private func textPoint(size: CGSize) -> CGPoint {
+    fileprivate func textPoint(_ size: CGSize) -> CGPoint {
         let horizonalCenter = ( self.frame.width - size.width ) / 2
         let horizonalRight  = self.frame.width - size.width
         let verticalCenter  = ( self.frame.height - size.height ) / 2
