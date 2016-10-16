@@ -4,12 +4,11 @@
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
-[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
-)](https://developer.apple.com/swift)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
-)](http://mit-license.org)
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+ [![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/LICENSE)
 
-**SYBlinkAnimationKit** is a blink effect animation framework for iOS, written in **Swift**.
+**SYBlinkAnimationKit** is a blink effect animation framework for iOS, written in **Swift** :bowtie:
 
 ## Demo
 
@@ -40,12 +39,12 @@ There are 5 types of animation for component.
 <img src="./DemoImage/Text.gif" width="300" height="70">
 </p>
 
-## Features
-- Animation like blink effect for UIKit
+## :octocat: Features
+- Animation like blink effect for `UIKit`
 - The 5 types of animation : `border`,  `borderWithShadow`,  `background`, `ripple`, `text`
-- Easily usable
+- Easily usable :stuck_out_tongue_closed_eyes:
 - Customizable in any properties for animation
-- [x] Support Swift 3.0
+- [x] Support Swift 3.0 :tada:
 - [x] Support `@IBDesignable` and `@IBInspectable`.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
@@ -74,7 +73,7 @@ First, Import **SYBlinkAnimationKit** in class.
 **SYBlinkAnimationKit** is designed to be easy to use.
 
 1. Call the SYClass. for example,` SYButton`, `SYLabel`, `SYTextField`, etc.
-2. If you use custom animation, call animation method ` startAnimation()`, ` stopAnimation()`
+2. If you use custom animation, call animation method ` startAnimating()`, ` stopAnimating()`
 
 ### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
 
@@ -83,37 +82,37 @@ First, Import **SYBlinkAnimationKit** in class.
 </p>
 
 ```swift
-   let syButton = SYButton(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
-   syButton.setTitle("Border Animation", forState: .Normal)
-   syButton.animationType = .border
-   view.addSubview(syButton)
+   let button = SYButton(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
+   button.setTitle("Border Animation", forState: .normal)
+   button.animationType = .border
+   view.addSubview(button)
 
   //Run Animation
-  syButton.startAnimation()
+  syButton.startAnimating()
   //End Animation
-  syButton.stopAnimation() 
+  syButton.stopAnimating() 
 ```
 
 #### Text Animation
 
 Available ***Text Animation*** because of handleable text.
 
-If you change text font size, name, you are supposed to call the `setFontOfSize()` or `setFontNameWithSize()`
+If you change text font size, name, you are supposed to call the `setFont()
+
 ```swift
-  syButton.setFontOfSize(22.0)
-  // or
-  syButton.setFontNameWithSize("ArialHebew", size: 22.0)
+    button
+        .setFont(name: "ArialHebew", ofSize: 21)
+        .startAnimating()
 ```
 
 ### [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
 
 ```swift
-   let syLabel = SYLabel(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
-   syLabel.text = "Text Animation"
-   syLabel.labelTextColor =  UIColor.darkGrayColor()
-   syLabel.setFontNameWithSize("ArialHebew", size: 22.0)
-   syLabel.animationType = .text
-   view.addSubview(syLabel)
+   let label = SYLabel(frame: CGRect(x: 40, y: 50, width: 300, height: 50 ))
+   label.text = "Text Animation"
+   label.labelTextColor =  .darkGray
+   label.animationType = .text
+   view.addSubview(label)
 ```
 
 #### Text Animation
@@ -122,6 +121,12 @@ If you change text font size, name, you are supposed to call the `setFontOfSize(
 
 If you set text color, you are supposed to set the ` labelTextColor` property.
 To change text font, use font method as with `SYButton`.
+
+```swift
+    label
+        .setFont(name: "ArialHebew", ofSize: 21)
+        .startAnimating()
+```
 
 ### [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 
@@ -140,7 +145,7 @@ class YourCell: SYTableViewCell {
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
         cell.animationType = .background
-        cell.startAnimation()
+        cell.startAnimating()
         return cell
     }
 ```
@@ -158,7 +163,7 @@ class YourCell: SYCollectionViewCell {
 func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("YourCell", forIndexPath: indexPath) as! YourCell
         cell.animationType = .background
-        cell.startAnimation()
+        cell.startAnimating()
         return cell
     }
 ```
@@ -175,7 +180,7 @@ but you can control this behavior.
 <img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
-## Customize animation properties
+## :wrench: Customize animation properties
 
 ### Animation Type
 
@@ -197,7 +202,7 @@ If you just want to change the types of animation, you can customize `animationT
 
 #### *inspectable*
 
-Set `animationAdapter` (with Integer) in place of `animationType` in IB.
+Set `animationAdapter` (with Integer) in place of `animationType` in `IB`.
 
 - `border`: 0
 - `borderWithShadow`: 1
@@ -242,13 +247,13 @@ You can customize `animationTimingFunction`, `animationDuration`.
 ```
 
 ```swift
-   //default is 2.0
+   //default is 1.5
    public var animationDuration: CGFloat 
 ```
 
 #### *inspectable*
 
-Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in IB.
+Set `animationTimingAdapter` (with Integer) in place of `animationTimingFunction` in `IB`.
 
 - `linear`: 0
 - `easeIn`: 1
@@ -289,7 +294,8 @@ pod "SYBlinkAnimationKit"
 
 ## Requirements
 - iOS 8.3+
-- Xcode 7.2
+- Xcode 8.0+
+- Swift 3.0+
 
 ## Author
 
