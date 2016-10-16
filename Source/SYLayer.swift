@@ -9,10 +9,10 @@
 import UIKit
 
 final class SYLayer: Animatable {
-    var superLayer     = CALayer()
-    var textLayer      = CATextLayer()
-    var rippleLayer    = CALayer()
-    var subRippleLayer = CALayer()
+    var superLayer: CALayer     = .init()
+    var textLayer: CATextLayer  = .init()
+    var rippleLayer: CALayer    = .init()
+    var subRippleLayer: CALayer = .init()
     
     var animationDuration: CFTimeInterval = AnimationConstants.defaultDuration
     var animationTimingFunction: SYMediaTimingFunction = .linear
@@ -30,24 +30,24 @@ final class SYLayer: Animatable {
         }
     }
     
-    var textColor = UIColor.black
-    var backgroundColor = UIColor.white {
+    var textColor: UIColor = .black
+    var backgroundColor: UIColor = .white {
         didSet {
             superLayer.backgroundColor = backgroundColor.cgColor
         }
     }
     
     var animationBackgroundColor = AnimationDefaultColor.background
-    var animationTextColor = AnimationDefaultColor.text
-    var animationBorderColor = AnimationDefaultColor.border {
+    var animationTextColor       = AnimationDefaultColor.text
+    var animationBorderColor     = AnimationDefaultColor.border {
         didSet {
             animationShadowColor = animationBorderColor
         }
     }
     
-    var borderColorAnimtion  = CABasicAnimation(type: .borderColor)
-    var borderWidthAnimation = CABasicAnimation(type: .borderWidth)
-    var shadowAnimation      = CABasicAnimation(type: .shadowOpacity)
+    var borderColorAnimtion: CABasicAnimation  = .init(type: .borderColor)
+    var borderWidthAnimation: CABasicAnimation = .init(type: .borderWidth)
+    var shadowAnimation: CABasicAnimation      = .init(type: .shadowOpacity)
 
     fileprivate var animationShadowColor = AnimationDefaultColor.border {
         didSet {
@@ -66,7 +66,7 @@ final class SYLayer: Animatable {
             superLayer.borderWidth = borderWidth
         }
     }
-    fileprivate var borderColor = UIColor.white {
+    fileprivate var borderColor: UIColor = .white {
         didSet {
             superLayer.borderColor = borderColor.cgColor
         }
@@ -82,7 +82,7 @@ final class SYLayer: Animatable {
             superLayer.shadowOpacity = shadowOpacity
         }
     }
-    fileprivate var shadowOffset: CGSize = CGSize.zero {
+    fileprivate var shadowOffset: CGSize = .zero {
         didSet {
             superLayer.shadowOffset = shadowOffset
         }
@@ -90,42 +90,34 @@ final class SYLayer: Animatable {
     
     // MARK: - initializer -
     
-    init(sLayer: CALayer) {
-        superLayer = sLayer
-        
-        setLayer()
+    init(layer: CALayer) {
+        superLayer = layer
+        configure()
     }
     
     // MARK: - Internal Methods -
     
-    func setAnimationBorderColor(_ borderColor: UIColor) {
+    func setBorderColor(_ borderColor: UIColor) {
         animationBorderColor = borderColor
     }
-    
     func setAnimationBackgroundColor(_ backgroundColor: UIColor) {
         animationBackgroundColor = backgroundColor
     }
-    
     func setAnimationTextColor(_ textColor: UIColor) {
         animationTextColor = textColor
     }
-    
-    func setAnimationRippleColor(_ rippleColor: UIColor) {
+    func setRippleColor(_ rippleColor: UIColor) {
         animationRippleColor = rippleColor
     }
-
     func setBackgroundColor(_ backgroundColor: UIColor) {
         self.backgroundColor = backgroundColor
     }
-    
     func setTextColor(_ textColor: UIColor) {
         self.textColor = textColor
     }
-    
-    func setAnimationTimingFunction(_ timingFunction: SYMediaTimingFunction) {
+    func setTimingFunction(_ timingFunction: SYMediaTimingFunction) {
         animationTimingFunction = timingFunction
     }
-    
     func setAnimationDuration(_ animationDuration: CFTimeInterval) {
         self.animationDuration = animationDuration
     }
@@ -148,11 +140,11 @@ final class SYLayer: Animatable {
 
 fileprivate extension SYLayer {
     
-    func setLayer() {
+    func configure() {
         superLayer.shadowColor  = animationShadowColor.cgColor
         superLayer.borderColor  = borderColor.cgColor
         superLayer.borderWidth  = borderWidth
-        superLayer.shadowOffset = CGSize.zero
+        superLayer.shadowOffset = .zero
         
         setRippleLayer()
     }
@@ -180,7 +172,7 @@ fileprivate extension SYLayer {
         let subCornerRadius: CGFloat = subDiameter / 2
 
         subRippleLayer.borderColor     = animationRippleColor.cgColor
-        subRippleLayer.borderWidth     = AnimationConstants.borderWidth
+        subRippleLayer.borderWidth     = AnimationConstants.rippleBorderWidth
         subRippleLayer.backgroundColor = UIColor.clear.cgColor
         subRippleLayer.cornerRadius    = subCornerRadius
         subRippleLayer.frame           = CGRect(x: (superLayer.bounds.width - subDiameter) / 2, y: (superLayer.bounds.height - subDiameter) / 2, width: subDiameter, height: subDiameter)

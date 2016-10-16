@@ -11,50 +11,51 @@ import SYBlinkAnimationKit
 
 class TableViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
-    let titles = [["SYButton", "SYLabel", "SYTextField", "SYView", "SYCollectionView", "SYImageView", "SYTextView", "SYAlertView", "SYNavigationBar", "SYSwitch", "SYControll", "SYSlider", "SYActivityIndicator"]]
-    let controllers = ["ButtonView", "LabelView", "TextFieldView", "AnimationView", "CollectionView"]
+    fileprivate let titles = [["SYButton", "SYLabel", "SYTextField", "SYView", "SYCollectionView", "SYImageView", "SYTextView", "SYAlertView", "SYNavigationBar", "SYSwitch", "SYControll", "SYSlider", "SYActivityIndicator"]]
+    fileprivate let controllers = ["ButtonView", "LabelView", "TextFieldView", "AnimationView", "CollectionView"]
+    
+    fileprivate let cellIdentifier = "ExampleTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
     }
     
-    func configure() {
+    private func configure() {
         title = "SYTableViewCell"
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         
-        let nib = UINib(nibName: "ExampleTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ExampleTableViewCell")
+        let nib = UINib(nibName: cellIdentifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
     
-    func configureCell(_ cell: ExampleTableViewCell, indexPath: IndexPath) {
+    fileprivate func configure(_ cell: ExampleTableViewCell, at indexPath: IndexPath) {
         cell.titleLabel.text = titles[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         
         switch (indexPath as NSIndexPath).row {
         case 0:
             cell.titleLabel.animationType = .text
-            cell.titleLabel.startAnimation()
+            cell.titleLabel.startAnimating()
             return
         case 1:
             cell.animationType = .borderWithShadow
             cell.titleLabel.labelTextColor = UIColor(red: 54/255, green: 215/255, blue: 183/255, alpha: 1)
-            cell.startAnimation()
+            cell.startAnimating()
             return
         case 2:
             cell.animationType = .ripple
             cell.titleLabel.labelTextColor = UIColor(red: 210/255, green: 82/255, blue: 127/255, alpha: 1)
-            cell.startAnimation()
+            cell.startAnimating()
             return
         case 3:
             cell.animationType = .background
             cell.titleLabel.labelTextColor = UIColor(red: 108/255, green: 122/255, blue: 137/255, alpha: 1)
-            cell.startAnimation()
+            cell.startAnimating()
             return
         case 4:  cell.titleLabel.animationTextColor = UIColor(red: 245/255, green: 215/255, blue: 110/255, alpha: 1)
         case 5:  cell.titleLabel.animationTextColor = UIColor(red: 58/255, green: 83/255, blue: 155/255, alpha: 1)
@@ -69,7 +70,7 @@ class TableViewController: UIViewController {
             break
         }
         cell.titleLabel.animationType = .text
-        cell.titleLabel.startAnimation()
+        cell.titleLabel.startAnimating()
     }
 }
 
@@ -77,8 +78,8 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "ExampleTableViewCell", for: indexPath) as! ExampleTableViewCell
-        configureCell(cell, indexPath: indexPath)
+         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ExampleTableViewCell
+        configure(cell, at: indexPath)
         return cell
     }
     

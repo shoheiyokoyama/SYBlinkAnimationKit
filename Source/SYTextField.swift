@@ -15,19 +15,19 @@ public final class SYTextField: UITextField, AnimatableComponent {
         case border, borderWithShadow, background, ripple
     }
 
-    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
+    @IBInspectable public var animationBorderColor = AnimationDefaultColor.border {
         didSet {
-            syLayer.setAnimationBorderColor(animationBorderColor)
+            syLayer.setBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
+    @IBInspectable public var animationBackgroundColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable public var animationRippleColor = AnimationDefaultColor.ripple {
         didSet {
-            syLayer.setAnimationRippleColor(animationRippleColor)
+            syLayer.setRippleColor(animationRippleColor)
         }
     }
     @IBInspectable public var animationTimingAdapter: Int {
@@ -38,7 +38,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = TextFieldConstants.defaultDuration {
+    @IBInspectable public var animationDuration: CGFloat = 1 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
@@ -65,7 +65,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
     }
     override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         if stopAnimationWithTouch && isAnimating {
-            stopAnimation()
+            stopAnimating()
         }
         
         return super.beginTracking(touch, with: event)
@@ -84,10 +84,10 @@ public final class SYTextField: UITextField, AnimatableComponent {
     }
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let backgroundColor = backgroundColor else { return }
-            
-            syLayer.setBackgroundColor(backgroundColor)
-            originalBackgroundColor = backgroundColor
+            if let backgroundColor = backgroundColor {
+                syLayer.setBackgroundColor(backgroundColor)
+                originalBackgroundColor = backgroundColor
+            }
         }
     }
     
@@ -95,7 +95,7 @@ public final class SYTextField: UITextField, AnimatableComponent {
     
     public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
+            syLayer.setTimingFunction(animationTimingFunction)
         }
     }
     
@@ -116,52 +116,43 @@ public final class SYTextField: UITextField, AnimatableComponent {
         }
     }
     
-    fileprivate var originalBackgroundColor = UIColor.white
+    fileprivate var originalBackgroundColor: UIColor = .white
     
-    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = .init(layer: self.layer)
     
     // MARK: - initializer -
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setLayer()
+        configure()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setLayer()
+        configure()
     }
     
     // MARK: - Public Methods -
     
-    public func startAnimation() {
+    public func startAnimating() {
         isAnimating = true
         if case (.background, .roundedRect) = (animationType, borderStyle) {
-            backgroundColor = UIColor.clear
+            backgroundColor = .clear
         }
-        
-        syLayer.startAnimation()
+        syLayer.startAnimating()
     }
     
-    public func stopAnimation() {
+    public func stopAnimating() {
         isAnimating = false
         if case (.background, .roundedRect) = (animationType, borderStyle) {
             backgroundColor = originalBackgroundColor
         }
-        syLayer.stopAnimation()
-    }
-}
-
-// MARK: - Fileprivate Methods -
-
-fileprivate extension SYTextField {
-    
-    struct TextFieldConstants {
-        static let defaultDuration: CGFloat = 1
+        syLayer.stopAnimating()
     }
     
-    func setLayer() {
+    // MARK: - Private Methods -
+    
+    private func configure() {
         syLayer.animationType = .border
         borderStyle = .roundedRect
     }

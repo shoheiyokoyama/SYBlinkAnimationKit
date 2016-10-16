@@ -13,14 +13,19 @@ class CollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let cellIdentifier = "CollectionViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
-        registerCell()
+        registerNib()
     }
-    
-    fileprivate func configure() {
+}
+
+// MARK: - Fileprivate Methods -
+
+fileprivate extension CollectionViewController {
+    func configure() {
         collectionView.delegate        = self
         collectionView.dataSource      = self
         collectionView.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
@@ -32,12 +37,12 @@ class CollectionViewController: UIViewController {
         collectionView.collectionViewLayout = layout
     }
     
-    fileprivate func registerCell() {
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
+    func registerNib() {
+        let nib = UINib(nibName: cellIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
-    fileprivate func configureCell(_ cell: CollectionViewCell, indexPath: IndexPath) {
+    func configure(cell: CollectionViewCell, at indexPath: IndexPath) {
         switch (indexPath as NSIndexPath).row {
         case 0:
             cell.titileLabel.text = "Border Animation"
@@ -55,11 +60,13 @@ class CollectionViewController: UIViewController {
         default:
             cell.titileLabel.text          = "SYCollectionViewCell"
             cell.titileLabel.animationType = .text
-            cell.titileLabel.startAnimation()
+            cell.titileLabel.startAnimating()
         }
-        cell.startAnimation()
+        cell.startAnimating()
     }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension CollectionViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -71,11 +78,13 @@ extension CollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        configureCell(cell, indexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! CollectionViewCell
+        configure(cell: cell, at: indexPath)
         return cell
     }
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     

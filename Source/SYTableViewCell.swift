@@ -15,19 +15,19 @@ open class SYTableViewCell: UITableViewCell, AnimatableComponent {
         case border, borderWithShadow, background, ripple
     }
     
-    @IBInspectable open var animationBorderColor: UIColor = AnimationDefaultColor.border {
+    @IBInspectable open var animationBorderColor = AnimationDefaultColor.border {
         didSet {
-            syLayer.setAnimationBorderColor(animationBorderColor)
+            syLayer.setBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable open var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
+    @IBInspectable open var animationBackgroundColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable open var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable open var animationRippleColor = AnimationDefaultColor.ripple {
         didSet {
-            syLayer.setAnimationRippleColor(animationRippleColor)
+            syLayer.setRippleColor(animationRippleColor)
         }
     }
     @IBInspectable open var animationTimingAdapter: Int {
@@ -56,7 +56,7 @@ open class SYTableViewCell: UITableViewCell, AnimatableComponent {
     
     open var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
+            syLayer.setTimingFunction(animationTimingFunction)
         }
     }
     
@@ -77,33 +77,30 @@ open class SYTableViewCell: UITableViewCell, AnimatableComponent {
         }
     }
     
-    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
-    
-    fileprivate let cornerRadius: CGFloat = 1.1
+    fileprivate lazy var syLayer: SYLayer = .init(layer: self.layer)
     
     // MARK: - initializer -
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        setLayer()
+        configure()
     }
     
     // MARK: - Public Methods -
     
-    open func startAnimation() {
+    open func startAnimating() {
         isAnimating = true
-        syLayer.startAnimation()
+        syLayer.startAnimating()
     }
     
-    open func stopAnimation() {
+    open func stopAnimating() {
         isAnimating = false
-        syLayer.stopAnimation()
+        syLayer.stopAnimating()
     }
     
-    // MARK: - Fileprivate Methods -
+    // MARK: - Private Methods -
     
-    fileprivate func setLayer() {
-        layer.cornerRadius = cornerRadius
+    private func configure() {
+        layer.cornerRadius = 1.1
     }
 }

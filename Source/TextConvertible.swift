@@ -25,11 +25,10 @@ extension TextConvertible where Self: UIView {
     func configureTextLayer(_ text: String?, font: UIFont?, textColor: UIColor) {
         guard let text = text, let font = font else { return }
         
-        var attributes = [String: AnyObject]()
-        attributes[NSFontAttributeName] = font
+        let attributes = [NSFontAttributeName: font]
         
         let size   = text.size(attributes: attributes)
-        let origin = textPoint(size)
+        let origin = textPoint(ofSize: size)
         let frame  = CGRect(origin: origin, size: CGSize(width: size.width, height: size.height + layer.borderWidth))
         
         textLayer.font            = font
@@ -38,10 +37,12 @@ extension TextConvertible where Self: UIView {
         textLayer.foregroundColor = textColor.cgColor
         textLayer.contentsScale   = UIScreen.main.scale
         textLayer.frame           = frame
-        textLayer.alignmentMode   = alignmentMode()
+        textLayer.alignmentMode   = alignmentMode
     }
     
-    fileprivate func alignmentMode() -> String {
+    // MARK: - Private Methods -
+    
+    private var alignmentMode: String {
         switch textAlignmentMode {
         case .left, .topLeft, .bottomLeft:       return "left"
         case .center, .topCenter, .bottomCenter: return "center"
@@ -49,7 +50,7 @@ extension TextConvertible where Self: UIView {
         }
     }
     
-    fileprivate func textPoint(_ size: CGSize) -> CGPoint {
+    private func textPoint(ofSize size: CGSize) -> CGPoint {
         let horizonalCenter = ( self.frame.width - size.width ) / 2
         let horizonalRight  = self.frame.width - size.width
         let verticalCenter  = ( self.frame.height - size.height ) / 2

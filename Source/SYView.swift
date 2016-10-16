@@ -15,24 +15,24 @@ public final class SYView: UIView, AnimatableComponent {
         case border, borderWithShadow, background, ripple
     }
     
-    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
+    @IBInspectable public var animationBorderColor = AnimationDefaultColor.border {
         didSet {
-            syLayer.setAnimationBorderColor(animationBorderColor)
+            syLayer.setBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
+    @IBInspectable public var animationBackgroundColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationTextColor: UIColor = AnimationDefaultColor.text {
+    @IBInspectable public var animationTextColor = AnimationDefaultColor.text {
         didSet {
             syLayer.setAnimationTextColor(animationTextColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable public var animationRippleColor = AnimationDefaultColor.ripple {
         didSet {
-            syLayer.setAnimationRippleColor(animationRippleColor)
+            syLayer.setRippleColor(animationRippleColor)
         }
     }
     @IBInspectable public var animationTimingAdapter: Int {
@@ -43,7 +43,7 @@ public final class SYView: UIView, AnimatableComponent {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = ViewConstants.defaultDuration {
+    @IBInspectable public var animationDuration: CGFloat = 1 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
@@ -69,8 +69,9 @@ public final class SYView: UIView, AnimatableComponent {
     }
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let backgroundColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(backgroundColor)
+            if let backgroundColor = backgroundColor {
+                syLayer.setBackgroundColor(backgroundColor)
+            }
         }
     }
     
@@ -78,7 +79,7 @@ public final class SYView: UIView, AnimatableComponent {
     
     public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
+            syLayer.setTimingFunction(animationTimingFunction)
         }
     }
     
@@ -99,45 +100,36 @@ public final class SYView: UIView, AnimatableComponent {
         }
     }
     
-    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = .init(layer: self.layer)
     
     // MARK: - initializer -
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setLayer()
+        configure()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setLayer()
+        configure()
     }
     
     // MARK: - Public Methods -
     
-    public func startAnimation() {
+    public func startAnimating() {
         isAnimating = true
-        syLayer.startAnimation()
+        syLayer.startAnimating()
     }
     
-    public func stopAnimation() {
+    public func stopAnimating() {
         isAnimating = false
-        syLayer.stopAnimation()
-    }
-}
-
-// MARK: - Fileprivate Methods -
-
-fileprivate extension SYView {
-    
-    struct ViewConstants {
-        static let cornerRadius: CGFloat    = 1.5
-        static let defaultDuration: CGFloat = 1
+        syLayer.stopAnimating()
     }
     
-    func setLayer() {
+    // MARK: - Private Methods -
+    
+    func configure() {
         animationType = .border
-        layer.cornerRadius = ViewConstants.cornerRadius
+        layer.cornerRadius = 1.5
     }
 }

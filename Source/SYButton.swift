@@ -10,32 +10,31 @@ import UIKit
 
 @IBDesignable
 public class SYButton: UIButton, AnimatableComponent, TextConvertible {
-    
     public enum AnimationType: Int {
         case border, borderWithShadow, background, ripple, text
     }
     
-    @IBInspectable public var animationBorderColor: UIColor = AnimationDefaultColor.border {
+    @IBInspectable public var animationBorderColor = AnimationDefaultColor.border {
         didSet {
-            syLayer.setAnimationBorderColor(animationBorderColor)
+            syLayer.setBorderColor(animationBorderColor)
         }
     }
-    @IBInspectable public var animationBackgroundColor: UIColor = AnimationDefaultColor.background {
+    @IBInspectable public var animationBackgroundColor = AnimationDefaultColor.background {
         didSet {
             syLayer.setAnimationBackgroundColor(animationBackgroundColor)
         }
     }
-    @IBInspectable public var animationTextColor: UIColor = AnimationDefaultColor.text {
+    @IBInspectable public var animationTextColor = AnimationDefaultColor.text {
         didSet {
             syLayer.setAnimationTextColor(animationTextColor)
         }
     }
-    @IBInspectable public var animationRippleColor: UIColor = AnimationDefaultColor.ripple {
+    @IBInspectable public var animationRippleColor = AnimationDefaultColor.ripple {
         didSet {
-            syLayer.setAnimationRippleColor(animationRippleColor)
+            syLayer.setRippleColor(animationRippleColor)
         }
     }
-    @IBInspectable public var animationTimingAdapter: Int {
+    @IBInspectable var animationTimingAdapter: Int {
         get {
             return animationTimingFunction.rawValue
         }
@@ -43,12 +42,12 @@ public class SYButton: UIButton, AnimatableComponent, TextConvertible {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = ButtonConstants.defaultDuration {
+    @IBInspectable public var animationDuration: CGFloat = 1 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }
     }
-    @IBInspectable public var animationAdapter: Int {
+    @IBInspectable var animationAdapter: Int {
         get {
             return animationType.rawValue
         }
@@ -59,7 +58,7 @@ public class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     public var animationTimingFunction: SYMediaTimingFunction = .linear {
         didSet {
-            syLayer.setAnimationTimingFunction(animationTimingFunction)
+            syLayer.setTimingFunction(animationTimingFunction)
         }
     }
     
@@ -94,8 +93,9 @@ public class SYButton: UIButton, AnimatableComponent, TextConvertible {
     }
     override public var backgroundColor: UIColor? {
         didSet {
-            guard let backgroundColor = backgroundColor else { return }
-            syLayer.setBackgroundColor(backgroundColor)
+            if let backgroundColor = backgroundColor {
+                syLayer.setBackgroundColor(backgroundColor)
+            }
         }
     }
     
@@ -109,9 +109,9 @@ public class SYButton: UIButton, AnimatableComponent, TextConvertible {
         }
     }
     
-    fileprivate lazy var syLayer: SYLayer = SYLayer(sLayer: self.layer)
+    fileprivate lazy var syLayer: SYLayer = .init(layer: self.layer)
     
-    fileprivate var textColor = UIColor.black {
+    fileprivate var textColor: UIColor = .black {
         didSet {
             syLayer.setTextColor(textColor)
         }
@@ -121,71 +121,62 @@ public class SYButton: UIButton, AnimatableComponent, TextConvertible {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setLayer()
+        configure()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setLayer()
+        configure()
     }
     
-    // MARK: - Public Methods -
+    // MARK: - Override Methods -
     
     override public func setTitle(_ title: String?, for state: UIControlState) {
-        guard let title = title else { return }
-        super.setTitle(title, for: state)
-        
+        super.setTitle(title ?? "", for: state)
         resetTextLayer()
     }
     
     override public func setTitleColor(_ color: UIColor?, for state: UIControlState) {
         super.setTitleColor(UIColor.clear, for: state)
         
-        guard let color = color else { return }
-        textLayer.foregroundColor = color.cgColor
-        textColor = color
+        if let color = color {
+            textLayer.foregroundColor = color.cgColor
+            textColor = color
+        }
     }
     
-    public func setFontOfSize(_ fontSize: CGFloat) {
-        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+    // MARK: - Public Methods -
+    
+    public func setFont(name fontName: String = ".SFUIText-Medium", ofSize fontSize: CGFloat) -> Self {
+        titleLabel?.font = UIFont(name: fontName, size: fontSize)
         resetTextLayer()
+        return self
     }
     
-    public func setFontNameWithSize(_ name: String, size: CGFloat) {
-        guard let titleLabel = titleLabel else { return }
-        
-        titleLabel.font = UIFont(name: name, size: size)
-        resetTextLayer()
-    }
-    
-    public func startAnimation() {
+    public func startAnimating() {
         isAnimating = true
-        syLayer.startAnimation()
+        syLayer.startAnimating()
     }
     
-    public func stopAnimation() {
+    public func stopAnimating() {
         isAnimating = false
-        syLayer.stopAnimation()
+        syLayer.startAnimating()
+
     }
 }
 
 // MARK: - Fileprivate Methods -
 
 fileprivate extension SYButton {
-    
-    struct ButtonConstants {
-        static let cornerRadius: CGFloat    = 5
-        static let padding: CGFloat         = 5
-        static let defaultDuration: CGFloat = 1
-    }
-    
-    func setLayer() {
-        layer.cornerRadius = ButtonConstants.cornerRadius
-        contentEdgeInsets  = UIEdgeInsets(top: ButtonConstants.padding, left: ButtonConstants.padding, bottom: ButtonConstants.padding, right: ButtonConstants.padding)
+    func configure() {
+        layer.cornerRadius = 5
+        
+        let padding: CGFloat = 5
+        contentEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         
         syLayer.animationType = .border
-
-        setTitleColor(UIColor.black, for: UIControlState())
+        
+        setTitleColor(.black, for: .normal)
     }
     
     func resetTextLayer() {
