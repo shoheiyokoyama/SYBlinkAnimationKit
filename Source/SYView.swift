@@ -43,7 +43,7 @@ public final class SYView: UIView, AnimatableComponent {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1 {
+    @IBInspectable public var animationDuration: CGFloat = 1.5 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }

@@ -43,7 +43,7 @@ public class SYLabel: UILabel, AnimatableComponent, TextConvertible {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable public var animationDuration: CGFloat = 1 {
+    @IBInspectable public var animationDuration: CGFloat = 1.5 {
         didSet {
             syLayer.setAnimationDuration(CFTimeInterval(animationDuration))
         }

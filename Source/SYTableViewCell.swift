@@ -38,7 +38,7 @@ open class SYTableViewCell: UITableViewCell, AnimatableComponent {
             animationTimingFunction = SYMediaTimingFunction(rawValue: index) ?? .linear
         }
     }
-    @IBInspectable open var animationDuration: CGFloat = 1 {
+    @IBInspectable open var animationDuration: CGFloat = 1.5 {
         didSet {
             syLayer.setAnimationDuration( CFTimeInterval(animationDuration) )
         }

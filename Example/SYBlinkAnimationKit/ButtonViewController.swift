@@ -57,6 +57,9 @@ class ButtonViewController: UIViewController {
         rippleButton.backgroundColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1)
         rippleButton.addTarget(self, action: #selector(rippleAnimation(_:)), for: .touchUpInside)
         rippleButton.animationType = .ripple
+        rippleButton
+            .setFont(name: ".SFUIText-Medium", ofSize: 21)
+            .startAnimating()
         rippleButton.startAnimating()
         self.view.addSubview(rippleButton)
     }

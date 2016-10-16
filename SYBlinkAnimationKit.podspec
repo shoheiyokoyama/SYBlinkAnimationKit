@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SYBlinkAnimationKit"
-  s.version          = "0.2.4"
+  s.version          = "0.3.0"
   s.summary          = "SYBlinkAnimationKit is a blink effect animation framework for iOS, written in Swift."
 
   s.homepage         = "https://github.com/shoheiyokoyama/SYBlinkAnimationKit"
@@ -12,7 +12,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Source/**/*.swift'
-#  s.resource_bundles = {
-#    'SYBlinkAnimationKit' => ['Pod/Assets/*.png']
-#  }
 end
