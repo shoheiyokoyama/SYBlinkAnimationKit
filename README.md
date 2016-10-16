@@ -4,10 +4,9 @@
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
-[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
-)](https://developer.apple.com/swift)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
-)](http://mit-license.org)
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+ [![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/LICENSE)
 
 **SYBlinkAnimationKit** is a blink effect animation framework for iOS, written in **Swift** :bowtie:
 
@@ -40,10 +39,10 @@ There are 5 types of animation for component.
 <img src="./DemoImage/Text.gif" width="300" height="70">
 </p>
 
-## Features
+## :octocat: Features
 - Animation like blink effect for `UIKit`
 - The 5 types of animation : `border`,  `borderWithShadow`,  `background`, `ripple`, `text`
-- Easily usable
+- Easily usable :stuck_out_tongue_closed_eyes:
 - Customizable in any properties for animation
 - [x] Support Swift 3.0
 - [x] Support `@IBDesignable` and `@IBInspectable`.
