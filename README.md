@@ -44,7 +44,7 @@ There are 5 types of animation for component.
 - The 5 types of animation : `border`,  `borderWithShadow`,  `background`, `ripple`, `text`
 - Easily usable :stuck_out_tongue_closed_eyes:
 - Customizable in any properties for animation
-- [x] Support Swift 3.0
+- [x] Support Swift 3.0 :tada:
 - [x] Support `@IBDesignable` and `@IBInspectable`.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 
@@ -180,7 +180,7 @@ but you can control this behavior.
 <img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
-## Customize animation properties
+## :wrench: Customize animation properties
 
 ### Animation Type
 
