@@ -10,7 +10,7 @@
 
 **SYBlinkAnimationKit** is a blink effect animation framework for iOS, written in **Swift** :bowtie:
 
-## Demo
+## :eyes: Demo
 
 There are 5 types of animation for component.
 
@@ -64,7 +64,7 @@ Open `Example/SYBlinkAnimationKit.xcworkspace` and run `SYBlinkAnimationKit-Exam
 
 To run the example project, run `pod install` from the Example directory first.
 
-## Usage
+## :large_orange_diamond: Usage
 First, Import **SYBlinkAnimationKit** in class.
 ```swift
    import SYBlinkAnimationKit
@@ -283,7 +283,7 @@ If SYClass is in middle of animation, this property is `true`
    public var isAnimating: Bool
 ```
 
-## Installation
+## :computer: Installation
 
 ***SYBlinkAnimationKit*** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -292,15 +292,15 @@ it, simply add the following line to your Podfile:
 pod "SYBlinkAnimationKit"
 ```
 
-## Requirements
+## :pencil: Requirements
 - iOS 8.3+
 - Xcode 8.0+
 - Swift 3.0+
 
-## Author
+## :coffee: Author
 
 Shohei Yokoyama, shohei.yok0602@gmail.com
 
-## License
+## :unlock: License
 
 ***SYBlinkAnimationKit*** is available under the MIT license. See the [LICENSE file](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/LICENSE) for more info.
