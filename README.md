@@ -294,7 +294,8 @@ pod "SYBlinkAnimationKit"
 
 ## Requirements
 - iOS 8.3+
-- Xcode 8.0
+- Xcode 8.0+
+- Swift 3.0+
 
 ## Author
 
