@@ -4,6 +4,7 @@
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
  [![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/LICENSE)
@@ -285,11 +286,22 @@ If SYClass is in middle of animation, this property is `true`
 
 ## :computer: Installation
 
+### CocoaPods
+
 ***SYBlinkAnimationKit*** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SYBlinkAnimationKit"
+```
+
+
+### Carthage
+
+Add the following line to your `Cartfile`:
+
+```ruby
+github "shoheiyokoyama/SYBlinkAnimationKit"
 ```
 
 ## :pencil: Requirements
