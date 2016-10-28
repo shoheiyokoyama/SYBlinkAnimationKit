@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SYBlinkAnimationKit"
-  s.version          = "0.3.0"
+  s.version          = "0.3.1"
   s.summary          = "SYBlinkAnimationKit is a blink effect animation framework for iOS, written in Swift."
 
   s.homepage         = "https://github.com/shoheiyokoyama/SYBlinkAnimationKit"
