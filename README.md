@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./DemoImage/logo.png">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/logo.png">
 </p>
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
@@ -17,27 +17,27 @@ There are 5 types of animation for component.
 
 **border**
 <p align="left">
-<img src="./DemoImage/Border.gif" width="300" height="55">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/Border.gif" width="300" height="55">
 </p>
 
 **borderWithShadow**
 <p align="left">
-<img src="./DemoImage/BorderWithShadow.gif" width="300" height="70">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/BorderWithShadow.gif" width="300" height="70">
 </p>
 
 **background**
 <p align="left">
-<img src="./DemoImage/Background.gif" width="300" height="70">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/Background.gif" width="300" height="70">
 </p>
 
 **ripple**
 <p align="left">
-<img src="./DemoImage/RippleEffect.gif" width="303" height="45">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/RippleEffect.gif" width="303" height="45">
 </p>
 
 **text**
 <p align="left">
-<img src="./DemoImage/Text.gif" width="300" height="70">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/Text.gif" width="300" height="70">
 </p>
 
 ## :octocat: Features
@@ -80,7 +80,7 @@ First, Import **SYBlinkAnimationKit** in class.
 ### [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
 
 <p align="center">
-<img src="./DemoImage/ExampleButton.gif">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/ExampleButton.gif">
 </p>
 
 ```swift
@@ -133,7 +133,7 @@ To change text font, use font method as with `SYButton`.
 ### [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 
 <p align="center">
-<img src="./DemoImage/ExampleTableViewCell.gif">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/ExampleTableViewCell.gif">
 </p>
 
 Inherit `SYTableViewCell`. customize your `TableViewCell` in `UITableViewDataSource`.
@@ -179,7 +179,7 @@ but you can control this behavior.
 ```
 
 <p align="center">
-<img src="./DemoImage/SYTextFieldSample.gif" width="350" height="350">
+<img src="https://github.com/shoheiyokoyama/Assets/blob/master/SYBlinkAnimationKit/SYTextFieldSample.gif" width="350" height="350">
 </p>
 
 ## :wrench: Customize animation properties
