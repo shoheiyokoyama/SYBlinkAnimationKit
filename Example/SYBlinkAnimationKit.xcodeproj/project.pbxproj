@@ -13,8 +13,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6B7A772A1D9A8401D534E613 /* Pods_SYBlinkAnimationKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD0D1B0CF0ECBBAB71E9905 /* Pods_SYBlinkAnimationKit_Example.framework */; };
-		6D2C74171DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */; };
-		6D2C74191DB0A2AB0053AF4A /* SYBlinkAnimationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D2C74171DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C74161DB0A1FF0053AF4A /* SYBlinkAnimationKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		6DA9213F1D4BAB0400454C88 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9213E1D4BAB0400454C88 /* TableViewController.swift */; };
 		6DA921421D4BACC300454C88 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA921401D4BACC300454C88 /* ExampleTableViewCell.swift */; };
 		6DA921431D4BACC300454C88 /* ExampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA921411D4BACC300454C88 /* ExampleTableViewCell.xib */; };
@@ -41,11 +40,10 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		6D2C741A1DB0A2AB0053AF4A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6D2C74191DB0A2AB0053AF4A /* SYBlinkAnimationKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
