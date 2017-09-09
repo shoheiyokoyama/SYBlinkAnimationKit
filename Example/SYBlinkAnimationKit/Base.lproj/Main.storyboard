@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1OH-MJ-dft">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1OH-MJ-dft">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,7 +14,7 @@
             <objects>
                 <navigationController id="1OH-MJ-dft" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTw-Da-NoI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,6 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-da-2Tf" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="37.5" y="94" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="6No-BU-Uf3"/>
                                     <constraint firstAttribute="height" constant="50" id="FfZ-EP-wBo"/>
@@ -42,15 +46,19 @@
                                 <state key="normal" title="Border Animation"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sb-B8-nz9" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="37.5" y="164" width="300" height="50"/>
                                 <state key="normal" title="BorderWithShadow Animation"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxw-p8-LK2" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="37.5" y="234" width="300" height="50"/>
                                 <state key="normal" title="Background Animation"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ql-Bp-1dS" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="37.5" y="304" width="300" height="50"/>
                                 <state key="normal" title="Text Animation"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU9-le-gKA" customClass="SYButton" customModule="SYBlinkAnimationKit">
+                                <rect key="frame" x="37.5" y="374" width="300" height="50"/>
                                 <state key="normal" title="Ripple Animation"/>
                             </button>
                         </subviews>
@@ -102,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-Tw-cM3" customClass="SYLabel" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="129" width="300" height="50"/>
+                                <rect key="frame" x="150" y="129" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kKe-np-VPo"/>
                                     <constraint firstAttribute="width" constant="300" id="vZe-Mc-PbC"/>
@@ -112,25 +120,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekc-Xd-uIy" customClass="SYLabel" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="199" width="300" height="50"/>
+                                <rect key="frame" x="150" y="199" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utv-Bq-bgs" customClass="SYLabel" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="269" width="300" height="50"/>
+                                <rect key="frame" x="150" y="269" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-Cp-JNc" customClass="SYLabel" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="409" width="300" height="50"/>
+                                <rect key="frame" x="150" y="409" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIb-lL-CKd" customClass="SYLabel" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="339" width="300" height="50"/>
+                                <rect key="frame" x="150" y="339" width="300" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Yw-5F-8Bi" customClass="SYView" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="94" width="300" height="70"/>
+                                <rect key="frame" x="150" y="94" width="300" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="4pM-gx-YbR"/>
@@ -192,7 +200,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-Sr-XTg" customClass="SYView" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="184" width="300" height="70"/>
+                                <rect key="frame" x="150" y="184" width="300" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="TOa-Oa-WqG"/>
@@ -200,7 +208,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08h-M8-MX8" customClass="SYView" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="274" width="300" height="70"/>
+                                <rect key="frame" x="150" y="274" width="300" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="cei-ok-ysy"/>
@@ -208,7 +216,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-TV-tji" customClass="SYView" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="364" width="300" height="70"/>
+                                <rect key="frame" x="150" y="364" width="300" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="8CK-av-ZT1"/>
@@ -253,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-LN-gVK" customClass="SYTextField" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="94" width="300" height="50"/>
+                                <rect key="frame" x="150" y="94" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Dwb-DX-FQI"/>
                                     <constraint firstAttribute="width" constant="300" id="Jsp-zB-e75"/>
@@ -262,7 +270,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-Rq-9vq" customClass="SYTextField" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="164" width="300" height="50"/>
+                                <rect key="frame" x="150" y="164" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Eoz-b2-ruJ"/>
                                     <constraint firstAttribute="height" constant="50" id="hzA-tQ-dkW"/>
@@ -271,7 +279,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LA0-p2-6uR" customClass="SYTextField" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="304" width="300" height="50"/>
+                                <rect key="frame" x="150" y="304" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="6SX-K8-4Xs"/>
                                     <constraint firstAttribute="height" constant="50" id="shx-cL-jAV"/>
@@ -280,7 +288,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-Lf-RUc" customClass="SYTextField" customModule="SYBlinkAnimationKit">
-                                <frame key="frameInset" minX="150" minY="234" width="300" height="50"/>
+                                <rect key="frame" x="150" y="234" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hzy-Fm-puY"/>
                                     <constraint firstAttribute="width" constant="300" id="jGM-rO-x0f"/>
@@ -326,7 +334,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bnZ-AC-sgD">
-                                <frame key="frameInset" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
@@ -364,7 +372,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z4j-8w-IjG">
-                                <frame key="frameInset" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MO5-u2-ixo">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
