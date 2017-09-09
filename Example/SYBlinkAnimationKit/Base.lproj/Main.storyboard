@@ -348,11 +348,11 @@
                     <navigationItem key="navigationItem" id="rCt-li-GfY"/>
                     <connections>
                         <outlet property="tableView" destination="bnZ-AC-sgD" id="0bx-RM-OaI"/>
-                        <segue destination="XaQ-Nl-GVO" kind="push" identifier="ButtonView" id="jml-L5-6IT"/>
-                        <segue destination="AQ4-f8-I01" kind="push" identifier="LabelView" id="K2U-xJ-DdC"/>
-                        <segue destination="Lrn-KK-1sM" kind="push" identifier="TextFieldView" id="Uh8-x3-jOD"/>
-                        <segue destination="akY-9H-MHV" kind="push" identifier="AnimationView" id="GvI-HY-1vg"/>
-                        <segue destination="ghU-CZ-L54" kind="push" identifier="CollectionView" id="A7g-OI-HRL"/>
+                        <segue destination="XaQ-Nl-GVO" kind="show" identifier="ButtonView" id="jml-L5-6IT"/>
+                        <segue destination="AQ4-f8-I01" kind="show" identifier="LabelView" id="K2U-xJ-DdC"/>
+                        <segue destination="Lrn-KK-1sM" kind="show" identifier="TextFieldView" id="Uh8-x3-jOD"/>
+                        <segue destination="akY-9H-MHV" kind="show" identifier="AnimationView" id="GvI-HY-1vg"/>
+                        <segue destination="ghU-CZ-L54" kind="show" identifier="CollectionView" id="A7g-OI-HRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
