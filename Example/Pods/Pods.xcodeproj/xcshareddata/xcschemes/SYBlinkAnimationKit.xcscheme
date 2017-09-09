@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C20649E2A64BEDBBADA4520D8F2E492E"
+               BlueprintIdentifier = "BE65DE274BDD3FDB2C1B2998C42BE654"
                BuildableName = "SYBlinkAnimationKit.framework"
                BlueprintName = "SYBlinkAnimationKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C20649E2A64BEDBBADA4520D8F2E492E"
+            BlueprintIdentifier = "BE65DE274BDD3FDB2C1B2998C42BE654"
             BuildableName = "SYBlinkAnimationKit.framework"
             BlueprintName = "SYBlinkAnimationKit"
             ReferencedContainer = "container:Pods.xcodeproj">
