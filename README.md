@@ -50,9 +50,9 @@ There are 5 types of animation for component.
 you can change properties in Interface Builder(IB) inspector. then IB update your custom objects automatically.
 - [x] Compatible with ***Carthage***
 
-- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift) 
+- [x] [SYButton](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYButton.swift)
 - [x] [SYLabel](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYLabel.swift)
-- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift) 
+- [x] [SYTextField](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTextField.swift)
 - [x] [SYView](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYView.swift)
 - [x] [SYTableViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYTableViewCell.swift)
 - [x] [SYCollectionViewCell](https://github.com/shoheiyokoyama/SYBlinkAnimationKit/blob/master/Source/SYCollectionViewCell.swift)
@@ -92,7 +92,7 @@ First, Import **SYBlinkAnimationKit** in class.
   //Run Animation
   syButton.startAnimating()
   //End Animation
-  syButton.stopAnimating() 
+  syButton.stopAnimating()
 ```
 
 #### Text Animation
@@ -191,7 +191,7 @@ If you just want to change the types of animation, you can customize `animationT
 ```swift
    // default is border
    var animationType: AnimationType
-   
+
    // Support 5 types of animation
    enum AnimationType: Int {
         case border
@@ -238,7 +238,7 @@ You can customize `animationTimingFunction`, `animationDuration`.
 ```swift
    //default is linear
    var animationTimingFunction: SYMediaTimingFunction
-   
+
    enum SYMediaTimingFunction: Int {
         case linear
         case easeIn
@@ -250,7 +250,7 @@ You can customize `animationTimingFunction`, `animationDuration`.
 
 ```swift
    //default is 1.5
-   public var animationDuration: CGFloat 
+   public var animationDuration: CGFloat
 ```
 
 #### *inspectable*
@@ -270,7 +270,7 @@ Available `SYButton`, `SYLabel` now.
 
 ````swift
     var textAlignmentMode: TextAlignmentMode
-    
+
     enum TextAlignmentMode {
         case topLeft, topCenter, topRight
         case left, center, right
@@ -307,7 +307,7 @@ github "shoheiyokoyama/SYBlinkAnimationKit"
 
 ## :pencil: Requirements
 - iOS 8.3+
-- Xcode 8.0+
+- Xcode 9.0+
 - Swift 3.0+
 
 ## :coffee: Author
