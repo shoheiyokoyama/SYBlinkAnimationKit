@@ -308,7 +308,7 @@ github "shoheiyokoyama/SYBlinkAnimationKit"
 ## :pencil: Requirements
 - iOS 8.3+
 - Xcode 9.0+
-- Swift 3.0+
+- Swift 3.2+
 
 ## :coffee: Author
 
