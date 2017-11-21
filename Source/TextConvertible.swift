@@ -25,9 +25,9 @@ extension TextConvertible where Self: UIView {
     func configureTextLayer(_ text: String?, font: UIFont?, textColor: UIColor) {
         guard let text = text, let font = font else { return }
         
-        let attributes = [NSFontAttributeName: font]
+        let attributes = [NSAttributedStringKey.font: font]
         
-        let size   = text.size(attributes: attributes)
+        let size   = text.size(withAttributes: attributes)
         let origin = textPoint(ofSize: size)
         let frame  = CGRect(origin: origin, size: CGSize(width: size.width, height: size.height + layer.borderWidth))
         
